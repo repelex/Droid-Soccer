@@ -1,12 +1,10 @@
-# Team-Game-Project
-
-Droid Soccer
+# Droid Soccer
 
 Teams (subject to change):
 - 1. UI/HUD/Art
 - 2. Multiplayer/Networking
-- 3. Gameplay
-- 4. Documentation + Extras
+- 3. Gameplay/Level Design
+- 4. Documentation/Extra Features
 
 For documentation:
 - install doxygen unity plugin http://www.jacobpennock.com/Blog/unity-automatic-documentation-generation-an-editor-plugin/
