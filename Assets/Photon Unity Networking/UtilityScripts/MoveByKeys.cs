@@ -51,32 +51,33 @@ public class MoveByKeys : Photon.MonoBehaviour
             transform.position += Vector3.right*(this.Speed*Time.deltaTime);
         }
 
-        // jumping has a simple "cooldown" time but you could also jump in the air
-        if (this.jumpingTime <= 0.0f)
-        {
-            if (this.body != null || this.body2d != null)
-            {
-                // obj has a Rigidbody and can jump (AddForce)
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    this.jumpingTime = this.JumpTimeout;
+        //// jumping has a simple "cooldown" time but you could also jump in the air
+        //if (this.jumpingTime <= 0.0f)
+        //{
+        //    if (this.body != null || this.body2d != null)
+        //    {
+        //        // obj has a Rigidbody and can jump (AddForce)
+        //        if (Input.GetKey(KeyCode.Space))
+        //        {
+        //            this.jumpingTime = this.JumpTimeout;
 
-                    Vector2 jump = Vector2.up*this.JumpForce;
-                    if (this.body2d != null)
-                    {
-                        this.body2d.AddForce(jump);
-                    }
-                    else if (this.body != null)
-                    {
-                        this.body.AddForce(jump);
-                    }
-                }
-            }
-        }
-        else
-        {
-            this.jumpingTime -= Time.deltaTime;
-        }
+        //            Vector2 jump = Vector2.up*this.JumpForce;
+        //            if (this.body2d != null)
+        //            {
+        //                this.body2d.AddForce(jump);
+        //            }
+        //            else if (this.body != null)
+        //            {
+        //                this.body.AddForce(jump);
+        //            }
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    this.jumpingTime -= Time.deltaTime;
+        //}
+
 
         // 2d objects can't be moved in 3d "forward"
         if (!this.isSprite)
@@ -91,5 +92,16 @@ public class MoveByKeys : Photon.MonoBehaviour
                 transform.position -= Vector3.forward*(this.Speed*Time.deltaTime);
             }
         }
+
+          if (Input.GetKey(KeyCode.Space))
+          {
+               transform.position += Vector3.up *(this.Speed * Time.deltaTime);
+          }
     }
+
+     private float jumpHeight = 150.0f;
+     public void jump()
+     {
+
+     }
 }

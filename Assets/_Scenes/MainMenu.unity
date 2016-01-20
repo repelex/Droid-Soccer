@@ -252,7 +252,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 263699048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1555710860}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &263699048
@@ -299,6 +310,7 @@ GameObject:
   - 222: {fileID: 397449228}
   - 114: {fileID: 397449227}
   - 114: {fileID: 397449226}
+  - 114: {fileID: 397449229}
   m_Layer: 5
   m_Name: Play Game
   m_TagString: Untagged
@@ -362,7 +374,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397449227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 397449229}
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &397449227
@@ -398,6 +421,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 397449224}
+--- !u!114 &397449229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397449224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d8157b01ec7ee4395d56fb75686533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &429408117
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +518,7 @@ GameObject:
   - 222: {fileID: 513152825}
   - 114: {fileID: 513152824}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +573,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play Game
+  m_Text: Start Game
 --- !u!222 &513152825
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -678,8 +712,9 @@ GameObject:
   - 224: {fileID: 1555710857}
   - 222: {fileID: 1555710859}
   - 114: {fileID: 1555710858}
+  - 114: {fileID: 1555710860}
   m_Layer: 5
-  m_Name: Quit Botton
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,6 +776,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1555710856}
+--- !u!114 &1555710860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555710856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d8157b01ec7ee4395d56fb75686533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1737350818
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +836,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
