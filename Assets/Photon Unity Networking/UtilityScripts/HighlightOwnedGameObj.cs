@@ -4,7 +4,7 @@
 public class HighlightOwnedGameObj : Photon.MonoBehaviour
 {
     public GameObject PointerPrefab;
-    public float Offset = 0.5f;
+    public float Offset = 1.5f;
     private Transform markerTransform;
 
 
