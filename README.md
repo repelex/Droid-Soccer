@@ -1,10 +1,9 @@
 # Droid Soccer
 
 Teams (subject to change):
-- 1. UI/Art/Gameplay [Bryon, Allan]
-- 2. Multiplayer/Gameplay [Alex, Andrew]
-- 3. Level Design/Gameplay [Cody, Dillon]
-- 4. Documentation/QA/Gameplay [David, Kevin]
+- 1. User Interface [Allan, David, Kevin]
+- 2. Multiplayer [Alex, Andrew]
+- 3. Gameplay [Cody, Dillon]
 
 To dos:
 - Start Menu
