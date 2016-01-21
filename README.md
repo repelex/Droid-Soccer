@@ -4,7 +4,7 @@ Teams (subject to change):
 - 1. UI/Art/Gameplay [Bryon, Allan]
 - 2. Multiplayer/Gameplay [Alex, Andrew]
 - 3. Level Design/Gameplay [Cody, Dillon]
-- 4. Documentation/Gameplay [David, Kevin]
+- 4. Documentation/QA/Gameplay [David, Kevin]
 
 To dos:
 - Start Menu
