@@ -6,11 +6,14 @@ public class OnJoinedInstantiate : MonoBehaviour
     public Transform SpawnPosition;
     public float PositionOffset = 2.0f;
     public GameObject[] PrefabsToInstantiate;   // set in inspector
+    public GameObject PlayerCamera;
+    
 
     public void OnJoinedRoom()
     {
         if (this.PrefabsToInstantiate != null)
         {
+            PlayerCamera= GameObject.FindGameObjectWithTag("Camera");
             foreach (GameObject o in this.PrefabsToInstantiate)
             {
                 Debug.Log("Instantiating: " + o.name);
@@ -26,7 +29,11 @@ public class OnJoinedInstantiate : MonoBehaviour
                 random = random.normalized;
                 Vector3 itempos = spawnPos + this.PositionOffset * random;
 
-                PhotonNetwork.Instantiate(o.name, itempos, Quaternion.identity, 0);
+                GameObject player = PhotonNetwork.Instantiate(o.name, itempos, Quaternion.identity, 0);
+                CameraController camera = PlayerCamera.GetComponent<CameraController>();
+                camera.enabled = true;
+                camera.player = player;
+                
             }
         }
     }
