@@ -10,14 +10,9 @@ public class MenuScript : MonoBehaviour {
     {
           SceneManager.LoadScene("MiniGame");  
     }
-    //Quit Game 
     public void QuitGame()
     {
         Application.Quit();
 
-    }
-    public void Credits()
-    {
-        SceneManager.LoadScene("Credits");
     }
 }
