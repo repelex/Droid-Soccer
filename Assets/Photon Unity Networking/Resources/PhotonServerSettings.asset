@@ -36,4 +36,8 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupTimes
   - TaggedPlayer
+  - ChangeColorToBlue
+  - ChangeColorToRed
+  - JoinBlue
+  - JoinRed
   DisableAutoOpenWizard: 1

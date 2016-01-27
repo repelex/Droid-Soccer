@@ -7,13 +7,17 @@ public class OnJoinedInstantiate : MonoBehaviour
     public float PositionOffset = 2.0f;
     public GameObject[] PrefabsToInstantiate;   // set in inspector
     public GameObject PlayerCamera;
+    public int redPlayers = 0, bluePlayers = 0;
+    public GameObject player;
     
 
     public void OnJoinedRoom()
     {
         if (this.PrefabsToInstantiate != null)
         {
+            GameObject controller = GameObject.Find("Control");
             PlayerCamera= GameObject.FindGameObjectWithTag("Camera");
+
             foreach (GameObject o in this.PrefabsToInstantiate)
             {
                 Debug.Log("Instantiating: " + o.name);
@@ -28,13 +32,33 @@ public class OnJoinedInstantiate : MonoBehaviour
                 random.y = 0;
                 random = random.normalized;
                 Vector3 itempos = spawnPos + this.PositionOffset * random;
+                
 
-                GameObject player = PhotonNetwork.Instantiate(o.name, itempos, Quaternion.identity, 0);
+                player = PhotonNetwork.Instantiate(o.name, itempos, Quaternion.identity, 0);
+                PhotonView photonView = player.GetPhotonView();
                 CameraController camera = PlayerCamera.GetComponent<CameraController>();
                 camera.enabled = true;
                 camera.player = player;
+                redPlayers = PunTeams.PlayersPerTeam[PunTeams.Team.red].Count;
+                bluePlayers = PunTeams.PlayersPerTeam[PunTeams.Team.blue].Count;
                 
+                if (redPlayers > bluePlayers)
+                {
+                    PhotonNetwork.player.SetTeam(PunTeams.Team.blue);
+                    photonView.RPC("ChangeColorToBlue", PhotonTargets.AllBuffered);
+
+                }
+                else {
+                    PhotonNetwork.player.SetTeam(PunTeams.Team.red);
+                    photonView.RPC("ChangeColorToRed", PhotonTargets.AllBuffered);
+
+                }
+
+
             }
+
         }
     }
+
+
 }

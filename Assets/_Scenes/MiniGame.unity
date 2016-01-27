@@ -1513,6 +1513,7 @@ GameObject:
   - 4: {fileID: 1656012105}
   - 114: {fileID: 1656012104}
   - 114: {fileID: 1656012106}
+  - 114: {fileID: 1656012109}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -1561,6 +1562,20 @@ MonoBehaviour:
   PrefabsToInstantiate:
   - {fileID: 100000, guid: bb733c4e80dbde84eaf61d8aace88c3d, type: 2}
   PlayerCamera: {fileID: 0}
+  redPlayers: 0
+  bluePlayers: 0
+  player: {fileID: 0}
+--- !u!114 &1656012109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656012103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6587c8104d7524f4280d0a68dd779f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867837067
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ GameObject:
   - 114: {fileID: 11400012}
   - 114: {fileID: 11484916}
   - 114: {fileID: 11493534}
+  - 114: {fileID: 11471326}
   m_Layer: 0
   m_Name: PlayerSphere
   m_TagString: Untagged
@@ -152,6 +153,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointerPrefab: {fileID: 100000, guid: 9c6977a9ecda14e4e96ea3a71c749c2c, type: 2}
   Offset: 1.5
+--- !u!114 &11471326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7eb0044b575a9b4da61f28daede8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,7 +244,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1ed6a16015b274642b2d9893df0c8d1b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -349,6 +361,11 @@ Prefab:
       propertyPath: m_PositionModel.ExtrapolateSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 1ed6a16015b274642b2d9893df0c8d1b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
