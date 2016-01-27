@@ -1,0 +1,92 @@
+\hypertarget{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}{}\section{Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper Class Reference}
+\label{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}\index{Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper@{Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper}}
+
+
+A utility class that turns it\textquotesingle{}s Should\+Execute property to true after a set interval time has passed.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_a4290da682c42ba1388fecb7000148512}{Time\+Keeper} (int interval)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}{Time\+Keeper} and sets it\textquotesingle{}s interval. \end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_a8ec9eb2bd19237afc5089abe75784841}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Should\+Execute becomes false and the time interval is refreshed for next execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_af643245f13169287f51e2df2f5b18758}{Interval}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interval in which Should\+Execute should be true (and something is executed).\end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_ad1d37a796623b211b4b98867bb3ac5bf}{Is\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A disabled \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}{Time\+Keeper} never turns Should\+Execute to true. Reset won\textquotesingle{}t affect Is\+Enabled!\end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_aa448c3addb4ded8b0226be09bed5982c}{Should\+Execute}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Turns true of the time interval has passed (after reset or creation) or someone set Should\+Execute manually. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A utility class that turns it\textquotesingle{}s Should\+Execute property to true after a set interval time has passed. 
+
+Time\+Keepers can be useful to execute tasks in a certain interval within a game loop (integrating a recurring task into a certain thread).
+
+An interval can be overridden, when you set Should\+Execute to true. Call Reset after execution of whatever you do to re-\/enable the \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}{Time\+Keeper} (Should\+Execute becomes false until interval passed). Being based on Environment.\+Tick\+Count, this is not very precise but cheap. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}!Time\+Keeper@{Time\+Keeper}}
+\index{Time\+Keeper@{Time\+Keeper}!Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}}
+\subsubsection[{\texorpdfstring{Time\+Keeper(int interval)}{TimeKeeper(int interval)}}]{\setlength{\rightskip}{0pt plus 5cm}Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper.\+Time\+Keeper (
+\begin{DoxyParamCaption}
+\item[{int}]{interval}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_a4290da682c42ba1388fecb7000148512}{}\label{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_a4290da682c42ba1388fecb7000148512}
+
+
+Creates a new \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}{Time\+Keeper} and sets it\textquotesingle{}s interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}!Reset@{Reset}}
+\index{Reset@{Reset}!Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}}
+\subsubsection[{\texorpdfstring{Reset()}{Reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper.\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_a8ec9eb2bd19237afc5089abe75784841}{}\label{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_a8ec9eb2bd19237afc5089abe75784841}
+
+
+Should\+Execute becomes false and the time interval is refreshed for next execution. 
+
+Does not affect Is\+Enabled.
+
+\subsection{Property Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}!Interval@{Interval}}
+\index{Interval@{Interval}!Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}}
+\subsubsection[{\texorpdfstring{Interval}{Interval}}]{\setlength{\rightskip}{0pt plus 5cm}int Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper.\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_af643245f13169287f51e2df2f5b18758}{}\label{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_af643245f13169287f51e2df2f5b18758}
+
+
+Interval in which Should\+Execute should be true (and something is executed).
+
+\index{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}!Is\+Enabled@{Is\+Enabled}}
+\index{Is\+Enabled@{Is\+Enabled}!Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}}
+\subsubsection[{\texorpdfstring{Is\+Enabled}{IsEnabled}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper.\+Is\+Enabled\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_ad1d37a796623b211b4b98867bb3ac5bf}{}\label{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_ad1d37a796623b211b4b98867bb3ac5bf}
+
+
+A disabled \hyperlink{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper}{Time\+Keeper} never turns Should\+Execute to true. Reset won\textquotesingle{}t affect Is\+Enabled!
+
+\index{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}!Should\+Execute@{Should\+Execute}}
+\index{Should\+Execute@{Should\+Execute}!Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper@{Exit\+Games\+::\+Client\+::\+Demo\+Particle\+::\+Time\+Keeper}}
+\subsubsection[{\texorpdfstring{Should\+Execute}{ShouldExecute}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Demo\+Particle.\+Time\+Keeper.\+Should\+Execute\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_aa448c3addb4ded8b0226be09bed5982c}{}\label{class_exit_games_1_1_client_1_1_demo_particle_1_1_time_keeper_aa448c3addb4ded8b0226be09bed5982c}
+
+
+Turns true of the time interval has passed (after reset or creation) or someone set Should\+Execute manually. 
+
+Call Reset to start a new interval.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_time_keeper_8cs}{Time\+Keeper.\+cs}\end{DoxyCompactItemize}

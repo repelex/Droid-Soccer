@@ -1,0 +1,2134 @@
+\hypertarget{class_photon_network}{}\section{Photon\+Network Class Reference}
+\label{class_photon_network}\index{Photon\+Network@{Photon\+Network}}
+
+
+The main class to use the \hyperlink{class_photon_network}{Photon\+Network} plugin.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \hyperlink{class_photon_network_a90ec16d1df1a0332d0ad16493d641f56}{Event\+Callback} (byte event\+Code, object content, int sender\+Id)
+\begin{DoxyCompactList}\small\item\em Defines the delegate usable in On\+Event\+Call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_photon_network_af4ff9e4128181a1a4974c20bf899a4c4}{Switch\+To\+Protocol} (Connection\+Protocol cp)
+\begin{DoxyCompactList}\small\item\em While offline, the network protocol can be switched (which affects the ports you can use to connect). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a0fdb79bcce45801ec81fbe56ffb939ec}{Connect\+Using\+Settings} (string \hyperlink{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}{game\+Version})
+\begin{DoxyCompactList}\small\item\em Connect to \hyperlink{namespace_photon}{Photon} as configured in the editor (saved in Photon\+Server\+Settings file). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a981e7244e915f41e18cb9da5f12fc858}{Connect\+To\+Master} (string master\+Server\+Address, int port, string app\+ID, string \hyperlink{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}{game\+Version})
+\begin{DoxyCompactList}\small\item\em Connect to a \hyperlink{namespace_photon}{Photon} Master Server by address, port, app\+ID and game(client) version. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_afba456bbc9d1525b87eb060c959af2b6}{Connect\+To\+Best\+Cloud\+Server} (string \hyperlink{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}{game\+Version})
+\begin{DoxyCompactList}\small\item\em Connect to the \hyperlink{namespace_photon}{Photon} Cloud region with the lowest ping (on platforms that support Unity\textquotesingle{}s Ping). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a84b7be74d130b19eeeb1d7b4e8193ad4}{Connect\+To\+Region} (\hyperlink{_enums_8cs_af823e3be9567fa753720895120c9819b}{Cloud\+Region\+Code} region, string \hyperlink{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}{game\+Version})
+\begin{DoxyCompactList}\small\item\em Connects to the \hyperlink{namespace_photon}{Photon} Cloud region of choice. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a7dc90dd05d697c3f8f04e50cc0e039b2}{Override\+Best\+Cloud\+Server} (\hyperlink{_enums_8cs_af823e3be9567fa753720895120c9819b}{Cloud\+Region\+Code} region)
+\begin{DoxyCompactList}\small\item\em Overwrites the region that is used for \hyperlink{class_photon_network_afba456bbc9d1525b87eb060c959af2b6}{Connect\+To\+Best\+Cloud\+Server(string game\+Version)}. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a6ffa9e23d8060c9898064cda0a21710b}{Refresh\+Cloud\+Server\+Rating} ()
+\begin{DoxyCompactList}\small\item\em Pings all cloud servers again to find the one with best ping (currently).\end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a43f616ce19891d3de81269a7821c5656}{Network\+Statistics\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the traffic stats and re-\/enables them. \end{DoxyCompactList}\item 
+static string \hyperlink{class_photon_network_aebed3f221d6a2d918cb734a15b9df8e0}{Network\+Statistics\+To\+String} ()
+\begin{DoxyCompactList}\small\item\em Only available when Network\+Statistics\+Enabled was used to gather some stats. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_aa4005f5ff36461d51f9d2c2c326550ac}{Initialize\+Security} ()
+\begin{DoxyCompactList}\small\item\em Used for compatibility with Unity networking only. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_aeb81fe77dfd0ebf7c8a63191a6a8fced}{Disconnect} ()
+\begin{DoxyCompactList}\small\item\em Makes this client disconnect from the photon server, a process that leaves any room and calls On\+Disconnected\+From\+Photon on completion. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a5c08f89cdf5766c1b69d5b7b8786b734}{Find\+Friends} (string\mbox{[}$\,$\mbox{]} friends\+To\+Find)
+\begin{DoxyCompactList}\small\item\em Requests the rooms and online status for a list of friends and saves the result in \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Create\+Room} (string room\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a room with given name but fails if this room(name) is existing already. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a08435c2d064fd6a85e51e1520e5a63d8}{Create\+Room} (string room\+Name, \hyperlink{class_room_options}{Room\+Options} room\+Options, \hyperlink{class_typed_lobby}{Typed\+Lobby} typed\+Lobby)
+\begin{DoxyCompactList}\small\item\em Creates a room but fails if this room is existing already. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a8c94dd51fe8e8986117b499161ff4461}{Join\+Room} (string room\+Name)
+\begin{DoxyCompactList}\small\item\em Join room by roomname and on success calls \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}{On\+Joined\+Room()}. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a902344ffd109a23f1a0606599af5eb96}{Join\+Or\+Create\+Room} (string room\+Name, \hyperlink{class_room_options}{Room\+Options} room\+Options, \hyperlink{class_typed_lobby}{Typed\+Lobby} typed\+Lobby)
+\begin{DoxyCompactList}\small\item\em Lets you either join a named room or create it on the fly -\/ you don\textquotesingle{}t have to know if someone created the room already. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_aa9a112ccaaf71a296b823e9637584445}{Join\+Random\+Room} ()
+\begin{DoxyCompactList}\small\item\em Joins any available room of the currently used lobby and fails if none is available. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a08119a6962c1d179a34d0388927ead3c}{Join\+Random\+Room} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} expected\+Custom\+Room\+Properties, byte expected\+Max\+Players)
+\begin{DoxyCompactList}\small\item\em Attempts to join an open room with fitting, custom properties but fails if none is currently available. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_af80e5f52ce253ab5a5f81fef1435e948}{Join\+Random\+Room} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} expected\+Custom\+Room\+Properties, byte expected\+Max\+Players, \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}{Matchmaking\+Mode} matching\+Type, \hyperlink{class_typed_lobby}{Typed\+Lobby} typed\+Lobby, string sql\+Lobby\+Filter)
+\begin{DoxyCompactList}\small\item\em Attempts to join an open room with fitting, custom properties but fails if none is currently available. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a62c512b8fe143fac07ff55e849aa48d5}{Join\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em On Master\+Server this joins the default lobby which list rooms currently in use. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a631231346113712f11319749d6e1a3eb}{Join\+Lobby} (\hyperlink{class_typed_lobby}{Typed\+Lobby} typed\+Lobby)
+\begin{DoxyCompactList}\small\item\em On a Master Server you can join a lobby to get lists of available rooms. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a941ac37ca7e275c93f3a1f95f0df84ae}{Leave\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em Leave a lobby to stop getting updates about available rooms. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_abb27939f0325b53c94f5ad52199b63b7}{Leave\+Room} ()
+\begin{DoxyCompactList}\small\item\em Leave the current room and return to the Master Server where you can join or create rooms (see remarks). \end{DoxyCompactList}\item 
+static \hyperlink{class_room_info}{Room\+Info}\mbox{[}$\,$\mbox{]} \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Get\+Room\+List} ()
+\begin{DoxyCompactList}\small\item\em Gets currently known rooms as \hyperlink{class_room_info}{Room\+Info} array. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}{Set\+Player\+Custom\+Properties} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} custom\+Properties)
+\begin{DoxyCompactList}\small\item\em Sets this (local) player\textquotesingle{}s properties and synchronizes them to the other players (don\textquotesingle{}t modify them directly). \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a4c59e3c4feeaf44293eef1d8d19b98a2}{Remove\+Player\+Custom\+Properties} (string\mbox{[}$\,$\mbox{]} custom\+Properties\+To\+Delete)
+\begin{DoxyCompactList}\small\item\em Locally removes Custom Properties of \char`\"{}this\char`\"{} player. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_aa9088b089a8c1b3548f8a7a792146e50}{Raise\+Event} (byte event\+Code, object event\+Content, bool send\+Reliable, \hyperlink{class_raise_event_options}{Raise\+Event\+Options} options)
+\begin{DoxyCompactList}\small\item\em Sends fully customizable events in a room. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a2eefb7151b27169d11062be9996a0eab}{Allocate\+View\+ID} ()
+\begin{DoxyCompactList}\small\item\em Allocates a view\+ID that\textquotesingle{}s valid for the current/local player. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a8a2bd25668b204f681c7d27174735ba1}{Allocate\+Scene\+View\+ID} ()
+\begin{DoxyCompactList}\small\item\em Enables the Master Client to allocate a view\+ID that is valid for scene objects. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_ae5c32625fb17b425e105de49ea267ddf}{Un\+Allocate\+View\+ID} (int view\+ID)
+\begin{DoxyCompactList}\small\item\em Unregister a view\+ID (of manually instantiated and destroyed networked objects). \end{DoxyCompactList}\item 
+static Game\+Object \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Instantiate} (string prefab\+Name, Vector3 position, Quaternion rotation, int group)
+\begin{DoxyCompactList}\small\item\em Instantiate a prefab over the network. \end{DoxyCompactList}\item 
+static Game\+Object \hyperlink{class_photon_network_a6dbc821988042fe109d28017cd955c73}{Instantiate} (string prefab\+Name, Vector3 position, Quaternion rotation, int group, object\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Instantiate a prefab over the network. \end{DoxyCompactList}\item 
+static Game\+Object \hyperlink{class_photon_network_a890353cbe3141ca134a1b0e28aa8ea9f}{Instantiate\+Scene\+Object} (string prefab\+Name, Vector3 position, Quaternion rotation, int group, object\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Instantiate a scene-\/owned prefab over the network. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a901a33962274b4467919acd868016d6b}{Get\+Ping} ()
+\begin{DoxyCompactList}\small\item\em The current roundtrip time to the photon server. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a88ef2952a1d0a468d5ba2bff48fa084c}{Fetch\+Server\+Timestamp} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the server timestamp (async operation, takes a roundtrip). \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a3b8d0c1cefdf577e1dff8aecb147b7fd}{Send\+Outgoing\+Commands} ()
+\begin{DoxyCompactList}\small\item\em Can be used to immediately send the R\+P\+Cs and Instantiates just called, so they are on their way to the other players. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a9cc8da229d513fce2fddbc5e2c6eaed2}{Close\+Connection} (\hyperlink{class_photon_player}{Photon\+Player} kick\+Player)
+\begin{DoxyCompactList}\small\item\em Request a client to disconnect (K\+I\+CK). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a85b058bab4a369d0c5730cf43b462962}{Set\+Master\+Client} (\hyperlink{class_photon_player}{Photon\+Player} master\+Client\+Player)
+\begin{DoxyCompactList}\small\item\em Asks the server to assign another player as Master Client of your current room. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a52fdada993f0729be0912113c0ddb3f8}{Destroy} (\hyperlink{class_photon_view}{Photon\+View} target\+View)
+\begin{DoxyCompactList}\small\item\em Network-\/\+Destroy the Game\+Object associated with the \hyperlink{class_photon_view}{Photon\+View}, unless the \hyperlink{class_photon_view}{Photon\+View} is static or not under this client\textquotesingle{}s control. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_abade51a8c3af0e9c280c2817f9ca15e5}{Destroy} (Game\+Object target\+Go)
+\begin{DoxyCompactList}\small\item\em Network-\/\+Destroy the Game\+Object, unless it is static or not under this client\textquotesingle{}s control. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a4c8c84b764c759a16296a1f3ebe48c46}{Destroy\+Player\+Objects} (\hyperlink{class_photon_player}{Photon\+Player} target\+Player)
+\begin{DoxyCompactList}\small\item\em Network-\/\+Destroy all Game\+Objects, Photon\+Views and their R\+P\+Cs of target\+Player. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_aa3e39af39baae3611730b914a8fe6f8b}{Destroy\+Player\+Objects} (int target\+Player\+Id)
+\begin{DoxyCompactList}\small\item\em Network-\/\+Destroy all Game\+Objects, Photon\+Views and their R\+P\+Cs of this player (by ID). \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a3b52beccf64860705cc467d7abf9fc41}{Destroy\+All} ()
+\begin{DoxyCompactList}\small\item\em Network-\/\+Destroy all Game\+Objects, Photon\+Views and their R\+P\+Cs in the room. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a0b99a01696f62ff29e005e6f939f8dc4}{Remove\+R\+P\+Cs} (\hyperlink{class_photon_player}{Photon\+Player} target\+Player)
+\begin{DoxyCompactList}\small\item\em Remove all buffered R\+P\+Cs from server that were sent by target\+Player. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a808fc6d1770c999fb1f5716abb45451a}{Remove\+R\+P\+Cs} (\hyperlink{class_photon_view}{Photon\+View} target\+Photon\+View)
+\begin{DoxyCompactList}\small\item\em Remove all buffered R\+P\+Cs from server that were sent via target\+Photon\+View. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_ae6fd306fd4adf0c44d64d9cfadc038aa}{Remove\+R\+P\+Cs\+In\+Group} (int target\+Group)
+\begin{DoxyCompactList}\small\item\em Remove all buffered R\+P\+Cs from server that were sent in the target\+Group, if this is the Master Client or if this controls the individual \hyperlink{class_photon_view}{Photon\+View}. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_adbb6045e5c8e64e0076cadbcb62703b5}{Cache\+Send\+Mono\+Message\+Targets} (Type type)
+\begin{DoxyCompactList}\small\item\em Populates Send\+Mono\+Message\+Targets with currently existing Game\+Objects that have a Component of type. \end{DoxyCompactList}\item 
+static Hash\+Set$<$ Game\+Object $>$ \hyperlink{class_photon_network_a89e99e64c1b6232132012bc311e7e205}{Find\+Game\+Objects\+With\+Component} (Type type)
+\begin{DoxyCompactList}\small\item\em Finds the Game\+Objects with Components of a specific type (using Find\+Objects\+Of\+Type). \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_af7728267e9576c7b2d205df53ac74fe1}{Set\+Receiving\+Enabled} (int group, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/disable receiving on given group (applied to Photon\+Views) \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_ada44c5edfa6e93e67db635bd0764ef70}{Set\+Receiving\+Enabled} (int\mbox{[}$\,$\mbox{]} enable\+Groups, int\mbox{[}$\,$\mbox{]} disable\+Groups)
+\begin{DoxyCompactList}\small\item\em Enable/disable receiving on given groups (applied to Photon\+Views) \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a8f8d6db18d74855e18ec43b3a221102b}{Set\+Sending\+Enabled} (int group, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/disable sending on given group (applied to Photon\+Views) \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a208a46eaefe19c965eb62d18ca59ac41}{Set\+Sending\+Enabled} (int\mbox{[}$\,$\mbox{]} enable\+Groups, int\mbox{[}$\,$\mbox{]} disable\+Groups)
+\begin{DoxyCompactList}\small\item\em Enable/disable sending on given groups (applied to Photon\+Views) \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a6b98294843798e6ebac72704a867b6da}{Set\+Level\+Prefix} (short prefix)
+\begin{DoxyCompactList}\small\item\em Sets level prefix for Photon\+Views instantiated later on. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_a5bb203a37b6db717583ea7b81fb56852}{Load\+Level} (int level\+Number)
+\begin{DoxyCompactList}\small\item\em Wraps loading a level to pause the network mesage-\/queue. \end{DoxyCompactList}\item 
+static void \hyperlink{class_photon_network_aaa7a2114de2a80a0a2ded65d1c0079ba}{Load\+Level} (string level\+Name)
+\begin{DoxyCompactList}\small\item\em Wraps loading a level to pause the network mesage-\/queue. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_ad9a866c73b3e417d55266ed548a52cb8}{Web\+Rpc} (string name, object parameters)
+\begin{DoxyCompactList}\small\item\em This operation makes \hyperlink{namespace_photon}{Photon} call your custom web-\/service by name (path) with the given parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{class_photon_network_ac6b98cecd29a9ced8ec4a6ae78908dfc}{version\+P\+UN} = \char`\"{}1.\+65\char`\"{}
+\begin{DoxyCompactList}\small\item\em Version number of P\+UN. Also used in Game\+Version to separate client version from each other.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly int \hyperlink{class_photon_network_ad3b82aa2ac8d89db5ebf0bc5ac9add9e}{M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS} = 1000
+\begin{DoxyCompactList}\small\item\em The maximum number of assigned Photon\+Views {\itshape per player} (or scene). \end{DoxyCompactList}\item 
+static \hyperlink{class_server_settings}{Server\+Settings} \hyperlink{class_photon_network_a505f06c3eb4ca67db5dd517aab34143d}{Photon\+Server\+Settings} = (\hyperlink{class_server_settings}{Server\+Settings})Resources.\+Load(Photon\+Network.\+server\+Settings\+Asset\+File, typeof(\hyperlink{class_server_settings}{Server\+Settings}))
+\begin{DoxyCompactList}\small\item\em Serialized server settings, written by the Setup Wizard for use in Connect\+Using\+Settings.\end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_ae0036d259f2b793b4838393837d4cf6d}{Instantiate\+In\+Room\+Only} = true
+\begin{DoxyCompactList}\small\item\em If true, Instantiate methods will check if you are in a room and fail if you are not. \end{DoxyCompactList}\item 
+static \hyperlink{group__public_api_gaf0468f6a0c8ab8caec09678e6dc6f3d5}{Photon\+Log\+Level} \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{log\+Level} = \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5ae0a1284706116eec7a83a489235a9ef8}{Photon\+Log\+Level.\+Errors\+Only}
+\begin{DoxyCompactList}\small\item\em Network log level. \end{DoxyCompactList}\item 
+static float \hyperlink{class_photon_network_acff20b8fd3871e0b3be350e0d1c98605}{precision\+For\+Vector\+Synchronization} = 0.\+000099f
+\begin{DoxyCompactList}\small\item\em The minimum difference that a Vector2 or Vector3(e.\+g. \end{DoxyCompactList}\item 
+static float \hyperlink{class_photon_network_a65cc14cdfda9c9cb8dad3b3f862097d4}{precision\+For\+Quaternion\+Synchronization} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The minimum angle that a rotation needs to change before we send it via a \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s On\+Serialize/\+Observing\+Component. \end{DoxyCompactList}\item 
+static float \hyperlink{class_photon_network_a734d436869fa53cb8660de63e79e6252}{precision\+For\+Float\+Synchronization} = 0.\+01f
+\begin{DoxyCompactList}\small\item\em The minimum difference between floats before we send it via a \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s On\+Serialize/\+Observing\+Component. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a2ea887525d418e088bf99d303673d2f3}{Use\+Rpc\+Mono\+Behaviour\+Cache}
+\begin{DoxyCompactList}\small\item\em While enabled, the Mono\+Behaviours on which we call R\+P\+Cs are cached, avoiding costly Get\+Components$<$\+Mono\+Behaviour$>$() calls. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a232458dc1894d99134f6d978524cbb99}{Use\+Prefab\+Cache} = true
+\begin{DoxyCompactList}\small\item\em While enabled (true), Instantiate uses \hyperlink{class_photon_network_a5d231578fbaadcb89dd592d2d8ddfd0a}{Photon\+Network.\+Prefab\+Cache} to keep game objects in memory (improving instantiation of the same prefab). \end{DoxyCompactList}\item 
+static Dictionary$<$ string, Game\+Object $>$ \hyperlink{class_photon_network_a5d231578fbaadcb89dd592d2d8ddfd0a}{Prefab\+Cache} = new Dictionary$<$string, Game\+Object$>$()
+\begin{DoxyCompactList}\small\item\em Keeps references to Game\+Objects for frequent instantiation (out of memory instead of loading the Resources). \end{DoxyCompactList}\item 
+static Hash\+Set$<$ Game\+Object $>$ \hyperlink{class_photon_network_a71b2a9299c3906b3e3d49f0ac296a87b}{Send\+Mono\+Message\+Targets}
+\begin{DoxyCompactList}\small\item\em If not null, this is the (exclusive) list of Game\+Objects that get called by P\+UN Send\+Mono\+Message(). \end{DoxyCompactList}\item 
+static Type \hyperlink{class_photon_network_a598db34bb93cdb17a3032a96c64b0ce3}{Send\+Mono\+Message\+Target\+Type} = typeof(Mono\+Behaviour)
+\begin{DoxyCompactList}\small\item\em Defines which classes can contain P\+UN Callback implementations. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a7a74751daa6e6e979cff9ba3aceb56dd}{max\+Connections}
+\begin{DoxyCompactList}\small\item\em Only used in Unity Networking. In P\+UN, set the number of players in \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Photon\+Network.\+Create\+Room}.\end{DoxyCompactList}\item 
+static float \hyperlink{class_photon_network_ae4186352869ef922cb84efbd5c1f2465}{Background\+Timeout} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Defines after how many seconds P\+UN will close a connection, after Unity\textquotesingle{}s On\+Application\+Pause(true) call. \end{DoxyCompactList}\item 
+static \hyperlink{class_photon_network_a90ec16d1df1a0332d0ad16493d641f56}{Event\+Callback} \hyperlink{class_photon_network_a81af9e901341d6b647df1f6d7f2d7583}{On\+Event\+Call}
+\begin{DoxyCompactList}\small\item\em Register your Raise\+Event handling methods here by using \char`\"{}+=\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static string \hyperlink{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}{game\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Version string for your this build. \end{DoxyCompactList}\item 
+static string \hyperlink{class_photon_network_a3b90d30007fbeced0293dde881d0421e}{Server\+Address}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Currently used server address (no matter if master or game server).\end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_ad96fd99b5e9384771ee44b427edf7487}{connected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em False until you connected to \hyperlink{namespace_photon}{Photon} initially. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a0141dc0df0d2e0a7fcda2e2101c44254}{connecting}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True when you called Connect\+Using\+Settings (or similar) until the low level connection to \hyperlink{namespace_photon}{Photon} gets established. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a7698c3e61503df2cb5375ffc3182fb1f}{connected\+And\+Ready}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A refined version of connected which is true only if your connection to the server is ready to accept operations like join, leave, etc. \end{DoxyCompactList}\item 
+static \hyperlink{_enums_8cs_acdd867d72142510ce53521a63a062f9b}{Connection\+State} \hyperlink{class_photon_network_aa2a46d8ce13fedd3f4550b6164524e81}{connection\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Simplified connection state \end{DoxyCompactList}\item 
+static \hyperlink{group__public_api_ga91cc003c03acb26c6f1530440ebdbc88}{Peer\+State} \hyperlink{class_photon_network_a70403962dc524bb642e24de01b8fa43e}{connection\+State\+Detailed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Detailed connection state (ignorant of P\+UN, so it can be \char`\"{}disconnected\char`\"{} while switching servers). \end{DoxyCompactList}\item 
+static \hyperlink{_enums_8cs_a85638c2837a71574f29802d46793c990}{Server\+Connection} \hyperlink{class_photon_network_a9225b990f7b3d0fffadc23c7b3118ef2}{Server}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The server (type) this client is currently connected or connecting to. \end{DoxyCompactList}\item 
+static \hyperlink{class_authentication_values}{Authentication\+Values} \hyperlink{class_photon_network_a282677f512ce2f53e4a0893d4e3844b8}{Auth\+Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A user\textquotesingle{}s authentication values used during connect for Custom Authentication with \hyperlink{namespace_photon}{Photon} (and a custom service/community). \end{DoxyCompactList}\item 
+static \hyperlink{class_room}{Room} \hyperlink{class_photon_network_ac7c6623c88f254b965aa366b1229781e}{room}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the room we\textquotesingle{}re currently in. \end{DoxyCompactList}\item 
+static \hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_network_a1b3803f17c6d713593bca41547b8b9b3}{player}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The local \hyperlink{class_photon_player}{Photon\+Player}. \end{DoxyCompactList}\item 
+static \hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_network_aa7e51b5e5f9f8b89f057096f47d11c5b}{master\+Client}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Master Client of the current room or null (outside of rooms). \end{DoxyCompactList}\item 
+static string \hyperlink{class_photon_network_abb168e543c15731ec4de869d3a1ad8f4}{player\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to synchronize the player\textquotesingle{}s nickname with everyone in the room(s) you enter. \end{DoxyCompactList}\item 
+static \hyperlink{class_photon_player}{Photon\+Player}\mbox{[}$\,$\mbox{]} \hyperlink{class_photon_network_a2dc5e6cba79f899d9952f804db35b2f3}{player\+List}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of players in the current room, including the local player. \end{DoxyCompactList}\item 
+static \hyperlink{class_photon_player}{Photon\+Player}\mbox{[}$\,$\mbox{]} \hyperlink{class_photon_network_a894df24398c8cfe2d06e22ddc39576fa}{other\+Players}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of players in the current room, excluding the local player. \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_friend_info}{Friend\+Info} $>$ \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Friends}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Read-\/only list of friends, their online status and the room they are in. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a5aca6d5aea9bb5b55967959d1ecd0ccd}{Friends\+List\+Age}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Age of friend list info (in milliseconds). \end{DoxyCompactList}\item 
+static \hyperlink{interface_i_pun_prefab_pool}{I\+Pun\+Prefab\+Pool} \hyperlink{class_photon_network_a1ed1ac94f91b8746d218e22146eb515e}{Prefab\+Pool}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An Object Pool can be used to keep and reuse instantiated object instances. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a4a1cd1887cb41a0592322527a7304ed7}{offline\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Offline mode can be set to re-\/use your multiplayer code in singleplayer game modes. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_af721675dc5cf3c5ac4d4b67339246cdf}{automatically\+Sync\+Scene}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines if all clients in a room should load the same level as the Master Client (if that used \hyperlink{class_photon_network_a5bb203a37b6db717583ea7b81fb56852}{Photon\+Network.\+Load\+Level}). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a6c6fb3cd57d7e2a13d1fc354db0c1fd7}{auto\+Clean\+Up\+Player\+Objects}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This setting defines per room, if network-\/instantiated Game\+Objects (with \hyperlink{class_photon_view}{Photon\+View}) get cleaned up when the creator of it leaves. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{auto\+Join\+Lobby}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set in Photon\+Server\+Settings asset. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a8ce4ab4a44e705199ff795b2eb9b395b}{Enable\+Lobby\+Statistics}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set in Photon\+Server\+Settings asset. \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_typed_lobby_info}{Typed\+Lobby\+Info} $>$ \hyperlink{class_photon_network_abdced09cccf61ae817cb97705ffce137}{Lobby\+Statistics}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If turned on, the Master Server will provide information about active lobbies for this application. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}{inside\+Lobby}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True while this client is in a lobby. \end{DoxyCompactList}\item 
+static \hyperlink{class_typed_lobby}{Typed\+Lobby} \hyperlink{class_photon_network_a3af7f8d0082599e6e3a56a5b1481a505}{lobby}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The lobby that will be used when P\+UN joins a lobby or creates a game. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{send\+Rate}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines how many times per second \hyperlink{class_photon_network}{Photon\+Network} should send a package. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_ac23d14ad150a87d51f4ffaa286db29e1}{send\+Rate\+On\+Serialize}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines how many times per second On\+Photon\+Serialize should be called on Photon\+Views. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a9cf8214080471001a1a32e17eff9b402}{is\+Message\+Queue\+Running}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Can be used to pause dispatching of incoming evtents (R\+P\+Cs, Instantiates and anything else incoming). \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a3315be88f62dbdc24819946fc6171e08}{unreliable\+Commands\+Limit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used once per dispatch to limit unreliable commands per channel (so after a pause, many channels can still cause a lot of unreliable commands) \end{DoxyCompactList}\item 
+static double \hyperlink{class_photon_network_a86ab96957666ef72830a35662ef3d30b}{time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_photon}{Photon} network time, synched with the server. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_aa3c3ed1a8a1da54e52c5b7284f69c8a4}{Server\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current server\textquotesingle{}s millisecond timestamp. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_af498064a6019a6c69e875bd64db40216}{is\+Master\+Client}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Are we the master client? \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a4f968278990dea7202b04eed1f833b6c}{in\+Room}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is true while being in a room (connection\+State\+Detailed == \hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7d50c09f1ad7d098e0a847bcdcab7efb}{Peer\+State.\+Joined}). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_afbff4452088b29acf41bf3012a8d2545}{is\+Non\+Master\+Client\+In\+Room}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if we are in a room (client) and N\+OT the room\textquotesingle{}s masterclient \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a1e23b1e0ff44046e6532c8588ac08140}{count\+Of\+Players\+On\+Master}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The count of players currently looking for a room (available on Master\+Server in 5sec intervals). \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a8830a7a4b92490f7882780630b1fcf99}{count\+Of\+Players\+In\+Rooms}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of users currently playing your app in some room (sent every 5sec by Master Server). \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a56b04c065a4f5d54e3f9113056b32da2}{count\+Of\+Players}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The count of players currently using this application (available on Master\+Server in 5sec intervals). \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a6cbf85644c07b9ceb4b4a1accd0f4ce9}{count\+Of\+Rooms}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The count of rooms currently in use (available on Master\+Server in 5sec intervals). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_a67cb40d5f2dede55b03b2be1f792e93a}{Network\+Statistics\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables or disables the collection of statistics about this client\textquotesingle{}s traffic. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_aaaf92ee5eec22fff548ee9bb735913b6}{Resent\+Reliable\+Commands}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of commands that got repeated (due to local repeat-\/timing before an A\+CK was received). \end{DoxyCompactList}\item 
+static bool \hyperlink{class_photon_network_ae995c021d1295f00afd9f87cd3bd118c}{Crc\+Check\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Crc checks can be useful to detect and avoid issues with broken datagrams. Can be enabled while not connected.\end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_a587a1fb0147ddc48a5176e48a2940985}{Packet\+Loss\+By\+Crc\+Check}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If Crc\+Check\+Enabled, this counts the incoming packages that don\textquotesingle{}t have a valid C\+RC checksum and got rejected.\end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_ad86d4af661dd7365f6e172e106ca7cb2}{Max\+Resends\+Before\+Disconnect}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines the number of times a reliable message can be resent before not getting an A\+CK for it will trigger a disconnect. \end{DoxyCompactList}\item 
+static int \hyperlink{class_photon_network_ab5e68c8f4799fabb200d08ff8c313c43}{Quick\+Resends}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em In case of network loss, reliable messages can be repeated quickly up to 3 times. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main class to use the \hyperlink{class_photon_network}{Photon\+Network} plugin. 
+
+This class is static. 
+
+\subsection{Member Function Documentation}
+\index{Photon\+Network@{Photon\+Network}!Allocate\+Scene\+View\+ID@{Allocate\+Scene\+View\+ID}}
+\index{Allocate\+Scene\+View\+ID@{Allocate\+Scene\+View\+ID}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Allocate\+Scene\+View\+I\+D()}{AllocateSceneViewID()}}]{\setlength{\rightskip}{0pt plus 5cm}static int Photon\+Network.\+Allocate\+Scene\+View\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a8a2bd25668b204f681c7d27174735ba1}{}\label{class_photon_network_a8a2bd25668b204f681c7d27174735ba1}
+
+
+Enables the Master Client to allocate a view\+ID that is valid for scene objects. 
+
+\begin{DoxyReturn}{Returns}
+A view\+ID that can be used for a new \hyperlink{class_photon_view}{Photon\+View} or -\/1 in case of an error.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Allocate\+View\+ID@{Allocate\+View\+ID}}
+\index{Allocate\+View\+ID@{Allocate\+View\+ID}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Allocate\+View\+I\+D()}{AllocateViewID()}}]{\setlength{\rightskip}{0pt plus 5cm}static int Photon\+Network.\+Allocate\+View\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a2eefb7151b27169d11062be9996a0eab}{}\label{class_photon_network_a2eefb7151b27169d11062be9996a0eab}
+
+
+Allocates a view\+ID that\textquotesingle{}s valid for the current/local player. 
+
+\begin{DoxyReturn}{Returns}
+A view\+ID that can be used for a new \hyperlink{class_photon_view}{Photon\+View}.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Cache\+Send\+Mono\+Message\+Targets@{Cache\+Send\+Mono\+Message\+Targets}}
+\index{Cache\+Send\+Mono\+Message\+Targets@{Cache\+Send\+Mono\+Message\+Targets}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Cache\+Send\+Mono\+Message\+Targets(\+Type type)}{CacheSendMonoMessageTargets(Type type)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Cache\+Send\+Mono\+Message\+Targets (
+\begin{DoxyParamCaption}
+\item[{Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_adbb6045e5c8e64e0076cadbcb62703b5}{}\label{class_photon_network_adbb6045e5c8e64e0076cadbcb62703b5}
+
+
+Populates Send\+Mono\+Message\+Targets with currently existing Game\+Objects that have a Component of type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & If null, this will use Send\+Mono\+Message\+Targets as component-\/type (Mono\+Behaviour by default).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Close\+Connection@{Close\+Connection}}
+\index{Close\+Connection@{Close\+Connection}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Close\+Connection(\+Photon\+Player kick\+Player)}{CloseConnection(PhotonPlayer kickPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Close\+Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{kick\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a9cc8da229d513fce2fddbc5e2c6eaed2}{}\label{class_photon_network_a9cc8da229d513fce2fddbc5e2c6eaed2}
+
+
+Request a client to disconnect (K\+I\+CK). 
+
+Only the master client can do this
+
+Only the target player gets this event. That player will disconnect automatically, which is what the others will notice, too.
+
+
+\begin{DoxyParams}{Parameters}
+{\em kick\+Player} & The \hyperlink{class_photon_player}{Photon\+Player} to kick.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Connect\+To\+Best\+Cloud\+Server@{Connect\+To\+Best\+Cloud\+Server}}
+\index{Connect\+To\+Best\+Cloud\+Server@{Connect\+To\+Best\+Cloud\+Server}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Connect\+To\+Best\+Cloud\+Server(string game\+Version)}{ConnectToBestCloudServer(string gameVersion)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Connect\+To\+Best\+Cloud\+Server (
+\begin{DoxyParamCaption}
+\item[{string}]{game\+Version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_afba456bbc9d1525b87eb060c959af2b6}{}\label{class_photon_network_afba456bbc9d1525b87eb060c959af2b6}
+
+
+Connect to the \hyperlink{namespace_photon}{Photon} Cloud region with the lowest ping (on platforms that support Unity\textquotesingle{}s Ping). 
+
+Will save the result of pinging all cloud servers in Player\+Prefs. Calling this the first time can take +-\/2 seconds. The ping result can be overridden via \hyperlink{class_photon_network_a7dc90dd05d697c3f8f04e50cc0e039b2}{Photon\+Network.\+Override\+Best\+Cloud\+Server}(..) This call can take up to 2 seconds if it is the first time you are using this, all cloud servers will be pinged to check for the best region.
+
+The P\+UN Setup Wizard stores your app\+ID in a settings file and applies a server address/port. To connect to the \hyperlink{namespace_photon}{Photon} Cloud, a valid App\+Id must be in the settings file (shown in the \hyperlink{namespace_photon}{Photon} Cloud Dashboard). \href{https://www.exitgames.com/dashboard}{\tt https\+://www.\+exitgames.\+com/dashboard}
+
+Connecting to the \hyperlink{namespace_photon}{Photon} Cloud might fail due to\+:
+\begin{DoxyItemize}
+\item Invalid App\+Id (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{On\+Failed\+To\+Connect\+To\+Photon()}. check exact App\+Id value)
+\item Network issues (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{On\+Failed\+To\+Connect\+To\+Photon()})
+\item Invalid region (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{On\+Connection\+Fail()} with \hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9aa8534012cb63e62c0b3a2335206117cc}{Disconnect\+Cause.\+Invalid\+Region})
+\item Subscription C\+CU limit reached (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{On\+Connection\+Fail()} with \hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a522f961eb7a2b35f0ef4b99b4ad3bb0a}{Disconnect\+Cause.\+Max\+Ccu\+Reached}. also calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa1d2567b2c2f8ec1799a293b0359b4046}{On\+Photon\+Max\+Cccu\+Reached()})
+\end{DoxyItemize}
+
+More about the connection limitations\+: \href{http://doc.exitgames.com/en/pun}{\tt http\+://doc.\+exitgames.\+com/en/pun} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Version} & This client\textquotesingle{}s version number. Users are separated from each other by gameversion (which allows you to make breaking changes).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If this client is going to connect to cloud server based on ping. Even if true, this does not guarantee a connection but the attempt is being made.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Connect\+To\+Master@{Connect\+To\+Master}}
+\index{Connect\+To\+Master@{Connect\+To\+Master}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Connect\+To\+Master(string master\+Server\+Address, int port, string app\+I\+D, string game\+Version)}{ConnectToMaster(string masterServerAddress, int port, string appID, string gameVersion)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Connect\+To\+Master (
+\begin{DoxyParamCaption}
+\item[{string}]{master\+Server\+Address, }
+\item[{int}]{port, }
+\item[{string}]{app\+ID, }
+\item[{string}]{game\+Version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a981e7244e915f41e18cb9da5f12fc858}{}\label{class_photon_network_a981e7244e915f41e18cb9da5f12fc858}
+
+
+Connect to a \hyperlink{namespace_photon}{Photon} Master Server by address, port, app\+ID and game(client) version. 
+
+To connect to the \hyperlink{namespace_photon}{Photon} Cloud, a valid App\+Id must be in the settings file (shown in the \hyperlink{namespace_photon}{Photon} Cloud Dashboard). \href{https://www.exitgames.com/dashboard}{\tt https\+://www.\+exitgames.\+com/dashboard}
+
+Connecting to the \hyperlink{namespace_photon}{Photon} Cloud might fail due to\+:
+\begin{DoxyItemize}
+\item Invalid App\+Id (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{On\+Failed\+To\+Connect\+To\+Photon()}. check exact App\+Id value)
+\item Network issues (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{On\+Failed\+To\+Connect\+To\+Photon()})
+\item Invalid region (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{On\+Connection\+Fail()} with \hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9aa8534012cb63e62c0b3a2335206117cc}{Disconnect\+Cause.\+Invalid\+Region})
+\item Subscription C\+CU limit reached (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{On\+Connection\+Fail()} with \hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a522f961eb7a2b35f0ef4b99b4ad3bb0a}{Disconnect\+Cause.\+Max\+Ccu\+Reached}. also calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa1d2567b2c2f8ec1799a293b0359b4046}{On\+Photon\+Max\+Cccu\+Reached()})
+\end{DoxyItemize}
+
+More about the connection limitations\+: \href{http://doc.exitgames.com/en/pun}{\tt http\+://doc.\+exitgames.\+com/en/pun} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em master\+Server\+Address} & The server\textquotesingle{}s address (either your own or \hyperlink{namespace_photon}{Photon} Cloud address).\\
+\hline
+{\em port} & The server\textquotesingle{}s port to connect to.\\
+\hline
+{\em app\+ID} & Your application ID (\hyperlink{namespace_photon}{Photon} Cloud provides you with a G\+U\+ID for your game).\\
+\hline
+{\em game\+Version} & This client\textquotesingle{}s version number. Users are separated by gameversion (which allows you to make breaking changes).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Connect\+To\+Region@{Connect\+To\+Region}}
+\index{Connect\+To\+Region@{Connect\+To\+Region}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Connect\+To\+Region(\+Cloud\+Region\+Code region, string game\+Version)}{ConnectToRegion(CloudRegionCode region, string gameVersion)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Connect\+To\+Region (
+\begin{DoxyParamCaption}
+\item[{{\bf Cloud\+Region\+Code}}]{region, }
+\item[{string}]{game\+Version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a84b7be74d130b19eeeb1d7b4e8193ad4}{}\label{class_photon_network_a84b7be74d130b19eeeb1d7b4e8193ad4}
+
+
+Connects to the \hyperlink{namespace_photon}{Photon} Cloud region of choice. 
+
+\index{Photon\+Network@{Photon\+Network}!Connect\+Using\+Settings@{Connect\+Using\+Settings}}
+\index{Connect\+Using\+Settings@{Connect\+Using\+Settings}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Connect\+Using\+Settings(string game\+Version)}{ConnectUsingSettings(string gameVersion)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Connect\+Using\+Settings (
+\begin{DoxyParamCaption}
+\item[{string}]{game\+Version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a0fdb79bcce45801ec81fbe56ffb939ec}{}\label{class_photon_network_a0fdb79bcce45801ec81fbe56ffb939ec}
+
+
+Connect to \hyperlink{namespace_photon}{Photon} as configured in the editor (saved in Photon\+Server\+Settings file). 
+
+This method will disable offline\+Mode (which won\textquotesingle{}t destroy any instantiated G\+Os) and it will set is\+Message\+Queue\+Running to true.
+
+Your server configuration is created by the P\+UN Wizard and contains the App\+Id and region for \hyperlink{namespace_photon}{Photon} Cloud games and the server address if you host \hyperlink{namespace_photon}{Photon} yourself. These settings usually don\textquotesingle{}t change often.
+
+To ignore the config file and connect anywhere call\+: \hyperlink{class_photon_network_a981e7244e915f41e18cb9da5f12fc858}{Photon\+Network.\+Connect\+To\+Master}.
+
+To connect to the \hyperlink{namespace_photon}{Photon} Cloud, a valid App\+Id must be in the settings file (shown in the \hyperlink{namespace_photon}{Photon} Cloud Dashboard). \href{https://www.exitgames.com/dashboard}{\tt https\+://www.\+exitgames.\+com/dashboard}
+
+Connecting to the \hyperlink{namespace_photon}{Photon} Cloud might fail due to\+:
+\begin{DoxyItemize}
+\item Invalid App\+Id (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{On\+Failed\+To\+Connect\+To\+Photon()}. check exact App\+Id value)
+\item Network issues (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{On\+Failed\+To\+Connect\+To\+Photon()})
+\item Invalid region (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{On\+Connection\+Fail()} with \hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9aa8534012cb63e62c0b3a2335206117cc}{Disconnect\+Cause.\+Invalid\+Region})
+\item Subscription C\+CU limit reached (calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{On\+Connection\+Fail()} with \hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a522f961eb7a2b35f0ef4b99b4ad3bb0a}{Disconnect\+Cause.\+Max\+Ccu\+Reached}. also calls\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa1d2567b2c2f8ec1799a293b0359b4046}{On\+Photon\+Max\+Cccu\+Reached()})
+\end{DoxyItemize}
+
+More about the connection limitations\+: \href{http://doc.exitgames.com/en/pun}{\tt http\+://doc.\+exitgames.\+com/en/pun} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Version} & This client\textquotesingle{}s version number. Users are separated from each other by gameversion (which allows you to make breaking changes).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Create\+Room@{Create\+Room}}
+\index{Create\+Room@{Create\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Create\+Room(string room\+Name)}{CreateRoom(string roomName)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Create\+Room (
+\begin{DoxyParamCaption}
+\item[{string}]{room\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{}\label{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}
+
+
+Creates a room with given name but fails if this room(name) is existing already. 
+
+Creates random name for room\+Name null. 
+
+If you don\textquotesingle{}t want to create a unique room-\/name, pass null or \char`\"{}\char`\"{} as name and the server will assign a room\+Name (a G\+U\+ID as string).
+
+The created room is automatically placed in the currently used lobby (if any) or the default-\/lobby if you didn\textquotesingle{}t explicitly join one.
+
+Call this only on the master server. Internally, the master will respond with a server-\/address (and room\+Name, if needed). Both are used internally to switch to the assigned game server and room\+Name.
+
+\hyperlink{class_photon_network_a6c6fb3cd57d7e2a13d1fc354db0c1fd7}{Photon\+Network.\+auto\+Clean\+Up\+Player\+Objects} will become this room\textquotesingle{}s Auto\+Clean\+Up property and that\textquotesingle{}s used by all clients that join this room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & Unique name of the room to create.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Create\+Room@{Create\+Room}}
+\index{Create\+Room@{Create\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Create\+Room(string room\+Name, Room\+Options room\+Options, Typed\+Lobby typed\+Lobby)}{CreateRoom(string roomName, RoomOptions roomOptions, TypedLobby typedLobby)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Create\+Room (
+\begin{DoxyParamCaption}
+\item[{string}]{room\+Name, }
+\item[{{\bf Room\+Options}}]{room\+Options, }
+\item[{{\bf Typed\+Lobby}}]{typed\+Lobby}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a08435c2d064fd6a85e51e1520e5a63d8}{}\label{class_photon_network_a08435c2d064fd6a85e51e1520e5a63d8}
+
+
+Creates a room but fails if this room is existing already. 
+
+Can only be called on Master Server. 
+
+When successful, this calls the callbacks On\+Created\+Room and On\+Joined\+Room (the latter, cause you join as first player). If the room can\textquotesingle{}t be created (because it exists already), On\+Photon\+Create\+Room\+Failed gets called.
+
+If you don\textquotesingle{}t want to create a unique room-\/name, pass null or \char`\"{}\char`\"{} as name and the server will assign a room\+Name (a G\+U\+ID as string).
+
+Rooms can be created in any number of lobbies. Those don\textquotesingle{}t have to exist before you create a room in them (they get auto-\/created on demand). Lobbies can be useful to split room lists on the server-\/side already. That can help keep the room lists short and manageable. If you set a typed\+Lobby parameter, the room will be created in that lobby (no matter if you are active in any). If you don\textquotesingle{}t set a typed\+Lobby, the room is automatically placed in the currently active lobby (if any) or the default-\/lobby.
+
+Call this only on the master server. Internally, the master will respond with a server-\/address (and room\+Name, if needed). Both are used internally to switch to the assigned game server and room\+Name.
+
+\hyperlink{class_photon_network_a6c6fb3cd57d7e2a13d1fc354db0c1fd7}{Photon\+Network.\+auto\+Clean\+Up\+Player\+Objects} will become this room\textquotesingle{}s auto\+Clean\+Up property and that\textquotesingle{}s used by all clients that join this room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & Unique name of the room to create. Pass null or \char`\"{}\char`\"{} to make the server generate a name.\\
+\hline
+{\em room\+Options} & Common options for the room like max\+Players, initial custom room properties and similar. See \hyperlink{class_room_options}{Room\+Options} type..\\
+\hline
+{\em typed\+Lobby} & If null, the room is automatically created in the currently used lobby (which is \char`\"{}default\char`\"{} when you didn\textquotesingle{}t join one explicitly).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Destroy(\+Photon\+View target\+View)}{Destroy(PhotonView targetView)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+View}}]{target\+View}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a52fdada993f0729be0912113c0ddb3f8}{}\label{class_photon_network_a52fdada993f0729be0912113c0ddb3f8}
+
+
+Network-\/\+Destroy the Game\+Object associated with the \hyperlink{class_photon_view}{Photon\+View}, unless the \hyperlink{class_photon_view}{Photon\+View} is static or not under this client\textquotesingle{}s control. 
+
+Destroying a networked Game\+Object while in a \hyperlink{class_room}{Room} includes\+:
+\begin{DoxyItemize}
+\item Removal of the Instantiate call from the server\textquotesingle{}s room buffer.
+\item Removing R\+P\+Cs buffered for Photon\+Views that got created indirectly with the \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate} call.
+\item Sending a message to other clients to remove the Game\+Object also (affected by network lag).
+\end{DoxyItemize}
+
+Usually, when you leave a room, the G\+Os get destroyed automatically. If you have to destroy a GO while not in a room, the Destroy is only done locally.
+
+Destroying networked objects works only if they got created with \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate()}. Objects loaded with a scene are ignored, no matter if they have \hyperlink{class_photon_view}{Photon\+View} components.
+
+The Game\+Object must be under this client\textquotesingle{}s control\+:
+\begin{DoxyItemize}
+\item Instantiated and owned by this client.
+\item Instantiated objects of players who left the room are controlled by the Master Client.
+\item Scene-\/owned game objects are controlled by the Master Client.
+\item Game\+Object can be destroyed while client is not in a room. 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Nothing. Check error debug log for any issues.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Destroy(\+Game\+Object target\+Go)}{Destroy(GameObject targetGo)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Destroy (
+\begin{DoxyParamCaption}
+\item[{Game\+Object}]{target\+Go}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_abade51a8c3af0e9c280c2817f9ca15e5}{}\label{class_photon_network_abade51a8c3af0e9c280c2817f9ca15e5}
+
+
+Network-\/\+Destroy the Game\+Object, unless it is static or not under this client\textquotesingle{}s control. 
+
+Destroying a networked Game\+Object includes\+:
+\begin{DoxyItemize}
+\item Removal of the Instantiate call from the server\textquotesingle{}s room buffer.
+\item Removing R\+P\+Cs buffered for Photon\+Views that got created indirectly with the \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate} call.
+\item Sending a message to other clients to remove the Game\+Object also (affected by network lag).
+\end{DoxyItemize}
+
+Usually, when you leave a room, the G\+Os get destroyed automatically. If you have to destroy a GO while not in a room, the Destroy is only done locally.
+
+Destroying networked objects works only if they got created with \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate()}. Objects loaded with a scene are ignored, no matter if they have \hyperlink{class_photon_view}{Photon\+View} components.
+
+The Game\+Object must be under this client\textquotesingle{}s control\+:
+\begin{DoxyItemize}
+\item Instantiated and owned by this client.
+\item Instantiated objects of players who left the room are controlled by the Master Client.
+\item Scene-\/owned game objects are controlled by the Master Client.
+\item Game\+Object can be destroyed while client is not in a room. 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Nothing. Check error debug log for any issues.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Destroy\+All@{Destroy\+All}}
+\index{Destroy\+All@{Destroy\+All}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Destroy\+All()}{DestroyAll()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Destroy\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a3b52beccf64860705cc467d7abf9fc41}{}\label{class_photon_network_a3b52beccf64860705cc467d7abf9fc41}
+
+
+Network-\/\+Destroy all Game\+Objects, Photon\+Views and their R\+P\+Cs in the room. 
+
+Removes anything buffered from the server. Can only be called by Master Client (for anyone). 
+
+Can only be called by Master Client (for anyone). Unlike the Destroy methods, this will remove anything from the server\textquotesingle{}s room buffer. If your game buffers anything beyond Instantiate and R\+PC calls, that will be cleaned as well from server.
+
+Destroying all includes\+:
+\begin{DoxyItemize}
+\item Remove anything from the server\textquotesingle{}s room buffer (Instantiate, R\+P\+Cs, anything buffered).
+\item Sending a message to other clients to destroy everything locally, too (affected by network lag).
+\end{DoxyItemize}
+
+Destroying networked objects works only if they got created with \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate()}. Objects loaded with a scene are ignored, no matter if they have \hyperlink{class_photon_view}{Photon\+View} components. 
+
+\begin{DoxyReturn}{Returns}
+Nothing. Check error debug log for any issues.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Destroy\+Player\+Objects@{Destroy\+Player\+Objects}}
+\index{Destroy\+Player\+Objects@{Destroy\+Player\+Objects}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Destroy\+Player\+Objects(\+Photon\+Player target\+Player)}{DestroyPlayerObjects(PhotonPlayer targetPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Destroy\+Player\+Objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{target\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a4c8c84b764c759a16296a1f3ebe48c46}{}\label{class_photon_network_a4c8c84b764c759a16296a1f3ebe48c46}
+
+
+Network-\/\+Destroy all Game\+Objects, Photon\+Views and their R\+P\+Cs of target\+Player. 
+
+Can only be called on local player (for \char`\"{}self\char`\"{}) or Master Client (for anyone). 
+
+Destroying a networked Game\+Object includes\+:
+\begin{DoxyItemize}
+\item Removal of the Instantiate call from the server\textquotesingle{}s room buffer.
+\item Removing R\+P\+Cs buffered for Photon\+Views that got created indirectly with the \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate} call.
+\item Sending a message to other clients to remove the Game\+Object also (affected by network lag).
+\end{DoxyItemize}
+
+Destroying networked objects works only if they got created with \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate()}. Objects loaded with a scene are ignored, no matter if they have \hyperlink{class_photon_view}{Photon\+View} components. 
+
+\begin{DoxyReturn}{Returns}
+Nothing. Check error debug log for any issues.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Destroy\+Player\+Objects@{Destroy\+Player\+Objects}}
+\index{Destroy\+Player\+Objects@{Destroy\+Player\+Objects}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Destroy\+Player\+Objects(int target\+Player\+Id)}{DestroyPlayerObjects(int targetPlayerId)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Destroy\+Player\+Objects (
+\begin{DoxyParamCaption}
+\item[{int}]{target\+Player\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aa3e39af39baae3611730b914a8fe6f8b}{}\label{class_photon_network_aa3e39af39baae3611730b914a8fe6f8b}
+
+
+Network-\/\+Destroy all Game\+Objects, Photon\+Views and their R\+P\+Cs of this player (by ID). 
+
+Can only be called on local player (for \char`\"{}self\char`\"{}) or Master Client (for anyone). 
+
+Destroying a networked Game\+Object includes\+:
+\begin{DoxyItemize}
+\item Removal of the Instantiate call from the server\textquotesingle{}s room buffer.
+\item Removing R\+P\+Cs buffered for Photon\+Views that got created indirectly with the \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate} call.
+\item Sending a message to other clients to remove the Game\+Object also (affected by network lag).
+\end{DoxyItemize}
+
+Destroying networked objects works only if they got created with \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate()}. Objects loaded with a scene are ignored, no matter if they have \hyperlink{class_photon_view}{Photon\+View} components. 
+
+\begin{DoxyReturn}{Returns}
+Nothing. Check error debug log for any issues.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Disconnect()}{Disconnect()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aeb81fe77dfd0ebf7c8a63191a6a8fced}{}\label{class_photon_network_aeb81fe77dfd0ebf7c8a63191a6a8fced}
+
+
+Makes this client disconnect from the photon server, a process that leaves any room and calls On\+Disconnected\+From\+Photon on completion. 
+
+When you disconnect, the client will send a \char`\"{}disconnecting\char`\"{} message to the server. This speeds up leave/disconnect messages for players in the same room as you (otherwise the server would timeout this client\textquotesingle{}s connection). When used in offline\+Mode, the state-\/change and event-\/call On\+Disconnected\+From\+Photon are immediate. Offline mode is set to false as well. Once disconnected, the client can connect again. Use Connect\+Using\+Settings. \index{Photon\+Network@{Photon\+Network}!Event\+Callback@{Event\+Callback}}
+\index{Event\+Callback@{Event\+Callback}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Event\+Callback(byte event\+Code, object content, int sender\+Id)}{EventCallback(byte eventCode, object content, int senderId)}}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Photon\+Network.\+Event\+Callback (
+\begin{DoxyParamCaption}
+\item[{byte}]{event\+Code, }
+\item[{object}]{content, }
+\item[{int}]{sender\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_network_a90ec16d1df1a0332d0ad16493d641f56}{}\label{class_photon_network_a90ec16d1df1a0332d0ad16493d641f56}
+
+
+Defines the delegate usable in On\+Event\+Call. 
+
+Any event\+Code $<$ 200 will be forwarded to your delegate(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Code} & The code assigend to the incoming event.\\
+\hline
+{\em content} & The content the sender put into the event.\\
+\hline
+{\em sender\+Id} & The ID of the player who sent the event. It might be 0, if the \char`\"{}room\char`\"{} sent the event.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Fetch\+Server\+Timestamp@{Fetch\+Server\+Timestamp}}
+\index{Fetch\+Server\+Timestamp@{Fetch\+Server\+Timestamp}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Fetch\+Server\+Timestamp()}{FetchServerTimestamp()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Fetch\+Server\+Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a88ef2952a1d0a468d5ba2bff48fa084c}{}\label{class_photon_network_a88ef2952a1d0a468d5ba2bff48fa084c}
+
+
+Refreshes the server timestamp (async operation, takes a roundtrip). 
+
+Can be useful if a bad connection made the timestamp unusable or imprecise.\index{Photon\+Network@{Photon\+Network}!Find\+Friends@{Find\+Friends}}
+\index{Find\+Friends@{Find\+Friends}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Find\+Friends(string[] friends\+To\+Find)}{FindFriends(string[] friendsToFind)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Find\+Friends (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{friends\+To\+Find}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a5c08f89cdf5766c1b69d5b7b8786b734}{}\label{class_photon_network_a5c08f89cdf5766c1b69d5b7b8786b734}
+
+
+Requests the rooms and online status for a list of friends and saves the result in \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}. 
+
+Works only on Master Server to find the rooms played by a selected list of users.
+
+The result will be stored in \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends} when available. That list is initialized on first use of Op\+Find\+Friends (before that, it is null). To refresh the list, call Find\+Friends again (in 5 seconds or 10 or 20).
+
+Users identify themselves by setting a unique username via \hyperlink{class_photon_network_abb168e543c15731ec4de869d3a1ad8f4}{Photon\+Network.\+player\+Name} or by \hyperlink{class_photon_network_a282677f512ce2f53e4a0893d4e3844b8}{Photon\+Network.\+Auth\+Values}. The user id set in Auth\+Values overrides the player\+Name, so make sure you know the ID your friends use to authenticate. The Auth\+Values are sent in Op\+Authenticate when you connect, so the Auth\+Values must be set before you connect!
+
+Note\+: Changing a player\textquotesingle{}s name doesn\textquotesingle{}t make sense when using a friend list.
+
+The list of friends must be fetched from some other source (not provided by \hyperlink{namespace_photon}{Photon}).
+
+Internal\+: The server response includes 2 arrays of info (each index matching a friend from the request)\+: Parameter\+Code.\+Find\+Friends\+Response\+Online\+List = bool\mbox{[}\mbox{]} of online states Parameter\+Code.\+Find\+Friends\+Response\+Room\+Id\+List = string\mbox{[}\mbox{]} of room names (empty string if not in a room) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em friends\+To\+Find} & Array of friend (make sure to use unique player\+Name or Auth\+Values).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the operation could be sent (requires connection, only one request is allowed at any time). Always false in offline mode.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Find\+Game\+Objects\+With\+Component@{Find\+Game\+Objects\+With\+Component}}
+\index{Find\+Game\+Objects\+With\+Component@{Find\+Game\+Objects\+With\+Component}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Find\+Game\+Objects\+With\+Component(\+Type type)}{FindGameObjectsWithComponent(Type type)}}]{\setlength{\rightskip}{0pt plus 5cm}static Hash\+Set$<$Game\+Object$>$ Photon\+Network.\+Find\+Game\+Objects\+With\+Component (
+\begin{DoxyParamCaption}
+\item[{Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a89e99e64c1b6232132012bc311e7e205}{}\label{class_photon_network_a89e99e64c1b6232132012bc311e7e205}
+
+
+Finds the Game\+Objects with Components of a specific type (using Find\+Objects\+Of\+Type). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type must be a Component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hash\+Set with Game\+Objects that have a specific type of Component.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Get\+Ping@{Get\+Ping}}
+\index{Get\+Ping@{Get\+Ping}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Get\+Ping()}{GetPing()}}]{\setlength{\rightskip}{0pt plus 5cm}static int Photon\+Network.\+Get\+Ping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a901a33962274b4467919acd868016d6b}{}\label{class_photon_network_a901a33962274b4467919acd868016d6b}
+
+
+The current roundtrip time to the photon server. 
+
+\begin{DoxyReturn}{Returns}
+Roundtrip time (to server and back).
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Get\+Room\+List@{Get\+Room\+List}}
+\index{Get\+Room\+List@{Get\+Room\+List}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Get\+Room\+List()}{GetRoomList()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Room\+Info} \mbox{[}$\,$\mbox{]} Photon\+Network.\+Get\+Room\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{}\label{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}
+
+
+Gets currently known rooms as \hyperlink{class_room_info}{Room\+Info} array. 
+
+This is available and updated while in a lobby (check inside\+Lobby). 
+
+This list is a cached copy of the internal rooms list so it can be accessed each frame if needed. Per \hyperlink{class_room_info}{Room\+Info} you can check if the room is full by comparing player\+Count and max\+Players before you allow a join.
+
+The name of a room must be used to join it (via Join\+Room).
+
+Closed rooms are also listed by lobbies but they can\textquotesingle{}t be joined. While in a room, any player can set \hyperlink{class_room_a8792cdddd5a4b8933bea7adab8438edf}{Room.\+visible} and \hyperlink{class_room_a86a1e0952d484cc7a679e141463f43c1}{Room.\+open} to hide rooms from matchmaking and close them. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_room_info}{Room\+Info}\mbox{[}\mbox{]} of current rooms in lobby.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Initialize\+Security@{Initialize\+Security}}
+\index{Initialize\+Security@{Initialize\+Security}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Initialize\+Security()}{InitializeSecurity()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Initialize\+Security (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aa4005f5ff36461d51f9d2c2c326550ac}{}\label{class_photon_network_aa4005f5ff36461d51f9d2c2c326550ac}
+
+
+Used for compatibility with Unity networking only. 
+
+Encryption is automatically initialized while connecting. \index{Photon\+Network@{Photon\+Network}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Instantiate(string prefab\+Name, Vector3 position, Quaternion rotation, int group)}{Instantiate(string prefabName, Vector3 position, Quaternion rotation, int group)}}]{\setlength{\rightskip}{0pt plus 5cm}static Game\+Object Photon\+Network.\+Instantiate (
+\begin{DoxyParamCaption}
+\item[{string}]{prefab\+Name, }
+\item[{Vector3}]{position, }
+\item[{Quaternion}]{rotation, }
+\item[{int}]{group}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{}\label{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}
+
+
+Instantiate a prefab over the network. 
+
+This prefab needs to be located in the root of a \char`\"{}\+Resources\char`\"{} folder. 
+
+Instead of using prefabs in the Resources folder, you can manually Instantiate and assign Photon\+Views. See doc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab\+Name} & Name of the prefab to instantiate.\\
+\hline
+{\em position} & Position Vector3 to apply on instantiation.\\
+\hline
+{\em rotation} & Rotation Quaternion to apply on instantiation.\\
+\hline
+{\em group} & The group for this \hyperlink{class_photon_view}{Photon\+View}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new instance of a Game\+Object with initialized \hyperlink{class_photon_view}{Photon\+View}.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Instantiate(string prefab\+Name, Vector3 position, Quaternion rotation, int group, object[] data)}{Instantiate(string prefabName, Vector3 position, Quaternion rotation, int group, object[] data)}}]{\setlength{\rightskip}{0pt plus 5cm}static Game\+Object Photon\+Network.\+Instantiate (
+\begin{DoxyParamCaption}
+\item[{string}]{prefab\+Name, }
+\item[{Vector3}]{position, }
+\item[{Quaternion}]{rotation, }
+\item[{int}]{group, }
+\item[{object\mbox{[}$\,$\mbox{]}}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a6dbc821988042fe109d28017cd955c73}{}\label{class_photon_network_a6dbc821988042fe109d28017cd955c73}
+
+
+Instantiate a prefab over the network. 
+
+This prefab needs to be located in the root of a \char`\"{}\+Resources\char`\"{} folder. 
+
+Instead of using prefabs in the Resources folder, you can manually Instantiate and assign Photon\+Views. See doc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab\+Name} & Name of the prefab to instantiate.\\
+\hline
+{\em position} & Position Vector3 to apply on instantiation.\\
+\hline
+{\em rotation} & Rotation Quaternion to apply on instantiation.\\
+\hline
+{\em group} & The group for this \hyperlink{class_photon_view}{Photon\+View}.\\
+\hline
+{\em data} & Optional instantiation data. This will be saved to it\textquotesingle{}s \hyperlink{class_photon_view_a0d1e63579ed533e6394ca7f12b313c7c}{Photon\+View.\+instantiation\+Data}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new instance of a Game\+Object with initialized \hyperlink{class_photon_view}{Photon\+View}.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Instantiate\+Scene\+Object@{Instantiate\+Scene\+Object}}
+\index{Instantiate\+Scene\+Object@{Instantiate\+Scene\+Object}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Instantiate\+Scene\+Object(string prefab\+Name, Vector3 position, Quaternion rotation, int group, object[] data)}{InstantiateSceneObject(string prefabName, Vector3 position, Quaternion rotation, int group, object[] data)}}]{\setlength{\rightskip}{0pt plus 5cm}static Game\+Object Photon\+Network.\+Instantiate\+Scene\+Object (
+\begin{DoxyParamCaption}
+\item[{string}]{prefab\+Name, }
+\item[{Vector3}]{position, }
+\item[{Quaternion}]{rotation, }
+\item[{int}]{group, }
+\item[{object\mbox{[}$\,$\mbox{]}}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a890353cbe3141ca134a1b0e28aa8ea9f}{}\label{class_photon_network_a890353cbe3141ca134a1b0e28aa8ea9f}
+
+
+Instantiate a scene-\/owned prefab over the network. 
+
+The Photon\+Views will be controllable by the Master\+Client. This prefab needs to be located in the root of a \char`\"{}\+Resources\char`\"{} folder. 
+
+Only the master client can Instantiate scene objects. Instead of using prefabs in the Resources folder, you can manually Instantiate and assign Photon\+Views. See doc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab\+Name} & Name of the prefab to instantiate.\\
+\hline
+{\em position} & Position Vector3 to apply on instantiation.\\
+\hline
+{\em rotation} & Rotation Quaternion to apply on instantiation.\\
+\hline
+{\em group} & The group for this \hyperlink{class_photon_view}{Photon\+View}.\\
+\hline
+{\em data} & Optional instantiation data. This will be saved to it\textquotesingle{}s \hyperlink{class_photon_view_a0d1e63579ed533e6394ca7f12b313c7c}{Photon\+View.\+instantiation\+Data}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new instance of a Game\+Object with initialized \hyperlink{class_photon_view}{Photon\+View}.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Join\+Lobby@{Join\+Lobby}}
+\index{Join\+Lobby@{Join\+Lobby}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Lobby()}{JoinLobby()}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Lobby (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a62c512b8fe143fac07ff55e849aa48d5}{}\label{class_photon_network_a62c512b8fe143fac07ff55e849aa48d5}
+
+
+On Master\+Server this joins the default lobby which list rooms currently in use. 
+
+The room list is sent and refreshed by the server. You can access this cached list by \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Photon\+Network.\+Get\+Room\+List()}.
+
+Per room you should check if it\textquotesingle{}s full or not before joining. \hyperlink{namespace_photon}{Photon} also lists rooms that are full, unless you close and hide them (room.\+open = false and room.\+visible = false).
+
+In best case, you make your clients join random games, as described here\+: \href{http://doc.exitgames.com/en/realtime/current/reference/matchmaking-and-lobby}{\tt http\+://doc.\+exitgames.\+com/en/realtime/current/reference/matchmaking-\/and-\/lobby}
+
+You can show your current players and room count without joining a lobby (but you must be on the master server). Use\+: count\+Of\+Players, count\+Of\+Players\+On\+Master, count\+Of\+Players\+In\+Rooms and count\+Of\+Rooms.
+
+You can use more than one lobby to keep the room lists shorter. See \hyperlink{class_photon_network_a631231346113712f11319749d6e1a3eb}{Join\+Lobby(\+Typed\+Lobby lobby)}. When creating new rooms, they will be \char`\"{}attached\char`\"{} to the currently used lobby or the default lobby.
+
+You can use Join\+Random\+Room without being in a lobby! Set auto\+Join\+Lobby = false before you connect, to not join a lobby. In that case, the connect-\/workflow will call On\+Connected\+To\+Master (if you implement it) when it\textquotesingle{}s done. \index{Photon\+Network@{Photon\+Network}!Join\+Lobby@{Join\+Lobby}}
+\index{Join\+Lobby@{Join\+Lobby}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Lobby(\+Typed\+Lobby typed\+Lobby)}{JoinLobby(TypedLobby typedLobby)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Lobby (
+\begin{DoxyParamCaption}
+\item[{{\bf Typed\+Lobby}}]{typed\+Lobby}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a631231346113712f11319749d6e1a3eb}{}\label{class_photon_network_a631231346113712f11319749d6e1a3eb}
+
+
+On a Master Server you can join a lobby to get lists of available rooms. 
+
+The room list is sent and refreshed by the server. You can access this cached list by \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Photon\+Network.\+Get\+Room\+List()}.
+
+Any client can \char`\"{}make up\char`\"{} any lobby on the fly. Splitting rooms into multiple lobbies will keep each list shorter. However, having too many lists might ruin the matchmaking experience.
+
+In best case, you create a limited number of lobbies. For example, create a lobby per game-\/mode\+: \char`\"{}koth\char`\"{} for king of the hill and \char`\"{}ffa\char`\"{} for free for all, etc.
+
+There is no listing of lobbies at the moment.
+
+Sql-\/typed lobbies offer a different filtering model for random matchmaking. This might be more suited for skillbased-\/games. However, you will also need to follow the conventions for naming filterable properties in sql-\/lobbies! Both is explained in the matchmaking doc linked below.
+
+In best case, you make your clients join random games, as described here\+: \href{http://confluence.exitgames.com/display/PTN/Op+JoinRandomGame}{\tt http\+://confluence.\+exitgames.\+com/display/\+P\+T\+N/\+Op+\+Join\+Random\+Game}
+
+Per room you should check if it\textquotesingle{}s full or not before joining. \hyperlink{namespace_photon}{Photon} does list rooms that are full, unless you close and hide them (room.\+open = false and room.\+visible = false).
+
+You can show your games current players and room count without joining a lobby (but you must be on the master server). Use\+: count\+Of\+Players, count\+Of\+Players\+On\+Master, count\+Of\+Players\+In\+Rooms and count\+Of\+Rooms.
+
+When creating new rooms, they will be \char`\"{}attached\char`\"{} to the currently used lobby or the default lobby.
+
+You can use Join\+Random\+Room without being in a lobby! Set auto\+Join\+Lobby = false before you connect, to not join a lobby. In that case, the connect-\/workflow will call On\+Connected\+To\+Master (if you implement it) when it\textquotesingle{}s done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em typed\+Lobby} & A typed lobby to join (must have name and type).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Join\+Or\+Create\+Room@{Join\+Or\+Create\+Room}}
+\index{Join\+Or\+Create\+Room@{Join\+Or\+Create\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Or\+Create\+Room(string room\+Name, Room\+Options room\+Options, Typed\+Lobby typed\+Lobby)}{JoinOrCreateRoom(string roomName, RoomOptions roomOptions, TypedLobby typedLobby)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Or\+Create\+Room (
+\begin{DoxyParamCaption}
+\item[{string}]{room\+Name, }
+\item[{{\bf Room\+Options}}]{room\+Options, }
+\item[{{\bf Typed\+Lobby}}]{typed\+Lobby}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a902344ffd109a23f1a0606599af5eb96}{}\label{class_photon_network_a902344ffd109a23f1a0606599af5eb96}
+
+
+Lets you either join a named room or create it on the fly -\/ you don\textquotesingle{}t have to know if someone created the room already. 
+
+This makes it easier for groups of players to get into the same room. Once the group exchanged a room\+Name, any player can call Join\+Or\+Create\+Room and it doesn\textquotesingle{}t matter who actually joins or creates the room.
+
+The parameters room\+Options and typed\+Lobby are only used when the room actually gets created by this client. You know if this client created a room, if you get a callback On\+Created\+Room (before On\+Joined\+Room gets called as well). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & Name of the room to join. Must be non null.\\
+\hline
+{\em room\+Options} & Options for the room, in case it does not exist yet. Else these values are ignored.\\
+\hline
+{\em typed\+Lobby} & Lobby you want a new room to be listed in. Ignored if the room was existing and got joined.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the operation got queued and will be sent.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Join\+Random\+Room@{Join\+Random\+Room}}
+\index{Join\+Random\+Room@{Join\+Random\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Random\+Room()}{JoinRandomRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Random\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aa9a112ccaaf71a296b823e9637584445}{}\label{class_photon_network_aa9a112ccaaf71a296b823e9637584445}
+
+
+Joins any available room of the currently used lobby and fails if none is available. 
+
+Rooms can be created in arbitrary lobbies which get created on demand. You can join rooms from any lobby without actually joining the lobby. Use the Join\+Random\+Room overload with \hyperlink{class_typed_lobby}{Typed\+Lobby} parameter.
+
+This method will only match rooms attached to one lobby! If you use many lobbies, you might have to repeat Join\+Random\+Room, to find some fitting room. This method looks up a room in the currently active lobby or (if no lobby is joined) in the default lobby.
+
+If this fails, you can still create a room (and make this available for the next who uses Join\+Random\+Room). Alternatively, try again in a moment. \index{Photon\+Network@{Photon\+Network}!Join\+Random\+Room@{Join\+Random\+Room}}
+\index{Join\+Random\+Room@{Join\+Random\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Random\+Room(\+Hashtable expected\+Custom\+Room\+Properties, byte expected\+Max\+Players)}{JoinRandomRoom(Hashtable expectedCustomRoomProperties, byte expectedMaxPlayers)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Random\+Room (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}}]{expected\+Custom\+Room\+Properties, }
+\item[{byte}]{expected\+Max\+Players}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a08119a6962c1d179a34d0388927ead3c}{}\label{class_photon_network_a08119a6962c1d179a34d0388927ead3c}
+
+
+Attempts to join an open room with fitting, custom properties but fails if none is currently available. 
+
+Rooms can be created in arbitrary lobbies which get created on demand. You can join rooms from any lobby without actually joining the lobby. Use the Join\+Random\+Room overload with \hyperlink{class_typed_lobby}{Typed\+Lobby} parameter.
+
+This method will only match rooms attached to one lobby! If you use many lobbies, you might have to repeat Join\+Random\+Room, to find some fitting room. This method looks up a room in the currently active lobby or (if no lobby is joined) in the default lobby.
+
+If this fails, you can still create a room (and make this available for the next who uses Join\+Random\+Room). Alternatively, try again in a moment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Custom\+Room\+Properties} & Filters for rooms that match these custom properties (string keys and values). To ignore, pass null.\\
+\hline
+{\em expected\+Max\+Players} & Filters for a particular maxplayer setting. Use 0 to accept any max\+Player value.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Join\+Random\+Room@{Join\+Random\+Room}}
+\index{Join\+Random\+Room@{Join\+Random\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Random\+Room(\+Hashtable expected\+Custom\+Room\+Properties, byte expected\+Max\+Players, Matchmaking\+Mode matching\+Type, Typed\+Lobby typed\+Lobby, string sql\+Lobby\+Filter)}{JoinRandomRoom(Hashtable expectedCustomRoomProperties, byte expectedMaxPlayers, MatchmakingMode matchingType, TypedLobby typedLobby, string sqlLobbyFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Random\+Room (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}}]{expected\+Custom\+Room\+Properties, }
+\item[{byte}]{expected\+Max\+Players, }
+\item[{{\bf Matchmaking\+Mode}}]{matching\+Type, }
+\item[{{\bf Typed\+Lobby}}]{typed\+Lobby, }
+\item[{string}]{sql\+Lobby\+Filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_af80e5f52ce253ab5a5f81fef1435e948}{}\label{class_photon_network_af80e5f52ce253ab5a5f81fef1435e948}
+
+
+Attempts to join an open room with fitting, custom properties but fails if none is currently available. 
+
+Rooms can be created in arbitrary lobbies which get created on demand. You can join rooms from any lobby without actually joining the lobby with this overload.
+
+This method will only match rooms attached to one lobby! If you use many lobbies, you might have to repeat Join\+Random\+Room, to find some fitting room. This method looks up a room in the specified lobby or the currently active lobby (if none specified) or in the default lobby (if none active).
+
+If this fails, you can still create a room (and make this available for the next who uses Join\+Random\+Room). Alternatively, try again in a moment.
+
+In offline\+Mode, a room will be created but no properties will be set and all parameters of this Join\+Random\+Room call are ignored. The event/callback On\+Joined\+Room gets called (see enum Photon\+Networking\+Message). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Custom\+Room\+Properties} & Filters for rooms that match these custom properties (string keys and values). To ignore, pass null.\\
+\hline
+{\em expected\+Max\+Players} & Filters for a particular maxplayer setting. Use 0 to accept any max\+Player value.\\
+\hline
+{\em matching\+Type} & Selects one of the available matchmaking algorithms. See Matchmaking\+Mode enum for options.\\
+\hline
+{\em typed\+Lobby} & The lobby in which you want to lookup a room. Pass null, to use the default lobby. This does not join that lobby and neither sets the lobby property.\\
+\hline
+{\em sql\+Lobby\+Filter} & A filter-\/string for S\+Q\+L-\/typed lobbies.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Join\+Room@{Join\+Room}}
+\index{Join\+Room@{Join\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Join\+Room(string room\+Name)}{JoinRoom(string roomName)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Room (
+\begin{DoxyParamCaption}
+\item[{string}]{room\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a8c94dd51fe8e8986117b499161ff4461}{}\label{class_photon_network_a8c94dd51fe8e8986117b499161ff4461}
+
+
+Join room by roomname and on success calls \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}{On\+Joined\+Room()}. 
+
+This is not affected by lobbies.
+
+On success, the method \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}{On\+Joined\+Room()} is called on any script. You can implement it to react to joining a room.
+
+Join\+Room fails if the room is either full or no longer available (it might become empty while you attempt to join). Implement \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3ad62b9539e5cf97eacf06e2268dea5a}{On\+Photon\+Join\+Room\+Failed()} to get a callback in error case.
+
+To join a room from the lobby\textquotesingle{}s listing, use \hyperlink{class_room_info_a77189ececa62ba47ff70359fd2db9af5}{Room\+Info.\+name} as room\+Name here. Despite using multiple lobbies, a room\+Name is always \char`\"{}global\char`\"{} for your application and so you don\textquotesingle{}t have to specify which lobby it\textquotesingle{}s in. The Master Server will find the room. In the \hyperlink{namespace_photon}{Photon} Cloud, an application is defined by App\+Id, Game-\/ and P\+U\+N-\/version. 
+
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3ad62b9539e5cf97eacf06e2268dea5a}{Photon\+Networking\+Message.\+On\+Photon\+Join\+Room\+Failed} \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}{Photon\+Networking\+Message.\+On\+Joined\+Room} 
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & Unique name of the room to join.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Leave\+Lobby@{Leave\+Lobby}}
+\index{Leave\+Lobby@{Leave\+Lobby}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Leave\+Lobby()}{LeaveLobby()}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Leave\+Lobby (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a941ac37ca7e275c93f3a1f95f0df84ae}{}\label{class_photon_network_a941ac37ca7e275c93f3a1f95f0df84ae}
+
+
+Leave a lobby to stop getting updates about available rooms. 
+
+This does not reset \hyperlink{class_photon_network_a3af7f8d0082599e6e3a56a5b1481a505}{Photon\+Network.\+lobby}! This allows you to join this particular lobby later easily.
+
+The values count\+Of\+Players, count\+Of\+Players\+On\+Master, count\+Of\+Players\+In\+Rooms and count\+Of\+Rooms are received even without being in a lobby.
+
+You can use Join\+Random\+Room without being in a lobby. Use auto\+Join\+Lobby to not join a lobby when you connect. \index{Photon\+Network@{Photon\+Network}!Leave\+Room@{Leave\+Room}}
+\index{Leave\+Room@{Leave\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Leave\+Room()}{LeaveRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Leave\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_abb27939f0325b53c94f5ad52199b63b7}{}\label{class_photon_network_abb27939f0325b53c94f5ad52199b63b7}
+
+
+Leave the current room and return to the Master Server where you can join or create rooms (see remarks). 
+
+This will clean up all (network) Game\+Objects with a \hyperlink{class_photon_view}{Photon\+View}, unless you changed auto\+Clean\+Up to false. Returns to the Master Server.
+
+In Offline\+Mode, the local \char`\"{}fake\char`\"{} room gets cleaned up and On\+Left\+Room gets called immediately. \index{Photon\+Network@{Photon\+Network}!Load\+Level@{Load\+Level}}
+\index{Load\+Level@{Load\+Level}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Load\+Level(int level\+Number)}{LoadLevel(int levelNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Load\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{level\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a5bb203a37b6db717583ea7b81fb56852}{}\label{class_photon_network_a5bb203a37b6db717583ea7b81fb56852}
+
+
+Wraps loading a level to pause the network mesage-\/queue. 
+
+Optionally syncs the loaded level in a room.
+
+To sync the loaded level in a room, set \hyperlink{class_photon_network_af721675dc5cf3c5ac4d4b67339246cdf}{Photon\+Network.\+automatically\+Sync\+Scene} to true. The Master Client of a room will then sync the loaded level with every other player in the room.
+
+While loading levels, it makes sense to not dispatch messages received by other players. This method takes care of that by setting \hyperlink{class_photon_network_a9cf8214080471001a1a32e17eff9b402}{Photon\+Network.\+is\+Message\+Queue\+Running} = false and enabling the queue when the level was loaded.
+
+You should make sure you don\textquotesingle{}t fire R\+P\+Cs before you load another scene (which doesn\textquotesingle{}t contain the same Game\+Objects and Photon\+Views). You can call this in On\+Joined\+Room.
+
+This uses Application.\+Load\+Level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+Number} & Number of the level to load. When using level numbers, make sure they are identical on all clients. \\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Load\+Level@{Load\+Level}}
+\index{Load\+Level@{Load\+Level}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Load\+Level(string level\+Name)}{LoadLevel(string levelName)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Load\+Level (
+\begin{DoxyParamCaption}
+\item[{string}]{level\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aaa7a2114de2a80a0a2ded65d1c0079ba}{}\label{class_photon_network_aaa7a2114de2a80a0a2ded65d1c0079ba}
+
+
+Wraps loading a level to pause the network mesage-\/queue. 
+
+Optionally syncs the loaded level in a room.
+
+While loading levels, it makes sense to not dispatch messages received by other players. This method takes care of that by setting \hyperlink{class_photon_network_a9cf8214080471001a1a32e17eff9b402}{Photon\+Network.\+is\+Message\+Queue\+Running} = false and enabling the queue when the level was loaded.
+
+To sync the loaded level in a room, set \hyperlink{class_photon_network_af721675dc5cf3c5ac4d4b67339246cdf}{Photon\+Network.\+automatically\+Sync\+Scene} to true. The Master Client of a room will then sync the loaded level with every other player in the room.
+
+You should make sure you don\textquotesingle{}t fire R\+P\+Cs before you load another scene (which doesn\textquotesingle{}t contain the same Game\+Objects and Photon\+Views). You can call this in On\+Joined\+Room.
+
+This uses Application.\+Load\+Level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+Name} & Name of the level to load. Make sure it\textquotesingle{}s available to all clients in the same room. \\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Network\+Statistics\+Reset@{Network\+Statistics\+Reset}}
+\index{Network\+Statistics\+Reset@{Network\+Statistics\+Reset}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Network\+Statistics\+Reset()}{NetworkStatisticsReset()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Network\+Statistics\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a43f616ce19891d3de81269a7821c5656}{}\label{class_photon_network_a43f616ce19891d3de81269a7821c5656}
+
+
+Resets the traffic stats and re-\/enables them. 
+
+\index{Photon\+Network@{Photon\+Network}!Network\+Statistics\+To\+String@{Network\+Statistics\+To\+String}}
+\index{Network\+Statistics\+To\+String@{Network\+Statistics\+To\+String}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Network\+Statistics\+To\+String()}{NetworkStatisticsToString()}}]{\setlength{\rightskip}{0pt plus 5cm}static string Photon\+Network.\+Network\+Statistics\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aebed3f221d6a2d918cb734a15b9df8e0}{}\label{class_photon_network_aebed3f221d6a2d918cb734a15b9df8e0}
+
+
+Only available when Network\+Statistics\+Enabled was used to gather some stats. 
+
+\begin{DoxyReturn}{Returns}
+A string with vital networking statistics.
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Override\+Best\+Cloud\+Server@{Override\+Best\+Cloud\+Server}}
+\index{Override\+Best\+Cloud\+Server@{Override\+Best\+Cloud\+Server}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Override\+Best\+Cloud\+Server(\+Cloud\+Region\+Code region)}{OverrideBestCloudServer(CloudRegionCode region)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Override\+Best\+Cloud\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Cloud\+Region\+Code}}]{region}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a7dc90dd05d697c3f8f04e50cc0e039b2}{}\label{class_photon_network_a7dc90dd05d697c3f8f04e50cc0e039b2}
+
+
+Overwrites the region that is used for \hyperlink{class_photon_network_afba456bbc9d1525b87eb060c959af2b6}{Connect\+To\+Best\+Cloud\+Server(string game\+Version)}. 
+
+This will overwrite the result of pinging all cloud servers.~\newline
+ Use this to allow your users to save a manually selected region in the player preferences.~\newline
+ Note\+: You can also use \hyperlink{class_photon_network_a84b7be74d130b19eeeb1d7b4e8193ad4}{Photon\+Network.\+Connect\+To\+Region} to (temporarily) connect to a specific region. \index{Photon\+Network@{Photon\+Network}!Raise\+Event@{Raise\+Event}}
+\index{Raise\+Event@{Raise\+Event}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Raise\+Event(byte event\+Code, object event\+Content, bool send\+Reliable, Raise\+Event\+Options options)}{RaiseEvent(byte eventCode, object eventContent, bool sendReliable, RaiseEventOptions options)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Raise\+Event (
+\begin{DoxyParamCaption}
+\item[{byte}]{event\+Code, }
+\item[{object}]{event\+Content, }
+\item[{bool}]{send\+Reliable, }
+\item[{{\bf Raise\+Event\+Options}}]{options}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aa9088b089a8c1b3548f8a7a792146e50}{}\label{class_photon_network_aa9088b089a8c1b3548f8a7a792146e50}
+
+
+Sends fully customizable events in a room. 
+
+Events consist of at least an Event\+Code (0..199) and can have content. 
+
+To receive the events someone sends, register your handling method in \hyperlink{class_photon_network_a81af9e901341d6b647df1f6d7f2d7583}{Photon\+Network.\+On\+Event\+Call}.
+
+Example\+: private void On\+Event\+Handler(byte event\+Code, object content, int sender\+Id) \{ Debug.\+Log(\char`\"{}\+On\+Event\+Handler\char`\"{}); \}
+
+\hyperlink{class_photon_network_a81af9e901341d6b647df1f6d7f2d7583}{Photon\+Network.\+On\+Event\+Call} += this.\+On\+Event\+Handler;
+
+With the sender\+Id, you can look up the \hyperlink{class_photon_player}{Photon\+Player} who sent the event. It is best practice to assign a event\+Code for each different type of content and action. You have to cast the content.
+
+The event\+Content is optional. To be able to send something, it must be a \char`\"{}serializable type\char`\"{}, something that the client can turn into a byte\mbox{[}\mbox{]} basically. Most basic types and arrays of them are supported, including Unity\textquotesingle{}s Vector2, Vector3, Quaternion. Transforms or classes some project defines are N\+OT supported! You can make your own class a \char`\"{}serializable type\char`\"{} by following the example in \hyperlink{_custom_types_8cs}{Custom\+Types.\+cs}.
+
+The \hyperlink{class_raise_event_options}{Raise\+Event\+Options} have some (less intuitive) combination rules\+: If you set target\+Actors (an array of \hyperlink{class_photon_player_ac363d86e7c6ea63573e0ecfda7f7eaa7}{Photon\+Player.\+ID} values), the receivers parameter gets ignored. When using event caching, the target\+Actors, receivers and interest\+Group can\textquotesingle{}t be used. Buffered events go to all. When using caching\+Option remove\+From\+Room\+Cache, the event\+Code and content are actually not sent but used as filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Code} & A byte identifying the type of event. You might want to use a code per action or to signal which content can be expected. Allowed\+: 0..199.\\
+\hline
+{\em event\+Content} & Some serializable object like string, byte, integer, float (etc) and arrays of those. Hashtables with byte keys are good to send variable content.\\
+\hline
+{\em send\+Reliable} & Makes sure this event reaches all players. It gets acknowledged, which requires bandwidth and it can\textquotesingle{}t be skipped (might add lag in case of loss).\\
+\hline
+{\em options} & Allows more complex usage of events. If null, \hyperlink{class_raise_event_options_af1fcb68ddd5f76876c8448de8b5ecb4d}{Raise\+Event\+Options.\+Default} will be used (which is fine).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if event could not be sent
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Refresh\+Cloud\+Server\+Rating@{Refresh\+Cloud\+Server\+Rating}}
+\index{Refresh\+Cloud\+Server\+Rating@{Refresh\+Cloud\+Server\+Rating}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Refresh\+Cloud\+Server\+Rating()}{RefreshCloudServerRating()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Refresh\+Cloud\+Server\+Rating (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a6ffa9e23d8060c9898064cda0a21710b}{}\label{class_photon_network_a6ffa9e23d8060c9898064cda0a21710b}
+
+
+Pings all cloud servers again to find the one with best ping (currently).
+
+\index{Photon\+Network@{Photon\+Network}!Remove\+Player\+Custom\+Properties@{Remove\+Player\+Custom\+Properties}}
+\index{Remove\+Player\+Custom\+Properties@{Remove\+Player\+Custom\+Properties}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Remove\+Player\+Custom\+Properties(string[] custom\+Properties\+To\+Delete)}{RemovePlayerCustomProperties(string[] customPropertiesToDelete)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Remove\+Player\+Custom\+Properties (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{custom\+Properties\+To\+Delete}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a4c59e3c4feeaf44293eef1d8d19b98a2}{}\label{class_photon_network_a4c59e3c4feeaf44293eef1d8d19b98a2}
+
+
+Locally removes Custom Properties of \char`\"{}this\char`\"{} player. 
+
+Important\+: This does not synchronize the change! Useful when you switch rooms. 
+
+Use this method with care. It can create inconsistencies of state between players! This only changes the player.\+custom\+Properties locally. This can be useful to clear your Custom Properties between games (let\textquotesingle{}s say they store which turn you made, kills, etc).
+
+\hyperlink{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}{Set\+Player\+Custom\+Properties()} syncs and can be used to set values to null while in a room. That can be considered \char`\"{}removed\char`\"{} while in a room.
+
+If custom\+Properties\+To\+Delete is null or has 0 entries, all Custom Properties are deleted (replaced with a new Hashtable). If you specify keys to remove, those will be removed from the Hashtable but other keys are unaffected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em custom\+Properties\+To\+Delete} & List of Custom Property keys to remove. See remarks.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Remove\+R\+P\+Cs@{Remove\+R\+P\+Cs}}
+\index{Remove\+R\+P\+Cs@{Remove\+R\+P\+Cs}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Remove\+R\+P\+Cs(\+Photon\+Player target\+Player)}{RemoveRPCs(PhotonPlayer targetPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Remove\+R\+P\+Cs (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{target\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a0b99a01696f62ff29e005e6f939f8dc4}{}\label{class_photon_network_a0b99a01696f62ff29e005e6f939f8dc4}
+
+
+Remove all buffered R\+P\+Cs from server that were sent by target\+Player. 
+
+Can only be called on local player (for \char`\"{}self\char`\"{}) or Master Client (for anyone). 
+
+This method requires either\+:
+\begin{DoxyItemize}
+\item This is the target\+Player\textquotesingle{}s client.
+\item This client is the Master Client (can remove any \hyperlink{class_photon_player}{Photon\+Player}\textquotesingle{}s R\+P\+Cs).
+\end{DoxyItemize}
+
+If the target\+Player calls R\+P\+Cs at the same time that this is called, network lag will determine if those get buffered or cleared like the rest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Player} & This player\textquotesingle{}s buffered R\+P\+Cs get removed from server buffer.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Remove\+R\+P\+Cs@{Remove\+R\+P\+Cs}}
+\index{Remove\+R\+P\+Cs@{Remove\+R\+P\+Cs}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Remove\+R\+P\+Cs(\+Photon\+View target\+Photon\+View)}{RemoveRPCs(PhotonView targetPhotonView)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Remove\+R\+P\+Cs (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+View}}]{target\+Photon\+View}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a808fc6d1770c999fb1f5716abb45451a}{}\label{class_photon_network_a808fc6d1770c999fb1f5716abb45451a}
+
+
+Remove all buffered R\+P\+Cs from server that were sent via target\+Photon\+View. 
+
+The Master Client and the owner of the target\+Photon\+View may call this. 
+
+This method requires either\+:
+\begin{DoxyItemize}
+\item The target\+Photon\+View is owned by this client (Instantiated by it).
+\item This client is the Master Client (can remove any \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s R\+P\+Cs). 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Photon\+View} & R\+P\+Cs buffered for this \hyperlink{class_photon_view}{Photon\+View} get removed from server buffer.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Remove\+R\+P\+Cs\+In\+Group@{Remove\+R\+P\+Cs\+In\+Group}}
+\index{Remove\+R\+P\+Cs\+In\+Group@{Remove\+R\+P\+Cs\+In\+Group}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Remove\+R\+P\+Cs\+In\+Group(int target\+Group)}{RemoveRPCsInGroup(int targetGroup)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Remove\+R\+P\+Cs\+In\+Group (
+\begin{DoxyParamCaption}
+\item[{int}]{target\+Group}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ae6fd306fd4adf0c44d64d9cfadc038aa}{}\label{class_photon_network_ae6fd306fd4adf0c44d64d9cfadc038aa}
+
+
+Remove all buffered R\+P\+Cs from server that were sent in the target\+Group, if this is the Master Client or if this controls the individual \hyperlink{class_photon_view}{Photon\+View}. 
+
+This method requires either\+:
+\begin{DoxyItemize}
+\item This client is the Master Client (can remove any R\+P\+Cs per group).
+\item Any other client\+: each \hyperlink{class_photon_view}{Photon\+View} is checked if it is under this client\textquotesingle{}s control. Only those R\+P\+Cs are removed. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Group} & Interest group that gets all R\+P\+Cs removed.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Send\+Outgoing\+Commands@{Send\+Outgoing\+Commands}}
+\index{Send\+Outgoing\+Commands@{Send\+Outgoing\+Commands}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Send\+Outgoing\+Commands()}{SendOutgoingCommands()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Send\+Outgoing\+Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a3b8d0c1cefdf577e1dff8aecb147b7fd}{}\label{class_photon_network_a3b8d0c1cefdf577e1dff8aecb147b7fd}
+
+
+Can be used to immediately send the R\+P\+Cs and Instantiates just called, so they are on their way to the other players. 
+
+This could be useful if you do a R\+PC to load a level and then load it yourself. While loading, no R\+P\+Cs are sent to others, so this would delay the \char`\"{}load\char`\"{} R\+PC. You can send the R\+PC to \char`\"{}others\char`\"{}, use this method, disable the message queue (by is\+Message\+Queue\+Running) and then load. \index{Photon\+Network@{Photon\+Network}!Set\+Level\+Prefix@{Set\+Level\+Prefix}}
+\index{Set\+Level\+Prefix@{Set\+Level\+Prefix}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Level\+Prefix(short prefix)}{SetLevelPrefix(short prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Level\+Prefix (
+\begin{DoxyParamCaption}
+\item[{short}]{prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a6b98294843798e6ebac72704a867b6da}{}\label{class_photon_network_a6b98294843798e6ebac72704a867b6da}
+
+
+Sets level prefix for Photon\+Views instantiated later on. 
+
+Don\textquotesingle{}t set it if you need only one! 
+
+Important\+: If you don\textquotesingle{}t use multiple level prefixes, simply don\textquotesingle{}t set this value. The default value is optimized out of the traffic.
+
+This won\textquotesingle{}t affect existing Photon\+Views (they can\textquotesingle{}t be changed yet for existing Photon\+Views).
+
+Messages sent with a different level prefix will be received but not executed. This affects R\+P\+Cs, Instantiates and synchronization.
+
+Be aware that P\+UN never resets this value, you\textquotesingle{}ll have to do so yourself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Max value is short.\+Max\+Value = 32767\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Set\+Master\+Client@{Set\+Master\+Client}}
+\index{Set\+Master\+Client@{Set\+Master\+Client}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Master\+Client(\+Photon\+Player master\+Client\+Player)}{SetMasterClient(PhotonPlayer masterClientPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Set\+Master\+Client (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{master\+Client\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a85b058bab4a369d0c5730cf43b462962}{}\label{class_photon_network_a85b058bab4a369d0c5730cf43b462962}
+
+
+Asks the server to assign another player as Master Client of your current room. 
+
+R\+P\+Cs and Raise\+Event have the option to send messages only to the Master Client of a room. Set\+Master\+Client affects which client gets those messages.
+
+This method calls an operation on the server to set a new Master Client, which takes a roundtrip. In case of success, this client and the others get the new Master Client from the server.
+
+Set\+Master\+Client tells the server which current Master Client should be replaced with the new one. It will fail, if anything switches the Master Client moments earlier. There is no callback for this error. All clients should get the new Master Client assigned by the server anyways.
+
+See also\+: \hyperlink{class_photon_network_aa7e51b5e5f9f8b89f057096f47d11c5b}{Photon\+Network.\+master\+Client}
+
+On v3 servers\+: The Receiver\+Group.\+Master\+Client (usable in R\+P\+Cs) is not affected by this (still points to lowest player.\+ID in room). Avoid using this enum value (and send to a specific player instead).
+
+If the current Master Client leaves, P\+UN will detect a new one by \char`\"{}lowest player I\+D\char`\"{}. Implement On\+Master\+Client\+Switched to get a callback in this case. The P\+U\+N-\/selected Master Client might assign a new one.
+
+Make sure you don\textquotesingle{}t create an endless loop of Master-\/assigning! When selecting a custom Master Client, all clients should point to the same player, no matter who actually assigns this player.
+
+Locally the Master Client is immediately switched, while remote clients get an event. This means the game is tempoarily without Master Client like when a current Master Client leaves.
+
+When switching the Master Client manually, keep in mind that this user might leave and not do it\textquotesingle{}s work, just like any Master Client.
+
+
+\begin{DoxyParams}{Parameters}
+{\em master\+Client\+Player} & The player to become the next Master Client.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False when this operation couldn\textquotesingle{}t be done. Must be in a room (not in offline\+Mode).
+\end{DoxyReturn}
+\index{Photon\+Network@{Photon\+Network}!Set\+Player\+Custom\+Properties@{Set\+Player\+Custom\+Properties}}
+\index{Set\+Player\+Custom\+Properties@{Set\+Player\+Custom\+Properties}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Player\+Custom\+Properties(\+Hashtable custom\+Properties)}{SetPlayerCustomProperties(Hashtable customProperties)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Player\+Custom\+Properties (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}}]{custom\+Properties}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}{}\label{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}
+
+
+Sets this (local) player\textquotesingle{}s properties and synchronizes them to the other players (don\textquotesingle{}t modify them directly). 
+
+While in a room, your properties are synced with the other players. Create\+Room, Join\+Room and Join\+Random\+Room will all apply your player\textquotesingle{}s custom properties when you enter the room. The whole Hashtable will get sent. Minimize the traffic by setting only updated key/values.
+
+If the Hashtable is null, the custom properties will be cleared. Custom properties are never cleared automatically, so they carry over to the next room, if you don\textquotesingle{}t change them.
+
+Don\textquotesingle{}t set properties by modifying Photon\+Network.\+player.\+custom\+Properties! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em custom\+Properties} & Only string-\/typed keys will be used from this hashtable. If null, custom properties are all deleted.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Set\+Receiving\+Enabled@{Set\+Receiving\+Enabled}}
+\index{Set\+Receiving\+Enabled@{Set\+Receiving\+Enabled}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Receiving\+Enabled(int group, bool enabled)}{SetReceivingEnabled(int group, bool enabled)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Receiving\+Enabled (
+\begin{DoxyParamCaption}
+\item[{int}]{group, }
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_af7728267e9576c7b2d205df53ac74fe1}{}\label{class_photon_network_af7728267e9576c7b2d205df53ac74fe1}
+
+
+Enable/disable receiving on given group (applied to Photon\+Views) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The interest group to affect.\\
+\hline
+{\em enabled} & Sets if receiving from group to enabled (or not).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Set\+Receiving\+Enabled@{Set\+Receiving\+Enabled}}
+\index{Set\+Receiving\+Enabled@{Set\+Receiving\+Enabled}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Receiving\+Enabled(int[] enable\+Groups, int[] disable\+Groups)}{SetReceivingEnabled(int[] enableGroups, int[] disableGroups)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Receiving\+Enabled (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{enable\+Groups, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{disable\+Groups}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ada44c5edfa6e93e67db635bd0764ef70}{}\label{class_photon_network_ada44c5edfa6e93e67db635bd0764ef70}
+
+
+Enable/disable receiving on given groups (applied to Photon\+Views) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable\+Groups} & The interest groups to enable (or null).\\
+\hline
+{\em disable\+Groups} & The interest groups to disable (or null).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Set\+Sending\+Enabled@{Set\+Sending\+Enabled}}
+\index{Set\+Sending\+Enabled@{Set\+Sending\+Enabled}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Sending\+Enabled(int group, bool enabled)}{SetSendingEnabled(int group, bool enabled)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Sending\+Enabled (
+\begin{DoxyParamCaption}
+\item[{int}]{group, }
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a8f8d6db18d74855e18ec43b3a221102b}{}\label{class_photon_network_a8f8d6db18d74855e18ec43b3a221102b}
+
+
+Enable/disable sending on given group (applied to Photon\+Views) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The interest group to affect.\\
+\hline
+{\em enabled} & Sets if sending to group is enabled (or not).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Set\+Sending\+Enabled@{Set\+Sending\+Enabled}}
+\index{Set\+Sending\+Enabled@{Set\+Sending\+Enabled}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Set\+Sending\+Enabled(int[] enable\+Groups, int[] disable\+Groups)}{SetSendingEnabled(int[] enableGroups, int[] disableGroups)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Sending\+Enabled (
+\begin{DoxyParamCaption}
+\item[{int\mbox{[}$\,$\mbox{]}}]{enable\+Groups, }
+\item[{int\mbox{[}$\,$\mbox{]}}]{disable\+Groups}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a208a46eaefe19c965eb62d18ca59ac41}{}\label{class_photon_network_a208a46eaefe19c965eb62d18ca59ac41}
+
+
+Enable/disable sending on given groups (applied to Photon\+Views) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable\+Groups} & The interest groups to enable sending on (or null).\\
+\hline
+{\em disable\+Groups} & The interest groups to disable sending on (or null).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Switch\+To\+Protocol@{Switch\+To\+Protocol}}
+\index{Switch\+To\+Protocol@{Switch\+To\+Protocol}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Switch\+To\+Protocol(\+Connection\+Protocol cp)}{SwitchToProtocol(ConnectionProtocol cp)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Switch\+To\+Protocol (
+\begin{DoxyParamCaption}
+\item[{Connection\+Protocol}]{cp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_af4ff9e4128181a1a4974c20bf899a4c4}{}\label{class_photon_network_af4ff9e4128181a1a4974c20bf899a4c4}
+
+
+While offline, the network protocol can be switched (which affects the ports you can use to connect). 
+
+When you switch the protocol, make sure to also switch the port for the master server. Default ports are\+: T\+CP\+: 4530 U\+DP\+: 5055
+
+This could look like this\+:~\newline
+ Connect(server\+Address, $<$udpport$\vert$tcpport$>$, app\+ID, game\+Version)
+
+Or when you use \hyperlink{class_photon_network_a0fdb79bcce45801ec81fbe56ffb939ec}{Connect\+Using\+Settings()}, the P\+O\+RT in the settings can be switched like so\+:~\newline
+ Photon\+Network.\+Photon\+Server\+Settings.\+Server\+Port = 4530;
+
+The current protocol can be read this way\+:~\newline
+ Photon\+Network.\+networking\+Peer.\+Used\+Protocol
+
+This does not work with the native socket plugin of P\+U\+N+ on mobile! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cp} & Network protocol to use as low level connection. U\+DP is default. T\+CP is not available on all platforms (see remarks).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Un\+Allocate\+View\+ID@{Un\+Allocate\+View\+ID}}
+\index{Un\+Allocate\+View\+ID@{Un\+Allocate\+View\+ID}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Un\+Allocate\+View\+I\+D(int view\+I\+D)}{UnAllocateViewID(int viewID)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Un\+Allocate\+View\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{view\+ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ae5c32625fb17b425e105de49ea267ddf}{}\label{class_photon_network_ae5c32625fb17b425e105de49ea267ddf}
+
+
+Unregister a view\+ID (of manually instantiated and destroyed networked objects). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+ID} & A view\+ID manually allocated by this player.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Network@{Photon\+Network}!Web\+Rpc@{Web\+Rpc}}
+\index{Web\+Rpc@{Web\+Rpc}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Web\+Rpc(string name, object parameters)}{WebRpc(string name, object parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Web\+Rpc (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{object}]{parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ad9a866c73b3e417d55266ed548a52cb8}{}\label{class_photon_network_ad9a866c73b3e417d55266ed548a52cb8}
+
+
+This operation makes \hyperlink{namespace_photon}{Photon} call your custom web-\/service by name (path) with the given parameters. 
+
+This is a server-\/side feature which must be setup in the \hyperlink{namespace_photon}{Photon} Cloud Dashboard prior to use.~\newline
+ See the Turnbased Feature Overview for a short intro.~\newline
+ \href{http://doc.photonengine.com/en/turnbased/current/getting-started/feature-overview}{\tt http\+://doc.\+photonengine.\+com/en/turnbased/current/getting-\/started/feature-\/overview} br/$>$ The Parameters will be converted into J\+Son format, so make sure your parameters are compatible.
+
+See \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa98a8b15d4aa12e02e5ccbc98172eecc}{Photon\+Networking\+Message.\+On\+Web\+Rpc\+Response} on how to get a response.
+
+It\textquotesingle{}s important to understand that the Operation\+Response only tells if the Web\+R\+PC could be called. The content of the response contains any values your web-\/service sent and the error/success code. In case the web-\/service failed, an error code and a debug message are usually inside the Operation\+Response.
+
+The class \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response} is a helper-\/class that extracts the most valuable content from the Web\+R\+PC response. 
+
+Example callback implementation\+:
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}public void \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa98a8b15d4aa12e02e5ccbc98172eecc}{OnWebRpcResponse(OperationResponse response)}
+\{
+    \hyperlink{class_web_rpc_response}{WebRpcResponse} webResponse = new \hyperlink{class_web_rpc_response}{WebRpcResponse(operationResponse)};
+    if (webResponse.ReturnCode != 0) \{ //...
+    \}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}    switch (webResponse.Name) \{ //...
+    \}
+    // and so on
+\}\end{DoxyPre}
+ 
+
+\subsection{Member Data Documentation}
+\index{Photon\+Network@{Photon\+Network}!Background\+Timeout@{Background\+Timeout}}
+\index{Background\+Timeout@{Background\+Timeout}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Background\+Timeout}{BackgroundTimeout}}]{\setlength{\rightskip}{0pt plus 5cm}float Photon\+Network.\+Background\+Timeout = 0.\+0f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ae4186352869ef922cb84efbd5c1f2465}{}\label{class_photon_network_ae4186352869ef922cb84efbd5c1f2465}
+
+
+Defines after how many seconds P\+UN will close a connection, after Unity\textquotesingle{}s On\+Application\+Pause(true) call. 
+
+The value is set in seconds. Set a value greater than 0.\+001f, if you want to disconnect in background. Default\+: 0.\+0f.
+
+Note\+: Some platforms (e.\+g. i\+OS) don\textquotesingle{}t allow to keep a connection while the app is in background. In those cases, this value does not change anything.
+
+Unity\textquotesingle{}s On\+Application\+Pause() callback is broken in some exports (Android) of some Unity versions. Make sure On\+Application\+Pause() gets the callbacks you\textquotesingle{}d expect on the platform you target! Check Photon\+Handler.\+On\+Application\+Pause(bool pause), to see the implementation.\index{Photon\+Network@{Photon\+Network}!Instantiate\+In\+Room\+Only@{Instantiate\+In\+Room\+Only}}
+\index{Instantiate\+In\+Room\+Only@{Instantiate\+In\+Room\+Only}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Instantiate\+In\+Room\+Only}{InstantiateInRoomOnly}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+Instantiate\+In\+Room\+Only = true\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ae0036d259f2b793b4838393837d4cf6d}{}\label{class_photon_network_ae0036d259f2b793b4838393837d4cf6d}
+
+
+If true, Instantiate methods will check if you are in a room and fail if you are not. 
+
+Instantiating anything outside of a specific room is very likely to break things. Turn this off only if you know what you do.\index{Photon\+Network@{Photon\+Network}!log\+Level@{log\+Level}}
+\index{log\+Level@{log\+Level}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{log\+Level}{logLevel}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Log\+Level} Photon\+Network.\+log\+Level = {\bf Photon\+Log\+Level.\+Errors\+Only}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{}\label{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}
+
+
+Network log level. 
+
+Controls how verbose P\+UN is. \index{Photon\+Network@{Photon\+Network}!M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS@{M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS}}
+\index{M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS@{M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS}{MAX_VIEW_IDS}}]{\setlength{\rightskip}{0pt plus 5cm}readonly int Photon\+Network.\+M\+A\+X\+\_\+\+V\+I\+E\+W\+\_\+\+I\+DS = 1000\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_ad3b82aa2ac8d89db5ebf0bc5ac9add9e}{}\label{class_photon_network_ad3b82aa2ac8d89db5ebf0bc5ac9add9e}
+
+
+The maximum number of assigned Photon\+Views {\itshape per player} (or scene). 
+
+See the General Documentation topic \char`\"{}\+Limitations\char`\"{} on how to raise this limitation. \index{Photon\+Network@{Photon\+Network}!max\+Connections@{max\+Connections}}
+\index{max\+Connections@{max\+Connections}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{max\+Connections}{maxConnections}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+max\+Connections\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a7a74751daa6e6e979cff9ba3aceb56dd}{}\label{class_photon_network_a7a74751daa6e6e979cff9ba3aceb56dd}
+
+
+Only used in Unity Networking. In P\+UN, set the number of players in \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Photon\+Network.\+Create\+Room}.
+
+\index{Photon\+Network@{Photon\+Network}!On\+Event\+Call@{On\+Event\+Call}}
+\index{On\+Event\+Call@{On\+Event\+Call}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{On\+Event\+Call}{OnEventCall}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Callback} Photon\+Network.\+On\+Event\+Call\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a81af9e901341d6b647df1f6d7f2d7583}{}\label{class_photon_network_a81af9e901341d6b647df1f6d7f2d7583}
+
+
+Register your Raise\+Event handling methods here by using \char`\"{}+=\char`\"{}. 
+
+Any event\+Code $<$ 200 will be forwarded to your delegate(s).
+
+\hyperlink{class_photon_network_aa9088b089a8c1b3548f8a7a792146e50}{Raise\+Event} \index{Photon\+Network@{Photon\+Network}!Photon\+Server\+Settings@{Photon\+Server\+Settings}}
+\index{Photon\+Server\+Settings@{Photon\+Server\+Settings}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Photon\+Server\+Settings}{PhotonServerSettings}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server\+Settings} Photon\+Network.\+Photon\+Server\+Settings = ({\bf Server\+Settings})Resources.\+Load(Photon\+Network.\+server\+Settings\+Asset\+File, typeof({\bf Server\+Settings}))\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a505f06c3eb4ca67db5dd517aab34143d}{}\label{class_photon_network_a505f06c3eb4ca67db5dd517aab34143d}
+
+
+Serialized server settings, written by the Setup Wizard for use in Connect\+Using\+Settings.
+
+\index{Photon\+Network@{Photon\+Network}!precision\+For\+Float\+Synchronization@{precision\+For\+Float\+Synchronization}}
+\index{precision\+For\+Float\+Synchronization@{precision\+For\+Float\+Synchronization}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{precision\+For\+Float\+Synchronization}{precisionForFloatSynchronization}}]{\setlength{\rightskip}{0pt plus 5cm}float Photon\+Network.\+precision\+For\+Float\+Synchronization = 0.\+01f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a734d436869fa53cb8660de63e79e6252}{}\label{class_photon_network_a734d436869fa53cb8660de63e79e6252}
+
+
+The minimum difference between floats before we send it via a \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s On\+Serialize/\+Observing\+Component. 
+
+\index{Photon\+Network@{Photon\+Network}!precision\+For\+Quaternion\+Synchronization@{precision\+For\+Quaternion\+Synchronization}}
+\index{precision\+For\+Quaternion\+Synchronization@{precision\+For\+Quaternion\+Synchronization}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{precision\+For\+Quaternion\+Synchronization}{precisionForQuaternionSynchronization}}]{\setlength{\rightskip}{0pt plus 5cm}float Photon\+Network.\+precision\+For\+Quaternion\+Synchronization = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a65cc14cdfda9c9cb8dad3b3f862097d4}{}\label{class_photon_network_a65cc14cdfda9c9cb8dad3b3f862097d4}
+
+
+The minimum angle that a rotation needs to change before we send it via a \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s On\+Serialize/\+Observing\+Component. 
+
+\index{Photon\+Network@{Photon\+Network}!precision\+For\+Vector\+Synchronization@{precision\+For\+Vector\+Synchronization}}
+\index{precision\+For\+Vector\+Synchronization@{precision\+For\+Vector\+Synchronization}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{precision\+For\+Vector\+Synchronization}{precisionForVectorSynchronization}}]{\setlength{\rightskip}{0pt plus 5cm}float Photon\+Network.\+precision\+For\+Vector\+Synchronization = 0.\+000099f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_acff20b8fd3871e0b3be350e0d1c98605}{}\label{class_photon_network_acff20b8fd3871e0b3be350e0d1c98605}
+
+
+The minimum difference that a Vector2 or Vector3(e.\+g. 
+
+a transforms rotation) needs to change before we send it via a \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s On\+Serialize/\+Observing\+Component. 
+
+Note that this is the sqr\+Magnitude. E.\+g. to send only after a 0.\+01 change on the Y-\/axix, we use 0.\+01f$\ast$0.01f=0.\+0001f. As a remedy against float inaccuracy we use 0.\+000099f instead of 0.\+0001f. \index{Photon\+Network@{Photon\+Network}!Prefab\+Cache@{Prefab\+Cache}}
+\index{Prefab\+Cache@{Prefab\+Cache}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Prefab\+Cache}{PrefabCache}}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$string, Game\+Object$>$ Photon\+Network.\+Prefab\+Cache = new Dictionary$<$string, Game\+Object$>$()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a5d231578fbaadcb89dd592d2d8ddfd0a}{}\label{class_photon_network_a5d231578fbaadcb89dd592d2d8ddfd0a}
+
+
+Keeps references to Game\+Objects for frequent instantiation (out of memory instead of loading the Resources). 
+
+You should be able to modify the cache anytime you like, except while Instantiate is used. Best do it only in the main-\/\+Thread. \index{Photon\+Network@{Photon\+Network}!Send\+Mono\+Message\+Targets@{Send\+Mono\+Message\+Targets}}
+\index{Send\+Mono\+Message\+Targets@{Send\+Mono\+Message\+Targets}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Send\+Mono\+Message\+Targets}{SendMonoMessageTargets}}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Set$<$Game\+Object$>$ Photon\+Network.\+Send\+Mono\+Message\+Targets\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a71b2a9299c3906b3e3d49f0ac296a87b}{}\label{class_photon_network_a71b2a9299c3906b3e3d49f0ac296a87b}
+
+
+If not null, this is the (exclusive) list of Game\+Objects that get called by P\+UN Send\+Mono\+Message(). 
+
+For all callbacks defined in Photon\+Networking\+Message, P\+UN will use Send\+Mono\+Message and call Find\+Objects\+Of\+Type() to find all scripts and Game\+Objects that might want a callback by P\+UN.
+
+P\+UN callbacks are not very frequent (in-\/game, property updates are most frequent) but Find\+Objects\+Of\+Type is time consuming and with a large number of Game\+Objects, performance might suffer.
+
+Optionally, Send\+Mono\+Message\+Targets can be used to supply a list of target Game\+Objects. This skips the Find\+Objects\+Of\+Type() but any Game\+Object that needs callbacks will have to Add itself to this list.
+
+If null, the default behaviour is to do a Send\+Message on each Game\+Object with a Mono\+Behaviour. \index{Photon\+Network@{Photon\+Network}!Send\+Mono\+Message\+Target\+Type@{Send\+Mono\+Message\+Target\+Type}}
+\index{Send\+Mono\+Message\+Target\+Type@{Send\+Mono\+Message\+Target\+Type}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Send\+Mono\+Message\+Target\+Type}{SendMonoMessageTargetType}}]{\setlength{\rightskip}{0pt plus 5cm}Type Photon\+Network.\+Send\+Mono\+Message\+Target\+Type = typeof(Mono\+Behaviour)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a598db34bb93cdb17a3032a96c64b0ce3}{}\label{class_photon_network_a598db34bb93cdb17a3032a96c64b0ce3}
+
+
+Defines which classes can contain P\+UN Callback implementations. 
+
+This provides the option to optimize your runtime for speed.~\newline
+ The more specific this Type is, the fewer classes will be checked with reflection for callback methods. \index{Photon\+Network@{Photon\+Network}!Use\+Prefab\+Cache@{Use\+Prefab\+Cache}}
+\index{Use\+Prefab\+Cache@{Use\+Prefab\+Cache}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Use\+Prefab\+Cache}{UsePrefabCache}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+Use\+Prefab\+Cache = true\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a232458dc1894d99134f6d978524cbb99}{}\label{class_photon_network_a232458dc1894d99134f6d978524cbb99}
+
+
+While enabled (true), Instantiate uses \hyperlink{class_photon_network_a5d231578fbaadcb89dd592d2d8ddfd0a}{Photon\+Network.\+Prefab\+Cache} to keep game objects in memory (improving instantiation of the same prefab). 
+
+Setting Use\+Prefab\+Cache to false during runtime will not clear Prefab\+Cache but will ignore it right away. You could clean and modify the cache yourself. Read its comments. \index{Photon\+Network@{Photon\+Network}!Use\+Rpc\+Mono\+Behaviour\+Cache@{Use\+Rpc\+Mono\+Behaviour\+Cache}}
+\index{Use\+Rpc\+Mono\+Behaviour\+Cache@{Use\+Rpc\+Mono\+Behaviour\+Cache}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Use\+Rpc\+Mono\+Behaviour\+Cache}{UseRpcMonoBehaviourCache}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+Use\+Rpc\+Mono\+Behaviour\+Cache\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a2ea887525d418e088bf99d303673d2f3}{}\label{class_photon_network_a2ea887525d418e088bf99d303673d2f3}
+
+
+While enabled, the Mono\+Behaviours on which we call R\+P\+Cs are cached, avoiding costly Get\+Components$<$\+Mono\+Behaviour$>$() calls. 
+
+R\+P\+Cs are called on the Mono\+Behaviours of a target \hyperlink{class_photon_view}{Photon\+View}. Those have to be found via Get\+Components.
+
+When set this to true, the list of Mono\+Behaviours gets cached in each \hyperlink{class_photon_view}{Photon\+View}. You can use photon\+View.\+Refresh\+Rpc\+Mono\+Behaviour\+Cache() to manually refresh a \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s list of Mono\+Behaviours on demand (when a new Mono\+Behaviour gets added to a networked Game\+Object, e.\+g.). \index{Photon\+Network@{Photon\+Network}!version\+P\+UN@{version\+P\+UN}}
+\index{version\+P\+UN@{version\+P\+UN}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{version\+P\+UN}{versionPUN}}]{\setlength{\rightskip}{0pt plus 5cm}const string Photon\+Network.\+version\+P\+UN = \char`\"{}1.\+65\char`\"{}}\hypertarget{class_photon_network_ac6b98cecd29a9ced8ec4a6ae78908dfc}{}\label{class_photon_network_ac6b98cecd29a9ced8ec4a6ae78908dfc}
+
+
+Version number of P\+UN. Also used in Game\+Version to separate client version from each other.
+
+
+
+\subsection{Property Documentation}
+\index{Photon\+Network@{Photon\+Network}!Auth\+Values@{Auth\+Values}}
+\index{Auth\+Values@{Auth\+Values}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Auth\+Values}{AuthValues}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Authentication\+Values} Photon\+Network.\+Auth\+Values\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a282677f512ce2f53e4a0893d4e3844b8}{}\label{class_photon_network_a282677f512ce2f53e4a0893d4e3844b8}
+
+
+A user\textquotesingle{}s authentication values used during connect for Custom Authentication with \hyperlink{namespace_photon}{Photon} (and a custom service/community). 
+
+Set these before calling Connect if you want custom authentication. 
+
+If authentication fails for any values, P\+UN will call your implementation of \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa03351bfa4fb9325a5b0486862d4be3be}{On\+Custom\+Authentication\+Failed(string debug\+Msg)}. See\+: \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa03351bfa4fb9325a5b0486862d4be3be}{Photon\+Networking\+Message.\+On\+Custom\+Authentication\+Failed} \index{Photon\+Network@{Photon\+Network}!auto\+Clean\+Up\+Player\+Objects@{auto\+Clean\+Up\+Player\+Objects}}
+\index{auto\+Clean\+Up\+Player\+Objects@{auto\+Clean\+Up\+Player\+Objects}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{auto\+Clean\+Up\+Player\+Objects}{autoCleanUpPlayerObjects}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+auto\+Clean\+Up\+Player\+Objects\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a6c6fb3cd57d7e2a13d1fc354db0c1fd7}{}\label{class_photon_network_a6c6fb3cd57d7e2a13d1fc354db0c1fd7}
+
+
+This setting defines per room, if network-\/instantiated Game\+Objects (with \hyperlink{class_photon_view}{Photon\+View}) get cleaned up when the creator of it leaves. 
+
+This setting is done per room. It can\textquotesingle{}t be changed in the room and it will override the settings of individual clients.
+
+If room.\+Auto\+Clean\+Up is enabled in a room, the P\+UN clients will destroy a player\textquotesingle{}s Game\+Objects on leave. This includes Game\+Objects manually instantiated (via R\+P\+Cs, e.\+g.). When enabled, the server will clean R\+P\+Cs, instantiated Game\+Objects and Photon\+Views of the leaving player, too. and Players who join after someone left, won\textquotesingle{}t get the events of that player anymore.
+
+Under the hood, this setting is stored as a Custom \hyperlink{class_room}{Room} Property. Enabled by default. \index{Photon\+Network@{Photon\+Network}!auto\+Join\+Lobby@{auto\+Join\+Lobby}}
+\index{auto\+Join\+Lobby@{auto\+Join\+Lobby}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{auto\+Join\+Lobby}{autoJoinLobby}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+auto\+Join\+Lobby\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{}\label{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}
+
+
+Set in Photon\+Server\+Settings asset. 
+
+Defines if the \hyperlink{class_photon_network}{Photon\+Network} should join the \char`\"{}lobby\char`\"{} when connected to the Master server. 
+
+If this is false, \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa883ba3af22ed6fc336cde8cb71624d30}{On\+Connected\+To\+Master()} will be called when connection to the Master is available. \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2af1a9ab5a169e8800132c0625d3c6b2}{On\+Joined\+Lobby()} will N\+OT be called if this is false.
+
+Enabled by default.
+
+The room listing will not become available. Rooms can be created and joined (randomly) without joining the lobby (and getting sent the room list). \index{Photon\+Network@{Photon\+Network}!automatically\+Sync\+Scene@{automatically\+Sync\+Scene}}
+\index{automatically\+Sync\+Scene@{automatically\+Sync\+Scene}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{automatically\+Sync\+Scene}{automaticallySyncScene}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+automatically\+Sync\+Scene\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_af721675dc5cf3c5ac4d4b67339246cdf}{}\label{class_photon_network_af721675dc5cf3c5ac4d4b67339246cdf}
+
+
+Defines if all clients in a room should load the same level as the Master Client (if that used \hyperlink{class_photon_network_a5bb203a37b6db717583ea7b81fb56852}{Photon\+Network.\+Load\+Level}). 
+
+To synchronize the loaded level, the Master Client should use \hyperlink{class_photon_network_a5bb203a37b6db717583ea7b81fb56852}{Photon\+Network.\+Load\+Level}. All clients will load the new scene when they get the update or when they join.
+
+Internally, a Custom \hyperlink{class_room}{Room} Property is set for the loaded scene. When a client reads that and is not in the same scene yet, it will immediately pause the Message Queue (\hyperlink{class_photon_network_a9cf8214080471001a1a32e17eff9b402}{Photon\+Network.\+is\+Message\+Queue\+Running} = false) and load. When the scene finished loading, P\+UN will automatically re-\/enable the Message Queue. \index{Photon\+Network@{Photon\+Network}!connected@{connected}}
+\index{connected@{connected}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{connected}{connected}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+connected\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_ad96fd99b5e9384771ee44b427edf7487}{}\label{class_photon_network_ad96fd99b5e9384771ee44b427edf7487}
+
+
+False until you connected to \hyperlink{namespace_photon}{Photon} initially. 
+
+True in offline mode, while connected to any server and even while switching servers. \index{Photon\+Network@{Photon\+Network}!connected\+And\+Ready@{connected\+And\+Ready}}
+\index{connected\+And\+Ready@{connected\+And\+Ready}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{connected\+And\+Ready}{connectedAndReady}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+connected\+And\+Ready\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a7698c3e61503df2cb5375ffc3182fb1f}{}\label{class_photon_network_a7698c3e61503df2cb5375ffc3182fb1f}
+
+
+A refined version of connected which is true only if your connection to the server is ready to accept operations like join, leave, etc. 
+
+\index{Photon\+Network@{Photon\+Network}!connecting@{connecting}}
+\index{connecting@{connecting}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{connecting}{connecting}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+connecting\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a0141dc0df0d2e0a7fcda2e2101c44254}{}\label{class_photon_network_a0141dc0df0d2e0a7fcda2e2101c44254}
+
+
+True when you called Connect\+Using\+Settings (or similar) until the low level connection to \hyperlink{namespace_photon}{Photon} gets established. 
+
+\index{Photon\+Network@{Photon\+Network}!connection\+State@{connection\+State}}
+\index{connection\+State@{connection\+State}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{connection\+State}{connectionState}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+State} Photon\+Network.\+connection\+State\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_aa2a46d8ce13fedd3f4550b6164524e81}{}\label{class_photon_network_aa2a46d8ce13fedd3f4550b6164524e81}
+
+
+Simplified connection state 
+
+\index{Photon\+Network@{Photon\+Network}!connection\+State\+Detailed@{connection\+State\+Detailed}}
+\index{connection\+State\+Detailed@{connection\+State\+Detailed}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{connection\+State\+Detailed}{connectionStateDetailed}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Peer\+State} Photon\+Network.\+connection\+State\+Detailed\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a70403962dc524bb642e24de01b8fa43e}{}\label{class_photon_network_a70403962dc524bb642e24de01b8fa43e}
+
+
+Detailed connection state (ignorant of P\+UN, so it can be \char`\"{}disconnected\char`\"{} while switching servers). 
+
+In Offline\+Mode, this is \hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7d50c09f1ad7d098e0a847bcdcab7efb}{Peer\+State.\+Joined} (after create/join) or it is Connected\+To\+Master in all other cases. \index{Photon\+Network@{Photon\+Network}!count\+Of\+Players@{count\+Of\+Players}}
+\index{count\+Of\+Players@{count\+Of\+Players}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{count\+Of\+Players}{countOfPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+count\+Of\+Players\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a56b04c065a4f5d54e3f9113056b32da2}{}\label{class_photon_network_a56b04c065a4f5d54e3f9113056b32da2}
+
+
+The count of players currently using this application (available on Master\+Server in 5sec intervals). 
+
+\index{Photon\+Network@{Photon\+Network}!count\+Of\+Players\+In\+Rooms@{count\+Of\+Players\+In\+Rooms}}
+\index{count\+Of\+Players\+In\+Rooms@{count\+Of\+Players\+In\+Rooms}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{count\+Of\+Players\+In\+Rooms}{countOfPlayersInRooms}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+count\+Of\+Players\+In\+Rooms\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a8830a7a4b92490f7882780630b1fcf99}{}\label{class_photon_network_a8830a7a4b92490f7882780630b1fcf99}
+
+
+Count of users currently playing your app in some room (sent every 5sec by Master Server). 
+
+Use player\+List.\+Count to get the count of players in the room you\textquotesingle{}re in! \index{Photon\+Network@{Photon\+Network}!count\+Of\+Players\+On\+Master@{count\+Of\+Players\+On\+Master}}
+\index{count\+Of\+Players\+On\+Master@{count\+Of\+Players\+On\+Master}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{count\+Of\+Players\+On\+Master}{countOfPlayersOnMaster}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+count\+Of\+Players\+On\+Master\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a1e23b1e0ff44046e6532c8588ac08140}{}\label{class_photon_network_a1e23b1e0ff44046e6532c8588ac08140}
+
+
+The count of players currently looking for a room (available on Master\+Server in 5sec intervals). 
+
+\index{Photon\+Network@{Photon\+Network}!count\+Of\+Rooms@{count\+Of\+Rooms}}
+\index{count\+Of\+Rooms@{count\+Of\+Rooms}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{count\+Of\+Rooms}{countOfRooms}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+count\+Of\+Rooms\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a6cbf85644c07b9ceb4b4a1accd0f4ce9}{}\label{class_photon_network_a6cbf85644c07b9ceb4b4a1accd0f4ce9}
+
+
+The count of rooms currently in use (available on Master\+Server in 5sec intervals). 
+
+While inside the lobby you can also check the count of listed rooms as\+: \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Photon\+Network.\+Get\+Room\+List()}.Length. Since P\+UN v1.\+25 this is only based on the statistic event \hyperlink{namespace_photon}{Photon} sends (counting all rooms). \index{Photon\+Network@{Photon\+Network}!Crc\+Check\+Enabled@{Crc\+Check\+Enabled}}
+\index{Crc\+Check\+Enabled@{Crc\+Check\+Enabled}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Crc\+Check\+Enabled}{CrcCheckEnabled}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+Crc\+Check\+Enabled\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_ae995c021d1295f00afd9f87cd3bd118c}{}\label{class_photon_network_ae995c021d1295f00afd9f87cd3bd118c}
+
+
+Crc checks can be useful to detect and avoid issues with broken datagrams. Can be enabled while not connected.
+
+\index{Photon\+Network@{Photon\+Network}!Enable\+Lobby\+Statistics@{Enable\+Lobby\+Statistics}}
+\index{Enable\+Lobby\+Statistics@{Enable\+Lobby\+Statistics}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Enable\+Lobby\+Statistics}{EnableLobbyStatistics}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+Enable\+Lobby\+Statistics\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a8ce4ab4a44e705199ff795b2eb9b395b}{}\label{class_photon_network_a8ce4ab4a44e705199ff795b2eb9b395b}
+
+
+Set in Photon\+Server\+Settings asset. 
+
+Enable to get a list of active lobbies from the Master Server. 
+
+Lobby Statistics can be useful if a game uses multiple lobbies and you want to show activity of each to players.
+
+This value is stored in Photon\+Server\+Settings.
+
+\hyperlink{class_photon_network_abdced09cccf61ae817cb97705ffce137}{Photon\+Network.\+Lobby\+Statistics} is updated when you connect to the Master Server. There is also a callback Pun\+Behaviour. \index{Photon\+Network@{Photon\+Network}!Friends@{Friends}}
+\index{Friends@{Friends}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Friends}{Friends}}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Friend\+Info}$>$ Photon\+Network.\+Friends\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{}\label{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}
+
+
+Read-\/only list of friends, their online status and the room they are in. 
+
+Null until initialized by a Find\+Friends call. 
+
+Do not modify this list! It is internally handled by Find\+Friends and only available to read the values. The value of Friends\+List\+Age tells you how old the data is in milliseconds.
+
+Don\textquotesingle{}t get this list more often than useful ($>$ 10 seconds). In best case, keep the list you fetch really short. You could (e.\+g.) get the full list only once, then request a few updates only for friends who are online. After a while (e.\+g. 1 minute), you can get the full list again (to update online states). \index{Photon\+Network@{Photon\+Network}!Friends\+List\+Age@{Friends\+List\+Age}}
+\index{Friends\+List\+Age@{Friends\+List\+Age}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Friends\+List\+Age}{FriendsListAge}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+Friends\+List\+Age\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a5aca6d5aea9bb5b55967959d1ecd0ccd}{}\label{class_photon_network_a5aca6d5aea9bb5b55967959d1ecd0ccd}
+
+
+Age of friend list info (in milliseconds). 
+
+It\textquotesingle{}s 0 until a friend list is fetched. \index{Photon\+Network@{Photon\+Network}!game\+Version@{game\+Version}}
+\index{game\+Version@{game\+Version}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{game\+Version}{gameVersion}}]{\setlength{\rightskip}{0pt plus 5cm}string Photon\+Network.\+game\+Version\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}{}\label{class_photon_network_a2a8b1690325d73930d6bc8b99d8e736d}
+
+
+Version string for your this build. 
+
+Can be used to separate incompatible clients. Sent during connect.
+
+This is only sent when you connect so that is also the place you set it usually (e.\+g. in Connect\+Using\+Settings).\index{Photon\+Network@{Photon\+Network}!in\+Room@{in\+Room}}
+\index{in\+Room@{in\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{in\+Room}{inRoom}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+in\+Room\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a4f968278990dea7202b04eed1f833b6c}{}\label{class_photon_network_a4f968278990dea7202b04eed1f833b6c}
+
+
+Is true while being in a room (connection\+State\+Detailed == \hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7d50c09f1ad7d098e0a847bcdcab7efb}{Peer\+State.\+Joined}). 
+
+Many actions can only be executed in a room, like Instantiate or Leave, etc. You can join a room in offline mode, too. \index{Photon\+Network@{Photon\+Network}!inside\+Lobby@{inside\+Lobby}}
+\index{inside\+Lobby@{inside\+Lobby}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{inside\+Lobby}{insideLobby}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+inside\+Lobby\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}{}\label{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}
+
+
+True while this client is in a lobby. 
+
+Implement \hyperlink{interface_i_pun_callbacks_ad3e808558f778aec6b12e950d9632506}{I\+Pun\+Callbacks.\+On\+Received\+Room\+List\+Update()} for a notification when the list of rooms becomes available or updated.
+
+You are automatically leaving any lobby when you join a room! Lobbies only exist on the Master Server (whereas rooms are handled by Game Servers). \index{Photon\+Network@{Photon\+Network}!is\+Master\+Client@{is\+Master\+Client}}
+\index{is\+Master\+Client@{is\+Master\+Client}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{is\+Master\+Client}{isMasterClient}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+is\+Master\+Client\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_af498064a6019a6c69e875bd64db40216}{}\label{class_photon_network_af498064a6019a6c69e875bd64db40216}
+
+
+Are we the master client? 
+
+\index{Photon\+Network@{Photon\+Network}!is\+Message\+Queue\+Running@{is\+Message\+Queue\+Running}}
+\index{is\+Message\+Queue\+Running@{is\+Message\+Queue\+Running}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{is\+Message\+Queue\+Running}{isMessageQueueRunning}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+is\+Message\+Queue\+Running\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a9cf8214080471001a1a32e17eff9b402}{}\label{class_photon_network_a9cf8214080471001a1a32e17eff9b402}
+
+
+Can be used to pause dispatching of incoming evtents (R\+P\+Cs, Instantiates and anything else incoming). 
+
+While Is\+Message\+Queue\+Running == false, the On\+Photon\+Serialize\+View calls are not done and nothing is sent by a client. Also, incoming messages will be queued until you re-\/activate the message queue.
+
+This can be useful if you first want to load a level, then go on receiving data of Photon\+Views and R\+P\+Cs. The client will go on receiving and sending acknowledgements for incoming packages and your R\+P\+Cs/\+Events. This adds \char`\"{}lag\char`\"{} and can cause issues when the pause is longer, as all incoming messages are just queued. \index{Photon\+Network@{Photon\+Network}!is\+Non\+Master\+Client\+In\+Room@{is\+Non\+Master\+Client\+In\+Room}}
+\index{is\+Non\+Master\+Client\+In\+Room@{is\+Non\+Master\+Client\+In\+Room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{is\+Non\+Master\+Client\+In\+Room}{isNonMasterClientInRoom}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+is\+Non\+Master\+Client\+In\+Room\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_afbff4452088b29acf41bf3012a8d2545}{}\label{class_photon_network_afbff4452088b29acf41bf3012a8d2545}
+
+
+True if we are in a room (client) and N\+OT the room\textquotesingle{}s masterclient 
+
+\index{Photon\+Network@{Photon\+Network}!lobby@{lobby}}
+\index{lobby@{lobby}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{lobby}{lobby}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Typed\+Lobby} Photon\+Network.\+lobby\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a3af7f8d0082599e6e3a56a5b1481a505}{}\label{class_photon_network_a3af7f8d0082599e6e3a56a5b1481a505}
+
+
+The lobby that will be used when P\+UN joins a lobby or creates a game. 
+
+The default lobby uses an empty string as name. P\+UN will enter a lobby on the Master Server if auto\+Join\+Lobby is set to true. So when you connect or leave a room, P\+UN automatically gets you into a lobby again.
+
+Check \hyperlink{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}{Photon\+Network.\+inside\+Lobby} if the client is in a lobby. (master\+Server\+And\+Lobby) \index{Photon\+Network@{Photon\+Network}!Lobby\+Statistics@{Lobby\+Statistics}}
+\index{Lobby\+Statistics@{Lobby\+Statistics}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Lobby\+Statistics}{LobbyStatistics}}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Typed\+Lobby\+Info}$>$ Photon\+Network.\+Lobby\+Statistics\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_abdced09cccf61ae817cb97705ffce137}{}\label{class_photon_network_abdced09cccf61ae817cb97705ffce137}
+
+
+If turned on, the Master Server will provide information about active lobbies for this application. 
+
+Lobby Statistics can be useful if a game uses multiple lobbies and you want to show activity of each to players. Per lobby, you get\+: name, type, room-\/ and player-\/count.
+
+\hyperlink{class_photon_network_abdced09cccf61ae817cb97705ffce137}{Photon\+Network.\+Lobby\+Statistics} is updated when you connect to the Master Server. There is also a callback Pun\+Behaviour.\+On\+Lobby\+Statistics\+Update, which you should implement to update your UI (e.\+g.).
+
+Lobby Statistics are not turned on by default. Enable them in the Photon\+Server\+Settings file of the project. \index{Photon\+Network@{Photon\+Network}!master\+Client@{master\+Client}}
+\index{master\+Client@{master\+Client}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{master\+Client}{masterClient}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+Network.\+master\+Client\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_aa7e51b5e5f9f8b89f057096f47d11c5b}{}\label{class_photon_network_aa7e51b5e5f9f8b89f057096f47d11c5b}
+
+
+The Master Client of the current room or null (outside of rooms). 
+
+Can be used as \char`\"{}authoritative\char`\"{} client/player to make descisions, run AI or other.
+
+If the current Master Client leaves the room (leave/disconnect), the server will quickly assign someone else. If the current Master Client times out (closed app, lost connection, etc), messages sent to this client are effectively lost for the others! A timeout can take 10 seconds in which no Master Client is active.
+
+Implement the method \hyperlink{interface_i_pun_callbacks_abee2c86784a9a700b9f5b4073bd00be7}{I\+Pun\+Callbacks.\+On\+Master\+Client\+Switched} to be called when the Master Client switched.
+
+Use \hyperlink{class_photon_network_a85b058bab4a369d0c5730cf43b462962}{Photon\+Network.\+Set\+Master\+Client}, to switch manually to some other player / client.
+
+With offline\+Mode == true, this always returns the \hyperlink{class_photon_network_a1b3803f17c6d713593bca41547b8b9b3}{Photon\+Network.\+player}. \index{Photon\+Network@{Photon\+Network}!Max\+Resends\+Before\+Disconnect@{Max\+Resends\+Before\+Disconnect}}
+\index{Max\+Resends\+Before\+Disconnect@{Max\+Resends\+Before\+Disconnect}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Max\+Resends\+Before\+Disconnect}{MaxResendsBeforeDisconnect}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+Max\+Resends\+Before\+Disconnect\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_ad86d4af661dd7365f6e172e106ca7cb2}{}\label{class_photon_network_ad86d4af661dd7365f6e172e106ca7cb2}
+
+
+Defines the number of times a reliable message can be resent before not getting an A\+CK for it will trigger a disconnect. 
+
+Default\+: 5.
+
+Less resends mean quicker disconnects, while more can lead to much more lag without helping. Min\+: 3. Max\+: 10.\index{Photon\+Network@{Photon\+Network}!Network\+Statistics\+Enabled@{Network\+Statistics\+Enabled}}
+\index{Network\+Statistics\+Enabled@{Network\+Statistics\+Enabled}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Network\+Statistics\+Enabled}{NetworkStatisticsEnabled}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+Network\+Statistics\+Enabled\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a67cb40d5f2dede55b03b2be1f792e93a}{}\label{class_photon_network_a67cb40d5f2dede55b03b2be1f792e93a}
+
+
+Enables or disables the collection of statistics about this client\textquotesingle{}s traffic. 
+
+If you encounter issues with clients, the traffic stats are a good starting point to find solutions. Only with enabled stats, you can use Get\+Vital\+Stats \index{Photon\+Network@{Photon\+Network}!offline\+Mode@{offline\+Mode}}
+\index{offline\+Mode@{offline\+Mode}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{offline\+Mode}{offlineMode}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Network.\+offline\+Mode\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a4a1cd1887cb41a0592322527a7304ed7}{}\label{class_photon_network_a4a1cd1887cb41a0592322527a7304ed7}
+
+
+Offline mode can be set to re-\/use your multiplayer code in singleplayer game modes. 
+
+When this is on \hyperlink{class_photon_network}{Photon\+Network} will not create any connections and there is near to no overhead. Mostly usefull for reusing R\+PC\textquotesingle{}s and \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate} \index{Photon\+Network@{Photon\+Network}!other\+Players@{other\+Players}}
+\index{other\+Players@{other\+Players}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{other\+Players}{otherPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} \mbox{[}$\,$\mbox{]} Photon\+Network.\+other\+Players\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a894df24398c8cfe2d06e22ddc39576fa}{}\label{class_photon_network_a894df24398c8cfe2d06e22ddc39576fa}
+
+
+The list of players in the current room, excluding the local player. 
+
+This list is only valid, while the client is in a room. It automatically gets updated when someone joins or leaves.
+
+This can be used to list all other players in a room. Each player\textquotesingle{}s \hyperlink{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}{Photon\+Player.\+custom\+Properties} are accessible (set and synchronized via \hyperlink{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{Photon\+Player.\+Set\+Custom\+Properties}).
+
+You can use a \hyperlink{class_photon_player_aaf54b32878a605d3e4d47f16ad106aa3}{Photon\+Player.\+Tag\+Object} to store an arbitrary object for reference. That is not synchronized via the network. \index{Photon\+Network@{Photon\+Network}!Packet\+Loss\+By\+Crc\+Check@{Packet\+Loss\+By\+Crc\+Check}}
+\index{Packet\+Loss\+By\+Crc\+Check@{Packet\+Loss\+By\+Crc\+Check}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Packet\+Loss\+By\+Crc\+Check}{PacketLossByCrcCheck}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+Packet\+Loss\+By\+Crc\+Check\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a587a1fb0147ddc48a5176e48a2940985}{}\label{class_photon_network_a587a1fb0147ddc48a5176e48a2940985}
+
+
+If Crc\+Check\+Enabled, this counts the incoming packages that don\textquotesingle{}t have a valid C\+RC checksum and got rejected.
+
+\index{Photon\+Network@{Photon\+Network}!player@{player}}
+\index{player@{player}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{player}{player}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+Network.\+player\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a1b3803f17c6d713593bca41547b8b9b3}{}\label{class_photon_network_a1b3803f17c6d713593bca41547b8b9b3}
+
+
+The local \hyperlink{class_photon_player}{Photon\+Player}. 
+
+Always available and represents this player. Custom\+Properties can be set before entering a room and will be synced as well. \index{Photon\+Network@{Photon\+Network}!player\+List@{player\+List}}
+\index{player\+List@{player\+List}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{player\+List}{playerList}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} \mbox{[}$\,$\mbox{]} Photon\+Network.\+player\+List\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a2dc5e6cba79f899d9952f804db35b2f3}{}\label{class_photon_network_a2dc5e6cba79f899d9952f804db35b2f3}
+
+
+The list of players in the current room, including the local player. 
+
+This list is only valid, while the client is in a room. It automatically gets updated when someone joins or leaves.
+
+This can be used to list all players in a room. Each player\textquotesingle{}s \hyperlink{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}{Photon\+Player.\+custom\+Properties} are accessible (set and synchronized via \hyperlink{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{Photon\+Player.\+Set\+Custom\+Properties}).
+
+You can use a \hyperlink{class_photon_player_aaf54b32878a605d3e4d47f16ad106aa3}{Photon\+Player.\+Tag\+Object} to store an arbitrary object for reference. That is not synchronized via the network. \index{Photon\+Network@{Photon\+Network}!player\+Name@{player\+Name}}
+\index{player\+Name@{player\+Name}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{player\+Name}{playerName}}]{\setlength{\rightskip}{0pt plus 5cm}string Photon\+Network.\+player\+Name\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_abb168e543c15731ec4de869d3a1ad8f4}{}\label{class_photon_network_abb168e543c15731ec4de869d3a1ad8f4}
+
+
+Set to synchronize the player\textquotesingle{}s nickname with everyone in the room(s) you enter. 
+
+This sets \hyperlink{class_photon_player_a74e5bb916dbfdb6960b8f2f11fa6aba9}{Photon\+Player.\+name}. 
+
+The player\+Name is just a nickname and does not have to be unique or backed up with some account.~\newline
+ Set the value any time (e.\+g. before you connect) and it will be available to everyone you play with.~\newline
+ Access the names of players by\+: \hyperlink{class_photon_player_a74e5bb916dbfdb6960b8f2f11fa6aba9}{Photon\+Player.\+name}. ~\newline
+ \hyperlink{class_photon_network_a894df24398c8cfe2d06e22ddc39576fa}{Photon\+Network.\+other\+Players} is a list of other players -\/ each contains the player\+Name the remote player set. \index{Photon\+Network@{Photon\+Network}!Prefab\+Pool@{Prefab\+Pool}}
+\index{Prefab\+Pool@{Prefab\+Pool}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Prefab\+Pool}{PrefabPool}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Pun\+Prefab\+Pool} Photon\+Network.\+Prefab\+Pool\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a1ed1ac94f91b8746d218e22146eb515e}{}\label{class_photon_network_a1ed1ac94f91b8746d218e22146eb515e}
+
+
+An Object Pool can be used to keep and reuse instantiated object instances. 
+
+It replaced Unity\textquotesingle{}s default Instantiate and Destroy methods. 
+
+To use a Game\+Object pool, implement \hyperlink{interface_i_pun_prefab_pool}{I\+Pun\+Prefab\+Pool} and assign it here. Prefabs are identified by name. \index{Photon\+Network@{Photon\+Network}!Quick\+Resends@{Quick\+Resends}}
+\index{Quick\+Resends@{Quick\+Resends}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Quick\+Resends}{QuickResends}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+Quick\+Resends\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_ab5e68c8f4799fabb200d08ff8c313c43}{}\label{class_photon_network_ab5e68c8f4799fabb200d08ff8c313c43}
+
+
+In case of network loss, reliable messages can be repeated quickly up to 3 times. 
+
+When reliable messages get lost more than once, subsequent repeats are delayed a bit to allow the network to recover.~\newline
+ With this option, the repeats 2 and 3 can be sped up. This can help avoid timeouts but also it increases the speed in which gaps are closed.~\newline
+ When you set this, increase \hyperlink{class_photon_network_ad86d4af661dd7365f6e172e106ca7cb2}{Photon\+Network.\+Max\+Resends\+Before\+Disconnect} to 6 or 7. \index{Photon\+Network@{Photon\+Network}!Resent\+Reliable\+Commands@{Resent\+Reliable\+Commands}}
+\index{Resent\+Reliable\+Commands@{Resent\+Reliable\+Commands}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Resent\+Reliable\+Commands}{ResentReliableCommands}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+Resent\+Reliable\+Commands\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_aaaf92ee5eec22fff548ee9bb735913b6}{}\label{class_photon_network_aaaf92ee5eec22fff548ee9bb735913b6}
+
+
+Count of commands that got repeated (due to local repeat-\/timing before an A\+CK was received). 
+
+If this value increases a lot, there is a good chance that a timeout disconnect will happen due to bad conditions. \index{Photon\+Network@{Photon\+Network}!room@{room}}
+\index{room@{room}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{room}{room}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} Photon\+Network.\+room\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_ac7c6623c88f254b965aa366b1229781e}{}\label{class_photon_network_ac7c6623c88f254b965aa366b1229781e}
+
+
+Get the room we\textquotesingle{}re currently in. 
+
+Null if we aren\textquotesingle{}t in any room. \index{Photon\+Network@{Photon\+Network}!send\+Rate@{send\+Rate}}
+\index{send\+Rate@{send\+Rate}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{send\+Rate}{sendRate}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+send\+Rate\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a154fc601fac7f0fddd704231189457fb}{}\label{class_photon_network_a154fc601fac7f0fddd704231189457fb}
+
+
+Defines how many times per second \hyperlink{class_photon_network}{Photon\+Network} should send a package. 
+
+If you change this, do not forget to also change \textquotesingle{}send\+Rate\+On\+Serialize\textquotesingle{}. 
+
+Less packages are less overhead but more delay. Setting the send\+Rate to 50 will create up to 50 packages per second (which is a lot!). Keep your target platform in mind\+: mobile networks are slower and less reliable. \index{Photon\+Network@{Photon\+Network}!send\+Rate\+On\+Serialize@{send\+Rate\+On\+Serialize}}
+\index{send\+Rate\+On\+Serialize@{send\+Rate\+On\+Serialize}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{send\+Rate\+On\+Serialize}{sendRateOnSerialize}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+send\+Rate\+On\+Serialize\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_ac23d14ad150a87d51f4ffaa286db29e1}{}\label{class_photon_network_ac23d14ad150a87d51f4ffaa286db29e1}
+
+
+Defines how many times per second On\+Photon\+Serialize should be called on Photon\+Views. 
+
+Choose this value in relation to \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{Photon\+Network.\+send\+Rate}. On\+Photon\+Serialize will create updates and messages to be sent.~\newline
+ A lower rate takes up less performance but will cause more lag. \index{Photon\+Network@{Photon\+Network}!Server@{Server}}
+\index{Server@{Server}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Server}{Server}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server\+Connection} Photon\+Network.\+Server\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a9225b990f7b3d0fffadc23c7b3118ef2}{}\label{class_photon_network_a9225b990f7b3d0fffadc23c7b3118ef2}
+
+
+The server (type) this client is currently connected or connecting to. 
+
+\hyperlink{namespace_photon}{Photon} uses 3 different roles of servers\+: Name Server, Master Server and Game Server.\index{Photon\+Network@{Photon\+Network}!Server\+Address@{Server\+Address}}
+\index{Server\+Address@{Server\+Address}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Server\+Address}{ServerAddress}}]{\setlength{\rightskip}{0pt plus 5cm}string Photon\+Network.\+Server\+Address\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a3b90d30007fbeced0293dde881d0421e}{}\label{class_photon_network_a3b90d30007fbeced0293dde881d0421e}
+
+
+Currently used server address (no matter if master or game server).
+
+\index{Photon\+Network@{Photon\+Network}!Server\+Timestamp@{Server\+Timestamp}}
+\index{Server\+Timestamp@{Server\+Timestamp}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{Server\+Timestamp}{ServerTimestamp}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+Server\+Timestamp\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_aa3c3ed1a8a1da54e52c5b7284f69c8a4}{}\label{class_photon_network_aa3c3ed1a8a1da54e52c5b7284f69c8a4}
+
+
+The current server\textquotesingle{}s millisecond timestamp. 
+
+This can be useful to sync actions and events on all clients in one room. The timestamp is based on the server\textquotesingle{}s Environment.\+Tick\+Count.
+
+It will overflow from a positive to a negative value every so often, so be careful to use only time-\/differences to check the time delta when things happen.
+
+This is the basis for \hyperlink{class_photon_network_a86ab96957666ef72830a35662ef3d30b}{Photon\+Network.\+time}. \index{Photon\+Network@{Photon\+Network}!time@{time}}
+\index{time@{time}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{time}{time}}]{\setlength{\rightskip}{0pt plus 5cm}double Photon\+Network.\+time\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_photon_network_a86ab96957666ef72830a35662ef3d30b}{}\label{class_photon_network_a86ab96957666ef72830a35662ef3d30b}
+
+
+\hyperlink{namespace_photon}{Photon} network time, synched with the server. 
+
+v1.\+55~\newline
+ This time value depends on the server\textquotesingle{}s Environment.\+Tick\+Count. It is different per server but inside a \hyperlink{class_room}{Room}, all clients should have the same value (Rooms are on one server only).~\newline
+ This is not a Date\+Time!~\newline
+
+
+Use this value with care\+: ~\newline
+ It can start with any positive value.~\newline
+ It will \char`\"{}wrap around\char`\"{} from 4294967.\+295 to 0! \index{Photon\+Network@{Photon\+Network}!unreliable\+Commands\+Limit@{unreliable\+Commands\+Limit}}
+\index{unreliable\+Commands\+Limit@{unreliable\+Commands\+Limit}!Photon\+Network@{Photon\+Network}}
+\subsubsection[{\texorpdfstring{unreliable\+Commands\+Limit}{unreliableCommandsLimit}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Network.\+unreliable\+Commands\+Limit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_network_a3315be88f62dbdc24819946fc6171e08}{}\label{class_photon_network_a3315be88f62dbdc24819946fc6171e08}
+
+
+Used once per dispatch to limit unreliable commands per channel (so after a pause, many channels can still cause a lot of unreliable commands) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_network_8cs}{Photon\+Network.\+cs}\end{DoxyCompactItemize}

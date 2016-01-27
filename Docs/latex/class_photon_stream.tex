@@ -1,0 +1,266 @@
+\hypertarget{class_photon_stream}{}\section{Photon\+Stream Class Reference}
+\label{class_photon_stream}\index{Photon\+Stream@{Photon\+Stream}}
+
+
+This container is used in \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}{On\+Photon\+Serialize\+View()} to either provide incoming data of a \hyperlink{class_photon_view}{Photon\+View} or for you to provide it.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_photon_stream_a87b96b24a15203e84e5bb3f3996609d0}{Photon\+Stream} (bool write, object\mbox{[}$\,$\mbox{]} incoming\+Data)
+\begin{DoxyCompactList}\small\item\em Creates a stream and initializes it. \end{DoxyCompactList}\item 
+object \hyperlink{class_photon_stream_ae1bda0f78819d5b29d72c968b856781b}{Receive\+Next} ()
+\begin{DoxyCompactList}\small\item\em Read next piece of data from the stream when is\+Reading is true.\end{DoxyCompactList}\item 
+object \hyperlink{class_photon_stream_a1e34f079e1ab0c8a86cb864bc6aa5443}{Peek\+Next} ()
+\begin{DoxyCompactList}\small\item\em Read next piece of data from the stream without advancing the \char`\"{}current\char`\"{} item.\end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a8b1a1e59820ff95d2d2dd4c376841322}{Send\+Next} (object obj)
+\begin{DoxyCompactList}\small\item\em Add another piece of data to send it when is\+Writing is true.\end{DoxyCompactList}\item 
+object\mbox{[}$\,$\mbox{]} \hyperlink{class_photon_stream_a546034701bbab3d113219f81c0ae8080}{To\+Array} ()
+\begin{DoxyCompactList}\small\item\em Turns the stream into a new object\mbox{[}\mbox{]}.\end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a1bfb478104459081a25e0cf8208de9f4}{Serialize} (ref bool my\+Bool)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_ab3cf6c969d02214b001ddecc8dcd34ca}{Serialize} (ref int my\+Int)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a372ce5e9fc5a92e0a5581ed2cb357724}{Serialize} (ref string value)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a64fe29df11450f421046871947a54d5d}{Serialize} (ref char value)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a23ad49d3b2a2395d29f6035595c33a60}{Serialize} (ref short value)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a0f65bddf114f21922e307a67e9a959a1}{Serialize} (ref float obj)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_af7d4afc02408fb47b41e28b8f920be35}{Serialize} (ref \hyperlink{class_photon_player}{Photon\+Player} obj)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a0a74157c27454d59c9ebcd2f12480611}{Serialize} (ref Vector3 obj)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a03bcbb2ade3cc109364416476083da0d}{Serialize} (ref Vector2 obj)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_a8ba68f5108d3ab8bbc69d7b88aa661da}{Serialize} (ref Quaternion obj)
+\begin{DoxyCompactList}\small\item\em Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_photon_stream_a99e20ecd7737381042751acf8ec8fc4b}{is\+Writing}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, this client should add data to the stream to send it.\end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_stream_a8192fc59b4ffe6ecc3ac70a793b36dc5}{is\+Reading}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, this client should read data send by another client.\end{DoxyCompactList}\item 
+int \hyperlink{class_photon_stream_a67f264145ca1f4d1cb8518cbbb607797}{Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of items in the stream.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This container is used in \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}{On\+Photon\+Serialize\+View()} to either provide incoming data of a \hyperlink{class_photon_view}{Photon\+View} or for you to provide it. 
+
+The is\+Writing property will be true if this client is the \char`\"{}owner\char`\"{} of the \hyperlink{class_photon_view}{Photon\+View} (and thus the Game\+Object). Add data to the stream and it\textquotesingle{}s sent via the server to the other players in a room. On the receiving side, is\+Writing is false and the data should be read.
+
+Send as few data as possible to keep connection quality up. An empty \hyperlink{class_photon_stream}{Photon\+Stream} will not be sent.
+
+Use either \hyperlink{class_photon_stream_a1bfb478104459081a25e0cf8208de9f4}{Serialize()} for reading and writing or \hyperlink{class_photon_stream_a8b1a1e59820ff95d2d2dd4c376841322}{Send\+Next()} and \hyperlink{class_photon_stream_ae1bda0f78819d5b29d72c968b856781b}{Receive\+Next()}. The latter two are just explicit read and write methods but do about the same work as \hyperlink{class_photon_stream_a1bfb478104459081a25e0cf8208de9f4}{Serialize()}. It\textquotesingle{}s a matter of preference which methods you use. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__public_api_gaf30bbea51cc8c4b1ddc239d1c5c1468f}{Photon\+Networking\+Message}
+
+
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Photon\+Stream@{Photon\+Stream}!Photon\+Stream@{Photon\+Stream}}
+\index{Photon\+Stream@{Photon\+Stream}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Photon\+Stream(bool write, object[] incoming\+Data)}{PhotonStream(bool write, object[] incomingData)}}]{\setlength{\rightskip}{0pt plus 5cm}Photon\+Stream.\+Photon\+Stream (
+\begin{DoxyParamCaption}
+\item[{bool}]{write, }
+\item[{object\mbox{[}$\,$\mbox{]}}]{incoming\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a87b96b24a15203e84e5bb3f3996609d0}{}\label{class_photon_stream_a87b96b24a15203e84e5bb3f3996609d0}
+
+
+Creates a stream and initializes it. 
+
+Used by P\+UN internally. 
+
+\subsection{Member Function Documentation}
+\index{Photon\+Stream@{Photon\+Stream}!Peek\+Next@{Peek\+Next}}
+\index{Peek\+Next@{Peek\+Next}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Peek\+Next()}{PeekNext()}}]{\setlength{\rightskip}{0pt plus 5cm}object Photon\+Stream.\+Peek\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a1e34f079e1ab0c8a86cb864bc6aa5443}{}\label{class_photon_stream_a1e34f079e1ab0c8a86cb864bc6aa5443}
+
+
+Read next piece of data from the stream without advancing the \char`\"{}current\char`\"{} item.
+
+\index{Photon\+Stream@{Photon\+Stream}!Receive\+Next@{Receive\+Next}}
+\index{Receive\+Next@{Receive\+Next}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Receive\+Next()}{ReceiveNext()}}]{\setlength{\rightskip}{0pt plus 5cm}object Photon\+Stream.\+Receive\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_ae1bda0f78819d5b29d72c968b856781b}{}\label{class_photon_stream_ae1bda0f78819d5b29d72c968b856781b}
+
+
+Read next piece of data from the stream when is\+Reading is true.
+
+\index{Photon\+Stream@{Photon\+Stream}!Send\+Next@{Send\+Next}}
+\index{Send\+Next@{Send\+Next}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Send\+Next(object obj)}{SendNext(object obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Send\+Next (
+\begin{DoxyParamCaption}
+\item[{object}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a8b1a1e59820ff95d2d2dd4c376841322}{}\label{class_photon_stream_a8b1a1e59820ff95d2d2dd4c376841322}
+
+
+Add another piece of data to send it when is\+Writing is true.
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref bool my\+Bool)}{Serialize(ref bool myBool)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref bool}]{my\+Bool}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a1bfb478104459081a25e0cf8208de9f4}{}\label{class_photon_stream_a1bfb478104459081a25e0cf8208de9f4}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref int my\+Int)}{Serialize(ref int myInt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref int}]{my\+Int}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_ab3cf6c969d02214b001ddecc8dcd34ca}{}\label{class_photon_stream_ab3cf6c969d02214b001ddecc8dcd34ca}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref string value)}{Serialize(ref string value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref string}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a372ce5e9fc5a92e0a5581ed2cb357724}{}\label{class_photon_stream_a372ce5e9fc5a92e0a5581ed2cb357724}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref char value)}{Serialize(ref char value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref char}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a64fe29df11450f421046871947a54d5d}{}\label{class_photon_stream_a64fe29df11450f421046871947a54d5d}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref short value)}{Serialize(ref short value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref short}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a23ad49d3b2a2395d29f6035595c33a60}{}\label{class_photon_stream_a23ad49d3b2a2395d29f6035595c33a60}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref float obj)}{Serialize(ref float obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref float}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a0f65bddf114f21922e307a67e9a959a1}{}\label{class_photon_stream_a0f65bddf114f21922e307a67e9a959a1}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref Photon\+Player obj)}{Serialize(ref PhotonPlayer obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref {\bf Photon\+Player}}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_af7d4afc02408fb47b41e28b8f920be35}{}\label{class_photon_stream_af7d4afc02408fb47b41e28b8f920be35}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref Vector3 obj)}{Serialize(ref Vector3 obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref Vector3}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a0a74157c27454d59c9ebcd2f12480611}{}\label{class_photon_stream_a0a74157c27454d59c9ebcd2f12480611}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref Vector2 obj)}{Serialize(ref Vector2 obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref Vector2}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a03bcbb2ade3cc109364416476083da0d}{}\label{class_photon_stream_a03bcbb2ade3cc109364416476083da0d}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Serialize(ref Quaternion obj)}{Serialize(ref Quaternion obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{ref Quaternion}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a8ba68f5108d3ab8bbc69d7b88aa661da}{}\label{class_photon_stream_a8ba68f5108d3ab8bbc69d7b88aa661da}
+
+
+Will read or write the value, depending on the stream\textquotesingle{}s is\+Writing value. 
+
+\index{Photon\+Stream@{Photon\+Stream}!To\+Array@{To\+Array}}
+\index{To\+Array@{To\+Array}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{To\+Array()}{ToArray()}}]{\setlength{\rightskip}{0pt plus 5cm}object \mbox{[}$\,$\mbox{]} Photon\+Stream.\+To\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_a546034701bbab3d113219f81c0ae8080}{}\label{class_photon_stream_a546034701bbab3d113219f81c0ae8080}
+
+
+Turns the stream into a new object\mbox{[}\mbox{]}.
+
+
+
+\subsection{Property Documentation}
+\index{Photon\+Stream@{Photon\+Stream}!Count@{Count}}
+\index{Count@{Count}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{Count}{Count}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Stream.\+Count\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_stream_a67f264145ca1f4d1cb8518cbbb607797}{}\label{class_photon_stream_a67f264145ca1f4d1cb8518cbbb607797}
+
+
+Count of items in the stream.
+
+\index{Photon\+Stream@{Photon\+Stream}!is\+Reading@{is\+Reading}}
+\index{is\+Reading@{is\+Reading}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{is\+Reading}{isReading}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stream.\+is\+Reading\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_stream_a8192fc59b4ffe6ecc3ac70a793b36dc5}{}\label{class_photon_stream_a8192fc59b4ffe6ecc3ac70a793b36dc5}
+
+
+If true, this client should read data send by another client.
+
+\index{Photon\+Stream@{Photon\+Stream}!is\+Writing@{is\+Writing}}
+\index{is\+Writing@{is\+Writing}!Photon\+Stream@{Photon\+Stream}}
+\subsubsection[{\texorpdfstring{is\+Writing}{isWriting}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stream.\+is\+Writing\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_stream_a99e20ecd7737381042751acf8ec8fc4b}{}\label{class_photon_stream_a99e20ecd7737381042751acf8ec8fc4b}
+
+
+If true, this client should add data to the stream to send it.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_classes_8cs}{Photon\+Classes.\+cs}\end{DoxyCompactItemize}

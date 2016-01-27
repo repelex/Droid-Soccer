@@ -1,0 +1,96 @@
+\hypertarget{class_in_room_round_timer}{}\section{In\+Room\+Round\+Timer Class Reference}
+\label{class_in_room_round_timer}\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+
+
+Simple script that uses a property to sync a start time for a multiplayer game.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_in_room_round_timer_a17202ffb28b9e93f1d2379d79d1e9262}{On\+Joined\+Room} ()
+\begin{DoxyCompactList}\small\item\em Called by P\+UN when this client entered a room (no matter if joined or created).\end{DoxyCompactList}\item 
+void \hyperlink{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}{On\+Photon\+Custom\+Room\+Properties\+Changed} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} properties\+That\+Changed)
+\begin{DoxyCompactList}\small\item\em Called by P\+UN when new properties for the room were set (by any client in the room).\end{DoxyCompactList}\item 
+void \hyperlink{class_in_room_round_timer_ae136a34f3bf637b1b5610fd202ffa1e3}{On\+Master\+Client\+Switched} (\hyperlink{class_photon_player}{Photon\+Player} new\+Master\+Client)
+\item 
+void \hyperlink{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}{On\+G\+UI} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}{Seconds\+Per\+Turn} = 5
+\item 
+double \hyperlink{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}{Start\+Time}
+\item 
+Rect \hyperlink{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}{Text\+Pos} = new Rect(0,80,150,300)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple script that uses a property to sync a start time for a multiplayer game. 
+
+When entering a room, the first player will store the synchronized timestamp. You can\textquotesingle{}t set the room\textquotesingle{}s synchronized time in Create\+Room, because the clock on the Master Server and those on the Game Servers are not in sync. We use many servers and each has it\textquotesingle{}s own timer.
+
+Everyone else will join the room and check the property to calculate how much time passed since start. You can start a new round whenever you like.
+
+Based on this, you should be able to implement a synchronized timer for turns between players. 
+
+\subsection{Member Function Documentation}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!On\+G\+UI@{On\+G\+UI}}
+\index{On\+G\+UI@{On\+G\+UI}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{On\+G\+U\+I()}{OnGUI()}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+G\+UI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}{}\label{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!On\+Joined\+Room@{On\+Joined\+Room}}
+\index{On\+Joined\+Room@{On\+Joined\+Room}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{On\+Joined\+Room()}{OnJoinedRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+Joined\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_in_room_round_timer_a17202ffb28b9e93f1d2379d79d1e9262}{}\label{class_in_room_round_timer_a17202ffb28b9e93f1d2379d79d1e9262}
+
+
+Called by P\+UN when this client entered a room (no matter if joined or created).
+
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!On\+Master\+Client\+Switched@{On\+Master\+Client\+Switched}}
+\index{On\+Master\+Client\+Switched@{On\+Master\+Client\+Switched}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{On\+Master\+Client\+Switched(\+Photon\+Player new\+Master\+Client)}{OnMasterClientSwitched(PhotonPlayer newMasterClient)}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+Master\+Client\+Switched (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{new\+Master\+Client}
+\end{DoxyParamCaption}
+)}\hypertarget{class_in_room_round_timer_ae136a34f3bf637b1b5610fd202ffa1e3}{}\label{class_in_room_round_timer_ae136a34f3bf637b1b5610fd202ffa1e3}
+In theory, the client which created the room might crash/close before it sets the start time. Just to make extremely sure this never happens, a new master\+Client will check if it has to start a new round. \index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}}
+\index{On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Custom\+Room\+Properties\+Changed(\+Hashtable properties\+That\+Changed)}{OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged)}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+Photon\+Custom\+Room\+Properties\+Changed (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}}]{properties\+That\+Changed}
+\end{DoxyParamCaption}
+)}\hypertarget{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}{}\label{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}
+
+
+Called by P\+UN when new properties for the room were set (by any client in the room).
+
+
+
+\subsection{Member Data Documentation}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!Seconds\+Per\+Turn@{Seconds\+Per\+Turn}}
+\index{Seconds\+Per\+Turn@{Seconds\+Per\+Turn}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{Seconds\+Per\+Turn}{SecondsPerTurn}}]{\setlength{\rightskip}{0pt plus 5cm}int In\+Room\+Round\+Timer.\+Seconds\+Per\+Turn = 5}\hypertarget{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}{}\label{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!Start\+Time@{Start\+Time}}
+\index{Start\+Time@{Start\+Time}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{Start\+Time}{StartTime}}]{\setlength{\rightskip}{0pt plus 5cm}double In\+Room\+Round\+Timer.\+Start\+Time}\hypertarget{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}{}\label{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!Text\+Pos@{Text\+Pos}}
+\index{Text\+Pos@{Text\+Pos}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{Text\+Pos}{TextPos}}]{\setlength{\rightskip}{0pt plus 5cm}Rect In\+Room\+Round\+Timer.\+Text\+Pos = new Rect(0,80,150,300)}\hypertarget{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}{}\label{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_in_room_round_timer_8cs}{In\+Room\+Round\+Timer.\+cs}\end{DoxyCompactItemize}

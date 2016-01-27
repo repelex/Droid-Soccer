@@ -1,0 +1,604 @@
+\hypertarget{class_photon_1_1_pun_behaviour}{}\section{Photon.\+Pun\+Behaviour Class Reference}
+\label{class_photon_1_1_pun_behaviour}\index{Photon.\+Pun\+Behaviour@{Photon.\+Pun\+Behaviour}}
+
+
+This class provides a .photon\+View and all callbacks/events that P\+UN can call.  
+
+
+
+
+Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}, and \hyperlink{interface_i_pun_callbacks}{I\+Pun\+Callbacks}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_addc4f79164cd22c37d330b5ee2e340c7}{On\+Connected\+To\+Photon} ()
+\begin{DoxyCompactList}\small\item\em Called when the initial connection got established but before you can use the server. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a4e9e2aebcfa279a2eec0020f0e44b57a}{On\+Left\+Room} ()
+\begin{DoxyCompactList}\small\item\em Called when the local user/client left a room. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a53833ef0f9be9906694fc600acc1b897}{On\+Master\+Client\+Switched} (\hyperlink{class_photon_player}{Photon\+Player} new\+Master\+Client)
+\begin{DoxyCompactList}\small\item\em Called after switching to a new Master\+Client when the current one leaves. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a9fb00e512c59fa60c0a95e0d6e4dbe89}{On\+Photon\+Create\+Room\+Failed} (object\mbox{[}$\,$\mbox{]} code\+And\+Msg)
+\begin{DoxyCompactList}\small\item\em Called when a Create\+Room() call failed. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_ac808cb2ed21bbbe52a0d33f4d927644e}{On\+Photon\+Join\+Room\+Failed} (object\mbox{[}$\,$\mbox{]} code\+And\+Msg)
+\begin{DoxyCompactList}\small\item\em Called when a Join\+Room() call failed. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a67049b5cdc50467f4790aca093c34e82}{On\+Created\+Room} ()
+\begin{DoxyCompactList}\small\item\em Called when this client created a room and entered it. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em Called on entering a lobby on the Master Server. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a0c64cd0591992e70393d719e07e09f6f}{On\+Left\+Lobby} ()
+\begin{DoxyCompactList}\small\item\em Called after leaving a lobby. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a03bc6b8a9fffa6a7e7b43ff793ad2b28}{On\+Failed\+To\+Connect\+To\+Photon} (\hyperlink{group__public_api_gad61b1461cf60ad9e8d86923d111d5cc9}{Disconnect\+Cause} cause)
+\begin{DoxyCompactList}\small\item\em Called if a connect call to the \hyperlink{namespace_photon}{Photon} server failed before the connection was established, followed by a call to \hyperlink{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{On\+Disconnected\+From\+Photon()}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{On\+Disconnected\+From\+Photon} ()
+\begin{DoxyCompactList}\small\item\em Called after disconnecting from the \hyperlink{namespace_photon}{Photon} server. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a44be8bdd38ea28a1f540d38aede43bde}{On\+Connection\+Fail} (\hyperlink{group__public_api_gad61b1461cf60ad9e8d86923d111d5cc9}{Disconnect\+Cause} cause)
+\begin{DoxyCompactList}\small\item\em Called when something causes the connection to fail (after it was established), followed by a call to \hyperlink{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{On\+Disconnected\+From\+Photon()}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a2f6b448cd6a97e4281d543196872d29a}{On\+Photon\+Instantiate} (\hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
+\begin{DoxyCompactList}\small\item\em Called on all scripts on a Game\+Object (and children) that have been Instantiated using \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_aa45db114fa51d09929389bf0620f3150}{On\+Received\+Room\+List\+Update} ()
+\begin{DoxyCompactList}\small\item\em Called for any update of the room-\/listing while in a lobby (\hyperlink{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}{Photon\+Network.\+inside\+Lobby}) on the Master Server. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a8ee05dd443b9e51ddf962e655ca8ab77}{On\+Joined\+Room} ()
+\begin{DoxyCompactList}\small\item\em Called when entering a room (by creating or joining it). \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_abfe94f562c7abc261b25b0df95852a17}{On\+Photon\+Player\+Connected} (\hyperlink{class_photon_player}{Photon\+Player} new\+Player)
+\begin{DoxyCompactList}\small\item\em Called when a remote player entered the room. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_af2f8ef712d9942f861f3357bb548e937}{On\+Photon\+Player\+Disconnected} (\hyperlink{class_photon_player}{Photon\+Player} other\+Player)
+\begin{DoxyCompactList}\small\item\em Called when a remote player left the room. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a94f901ce1a7af7b6c49937c5c47ceae4}{On\+Photon\+Random\+Join\+Failed} (object\mbox{[}$\,$\mbox{]} code\+And\+Msg)
+\begin{DoxyCompactList}\small\item\em Called when a Join\+Random() call failed. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{On\+Connected\+To\+Master} ()
+\begin{DoxyCompactList}\small\item\em Called after the connection to the master is established and authenticated but only when \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} is false. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_adcef9694244295ad493bc4ec0b4463d4}{On\+Photon\+Max\+Cccu\+Reached} ()
+\begin{DoxyCompactList}\small\item\em Because the concurrent user limit was (temporarily) reached, this client is rejected by the server and disconnecting. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_abf25d63a39ef13cb9a0519e6e7672a2f}{On\+Photon\+Custom\+Room\+Properties\+Changed} (\hyperlink{namespace_photon_ac2f4b49a218ef814d00e31cd5f32bf4e}{Hashtable} properties\+That\+Changed)
+\begin{DoxyCompactList}\small\item\em Called when a room\textquotesingle{}s custom properties changed. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_aaec2f5973228b99c6ad781d5cedadb6f}{On\+Photon\+Player\+Properties\+Changed} (object\mbox{[}$\,$\mbox{]} player\+And\+Updated\+Props)
+\begin{DoxyCompactList}\small\item\em Called when custom player-\/properties are changed. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a443380e89534a70dfe4ce7ca16083035}{On\+Updated\+Friend\+List} ()
+\begin{DoxyCompactList}\small\item\em Called when the server sent the response to a Find\+Friends request and updated \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_ade038a534b66b6d9a5faad53e21e22c9}{On\+Custom\+Authentication\+Failed} (string debug\+Message)
+\begin{DoxyCompactList}\small\item\em Called when the custom authentication failed. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_abddb6286cecb1409cbca26088328e86d}{On\+Web\+Rpc\+Response} (Operation\+Response response)
+\begin{DoxyCompactList}\small\item\em Called by P\+UN when the response to a Web\+R\+PC is available. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a943727ed00dbd38afc4b7d16c9c3454d}{On\+Ownership\+Request} (object\mbox{[}$\,$\mbox{]} view\+And\+Player)
+\begin{DoxyCompactList}\small\item\em Called when another player requests ownership of a \hyperlink{class_photon_view}{Photon\+View} from you (the current owner). \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_photon_1_1_pun_behaviour_a945651c506d001121aa81e4fc8010a42}{On\+Lobby\+Statistics\+Update} ()
+\begin{DoxyCompactList}\small\item\em Called when the Master Server sent an update for the Lobby Statistics, updating \hyperlink{class_photon_network_abdced09cccf61ae817cb97705ffce137}{Photon\+Network.\+Lobby\+Statistics}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class provides a .photon\+View and all callbacks/events that P\+UN can call. 
+
+Override the events/methods you want to use. 
+
+By extending this class, you can implement individual methods as override.
+
+Visual Studio and Mono\+Develop should provide the list of methods when you begin typing \char`\"{}override\char`\"{}. {\bfseries Your implementation does not have to call \char`\"{}base.\+method()\char`\"{}.}
+
+This class implements \hyperlink{interface_i_pun_callbacks}{I\+Pun\+Callbacks}, which is used as definition of all P\+UN callbacks. Don\textquotesingle{}t implement \hyperlink{interface_i_pun_callbacks}{I\+Pun\+Callbacks} in your classes. Instead, implent \hyperlink{class_photon_1_1_pun_behaviour}{Pun\+Behaviour} or individual methods. 
+
+\subsection{Member Function Documentation}
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Connected\+To\+Master@{On\+Connected\+To\+Master}}
+\index{On\+Connected\+To\+Master@{On\+Connected\+To\+Master}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Connected\+To\+Master()}{OnConnectedToMaster()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Connected\+To\+Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{}\label{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}
+
+
+Called after the connection to the master is established and authenticated but only when \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} is false. 
+
+If you set \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} to true, \hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby()} will be called instead of this.
+
+You can join rooms and create them even without being in a lobby. The default lobby is used in that case. The list of available rooms won\textquotesingle{}t become available unless you join a lobby via Photon\+Network.\+join\+Lobby. 
+
+Implements \hyperlink{interface_i_pun_callbacks_aee4c7c26520ae45019b605b054fa1ac0}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Connected\+To\+Photon@{On\+Connected\+To\+Photon}}
+\index{On\+Connected\+To\+Photon@{On\+Connected\+To\+Photon}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Connected\+To\+Photon()}{OnConnectedToPhoton()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Connected\+To\+Photon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_addc4f79164cd22c37d330b5ee2e340c7}{}\label{class_photon_1_1_pun_behaviour_addc4f79164cd22c37d330b5ee2e340c7}
+
+
+Called when the initial connection got established but before you can use the server. 
+
+\hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby()} or \hyperlink{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{On\+Connected\+To\+Master()} are called when P\+UN is ready. 
+
+This callback is only useful to detect if the server can be reached at all (technically). Most often, it\textquotesingle{}s enough to implement \hyperlink{class_photon_1_1_pun_behaviour_a03bc6b8a9fffa6a7e7b43ff793ad2b28}{On\+Failed\+To\+Connect\+To\+Photon()} and \hyperlink{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{On\+Disconnected\+From\+Photon()}.
+
+{\itshape \hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby()} or \hyperlink{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{On\+Connected\+To\+Master()} are called when P\+UN is ready.}
+
+When this is called, the low level connection is established and P\+UN will send your App\+Id, the user, etc in the background. This is not called for transitions from the masterserver to game servers. 
+
+Implements \hyperlink{interface_i_pun_callbacks_aa9014980a1dc2d9befc6129668c890a2}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Connection\+Fail@{On\+Connection\+Fail}}
+\index{On\+Connection\+Fail@{On\+Connection\+Fail}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Connection\+Fail(\+Disconnect\+Cause cause)}{OnConnectionFail(DisconnectCause cause)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Connection\+Fail (
+\begin{DoxyParamCaption}
+\item[{{\bf Disconnect\+Cause}}]{cause}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a44be8bdd38ea28a1f540d38aede43bde}{}\label{class_photon_1_1_pun_behaviour_a44be8bdd38ea28a1f540d38aede43bde}
+
+
+Called when something causes the connection to fail (after it was established), followed by a call to \hyperlink{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{On\+Disconnected\+From\+Photon()}. 
+
+If the server could not be reached in the first place, On\+Failed\+To\+Connect\+To\+Photon is called instead. The reason for the error is provided as Disconnect\+Cause. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a49f4cfb7c0e2c51ec71b8f52c7413b31}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Created\+Room@{On\+Created\+Room}}
+\index{On\+Created\+Room@{On\+Created\+Room}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Created\+Room()}{OnCreatedRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Created\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a67049b5cdc50467f4790aca093c34e82}{}\label{class_photon_1_1_pun_behaviour_a67049b5cdc50467f4790aca093c34e82}
+
+
+Called when this client created a room and entered it. 
+
+\hyperlink{class_photon_1_1_pun_behaviour_a8ee05dd443b9e51ddf962e655ca8ab77}{On\+Joined\+Room()} will be called as well. 
+
+This callback is only called on the client which created a room (see \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Photon\+Network.\+Create\+Room}).
+
+As any client might close (or drop connection) anytime, there is a chance that the creator of a room does not execute On\+Created\+Room.
+
+If you need specific room properties or a \char`\"{}start signal\char`\"{}, it is safer to implement \hyperlink{class_photon_1_1_pun_behaviour_a53833ef0f9be9906694fc600acc1b897}{On\+Master\+Client\+Switched()} and to make the new Master\+Client check the room\textquotesingle{}s state. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a5d06d8035078d422f08b0c72c97ab136}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Custom\+Authentication\+Failed@{On\+Custom\+Authentication\+Failed}}
+\index{On\+Custom\+Authentication\+Failed@{On\+Custom\+Authentication\+Failed}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Custom\+Authentication\+Failed(string debug\+Message)}{OnCustomAuthenticationFailed(string debugMessage)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Custom\+Authentication\+Failed (
+\begin{DoxyParamCaption}
+\item[{string}]{debug\+Message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_ade038a534b66b6d9a5faad53e21e22c9}{}\label{class_photon_1_1_pun_behaviour_ade038a534b66b6d9a5faad53e21e22c9}
+
+
+Called when the custom authentication failed. 
+
+Followed by disconnect! 
+
+Custom Authentication can fail due to user-\/input, bad tokens/secrets. If authentication is successful, this method is not called. Implement \hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby()} or \hyperlink{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{On\+Connected\+To\+Master()} (as usual).
+
+During development of a game, it might also fail due to wrong configuration on the server side. In those cases, logging the debug\+Message is very important.
+
+Unless you setup a custom authentication service for your app (in the \href{https://www.exitgames.com/dashboard}{\tt Dashboard}), this won\textquotesingle{}t be called! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em debug\+Message} & Contains a debug message why authentication failed. This has to be fixed during development time.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_a9b55ef4a99252e1a9a111a3f88b61e1d}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Disconnected\+From\+Photon@{On\+Disconnected\+From\+Photon}}
+\index{On\+Disconnected\+From\+Photon@{On\+Disconnected\+From\+Photon}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Disconnected\+From\+Photon()}{OnDisconnectedFromPhoton()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Disconnected\+From\+Photon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{}\label{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}
+
+
+Called after disconnecting from the \hyperlink{namespace_photon}{Photon} server. 
+
+In some cases, other callbacks are called before On\+Disconnected\+From\+Photon is called. Examples\+: \hyperlink{class_photon_1_1_pun_behaviour_a44be8bdd38ea28a1f540d38aede43bde}{On\+Connection\+Fail()} and \hyperlink{class_photon_1_1_pun_behaviour_a03bc6b8a9fffa6a7e7b43ff793ad2b28}{On\+Failed\+To\+Connect\+To\+Photon()}. 
+
+Implements \hyperlink{interface_i_pun_callbacks_ac345f1ed2f24bcc73593988f1ac44f7d}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Failed\+To\+Connect\+To\+Photon@{On\+Failed\+To\+Connect\+To\+Photon}}
+\index{On\+Failed\+To\+Connect\+To\+Photon@{On\+Failed\+To\+Connect\+To\+Photon}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Failed\+To\+Connect\+To\+Photon(\+Disconnect\+Cause cause)}{OnFailedToConnectToPhoton(DisconnectCause cause)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Failed\+To\+Connect\+To\+Photon (
+\begin{DoxyParamCaption}
+\item[{{\bf Disconnect\+Cause}}]{cause}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a03bc6b8a9fffa6a7e7b43ff793ad2b28}{}\label{class_photon_1_1_pun_behaviour_a03bc6b8a9fffa6a7e7b43ff793ad2b28}
+
+
+Called if a connect call to the \hyperlink{namespace_photon}{Photon} server failed before the connection was established, followed by a call to \hyperlink{class_photon_1_1_pun_behaviour_a57675c88d17befc4746b7812a69b6b93}{On\+Disconnected\+From\+Photon()}. 
+
+This is called when no connection could be established at all. It differs from On\+Connection\+Fail, which is called when an existing connection fails. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a12268b49cbab2203f8b664c7bef4655a}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Joined\+Lobby@{On\+Joined\+Lobby}}
+\index{On\+Joined\+Lobby@{On\+Joined\+Lobby}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Joined\+Lobby()}{OnJoinedLobby()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Joined\+Lobby (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{}\label{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}
+
+
+Called on entering a lobby on the Master Server. 
+
+The actual room-\/list updates will call \hyperlink{class_photon_1_1_pun_behaviour_aa45db114fa51d09929389bf0620f3150}{On\+Received\+Room\+List\+Update()}. 
+
+Note\+: When \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} is false, \hyperlink{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{On\+Connected\+To\+Master()} will be called and the room list won\textquotesingle{}t become available.
+
+While in the lobby, the roomlist is automatically updated in fixed intervals (which you can\textquotesingle{}t modify). The room list gets available when \hyperlink{class_photon_1_1_pun_behaviour_aa45db114fa51d09929389bf0620f3150}{On\+Received\+Room\+List\+Update()} gets called after \hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby()}. 
+
+Implements \hyperlink{interface_i_pun_callbacks_affec2831a07b42447ac47919104c608e}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Joined\+Room@{On\+Joined\+Room}}
+\index{On\+Joined\+Room@{On\+Joined\+Room}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Joined\+Room()}{OnJoinedRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Joined\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a8ee05dd443b9e51ddf962e655ca8ab77}{}\label{class_photon_1_1_pun_behaviour_a8ee05dd443b9e51ddf962e655ca8ab77}
+
+
+Called when entering a room (by creating or joining it). 
+
+Called on all clients (including the Master Client). 
+
+This method is commonly used to instantiate player characters. If a match has to be started \char`\"{}actively\char`\"{}, you can call an \hyperlink{class_photon_view_ad288db13a15d581e0f7c5886f4036720}{Pun\+R\+PC} triggered by a user\textquotesingle{}s button-\/press or a timer.
+
+When this is called, you can usually already access the existing players in the room via \hyperlink{class_photon_network_a2dc5e6cba79f899d9952f804db35b2f3}{Photon\+Network.\+player\+List}. Also, all custom properties should be already available as \hyperlink{class_room_info_a928b103a3e88d2c090152440aa6fa874}{Room.\+custom\+Properties}. Check \hyperlink{class_room_aa9d85e54b2ff1b151de3670e87549966}{Room.\+player\+Count} to find out if enough players are in the room to start playing. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a113daf6c35e118aff8daa5537d8c1c6c}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Left\+Lobby@{On\+Left\+Lobby}}
+\index{On\+Left\+Lobby@{On\+Left\+Lobby}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Left\+Lobby()}{OnLeftLobby()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Left\+Lobby (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a0c64cd0591992e70393d719e07e09f6f}{}\label{class_photon_1_1_pun_behaviour_a0c64cd0591992e70393d719e07e09f6f}
+
+
+Called after leaving a lobby. 
+
+When you leave a lobby, \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Create\+Room} and \hyperlink{class_photon_network_aa9a112ccaaf71a296b823e9637584445}{Join\+Random\+Room} automatically refer to the default lobby. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a74de405ce9dff20613c31ce891090f49}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Left\+Room@{On\+Left\+Room}}
+\index{On\+Left\+Room@{On\+Left\+Room}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Left\+Room()}{OnLeftRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Left\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a4e9e2aebcfa279a2eec0020f0e44b57a}{}\label{class_photon_1_1_pun_behaviour_a4e9e2aebcfa279a2eec0020f0e44b57a}
+
+
+Called when the local user/client left a room. 
+
+When leaving a room, P\+UN brings you back to the Master Server. Before you can use lobbies and join or create rooms, \hyperlink{class_photon_1_1_pun_behaviour_a17686ad2c9bfdf6e64b8883792c81fee}{On\+Joined\+Lobby()} or \hyperlink{class_photon_1_1_pun_behaviour_ad77f0474fa75a37a3a39e96aa386ab09}{On\+Connected\+To\+Master()} will get called again. 
+
+Implements \hyperlink{interface_i_pun_callbacks_ac6d7fe9f1dfe9aec1562c262a90f7d5b}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Lobby\+Statistics\+Update@{On\+Lobby\+Statistics\+Update}}
+\index{On\+Lobby\+Statistics\+Update@{On\+Lobby\+Statistics\+Update}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Lobby\+Statistics\+Update()}{OnLobbyStatisticsUpdate()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Lobby\+Statistics\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a945651c506d001121aa81e4fc8010a42}{}\label{class_photon_1_1_pun_behaviour_a945651c506d001121aa81e4fc8010a42}
+
+
+Called when the Master Server sent an update for the Lobby Statistics, updating \hyperlink{class_photon_network_abdced09cccf61ae817cb97705ffce137}{Photon\+Network.\+Lobby\+Statistics}. 
+
+This callback has two preconditions\+: Enable\+Lobby\+Statistics must be set to true, before this client connects. And the client has to be connected to the Master Server, which is providing the info about lobbies. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a6922987e083f414d05464403e3b94bce}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Master\+Client\+Switched@{On\+Master\+Client\+Switched}}
+\index{On\+Master\+Client\+Switched@{On\+Master\+Client\+Switched}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Master\+Client\+Switched(\+Photon\+Player new\+Master\+Client)}{OnMasterClientSwitched(PhotonPlayer newMasterClient)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Master\+Client\+Switched (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{new\+Master\+Client}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a53833ef0f9be9906694fc600acc1b897}{}\label{class_photon_1_1_pun_behaviour_a53833ef0f9be9906694fc600acc1b897}
+
+
+Called after switching to a new Master\+Client when the current one leaves. 
+
+This is not called when this client enters a room. The former Master\+Client is still in the player list when this method get called. 
+
+Implements \hyperlink{interface_i_pun_callbacks_abee2c86784a9a700b9f5b4073bd00be7}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Ownership\+Request@{On\+Ownership\+Request}}
+\index{On\+Ownership\+Request@{On\+Ownership\+Request}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Ownership\+Request(object[] view\+And\+Player)}{OnOwnershipRequest(object[] viewAndPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Ownership\+Request (
+\begin{DoxyParamCaption}
+\item[{object\mbox{[}$\,$\mbox{]}}]{view\+And\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a943727ed00dbd38afc4b7d16c9c3454d}{}\label{class_photon_1_1_pun_behaviour_a943727ed00dbd38afc4b7d16c9c3454d}
+
+
+Called when another player requests ownership of a \hyperlink{class_photon_view}{Photon\+View} from you (the current owner). 
+
+The parameter view\+And\+Player contains\+:
+
+\hyperlink{class_photon_view}{Photon\+View} view = view\+And\+Player\mbox{[}0\mbox{]} as \hyperlink{class_photon_view}{Photon\+View};
+
+\hyperlink{class_photon_player}{Photon\+Player} requesting\+Player = view\+And\+Player\mbox{[}1\mbox{]} as \hyperlink{class_photon_player}{Photon\+Player}; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+And\+Player} & The \hyperlink{class_photon_view}{Photon\+View} is view\+And\+Player\mbox{[}0\mbox{]} and the requesting player is view\+And\+Player\mbox{[}1\mbox{]}.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_a02364f5144b6305bbffc886d530b7bd2}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Create\+Room\+Failed@{On\+Photon\+Create\+Room\+Failed}}
+\index{On\+Photon\+Create\+Room\+Failed@{On\+Photon\+Create\+Room\+Failed}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Create\+Room\+Failed(object[] code\+And\+Msg)}{OnPhotonCreateRoomFailed(object[] codeAndMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Create\+Room\+Failed (
+\begin{DoxyParamCaption}
+\item[{object\mbox{[}$\,$\mbox{]}}]{code\+And\+Msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a9fb00e512c59fa60c0a95e0d6e4dbe89}{}\label{class_photon_1_1_pun_behaviour_a9fb00e512c59fa60c0a95e0d6e4dbe89}
+
+
+Called when a Create\+Room() call failed. 
+
+The parameter provides Error\+Code and message (as array). 
+
+Most likely because the room name is already in use (some other client was faster than you). P\+UN logs some info if the \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{Photon\+Network.\+log\+Level} is $>$= \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+And\+Msg} & code\+And\+Msg\mbox{[}0\mbox{]} is a short Error\+Code and code\+And\+Msg\mbox{[}1\mbox{]} is a string debug msg.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_a523ce991e9a0dcde1b57b13e4e3db38c}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}}
+\index{On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Custom\+Room\+Properties\+Changed(\+Hashtable properties\+That\+Changed)}{OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Custom\+Room\+Properties\+Changed (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}}]{properties\+That\+Changed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_abf25d63a39ef13cb9a0519e6e7672a2f}{}\label{class_photon_1_1_pun_behaviour_abf25d63a39ef13cb9a0519e6e7672a2f}
+
+
+Called when a room\textquotesingle{}s custom properties changed. 
+
+The properties\+That\+Changed contains all that was set via \hyperlink{class_room_a9f8ac164f4f24be4140221b72792250a}{Room.\+Set\+Custom\+Properties}. 
+
+Since v1.\+25 this method has one parameter\+: Hashtable properties\+That\+Changed.~\newline
+ Changing properties must be done by \hyperlink{class_room_a9f8ac164f4f24be4140221b72792250a}{Room.\+Set\+Custom\+Properties}, which causes this callback locally, too. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em properties\+That\+Changed} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_a3a210383eb25f1c6f509aaa23c792f6f}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Instantiate@{On\+Photon\+Instantiate}}
+\index{On\+Photon\+Instantiate@{On\+Photon\+Instantiate}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Instantiate(\+Photon\+Message\+Info info)}{OnPhotonInstantiate(PhotonMessageInfo info)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Instantiate (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Message\+Info}}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a2f6b448cd6a97e4281d543196872d29a}{}\label{class_photon_1_1_pun_behaviour_a2f6b448cd6a97e4281d543196872d29a}
+
+
+Called on all scripts on a Game\+Object (and children) that have been Instantiated using \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate}. 
+
+\hyperlink{class_photon_message_info}{Photon\+Message\+Info} parameter provides info about who created the object and when (based off Photon\+Networking.\+time). 
+
+Implements \hyperlink{interface_i_pun_callbacks_a28ef052b776a594b305b08d7e80b6df3}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Join\+Room\+Failed@{On\+Photon\+Join\+Room\+Failed}}
+\index{On\+Photon\+Join\+Room\+Failed@{On\+Photon\+Join\+Room\+Failed}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Join\+Room\+Failed(object[] code\+And\+Msg)}{OnPhotonJoinRoomFailed(object[] codeAndMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Join\+Room\+Failed (
+\begin{DoxyParamCaption}
+\item[{object\mbox{[}$\,$\mbox{]}}]{code\+And\+Msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_ac808cb2ed21bbbe52a0d33f4d927644e}{}\label{class_photon_1_1_pun_behaviour_ac808cb2ed21bbbe52a0d33f4d927644e}
+
+
+Called when a Join\+Room() call failed. 
+
+The parameter provides Error\+Code and message (as array). 
+
+Most likely error is that the room does not exist or the room is full (some other client was faster than you). P\+UN logs some info if the \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{Photon\+Network.\+log\+Level} is $>$= \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+And\+Msg} & code\+And\+Msg\mbox{[}0\mbox{]} is short Error\+Code. code\+And\+Msg\mbox{[}1\mbox{]} is string debug msg.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_ad56f84b6647d2e61d273db297deb08b1}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Max\+Cccu\+Reached@{On\+Photon\+Max\+Cccu\+Reached}}
+\index{On\+Photon\+Max\+Cccu\+Reached@{On\+Photon\+Max\+Cccu\+Reached}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Max\+Cccu\+Reached()}{OnPhotonMaxCccuReached()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Max\+Cccu\+Reached (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_adcef9694244295ad493bc4ec0b4463d4}{}\label{class_photon_1_1_pun_behaviour_adcef9694244295ad493bc4ec0b4463d4}
+
+
+Because the concurrent user limit was (temporarily) reached, this client is rejected by the server and disconnecting. 
+
+When this happens, the user might try again later. You can\textquotesingle{}t create or join rooms in On\+Photon\+Max\+Ccu\+Reached(), cause the client will be disconnecting. You can raise the C\+CU limits with a new license (when you host yourself) or extended subscription (when using the \hyperlink{namespace_photon}{Photon} Cloud). The \hyperlink{namespace_photon}{Photon} Cloud will mail you when the C\+CU limit was reached. This is also visible in the Dashboard (webpage). 
+
+Implements \hyperlink{interface_i_pun_callbacks_a445d24c62e4e3d8bbc2cc0d25853d43c}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Player\+Connected@{On\+Photon\+Player\+Connected}}
+\index{On\+Photon\+Player\+Connected@{On\+Photon\+Player\+Connected}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Player\+Connected(\+Photon\+Player new\+Player)}{OnPhotonPlayerConnected(PhotonPlayer newPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Player\+Connected (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{new\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_abfe94f562c7abc261b25b0df95852a17}{}\label{class_photon_1_1_pun_behaviour_abfe94f562c7abc261b25b0df95852a17}
+
+
+Called when a remote player entered the room. 
+
+This \hyperlink{class_photon_player}{Photon\+Player} is already added to the playerlist at this time. 
+
+If your game starts with a certain number of players, this callback can be useful to check the \hyperlink{class_room_aa9d85e54b2ff1b151de3670e87549966}{Room.\+player\+Count} and find out if you can start. 
+
+Implements \hyperlink{interface_i_pun_callbacks_a14eede4f84e088008e59fe63efb8775d}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Player\+Disconnected@{On\+Photon\+Player\+Disconnected}}
+\index{On\+Photon\+Player\+Disconnected@{On\+Photon\+Player\+Disconnected}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Player\+Disconnected(\+Photon\+Player other\+Player)}{OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Player\+Disconnected (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{other\+Player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_af2f8ef712d9942f861f3357bb548e937}{}\label{class_photon_1_1_pun_behaviour_af2f8ef712d9942f861f3357bb548e937}
+
+
+Called when a remote player left the room. 
+
+This \hyperlink{class_photon_player}{Photon\+Player} is already removed from the playerlist at this time. 
+
+When your client calls Photon\+Network.\+leave\+Room, P\+UN will call this method on the remaining clients. When a remote client drops connection or gets closed, this callback gets executed. after a timeout of several seconds. 
+
+Implements \hyperlink{interface_i_pun_callbacks_aa200001beb114a07eac4b9442e2b793e}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Player\+Properties\+Changed@{On\+Photon\+Player\+Properties\+Changed}}
+\index{On\+Photon\+Player\+Properties\+Changed@{On\+Photon\+Player\+Properties\+Changed}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Player\+Properties\+Changed(object[] player\+And\+Updated\+Props)}{OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Player\+Properties\+Changed (
+\begin{DoxyParamCaption}
+\item[{object\mbox{[}$\,$\mbox{]}}]{player\+And\+Updated\+Props}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_aaec2f5973228b99c6ad781d5cedadb6f}{}\label{class_photon_1_1_pun_behaviour_aaec2f5973228b99c6ad781d5cedadb6f}
+
+
+Called when custom player-\/properties are changed. 
+
+Player and the changed properties are passed as object\mbox{[}\mbox{]}. 
+
+Since v1.\+25 this method has one parameter\+: object\mbox{[}\mbox{]} player\+And\+Updated\+Props, which contains two entries.~\newline
+ \mbox{[}0\mbox{]} is the affected \hyperlink{class_photon_player}{Photon\+Player}.~\newline
+ \mbox{[}1\mbox{]} is the Hashtable of properties that changed.~\newline
+
+
+We are using a object\mbox{[}\mbox{]} due to limitations of Unity\textquotesingle{}s Game\+Object.\+Send\+Message (which has only one optional parameter).
+
+Changing properties must be done by \hyperlink{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{Photon\+Player.\+Set\+Custom\+Properties}, which causes this callback locally, too.
+
+Example\+:
+\begin{DoxyPre}
+void \hyperlink{class_photon_1_1_pun_behaviour_aaec2f5973228b99c6ad781d5cedadb6f}{OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps)} \{
+    \hyperlink{class_photon_player}{PhotonPlayer} player = playerAndUpdatedProps[0] as \hyperlink{class_photon_player}{PhotonPlayer};
+    Hashtable props = playerAndUpdatedProps[1] as Hashtable;
+    //...
+\}\end{DoxyPre}
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+And\+Updated\+Props} & Contains \hyperlink{class_photon_player}{Photon\+Player} and the properties that changed See remarks.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_aa6d84e9c68f93825fb3bf453d6f5ca1b}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Photon\+Random\+Join\+Failed@{On\+Photon\+Random\+Join\+Failed}}
+\index{On\+Photon\+Random\+Join\+Failed@{On\+Photon\+Random\+Join\+Failed}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Random\+Join\+Failed(object[] code\+And\+Msg)}{OnPhotonRandomJoinFailed(object[] codeAndMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Photon\+Random\+Join\+Failed (
+\begin{DoxyParamCaption}
+\item[{object\mbox{[}$\,$\mbox{]}}]{code\+And\+Msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a94f901ce1a7af7b6c49937c5c47ceae4}{}\label{class_photon_1_1_pun_behaviour_a94f901ce1a7af7b6c49937c5c47ceae4}
+
+
+Called when a Join\+Random() call failed. 
+
+The parameter provides Error\+Code and message. 
+
+Most likely all rooms are full or no rooms are available. ~\newline
+ When using multiple lobbies (via Join\+Lobby or \hyperlink{class_typed_lobby}{Typed\+Lobby}), another lobby might have more/fitting rooms.~\newline
+ P\+UN logs some info if the \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{Photon\+Network.\+log\+Level} is $>$= \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+And\+Msg} & code\+And\+Msg\mbox{[}0\mbox{]} is short Error\+Code. code\+And\+Msg\mbox{[}1\mbox{]} is string debug msg.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_i_pun_callbacks_ac0d022a7c6abd23f0039efec687eb0dc}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Received\+Room\+List\+Update@{On\+Received\+Room\+List\+Update}}
+\index{On\+Received\+Room\+List\+Update@{On\+Received\+Room\+List\+Update}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Received\+Room\+List\+Update()}{OnReceivedRoomListUpdate()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Received\+Room\+List\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_aa45db114fa51d09929389bf0620f3150}{}\label{class_photon_1_1_pun_behaviour_aa45db114fa51d09929389bf0620f3150}
+
+
+Called for any update of the room-\/listing while in a lobby (\hyperlink{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}{Photon\+Network.\+inside\+Lobby}) on the Master Server. 
+
+P\+UN provides the list of rooms by \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Photon\+Network.\+Get\+Room\+List()}.~\newline
+ Each item is a \hyperlink{class_room_info}{Room\+Info} which might include custom properties (provided you defined those as lobby-\/listed when creating a room).
+
+Not all types of lobbies provide a listing of rooms to the client. Some are silent and specialized for server-\/side matchmaking. 
+
+Implements \hyperlink{interface_i_pun_callbacks_ad3e808558f778aec6b12e950d9632506}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Updated\+Friend\+List@{On\+Updated\+Friend\+List}}
+\index{On\+Updated\+Friend\+List@{On\+Updated\+Friend\+List}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Updated\+Friend\+List()}{OnUpdatedFriendList()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Updated\+Friend\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_a443380e89534a70dfe4ce7ca16083035}{}\label{class_photon_1_1_pun_behaviour_a443380e89534a70dfe4ce7ca16083035}
+
+
+Called when the server sent the response to a Find\+Friends request and updated \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}. 
+
+The friends list is available as \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}, listing name, online state and the room a user is in (if any). 
+
+Implements \hyperlink{interface_i_pun_callbacks_a5dd5d351e76698a0b6665064f6282baa}{I\+Pun\+Callbacks}.
+
+\index{Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}!On\+Web\+Rpc\+Response@{On\+Web\+Rpc\+Response}}
+\index{On\+Web\+Rpc\+Response@{On\+Web\+Rpc\+Response}!Photon\+::\+Pun\+Behaviour@{Photon\+::\+Pun\+Behaviour}}
+\subsubsection[{\texorpdfstring{On\+Web\+Rpc\+Response(\+Operation\+Response response)}{OnWebRpcResponse(OperationResponse response)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Photon.\+Pun\+Behaviour.\+On\+Web\+Rpc\+Response (
+\begin{DoxyParamCaption}
+\item[{Operation\+Response}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_photon_1_1_pun_behaviour_abddb6286cecb1409cbca26088328e86d}{}\label{class_photon_1_1_pun_behaviour_abddb6286cecb1409cbca26088328e86d}
+
+
+Called by P\+UN when the response to a Web\+R\+PC is available. 
+
+See Photon\+Network.\+Web\+R\+PC. 
+
+Important\+: The response.\+Return\+Code is 0 if \hyperlink{namespace_photon}{Photon} was able to reach your web-\/service. The content of the response is what your web-\/service sent. You can create a Web\+Response instance from it. Example\+: \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response} web\+Response = new \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response(operation\+Response)};
+
+Please note\+: Class Operation\+Response is in a namespace which needs to be \char`\"{}used\char`\"{}\+: using \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Exit\+Games.\+Client.\+Photon}; // includes Operation\+Response (and other classes)
+
+The Operation\+Response.\+Return\+Code by \hyperlink{namespace_photon}{Photon} is\+:
+\begin{DoxyPre}
+ 0 for "OK"
+-3 for "Web-Service not configured" (see Dashboard / WebHooks)
+-5 for "Web-Service does now have RPC path/name" (at least for Azure)\end{DoxyPre}
+ 
+
+Implements \hyperlink{interface_i_pun_callbacks_aae3221aa2d3b999574fc55a6aaee2877}{I\+Pun\+Callbacks}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_classes_8cs}{Photon\+Classes.\+cs}\end{DoxyCompactItemize}

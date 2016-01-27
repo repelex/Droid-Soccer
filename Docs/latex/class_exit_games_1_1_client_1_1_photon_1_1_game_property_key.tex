@@ -1,0 +1,99 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key}{}\section{Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key}\index{Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key@{Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key}}
+
+
+Class for constants.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a824619ef3a7938a5152370fe41e87873}{Max\+Players} = 255
+\begin{DoxyCompactList}\small\item\em (255) Max number of players that \char`\"{}fit\char`\"{} into this room. 0 is for \char`\"{}unlimited\char`\"{}.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a0993168380169958a6371abb880808ed}{Is\+Visible} = 254
+\begin{DoxyCompactList}\small\item\em (254) Makes this room listed or not in the lobby on master.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a1c7589abaef2849dc89cf31aa3a212b5}{Is\+Open} = 253
+\begin{DoxyCompactList}\small\item\em (253) Allows more players to join a room (or not).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a6fdf48ff1a9e010809acc852a416fc7e}{Player\+Count} = 252
+\begin{DoxyCompactList}\small\item\em (252) Current count of players in the room. Used only in the lobby on master.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a18ac3b26c2e0f3efbe3bd03afbae74f6}{Removed} = 251
+\begin{DoxyCompactList}\small\item\em (251) True if the room is to be removed from room listing (used in update to room list in lobby on master)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae6a5330870a04b82f5acfe76ff067276}{Props\+Listed\+In\+Lobby} = 250
+\begin{DoxyCompactList}\small\item\em (250) A list of the room properties to pass to the \hyperlink{class_room_info}{Room\+Info} list in a lobby. This is used in Create\+Room, which defines this list once per room.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_acc3065666f07d6e0fe5530add3955085}{Cleanup\+Cache\+On\+Leave} = 249
+\begin{DoxyCompactList}\small\item\em (249) Equivalent of Operation Join parameter Cleanup\+Cache\+On\+Leave.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae06d85caaaad94ef81bb048f4e8a9c3c}{Master\+Client\+Id} = (byte)248
+\begin{DoxyCompactList}\small\item\em (248) Code for Master\+Client\+Id, which is synced by server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for constants. 
+
+These (byte) values are for \char`\"{}well known\char`\"{} room/game properties used in \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Loadbalancing. Pun uses these constants internally. 
+
+\char`\"{}\+Custom properties\char`\"{} have to use a string-\/type as key. They can be assigned at will. 
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Cleanup\+Cache\+On\+Leave@{Cleanup\+Cache\+On\+Leave}}
+\index{Cleanup\+Cache\+On\+Leave@{Cleanup\+Cache\+On\+Leave}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Cleanup\+Cache\+On\+Leave}{CleanupCacheOnLeave}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Cleanup\+Cache\+On\+Leave = 249}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_acc3065666f07d6e0fe5530add3955085}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_acc3065666f07d6e0fe5530add3955085}
+
+
+(249) Equivalent of Operation Join parameter Cleanup\+Cache\+On\+Leave.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Is\+Open@{Is\+Open}}
+\index{Is\+Open@{Is\+Open}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Is\+Open}{IsOpen}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Is\+Open = 253}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a1c7589abaef2849dc89cf31aa3a212b5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a1c7589abaef2849dc89cf31aa3a212b5}
+
+
+(253) Allows more players to join a room (or not).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Is\+Visible@{Is\+Visible}}
+\index{Is\+Visible@{Is\+Visible}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Is\+Visible}{IsVisible}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Is\+Visible = 254}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a0993168380169958a6371abb880808ed}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a0993168380169958a6371abb880808ed}
+
+
+(254) Makes this room listed or not in the lobby on master.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Master\+Client\+Id@{Master\+Client\+Id}}
+\index{Master\+Client\+Id@{Master\+Client\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Master\+Client\+Id}{MasterClientId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Master\+Client\+Id = (byte)248}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae06d85caaaad94ef81bb048f4e8a9c3c}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae06d85caaaad94ef81bb048f4e8a9c3c}
+
+
+(248) Code for Master\+Client\+Id, which is synced by server. 
+
+When sent as op-\/parameter this is (byte)203. As room property this is (byte)248.
+
+Tightly related to \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1f3cfe3d4e33a66a1b43f69b61c1371d}{Parameter\+Code.\+Master\+Client\+Id}.\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Max\+Players@{Max\+Players}}
+\index{Max\+Players@{Max\+Players}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Max\+Players}{MaxPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Max\+Players = 255}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a824619ef3a7938a5152370fe41e87873}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a824619ef3a7938a5152370fe41e87873}
+
+
+(255) Max number of players that \char`\"{}fit\char`\"{} into this room. 0 is for \char`\"{}unlimited\char`\"{}.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Player\+Count@{Player\+Count}}
+\index{Player\+Count@{Player\+Count}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Player\+Count}{PlayerCount}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Player\+Count = 252}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a6fdf48ff1a9e010809acc852a416fc7e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a6fdf48ff1a9e010809acc852a416fc7e}
+
+
+(252) Current count of players in the room. Used only in the lobby on master.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Props\+Listed\+In\+Lobby@{Props\+Listed\+In\+Lobby}}
+\index{Props\+Listed\+In\+Lobby@{Props\+Listed\+In\+Lobby}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Props\+Listed\+In\+Lobby}{PropsListedInLobby}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Props\+Listed\+In\+Lobby = 250}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae6a5330870a04b82f5acfe76ff067276}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae6a5330870a04b82f5acfe76ff067276}
+
+
+(250) A list of the room properties to pass to the \hyperlink{class_room_info}{Room\+Info} list in a lobby. This is used in Create\+Room, which defines this list once per room.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}!Removed@{Removed}}
+\index{Removed@{Removed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Game\+Property\+Key}}
+\subsubsection[{\texorpdfstring{Removed}{Removed}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key.\+Removed = 251}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a18ac3b26c2e0f3efbe3bd03afbae74f6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_a18ac3b26c2e0f3efbe3bd03afbae74f6}
+
+
+(251) True if the room is to be removed from room listing (used in update to room list in lobby on master)
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_loadbalancing_peer_8cs}{Loadbalancing\+Peer.\+cs}\end{DoxyCompactItemize}

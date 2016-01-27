@@ -1,0 +1,103 @@
+\hypertarget{class_typed_lobby}{}\section{Typed\+Lobby Class Reference}
+\label{class_typed_lobby}\index{Typed\+Lobby@{Typed\+Lobby}}
+
+
+Refers to a specific lobby (and type) on the server.  
+
+
+
+
+Inherited by \hyperlink{class_typed_lobby_info}{Typed\+Lobby\+Info}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_typed_lobby_a3cc306cd96153d9e71b905ca7367da77}{Typed\+Lobby} ()
+\item 
+\hyperlink{class_typed_lobby_aa384f44e95a51cd7b7fd5cfc3354fde3}{Typed\+Lobby} (string name, \hyperlink{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ad}{Lobby\+Type} type)
+\item 
+override string \hyperlink{class_typed_lobby_a7ba53ade2e4b461836a442872bdb5f71}{To\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_typed_lobby_acd1dfdf3ed901ee8ebe75587fcd0c60b}{Name}
+\begin{DoxyCompactList}\small\item\em Name of the lobby this game gets added to. Default\+: null, attached to default lobby. Lobbies are unique per lobby\+Name plus lobby\+Type, so the same name can be used when several types are existing.\end{DoxyCompactList}\item 
+\hyperlink{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ad}{Lobby\+Type} \hyperlink{class_typed_lobby_a6f007dbaead56a950745524463ce5219}{Type}
+\begin{DoxyCompactList}\small\item\em Type of the (named)lobby this game gets added to\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \hyperlink{class_typed_lobby}{Typed\+Lobby} \hyperlink{class_typed_lobby_a127f509c2991db15c8d1801ec9fe8b35}{Default} = new \hyperlink{class_typed_lobby}{Typed\+Lobby}()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_typed_lobby_a73ad6b86a44c2b93d32748ea667c5427}{Is\+Default}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Refers to a specific lobby (and type) on the server. 
+
+The name and type are the unique identifier for a lobby.~\newline
+ Join a lobby via \hyperlink{class_photon_network_a631231346113712f11319749d6e1a3eb}{Photon\+Network.\+Join\+Lobby(\+Typed\+Lobby lobby)}.~\newline
+ The current lobby is stored in \hyperlink{class_photon_network_a3af7f8d0082599e6e3a56a5b1481a505}{Photon\+Network.\+lobby}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Typed\+Lobby@{Typed\+Lobby}!Typed\+Lobby@{Typed\+Lobby}}
+\index{Typed\+Lobby@{Typed\+Lobby}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{Typed\+Lobby()}{TypedLobby()}}]{\setlength{\rightskip}{0pt plus 5cm}Typed\+Lobby.\+Typed\+Lobby (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_typed_lobby_a3cc306cd96153d9e71b905ca7367da77}{}\label{class_typed_lobby_a3cc306cd96153d9e71b905ca7367da77}
+\index{Typed\+Lobby@{Typed\+Lobby}!Typed\+Lobby@{Typed\+Lobby}}
+\index{Typed\+Lobby@{Typed\+Lobby}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{Typed\+Lobby(string name, Lobby\+Type type)}{TypedLobby(string name, LobbyType type)}}]{\setlength{\rightskip}{0pt plus 5cm}Typed\+Lobby.\+Typed\+Lobby (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{{\bf Lobby\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_typed_lobby_aa384f44e95a51cd7b7fd5cfc3354fde3}{}\label{class_typed_lobby_aa384f44e95a51cd7b7fd5cfc3354fde3}
+
+
+\subsection{Member Function Documentation}
+\index{Typed\+Lobby@{Typed\+Lobby}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{To\+String()}{ToString()}}]{\setlength{\rightskip}{0pt plus 5cm}override string Typed\+Lobby.\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_typed_lobby_a7ba53ade2e4b461836a442872bdb5f71}{}\label{class_typed_lobby_a7ba53ade2e4b461836a442872bdb5f71}
+
+
+\subsection{Member Data Documentation}
+\index{Typed\+Lobby@{Typed\+Lobby}!Default@{Default}}
+\index{Default@{Default}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{Default}{Default}}]{\setlength{\rightskip}{0pt plus 5cm}readonly {\bf Typed\+Lobby} Typed\+Lobby.\+Default = new {\bf Typed\+Lobby}()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_typed_lobby_a127f509c2991db15c8d1801ec9fe8b35}{}\label{class_typed_lobby_a127f509c2991db15c8d1801ec9fe8b35}
+\index{Typed\+Lobby@{Typed\+Lobby}!Name@{Name}}
+\index{Name@{Name}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{Name}{Name}}]{\setlength{\rightskip}{0pt plus 5cm}string Typed\+Lobby.\+Name}\hypertarget{class_typed_lobby_acd1dfdf3ed901ee8ebe75587fcd0c60b}{}\label{class_typed_lobby_acd1dfdf3ed901ee8ebe75587fcd0c60b}
+
+
+Name of the lobby this game gets added to. Default\+: null, attached to default lobby. Lobbies are unique per lobby\+Name plus lobby\+Type, so the same name can be used when several types are existing.
+
+\index{Typed\+Lobby@{Typed\+Lobby}!Type@{Type}}
+\index{Type@{Type}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{Type}{Type}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lobby\+Type} Typed\+Lobby.\+Type}\hypertarget{class_typed_lobby_a6f007dbaead56a950745524463ce5219}{}\label{class_typed_lobby_a6f007dbaead56a950745524463ce5219}
+
+
+Type of the (named)lobby this game gets added to
+
+
+
+\subsection{Property Documentation}
+\index{Typed\+Lobby@{Typed\+Lobby}!Is\+Default@{Is\+Default}}
+\index{Is\+Default@{Is\+Default}!Typed\+Lobby@{Typed\+Lobby}}
+\subsubsection[{\texorpdfstring{Is\+Default}{IsDefault}}]{\setlength{\rightskip}{0pt plus 5cm}bool Typed\+Lobby.\+Is\+Default\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_typed_lobby_a73ad6b86a44c2b93d32748ea667c5427}{}\label{class_typed_lobby_a73ad6b86a44c2b93d32748ea667c5427}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_loadbalancing_peer_8cs}{Loadbalancing\+Peer.\+cs}\end{DoxyCompactItemize}

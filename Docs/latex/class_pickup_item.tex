@@ -1,0 +1,205 @@
+\hypertarget{class_pickup_item}{}\section{Pickup\+Item Class Reference}
+\label{class_pickup_item}\index{Pickup\+Item@{Pickup\+Item}}
+
+
+Makes a scene object pickup-\/able.  
+
+
+
+
+Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}, and \hyperlink{interface_i_pun_observable}{I\+Pun\+Observable}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}{On\+Trigger\+Enter} (Collider other)
+\item 
+void \hyperlink{class_pickup_item_a7b6809bac46d2eaddc309e2ad97167fa}{On\+Photon\+Serialize\+View} (\hyperlink{class_photon_stream}{Photon\+Stream} stream, \hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
+\begin{DoxyCompactList}\small\item\em Called by P\+UN several times per second, so that your script can write and read synchronization data for the \hyperlink{class_photon_view}{Photon\+View}. \end{DoxyCompactList}\item 
+void \hyperlink{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}{Pickup} ()
+\item 
+void \hyperlink{class_pickup_item_aa23d18ee93cd9591072f01da535370bc}{Drop} ()
+\begin{DoxyCompactList}\small\item\em Makes use of R\+PC Pun\+Respawn to drop an item (sent through server for all).\end{DoxyCompactList}\item 
+void \hyperlink{class_pickup_item_a7fab906a78c790fe991bf63a812ae8cf}{Drop} (Vector3 new\+Position)
+\begin{DoxyCompactList}\small\item\em Makes use of R\+PC Pun\+Respawn to drop an item (sent through server for all).\end{DoxyCompactList}\item 
+void \hyperlink{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}{Pun\+Pickup} (\hyperlink{class_photon_message_info}{Photon\+Message\+Info} msg\+Info)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_pickup_item_a026d74417bd3cebea3076b676bee27b8}{Seconds\+Before\+Respawn} = 2
+\begin{DoxyCompactList}\small\item\em Enables you to define a timeout when the picked up item should re-\/spawn at the same place it was before. \end{DoxyCompactList}\item 
+bool \hyperlink{class_pickup_item_a6fb1c4a94bef1e321638b430e27141d1}{Pickup\+On\+Trigger}
+\begin{DoxyCompactList}\small\item\em The most likely trigger to pick up an item. \end{DoxyCompactList}\item 
+bool \hyperlink{class_pickup_item_a5b7ca0ead3f54bdf3ae3fbb0d80607f3}{Pickup\+Is\+Mine}
+\begin{DoxyCompactList}\small\item\em If the pickup item is currently yours. Interesting in On\+Picked\+Up(\+Pickup\+Item item).\end{DoxyCompactList}\item 
+Mono\+Behaviour \hyperlink{class_pickup_item_a48a1fe620e9fecb4e8825c48723140c4}{On\+Picked\+Up\+Call}
+\begin{DoxyCompactList}\small\item\em Game\+Object to send an event \char`\"{}\+On\+Picked\+Up(\+Pickup\+Item item)\char`\"{} to. \end{DoxyCompactList}\item 
+bool \hyperlink{class_pickup_item_a2cb53f4bb11cda01690309bf2de67894}{Sent\+Pickup}
+\begin{DoxyCompactList}\small\item\em If this client sent a pickup. To avoid sending multiple pickup requests before reply is there.\end{DoxyCompactList}\item 
+double \hyperlink{class_pickup_item_a73055debb47c9bcf0813e74a0fd6e3ee}{Time\+Of\+Respawn}
+\begin{DoxyCompactList}\small\item\em Timestamp when to respawn the item (compared to \hyperlink{class_photon_network_a86ab96957666ef72830a35662ef3d30b}{Photon\+Network.\+time}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Hash\+Set$<$ \hyperlink{class_pickup_item}{Pickup\+Item} $>$ \hyperlink{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}{Disabled\+Pickup\+Items} = new Hash\+Set$<$\hyperlink{class_pickup_item}{Pickup\+Item}$>$()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_pickup_item_a51ef87cc3a26bfe0006b66ac3a2fd056}{View\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Makes a scene object pickup-\/able. 
+
+Needs a \hyperlink{class_photon_view}{Photon\+View} which belongs to the scene. 
+
+Includes a On\+Photon\+Serialize\+View implementation that 
+
+\subsection{Member Function Documentation}
+\index{Pickup\+Item@{Pickup\+Item}!Drop@{Drop}}
+\index{Drop@{Drop}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Drop()}{Drop()}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+Drop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pickup_item_aa23d18ee93cd9591072f01da535370bc}{}\label{class_pickup_item_aa23d18ee93cd9591072f01da535370bc}
+
+
+Makes use of R\+PC Pun\+Respawn to drop an item (sent through server for all).
+
+\index{Pickup\+Item@{Pickup\+Item}!Drop@{Drop}}
+\index{Drop@{Drop}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Drop(\+Vector3 new\+Position)}{Drop(Vector3 newPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+Drop (
+\begin{DoxyParamCaption}
+\item[{Vector3}]{new\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pickup_item_a7fab906a78c790fe991bf63a812ae8cf}{}\label{class_pickup_item_a7fab906a78c790fe991bf63a812ae8cf}
+
+
+Makes use of R\+PC Pun\+Respawn to drop an item (sent through server for all).
+
+\index{Pickup\+Item@{Pickup\+Item}!On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}}
+\index{On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Serialize\+View(\+Photon\+Stream stream, Photon\+Message\+Info info)}{OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+On\+Photon\+Serialize\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Stream}}]{stream, }
+\item[{{\bf Photon\+Message\+Info}}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pickup_item_a7b6809bac46d2eaddc309e2ad97167fa}{}\label{class_pickup_item_a7b6809bac46d2eaddc309e2ad97167fa}
+
+
+Called by P\+UN several times per second, so that your script can write and read synchronization data for the \hyperlink{class_photon_view}{Photon\+View}. 
+
+This method will be called in scripts that are assigned as Observed component of a \hyperlink{class_photon_view}{Photon\+View}.~\newline
+ \hyperlink{class_photon_network_ac23d14ad150a87d51f4ffaa286db29e1}{Photon\+Network.\+send\+Rate\+On\+Serialize} affects how often this method is called.~\newline
+ \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{Photon\+Network.\+send\+Rate} affects how often packages are sent by this client.~\newline
+
+
+Implementing this method, you can customize which data a \hyperlink{class_photon_view}{Photon\+View} regularly synchronizes. Your code defines what is being sent (content) and how your data is used by receiving clients.
+
+Unlike other callbacks, {\itshape On\+Photon\+Serialize\+View only gets called when it is assigned to a \hyperlink{class_photon_view}{Photon\+View}} as \hyperlink{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}{Photon\+View.\+observed} script.
+
+To make use of this method, the \hyperlink{class_photon_stream}{Photon\+Stream} is essential. It will be in \char`\"{}writing\char`\"{} mode\char`\"{} on the
+client that controls a Photon\+View (\+Photon\+Stream.\+is\+Writing == true) and in \char`\"{}reading mode" on the remote clients that just receive that the controlling client sends.
+
+If you skip writing any value into the stream, P\+UN will skip the update. Used carefully, this can conserve bandwidth and messages (which have a limit per room/second).
+
+Note that On\+Photon\+Serialize\+View is not called on remote clients when the sender does not send any update. This can\textquotesingle{}t be used as \char`\"{}x-\/times per second Update()\char`\"{}. 
+
+Implements \hyperlink{group__public_api_ga78c69bbb6f79d1e4fb23d3f761eaf4aa}{I\+Pun\+Observable}.
+
+\index{Pickup\+Item@{Pickup\+Item}!On\+Trigger\+Enter@{On\+Trigger\+Enter}}
+\index{On\+Trigger\+Enter@{On\+Trigger\+Enter}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{On\+Trigger\+Enter(\+Collider other)}{OnTriggerEnter(Collider other)}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+On\+Trigger\+Enter (
+\begin{DoxyParamCaption}
+\item[{Collider}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}{}\label{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}
+\index{Pickup\+Item@{Pickup\+Item}!Pickup@{Pickup}}
+\index{Pickup@{Pickup}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Pickup()}{Pickup()}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+Pickup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}{}\label{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}
+\index{Pickup\+Item@{Pickup\+Item}!Pun\+Pickup@{Pun\+Pickup}}
+\index{Pun\+Pickup@{Pun\+Pickup}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Pun\+Pickup(\+Photon\+Message\+Info msg\+Info)}{PunPickup(PhotonMessageInfo msgInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+Pun\+Pickup (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Message\+Info}}]{msg\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}{}\label{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}
+
+
+\subsection{Member Data Documentation}
+\index{Pickup\+Item@{Pickup\+Item}!Disabled\+Pickup\+Items@{Disabled\+Pickup\+Items}}
+\index{Disabled\+Pickup\+Items@{Disabled\+Pickup\+Items}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Disabled\+Pickup\+Items}{DisabledPickupItems}}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Set$<${\bf Pickup\+Item}$>$ Pickup\+Item.\+Disabled\+Pickup\+Items = new Hash\+Set$<${\bf Pickup\+Item}$>$()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}{}\label{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}
+\index{Pickup\+Item@{Pickup\+Item}!On\+Picked\+Up\+Call@{On\+Picked\+Up\+Call}}
+\index{On\+Picked\+Up\+Call@{On\+Picked\+Up\+Call}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{On\+Picked\+Up\+Call}{OnPickedUpCall}}]{\setlength{\rightskip}{0pt plus 5cm}Mono\+Behaviour Pickup\+Item.\+On\+Picked\+Up\+Call}\hypertarget{class_pickup_item_a48a1fe620e9fecb4e8825c48723140c4}{}\label{class_pickup_item_a48a1fe620e9fecb4e8825c48723140c4}
+
+
+Game\+Object to send an event \char`\"{}\+On\+Picked\+Up(\+Pickup\+Item item)\char`\"{} to. 
+
+Implement On\+Picked\+Up(\+Pickup\+Item item) \{\} in some script on the linked game object. The item will be \char`\"{}this\char`\"{} and item.\+Pickup\+Is\+Mine will help you to find if this pickup was done by \char`\"{}this player\char`\"{}. \index{Pickup\+Item@{Pickup\+Item}!Pickup\+Is\+Mine@{Pickup\+Is\+Mine}}
+\index{Pickup\+Is\+Mine@{Pickup\+Is\+Mine}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Pickup\+Is\+Mine}{PickupIsMine}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pickup\+Item.\+Pickup\+Is\+Mine}\hypertarget{class_pickup_item_a5b7ca0ead3f54bdf3ae3fbb0d80607f3}{}\label{class_pickup_item_a5b7ca0ead3f54bdf3ae3fbb0d80607f3}
+
+
+If the pickup item is currently yours. Interesting in On\+Picked\+Up(\+Pickup\+Item item).
+
+\index{Pickup\+Item@{Pickup\+Item}!Pickup\+On\+Trigger@{Pickup\+On\+Trigger}}
+\index{Pickup\+On\+Trigger@{Pickup\+On\+Trigger}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Pickup\+On\+Trigger}{PickupOnTrigger}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pickup\+Item.\+Pickup\+On\+Trigger}\hypertarget{class_pickup_item_a6fb1c4a94bef1e321638b430e27141d1}{}\label{class_pickup_item_a6fb1c4a94bef1e321638b430e27141d1}
+
+
+The most likely trigger to pick up an item. 
+
+Set in inspector!
+
+Edit the collider and set collision masks to avoid pickups by random objects.\index{Pickup\+Item@{Pickup\+Item}!Seconds\+Before\+Respawn@{Seconds\+Before\+Respawn}}
+\index{Seconds\+Before\+Respawn@{Seconds\+Before\+Respawn}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Seconds\+Before\+Respawn}{SecondsBeforeRespawn}}]{\setlength{\rightskip}{0pt plus 5cm}float Pickup\+Item.\+Seconds\+Before\+Respawn = 2}\hypertarget{class_pickup_item_a026d74417bd3cebea3076b676bee27b8}{}\label{class_pickup_item_a026d74417bd3cebea3076b676bee27b8}
+
+
+Enables you to define a timeout when the picked up item should re-\/spawn at the same place it was before. 
+
+Set in Inspector per Game\+Object! The value in code is just the default.
+
+If you don\textquotesingle{}t want an item to respawn, set Seconds\+Before\+Respawn == 0. If an item does not respawn, it could be consumed or carried around and dropped somewhere else.
+
+A respawning item should stick to a fixed position. It should not be observed at all (in any \hyperlink{class_photon_view}{Photon\+View}). It can only be consumed and can\textquotesingle{}t be dropped somewhere else (cause that would double the item).
+
+This script uses Pun\+Respawn() as R\+PC and as method that gets called by Invoke() after a timeout. No matter if the item respawns timed or by Drop, that method makes sure (temporary) owner and other status-\/values are being re-\/set. \index{Pickup\+Item@{Pickup\+Item}!Sent\+Pickup@{Sent\+Pickup}}
+\index{Sent\+Pickup@{Sent\+Pickup}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Sent\+Pickup}{SentPickup}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pickup\+Item.\+Sent\+Pickup}\hypertarget{class_pickup_item_a2cb53f4bb11cda01690309bf2de67894}{}\label{class_pickup_item_a2cb53f4bb11cda01690309bf2de67894}
+
+
+If this client sent a pickup. To avoid sending multiple pickup requests before reply is there.
+
+\index{Pickup\+Item@{Pickup\+Item}!Time\+Of\+Respawn@{Time\+Of\+Respawn}}
+\index{Time\+Of\+Respawn@{Time\+Of\+Respawn}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{Time\+Of\+Respawn}{TimeOfRespawn}}]{\setlength{\rightskip}{0pt plus 5cm}double Pickup\+Item.\+Time\+Of\+Respawn}\hypertarget{class_pickup_item_a73055debb47c9bcf0813e74a0fd6e3ee}{}\label{class_pickup_item_a73055debb47c9bcf0813e74a0fd6e3ee}
+
+
+Timestamp when to respawn the item (compared to \hyperlink{class_photon_network_a86ab96957666ef72830a35662ef3d30b}{Photon\+Network.\+time}). 
+
+
+
+\subsection{Property Documentation}
+\index{Pickup\+Item@{Pickup\+Item}!View\+ID@{View\+ID}}
+\index{View\+ID@{View\+ID}!Pickup\+Item@{Pickup\+Item}}
+\subsubsection[{\texorpdfstring{View\+ID}{ViewID}}]{\setlength{\rightskip}{0pt plus 5cm}int Pickup\+Item.\+View\+ID\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_pickup_item_a51ef87cc3a26bfe0006b66ac3a2fd056}{}\label{class_pickup_item_a51ef87cc3a26bfe0006b66ac3a2fd056}
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_pickup_item_8cs}{Pickup\+Item.\+cs}\end{DoxyCompactItemize}

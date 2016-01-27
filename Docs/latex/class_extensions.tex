@@ -1,0 +1,239 @@
+\hypertarget{class_extensions}{}\section{Extensions Class Reference}
+\label{class_extensions}\index{Extensions@{Extensions}}
+
+
+This static class defines some useful extension methods for several existing classes (e.\+g.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_photon_view}{Photon\+View}\mbox{[}$\,$\mbox{]} \hyperlink{class_extensions_abd9afd41c4e0ce06bc3b49c04bed4523}{Get\+Photon\+Views\+In\+Children} (this Unity\+Engine.\+Game\+Object go)
+\item 
+static \hyperlink{class_photon_view}{Photon\+View} \hyperlink{class_extensions_a32cd3eb67b60887a800ecbc88ed7f121}{Get\+Photon\+View} (this Unity\+Engine.\+Game\+Object go)
+\item 
+static bool \hyperlink{class_extensions_a35fba37c30e813d78f40fbb4b88dca33}{Almost\+Equals} (this Vector3 target, Vector3 second, float sqr\+Magnitude\+Precision)
+\begin{DoxyCompactList}\small\item\em compares the squared magnitude of target -\/ second to given float value\end{DoxyCompactList}\item 
+static bool \hyperlink{class_extensions_a0d7e1279d0951869d76856a5ea84e7f3}{Almost\+Equals} (this Vector2 target, Vector2 second, float sqr\+Magnitude\+Precision)
+\begin{DoxyCompactList}\small\item\em compares the squared magnitude of target -\/ second to given float value\end{DoxyCompactList}\item 
+static bool \hyperlink{class_extensions_a7ce33f2b493f18ef1d30ffd06a249517}{Almost\+Equals} (this Quaternion target, Quaternion second, float max\+Angle)
+\begin{DoxyCompactList}\small\item\em compares the angle between target and second to given float value\end{DoxyCompactList}\item 
+static bool \hyperlink{class_extensions_a740813774fff222b8d4a4f23f2fa2326}{Almost\+Equals} (this float target, float second, float float\+Diff)
+\begin{DoxyCompactList}\small\item\em compares two floats and returns true of their difference is less than float\+Diff\end{DoxyCompactList}\item 
+static void \hyperlink{class_extensions_a6b5d90a1ed678d74548f4ce759b47043}{Merge} (this I\+Dictionary target, I\+Dictionary add\+Hash)
+\begin{DoxyCompactList}\small\item\em Merges all keys from add\+Hash into the target. \end{DoxyCompactList}\item 
+static void \hyperlink{class_extensions_ac37ceea048b52ed7df7dc2dc3ea49c04}{Merge\+String\+Keys} (this I\+Dictionary target, I\+Dictionary add\+Hash)
+\begin{DoxyCompactList}\small\item\em Merges keys of type string to target Hashtable. \end{DoxyCompactList}\item 
+static string \hyperlink{class_extensions_a646282c077a078cdaeab9184809c2e76}{To\+String\+Full} (this I\+Dictionary origin)
+\begin{DoxyCompactList}\small\item\em Returns a string-\/representation of the I\+Dictionary\textquotesingle{}s content, inlcuding type-\/information. \end{DoxyCompactList}\item 
+static \hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} \hyperlink{class_extensions_a59cc48f36f7bf9a0ae0f8efefff91a74}{Strip\+To\+String\+Keys} (this I\+Dictionary original)
+\begin{DoxyCompactList}\small\item\em This method copies all string-\/typed keys of the original into a new Hashtable. \end{DoxyCompactList}\item 
+static void \hyperlink{class_extensions_a733a7e102e781cf0879e96d535bbd2d8}{Strip\+Keys\+With\+Null\+Values} (this I\+Dictionary original)
+\begin{DoxyCompactList}\small\item\em This removes all key-\/value pairs that have a null-\/reference as value. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_extensions_ac89906aaca1f1603398873874d981417}{Contains} (this int\mbox{[}$\,$\mbox{]} target, int nr)
+\begin{DoxyCompactList}\small\item\em Checks if a particular integer value is in an int-\/array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This static class defines some useful extension methods for several existing classes (e.\+g. 
+
+Vector3, float and others). 
+
+\subsection{Member Function Documentation}
+\index{Extensions@{Extensions}!Almost\+Equals@{Almost\+Equals}}
+\index{Almost\+Equals@{Almost\+Equals}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Almost\+Equals(this Vector3 target, Vector3 second, float sqr\+Magnitude\+Precision)}{AlmostEquals(this Vector3 target, Vector3 second, float sqrMagnitudePrecision)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Extensions.\+Almost\+Equals (
+\begin{DoxyParamCaption}
+\item[{this Vector3}]{target, }
+\item[{Vector3}]{second, }
+\item[{float}]{sqr\+Magnitude\+Precision}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a35fba37c30e813d78f40fbb4b88dca33}{}\label{class_extensions_a35fba37c30e813d78f40fbb4b88dca33}
+
+
+compares the squared magnitude of target -\/ second to given float value
+
+\index{Extensions@{Extensions}!Almost\+Equals@{Almost\+Equals}}
+\index{Almost\+Equals@{Almost\+Equals}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Almost\+Equals(this Vector2 target, Vector2 second, float sqr\+Magnitude\+Precision)}{AlmostEquals(this Vector2 target, Vector2 second, float sqrMagnitudePrecision)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Extensions.\+Almost\+Equals (
+\begin{DoxyParamCaption}
+\item[{this Vector2}]{target, }
+\item[{Vector2}]{second, }
+\item[{float}]{sqr\+Magnitude\+Precision}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a0d7e1279d0951869d76856a5ea84e7f3}{}\label{class_extensions_a0d7e1279d0951869d76856a5ea84e7f3}
+
+
+compares the squared magnitude of target -\/ second to given float value
+
+\index{Extensions@{Extensions}!Almost\+Equals@{Almost\+Equals}}
+\index{Almost\+Equals@{Almost\+Equals}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Almost\+Equals(this Quaternion target, Quaternion second, float max\+Angle)}{AlmostEquals(this Quaternion target, Quaternion second, float maxAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Extensions.\+Almost\+Equals (
+\begin{DoxyParamCaption}
+\item[{this Quaternion}]{target, }
+\item[{Quaternion}]{second, }
+\item[{float}]{max\+Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a7ce33f2b493f18ef1d30ffd06a249517}{}\label{class_extensions_a7ce33f2b493f18ef1d30ffd06a249517}
+
+
+compares the angle between target and second to given float value
+
+\index{Extensions@{Extensions}!Almost\+Equals@{Almost\+Equals}}
+\index{Almost\+Equals@{Almost\+Equals}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Almost\+Equals(this float target, float second, float float\+Diff)}{AlmostEquals(this float target, float second, float floatDiff)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Extensions.\+Almost\+Equals (
+\begin{DoxyParamCaption}
+\item[{this float}]{target, }
+\item[{float}]{second, }
+\item[{float}]{float\+Diff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a740813774fff222b8d4a4f23f2fa2326}{}\label{class_extensions_a740813774fff222b8d4a4f23f2fa2326}
+
+
+compares two floats and returns true of their difference is less than float\+Diff
+
+\index{Extensions@{Extensions}!Contains@{Contains}}
+\index{Contains@{Contains}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Contains(this int[] target, int nr)}{Contains(this int[] target, int nr)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Extensions.\+Contains (
+\begin{DoxyParamCaption}
+\item[{this int\mbox{[}$\,$\mbox{]}}]{target, }
+\item[{int}]{nr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_ac89906aaca1f1603398873874d981417}{}\label{class_extensions_ac89906aaca1f1603398873874d981417}
+
+
+Checks if a particular integer value is in an int-\/array. 
+
+This might be useful to look up if a particular actor\+Number is in the list of players of a room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The array of ints to check.\\
+\hline
+{\em nr} & The number to lookup in target.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if nr was found in target.
+\end{DoxyReturn}
+\index{Extensions@{Extensions}!Get\+Photon\+View@{Get\+Photon\+View}}
+\index{Get\+Photon\+View@{Get\+Photon\+View}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Get\+Photon\+View(this Unity\+Engine.\+Game\+Object go)}{GetPhotonView(this UnityEngine.GameObject go)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Photon\+View} Extensions.\+Get\+Photon\+View (
+\begin{DoxyParamCaption}
+\item[{this Unity\+Engine.\+Game\+Object}]{go}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a32cd3eb67b60887a800ecbc88ed7f121}{}\label{class_extensions_a32cd3eb67b60887a800ecbc88ed7f121}
+\index{Extensions@{Extensions}!Get\+Photon\+Views\+In\+Children@{Get\+Photon\+Views\+In\+Children}}
+\index{Get\+Photon\+Views\+In\+Children@{Get\+Photon\+Views\+In\+Children}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Get\+Photon\+Views\+In\+Children(this Unity\+Engine.\+Game\+Object go)}{GetPhotonViewsInChildren(this UnityEngine.GameObject go)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Photon\+View} \mbox{[}$\,$\mbox{]} Extensions.\+Get\+Photon\+Views\+In\+Children (
+\begin{DoxyParamCaption}
+\item[{this Unity\+Engine.\+Game\+Object}]{go}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_abd9afd41c4e0ce06bc3b49c04bed4523}{}\label{class_extensions_abd9afd41c4e0ce06bc3b49c04bed4523}
+\index{Extensions@{Extensions}!Merge@{Merge}}
+\index{Merge@{Merge}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Merge(this I\+Dictionary target, I\+Dictionary add\+Hash)}{Merge(this IDictionary target, IDictionary addHash)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Extensions.\+Merge (
+\begin{DoxyParamCaption}
+\item[{this I\+Dictionary}]{target, }
+\item[{I\+Dictionary}]{add\+Hash}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a6b5d90a1ed678d74548f4ce759b47043}{}\label{class_extensions_a6b5d90a1ed678d74548f4ce759b47043}
+
+
+Merges all keys from add\+Hash into the target. 
+
+Adds new keys and updates the values of existing keys in target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The I\+Dictionary to update.\\
+\hline
+{\em add\+Hash} & The I\+Dictionary containing data to merge into target.\\
+\hline
+\end{DoxyParams}
+\index{Extensions@{Extensions}!Merge\+String\+Keys@{Merge\+String\+Keys}}
+\index{Merge\+String\+Keys@{Merge\+String\+Keys}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Merge\+String\+Keys(this I\+Dictionary target, I\+Dictionary add\+Hash)}{MergeStringKeys(this IDictionary target, IDictionary addHash)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Extensions.\+Merge\+String\+Keys (
+\begin{DoxyParamCaption}
+\item[{this I\+Dictionary}]{target, }
+\item[{I\+Dictionary}]{add\+Hash}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_ac37ceea048b52ed7df7dc2dc3ea49c04}{}\label{class_extensions_ac37ceea048b52ed7df7dc2dc3ea49c04}
+
+
+Merges keys of type string to target Hashtable. 
+
+Does not remove keys from target (so non-\/string keys C\+AN be in target if they were before). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target I\+Dicitionary passed in plus all string-\/typed keys from the add\+Hash.\\
+\hline
+{\em add\+Hash} & A I\+Dictionary that should be merged partly into target to update it.\\
+\hline
+\end{DoxyParams}
+\index{Extensions@{Extensions}!Strip\+Keys\+With\+Null\+Values@{Strip\+Keys\+With\+Null\+Values}}
+\index{Strip\+Keys\+With\+Null\+Values@{Strip\+Keys\+With\+Null\+Values}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Strip\+Keys\+With\+Null\+Values(this I\+Dictionary original)}{StripKeysWithNullValues(this IDictionary original)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Extensions.\+Strip\+Keys\+With\+Null\+Values (
+\begin{DoxyParamCaption}
+\item[{this I\+Dictionary}]{original}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a733a7e102e781cf0879e96d535bbd2d8}{}\label{class_extensions_a733a7e102e781cf0879e96d535bbd2d8}
+
+
+This removes all key-\/value pairs that have a null-\/reference as value. 
+
+\hyperlink{namespace_photon}{Photon} properties are removed by setting their value to null. Changes the original passed I\+Dictionary! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & The I\+Dictionary to strip of keys with null-\/values.\\
+\hline
+\end{DoxyParams}
+\index{Extensions@{Extensions}!Strip\+To\+String\+Keys@{Strip\+To\+String\+Keys}}
+\index{Strip\+To\+String\+Keys@{Strip\+To\+String\+Keys}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{Strip\+To\+String\+Keys(this I\+Dictionary original)}{StripToStringKeys(this IDictionary original)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Hashtable} Extensions.\+Strip\+To\+String\+Keys (
+\begin{DoxyParamCaption}
+\item[{this I\+Dictionary}]{original}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a59cc48f36f7bf9a0ae0f8efefff91a74}{}\label{class_extensions_a59cc48f36f7bf9a0ae0f8efefff91a74}
+
+
+This method copies all string-\/typed keys of the original into a new Hashtable. 
+
+Does not recurse (!) into hashes that might be values in the root-\/hash. This does not modify the original. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & The original I\+Dictonary to get string-\/typed keys from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New Hashtable containing only string-\/typed keys of the original.
+\end{DoxyReturn}
+\index{Extensions@{Extensions}!To\+String\+Full@{To\+String\+Full}}
+\index{To\+String\+Full@{To\+String\+Full}!Extensions@{Extensions}}
+\subsubsection[{\texorpdfstring{To\+String\+Full(this I\+Dictionary origin)}{ToStringFull(this IDictionary origin)}}]{\setlength{\rightskip}{0pt plus 5cm}static string Extensions.\+To\+String\+Full (
+\begin{DoxyParamCaption}
+\item[{this I\+Dictionary}]{origin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_extensions_a646282c077a078cdaeab9184809c2e76}{}\label{class_extensions_a646282c077a078cdaeab9184809c2e76}
+
+
+Returns a string-\/representation of the I\+Dictionary\textquotesingle{}s content, inlcuding type-\/information. 
+
+Note\+: This might turn out a \char`\"{}heavy-\/duty\char`\"{} call if used frequently but it\textquotesingle{}s usfuly to debug Dictionary or Hashtable content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & Some Dictionary or Hashtable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String of the content of the I\+Dictionary.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_extensions_8cs}{Extensions.\+cs}\end{DoxyCompactItemize}

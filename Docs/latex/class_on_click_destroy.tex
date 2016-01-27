@@ -1,0 +1,67 @@
+\hypertarget{class_on_click_destroy}{}\section{On\+Click\+Destroy Class Reference}
+\label{class_on_click_destroy}\index{On\+Click\+Destroy@{On\+Click\+Destroy}}
+
+
+Implements On\+Click to destroy the Game\+Object it\textquotesingle{}s attached to.  
+
+
+
+
+Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_on_click_destroy_ad6050d0a7dac6afab6063ca7b94c317c}{On\+Click} ()
+\item 
+I\+Enumerator \hyperlink{class_on_click_destroy_aa4c9d02e0298626789a0c58640ecb827}{Destroy\+Rpc} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_on_click_destroy_ac2047f6e4afd9f42f366c09b7ffd7570}{Destroy\+By\+Rpc}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implements On\+Click to destroy the Game\+Object it\textquotesingle{}s attached to. 
+
+Optionally a R\+PC is sent to do this. 
+
+Using an R\+PC to Destroy a Game\+Object allows any player to Destroy a Game\+Object. But it might cause errors. R\+PC and the Instantiated Game\+Object are not fully linked on the server. One might stick in the server witout the other.
+
+A buffered R\+PC gets cleaned up when the sending player leaves the room. This means, the R\+PC gets lost.
+
+Vice versus, a Game\+Object Instantiate might get cleaned up when the creating player leaves a room. This way, the Game\+Object that a R\+PC targets might become lost.
+
+It makes sense to test those cases. Many are not breaking errors and you just have to be aware of them.
+
+Gets \hyperlink{class_on_click_destroy_ad6050d0a7dac6afab6063ca7b94c317c}{On\+Click()} calls by \hyperlink{class_input_to_event}{Input\+To\+Event} class attached to a camera. 
+
+\subsection{Member Function Documentation}
+\index{On\+Click\+Destroy@{On\+Click\+Destroy}!Destroy\+Rpc@{Destroy\+Rpc}}
+\index{Destroy\+Rpc@{Destroy\+Rpc}!On\+Click\+Destroy@{On\+Click\+Destroy}}
+\subsubsection[{\texorpdfstring{Destroy\+Rpc()}{DestroyRpc()}}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator On\+Click\+Destroy.\+Destroy\+Rpc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_on_click_destroy_aa4c9d02e0298626789a0c58640ecb827}{}\label{class_on_click_destroy_aa4c9d02e0298626789a0c58640ecb827}
+\index{On\+Click\+Destroy@{On\+Click\+Destroy}!On\+Click@{On\+Click}}
+\index{On\+Click@{On\+Click}!On\+Click\+Destroy@{On\+Click\+Destroy}}
+\subsubsection[{\texorpdfstring{On\+Click()}{OnClick()}}]{\setlength{\rightskip}{0pt plus 5cm}void On\+Click\+Destroy.\+On\+Click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_on_click_destroy_ad6050d0a7dac6afab6063ca7b94c317c}{}\label{class_on_click_destroy_ad6050d0a7dac6afab6063ca7b94c317c}
+
+
+\subsection{Member Data Documentation}
+\index{On\+Click\+Destroy@{On\+Click\+Destroy}!Destroy\+By\+Rpc@{Destroy\+By\+Rpc}}
+\index{Destroy\+By\+Rpc@{Destroy\+By\+Rpc}!On\+Click\+Destroy@{On\+Click\+Destroy}}
+\subsubsection[{\texorpdfstring{Destroy\+By\+Rpc}{DestroyByRpc}}]{\setlength{\rightskip}{0pt plus 5cm}bool On\+Click\+Destroy.\+Destroy\+By\+Rpc}\hypertarget{class_on_click_destroy_ac2047f6e4afd9f42f366c09b7ffd7570}{}\label{class_on_click_destroy_ac2047f6e4afd9f42f366c09b7ffd7570}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_on_click_destroy_8cs}{On\+Click\+Destroy.\+cs}\end{DoxyCompactItemize}

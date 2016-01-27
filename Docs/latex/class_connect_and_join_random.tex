@@ -1,0 +1,111 @@
+\hypertarget{class_connect_and_join_random}{}\section{Connect\+And\+Join\+Random Class Reference}
+\label{class_connect_and_join_random}\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+
+
+This script automatically connects to \hyperlink{namespace_photon}{Photon} (using the settings file), tries to join a random room and creates one if none was found (which is ok).  
+
+
+
+
+Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_connect_and_join_random_a94e4c7f48112d0cdd76225301d58be0b}{Start} ()
+\item 
+virtual void \hyperlink{class_connect_and_join_random_ac667e7a1d80a18e1c03e39c74925a18f}{Update} ()
+\item 
+virtual void \hyperlink{class_connect_and_join_random_a2229303d2ad53f9ee29ee9cdd9a9f0be}{On\+Connected\+To\+Master} ()
+\item 
+virtual void \hyperlink{class_connect_and_join_random_a41b158cb3ba3aad65798e8013fc5c56e}{On\+Joined\+Lobby} ()
+\item 
+virtual void \hyperlink{class_connect_and_join_random_ab9a5bda7e2e657e4f78bd550010ed851}{On\+Photon\+Random\+Join\+Failed} ()
+\item 
+virtual void \hyperlink{class_connect_and_join_random_aadf3359d7ba471cae2073f11b609d615}{On\+Failed\+To\+Connect\+To\+Photon} (\hyperlink{group__public_api_gad61b1461cf60ad9e8d86923d111d5cc9}{Disconnect\+Cause} cause)
+\item 
+void \hyperlink{class_connect_and_join_random_a4774e18af3d44ea1592a965cd0c5cca6}{On\+Joined\+Room} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_connect_and_join_random_ad1bdc6e43fba410f858cf53c003356a6}{Auto\+Connect} = true
+\begin{DoxyCompactList}\small\item\em Connect automatically? If false you can set this to true later on or call Connect\+Using\+Settings in your own scripts.\end{DoxyCompactList}\item 
+byte \hyperlink{class_connect_and_join_random_a3cfdc20e538daf4b47e15c90a8fd677b}{Version} = 1
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This script automatically connects to \hyperlink{namespace_photon}{Photon} (using the settings file), tries to join a random room and creates one if none was found (which is ok). 
+
+
+
+\subsection{Member Function Documentation}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!On\+Connected\+To\+Master@{On\+Connected\+To\+Master}}
+\index{On\+Connected\+To\+Master@{On\+Connected\+To\+Master}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{On\+Connected\+To\+Master()}{OnConnectedToMaster()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connect\+And\+Join\+Random.\+On\+Connected\+To\+Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_connect_and_join_random_a2229303d2ad53f9ee29ee9cdd9a9f0be}{}\label{class_connect_and_join_random_a2229303d2ad53f9ee29ee9cdd9a9f0be}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!On\+Failed\+To\+Connect\+To\+Photon@{On\+Failed\+To\+Connect\+To\+Photon}}
+\index{On\+Failed\+To\+Connect\+To\+Photon@{On\+Failed\+To\+Connect\+To\+Photon}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{On\+Failed\+To\+Connect\+To\+Photon(\+Disconnect\+Cause cause)}{OnFailedToConnectToPhoton(DisconnectCause cause)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connect\+And\+Join\+Random.\+On\+Failed\+To\+Connect\+To\+Photon (
+\begin{DoxyParamCaption}
+\item[{{\bf Disconnect\+Cause}}]{cause}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_connect_and_join_random_aadf3359d7ba471cae2073f11b609d615}{}\label{class_connect_and_join_random_aadf3359d7ba471cae2073f11b609d615}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!On\+Joined\+Lobby@{On\+Joined\+Lobby}}
+\index{On\+Joined\+Lobby@{On\+Joined\+Lobby}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{On\+Joined\+Lobby()}{OnJoinedLobby()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connect\+And\+Join\+Random.\+On\+Joined\+Lobby (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_connect_and_join_random_a41b158cb3ba3aad65798e8013fc5c56e}{}\label{class_connect_and_join_random_a41b158cb3ba3aad65798e8013fc5c56e}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!On\+Joined\+Room@{On\+Joined\+Room}}
+\index{On\+Joined\+Room@{On\+Joined\+Room}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{On\+Joined\+Room()}{OnJoinedRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}void Connect\+And\+Join\+Random.\+On\+Joined\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_connect_and_join_random_a4774e18af3d44ea1592a965cd0c5cca6}{}\label{class_connect_and_join_random_a4774e18af3d44ea1592a965cd0c5cca6}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!On\+Photon\+Random\+Join\+Failed@{On\+Photon\+Random\+Join\+Failed}}
+\index{On\+Photon\+Random\+Join\+Failed@{On\+Photon\+Random\+Join\+Failed}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Random\+Join\+Failed()}{OnPhotonRandomJoinFailed()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connect\+And\+Join\+Random.\+On\+Photon\+Random\+Join\+Failed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_connect_and_join_random_ab9a5bda7e2e657e4f78bd550010ed851}{}\label{class_connect_and_join_random_ab9a5bda7e2e657e4f78bd550010ed851}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!Start@{Start}}
+\index{Start@{Start}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connect\+And\+Join\+Random.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_connect_and_join_random_a94e4c7f48112d0cdd76225301d58be0b}{}\label{class_connect_and_join_random_a94e4c7f48112d0cdd76225301d58be0b}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!Update@{Update}}
+\index{Update@{Update}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connect\+And\+Join\+Random.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_connect_and_join_random_ac667e7a1d80a18e1c03e39c74925a18f}{}\label{class_connect_and_join_random_ac667e7a1d80a18e1c03e39c74925a18f}
+
+
+\subsection{Member Data Documentation}
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!Auto\+Connect@{Auto\+Connect}}
+\index{Auto\+Connect@{Auto\+Connect}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{Auto\+Connect}{AutoConnect}}]{\setlength{\rightskip}{0pt plus 5cm}bool Connect\+And\+Join\+Random.\+Auto\+Connect = true}\hypertarget{class_connect_and_join_random_ad1bdc6e43fba410f858cf53c003356a6}{}\label{class_connect_and_join_random_ad1bdc6e43fba410f858cf53c003356a6}
+
+
+Connect automatically? If false you can set this to true later on or call Connect\+Using\+Settings in your own scripts.
+
+\index{Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}!Version@{Version}}
+\index{Version@{Version}!Connect\+And\+Join\+Random@{Connect\+And\+Join\+Random}}
+\subsubsection[{\texorpdfstring{Version}{Version}}]{\setlength{\rightskip}{0pt plus 5cm}byte Connect\+And\+Join\+Random.\+Version = 1}\hypertarget{class_connect_and_join_random_a3cfdc20e538daf4b47e15c90a8fd677b}{}\label{class_connect_and_join_random_a3cfdc20e538daf4b47e15c90a8fd677b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_connect_and_join_random_8cs}{Connect\+And\+Join\+Random.\+cs}\end{DoxyCompactItemize}

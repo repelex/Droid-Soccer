@@ -1,0 +1,175 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel}{}\section{Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel}\index{Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel@{Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel}}
+
+
+A channel of communication in \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat}, updated by \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client} and provided as R\+E\+AD O\+N\+LY.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a2e1d1cb310690b115794661ffdbb68b2}{Chat\+Channel} (string name)
+\begin{DoxyCompactList}\small\item\em Used internally to create new channels. This does N\+OT create a channel on the server! Use \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aecfdac4a2de6577291597477bcaec9c7}{Chat\+Client.\+Subscribe}.\end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a17c00992e4bc685fbea02345c8e206cb}{Add} (string sender, object message)
+\begin{DoxyCompactList}\small\item\em Used internally to add messages to this channel.\end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_aa672474d138d6e1a4d7ef8c4ec616617}{Add} (string\mbox{[}$\,$\mbox{]} senders, object\mbox{[}$\,$\mbox{]} messages)
+\begin{DoxyCompactList}\small\item\em Used internally to add messages to this channel.\end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a289e0448db95485404474b3702e80943}{Truncate\+Messages} ()
+\begin{DoxyCompactList}\small\item\em Reduces the number of locally cached messages in this channel to the Message\+Limit (if set).\end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a837567f440a3174151eab88afb34d019}{Clear\+Messages} ()
+\begin{DoxyCompactList}\small\item\em Clear the local cache of messages currently stored. This frees memory but doesn\textquotesingle{}t affect the server.\end{DoxyCompactList}\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a6aee5506a39fd2a26113addf8287f31a}{To\+String\+Messages} ()
+\begin{DoxyCompactList}\small\item\em Provides a string-\/representation of all messages in this channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_ad5488b697206375ef6b13d4fa33eafdf}{Name}
+\begin{DoxyCompactList}\small\item\em Name of the channel (used to subscribe and unsubscribe).\end{DoxyCompactList}\item 
+readonly List$<$ string $>$ \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a5f663f2af6204ea58ab29a5ee2bee316}{Senders} = new List$<$string$>$()
+\begin{DoxyCompactList}\small\item\em Senders of messages in chronoligical order. Senders and Messages refer to each other by index. Senders\mbox{[}x\mbox{]} is the sender of Messages\mbox{[}x\mbox{]}.\end{DoxyCompactList}\item 
+readonly List$<$ object $>$ \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a6ed4416ea6c6778dd857c95f3276a005}{Messages} = new List$<$object$>$()
+\begin{DoxyCompactList}\small\item\em Messages in chronoligical order. Senders and Messages refer to each other by index. Senders\mbox{[}x\mbox{]} is the sender of Messages\mbox{[}x\mbox{]}.\end{DoxyCompactList}\item 
+int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a647d38d28697bcb1c6600520130d4cbf}{Message\+Limit}
+\begin{DoxyCompactList}\small\item\em If greater than 0, this channel will limit the number of messages, that it caches locally.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a3486dbba0f3a83529fe4f327375548cb}{Is\+Private}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this a private 1\+:1 channel?\end{DoxyCompactList}\item 
+int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a91a15ffc97cfd40eea6cf7965b99e5dc}{Message\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of messages this client still buffers/knows for this channel.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A channel of communication in \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat}, updated by \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client} and provided as R\+E\+AD O\+N\+LY. 
+
+Contains messages and senders to use (read!) and display by your \hyperlink{namespace_exit_games_1_1_client_1_1_g_u_i}{G\+UI}. Access these by\+: \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aa3d4261b652969dd5f94971ca48f5a7e}{Chat\+Client.\+Public\+Channels} \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a25f9db0c022bb0feda81d31f43053a81}{Chat\+Client.\+Private\+Channels} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Chat\+Channel@{Chat\+Channel}}
+\index{Chat\+Channel@{Chat\+Channel}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Chat\+Channel(string name)}{ChatChannel(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Chat\+Channel (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a2e1d1cb310690b115794661ffdbb68b2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a2e1d1cb310690b115794661ffdbb68b2}
+
+
+Used internally to create new channels. This does N\+OT create a channel on the server! Use \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aecfdac4a2de6577291597477bcaec9c7}{Chat\+Client.\+Subscribe}.
+
+
+
+\subsection{Member Function Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Add@{Add}}
+\index{Add@{Add}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Add(string sender, object message)}{Add(string sender, object message)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Add (
+\begin{DoxyParamCaption}
+\item[{string}]{sender, }
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a17c00992e4bc685fbea02345c8e206cb}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a17c00992e4bc685fbea02345c8e206cb}
+
+
+Used internally to add messages to this channel.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Add@{Add}}
+\index{Add@{Add}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Add(string[] senders, object[] messages)}{Add(string[] senders, object[] messages)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Add (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{senders, }
+\item[{object\mbox{[}$\,$\mbox{]}}]{messages}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_aa672474d138d6e1a4d7ef8c4ec616617}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_aa672474d138d6e1a4d7ef8c4ec616617}
+
+
+Used internally to add messages to this channel.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Clear\+Messages@{Clear\+Messages}}
+\index{Clear\+Messages@{Clear\+Messages}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Clear\+Messages()}{ClearMessages()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Clear\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a837567f440a3174151eab88afb34d019}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a837567f440a3174151eab88afb34d019}
+
+
+Clear the local cache of messages currently stored. This frees memory but doesn\textquotesingle{}t affect the server.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!To\+String\+Messages@{To\+String\+Messages}}
+\index{To\+String\+Messages@{To\+String\+Messages}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{To\+String\+Messages()}{ToStringMessages()}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+To\+String\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a6aee5506a39fd2a26113addf8287f31a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a6aee5506a39fd2a26113addf8287f31a}
+
+
+Provides a string-\/representation of all messages in this channel. 
+
+\begin{DoxyReturn}{Returns}
+All known messages in format \char`\"{}\+Sender\+: Message\char`\"{}, line by line.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Truncate\+Messages@{Truncate\+Messages}}
+\index{Truncate\+Messages@{Truncate\+Messages}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Truncate\+Messages()}{TruncateMessages()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Truncate\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a289e0448db95485404474b3702e80943}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a289e0448db95485404474b3702e80943}
+
+
+Reduces the number of locally cached messages in this channel to the Message\+Limit (if set).
+
+
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Message\+Limit@{Message\+Limit}}
+\index{Message\+Limit@{Message\+Limit}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Message\+Limit}{MessageLimit}}]{\setlength{\rightskip}{0pt plus 5cm}int Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Message\+Limit}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a647d38d28697bcb1c6600520130d4cbf}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a647d38d28697bcb1c6600520130d4cbf}
+
+
+If greater than 0, this channel will limit the number of messages, that it caches locally.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Messages@{Messages}}
+\index{Messages@{Messages}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Messages}{Messages}}]{\setlength{\rightskip}{0pt plus 5cm}readonly List$<$object$>$ Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Messages = new List$<$object$>$()}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a6ed4416ea6c6778dd857c95f3276a005}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a6ed4416ea6c6778dd857c95f3276a005}
+
+
+Messages in chronoligical order. Senders and Messages refer to each other by index. Senders\mbox{[}x\mbox{]} is the sender of Messages\mbox{[}x\mbox{]}.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Name@{Name}}
+\index{Name@{Name}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Name}{Name}}]{\setlength{\rightskip}{0pt plus 5cm}readonly string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Name}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_ad5488b697206375ef6b13d4fa33eafdf}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_ad5488b697206375ef6b13d4fa33eafdf}
+
+
+Name of the channel (used to subscribe and unsubscribe).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Senders@{Senders}}
+\index{Senders@{Senders}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Senders}{Senders}}]{\setlength{\rightskip}{0pt plus 5cm}readonly List$<$string$>$ Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Senders = new List$<$string$>$()}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a5f663f2af6204ea58ab29a5ee2bee316}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a5f663f2af6204ea58ab29a5ee2bee316}
+
+
+Senders of messages in chronoligical order. Senders and Messages refer to each other by index. Senders\mbox{[}x\mbox{]} is the sender of Messages\mbox{[}x\mbox{]}.
+
+
+
+\subsection{Property Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Is\+Private@{Is\+Private}}
+\index{Is\+Private@{Is\+Private}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Is\+Private}{IsPrivate}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Is\+Private\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a3486dbba0f3a83529fe4f327375548cb}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a3486dbba0f3a83529fe4f327375548cb}
+
+
+Is this a private 1\+:1 channel?
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}!Message\+Count@{Message\+Count}}
+\index{Message\+Count@{Message\+Count}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Channel}}
+\subsubsection[{\texorpdfstring{Message\+Count}{MessageCount}}]{\setlength{\rightskip}{0pt plus 5cm}int Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Channel.\+Message\+Count\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a91a15ffc97cfd40eea6cf7965b99e5dc}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel_a91a15ffc97cfd40eea6cf7965b99e5dc}
+
+
+Count of messages this client still buffers/knows for this channel.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Plugins/\+Chat\+Api/\hyperlink{_chat_channel_8cs}{Chat\+Channel.\+cs}\end{DoxyCompactItemize}

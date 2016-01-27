@@ -1,0 +1,403 @@
+\hypertarget{class_photon_view}{}\section{Photon\+View Class Reference}
+\label{class_photon_view}\index{Photon\+View@{Photon\+View}}
+
+
+P\+UN\textquotesingle{}s Network\+View replacement class for networking.  
+
+
+
+
+Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_photon_view_a0eee05bdd9c48c263a41ccfec45b8651}{Request\+Ownership} ()
+\begin{DoxyCompactList}\small\item\em Depending on the \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s ownership\+Transfer setting, any client can request to become owner of the \hyperlink{class_photon_view}{Photon\+View}. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_a484df6eca8208330c00c317334dd8115}{Transfer\+Ownership} (\hyperlink{class_photon_player}{Photon\+Player} new\+Owner)
+\begin{DoxyCompactList}\small\item\em Transfers the ownership of this \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) to another player. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_ad892c308b04787c06907120e64f6bc03}{Transfer\+Ownership} (int new\+Owner\+Id)
+\begin{DoxyCompactList}\small\item\em Transfers the ownership of this \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) to another player. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_af1871faa617868760d00e59d443d2ad8}{Serialize\+View} (\hyperlink{class_photon_stream}{Photon\+Stream} stream, \hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
+\item 
+void \hyperlink{class_photon_view_a677557c203df8f79277095ce5f9da001}{Deserialize\+View} (\hyperlink{class_photon_stream}{Photon\+Stream} stream, \hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
+\item 
+void \hyperlink{class_photon_view_a869710e081df022bbb4fa160e7ab9e0a}{Refresh\+Rpc\+Mono\+Behaviour\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Can be used to refesh the list of Mono\+Behaviours on this Game\+Object while \hyperlink{class_photon_network_a2ea887525d418e088bf99d303673d2f3}{Photon\+Network.\+Use\+Rpc\+Mono\+Behaviour\+Cache} is true. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_ad288db13a15d581e0f7c5886f4036720}{R\+PC} (string method\+Name, \hyperlink{group__public_api_gab84b274b6aa3b3a3d7810361da16170f}{Photon\+Targets} target, params object\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_a2950cb34198fa050a7e65a6b2f722c68}{Rpc\+Secure} (string method\+Name, \hyperlink{group__public_api_gab84b274b6aa3b3a3d7810361da16170f}{Photon\+Targets} target, bool encrypt, params object\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_a6bc9726af14a8c7b8bdd7793c495a6e8}{R\+PC} (string method\+Name, \hyperlink{class_photon_player}{Photon\+Player} target\+Player, params object\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_view_ab6f075ebed73c05fa1c9ea6e81b66cca}{Rpc\+Secure} (string method\+Name, \hyperlink{class_photon_player}{Photon\+Player} target\+Player, bool encrypt, params object\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). \end{DoxyCompactList}\item 
+override string \hyperlink{class_photon_view_aaa61ad448b005df342350762476e367d}{To\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_photon_view}{Photon\+View} \hyperlink{class_photon_view_ace8c64cae230e1fbd3356112274e4d8d}{Get} (Component component)
+\item 
+static \hyperlink{class_photon_view}{Photon\+View} \hyperlink{class_photon_view_a24370932ff0a1f79d6dcb83a2bd7a27b}{Get} (Game\+Object game\+Obj)
+\item 
+static \hyperlink{class_photon_view}{Photon\+View} \hyperlink{class_photon_view_a84084cfaf09debaf88362629bb772907}{Find} (int \hyperlink{class_photon_view_a309ddedb443400696cf80da2ff579262}{view\+ID})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_photon_view_af37a856ac051d3882de691851c7d2d08}{owner\+Id}
+\item 
+int \hyperlink{class_photon_view_a9f8a7d9f0fa7703f07dcc2f0daf0e4db}{group} = 0
+\item 
+int \hyperlink{class_photon_view_a3a3650071e812aca9b9cd518638ebd7d}{prefix\+Backup} = -\/1
+\item 
+Component \hyperlink{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}{observed}
+\item 
+\hyperlink{_photon_view_8cs_adca9c5e682d5417add581b004cd5b990}{View\+Synchronization} \hyperlink{class_photon_view_a634144e72774beb34d84c3ab7cac9cd4}{synchronization}
+\item 
+\hyperlink{_photon_view_8cs_a2188da6000e577148a984d5c78b279d2}{On\+Serialize\+Transform} \hyperlink{class_photon_view_a72f924cef0d24da2c542e80062cc3934}{on\+Serialize\+Transform\+Option} = \hyperlink{_photon_view_8cs_a2188da6000e577148a984d5c78b279d2aa2090ce6165d865de2f99434311550a2}{On\+Serialize\+Transform.\+Position\+And\+Rotation}
+\item 
+\hyperlink{_photon_view_8cs_a30dff10dfe67eb47ed952eac57dd6dc3}{On\+Serialize\+Rigid\+Body} \hyperlink{class_photon_view_a57eb2e5b6b3aea9e4ac6cc494dc19a27}{on\+Serialize\+Rigid\+Body\+Option} = \hyperlink{_photon_view_8cs_a30dff10dfe67eb47ed952eac57dd6dc3ab1c94ca2fbc3e78fc30069c8d0f01680}{On\+Serialize\+Rigid\+Body.\+All}
+\item 
+\hyperlink{_photon_view_8cs_afcc67b7812df847096e32bd0a953b39f}{Ownership\+Option} \hyperlink{class_photon_view_a29400fef2cf398230b2c63a7d66f6d9a}{ownership\+Transfer} = \hyperlink{_photon_view_8cs_afcc67b7812df847096e32bd0a953b39fa4457d440870ad6d42bab9082d9bf9b61}{Ownership\+Option.\+Fixed}
+\begin{DoxyCompactList}\small\item\em Defines if ownership of this \hyperlink{class_photon_view}{Photon\+View} is fixed, can be requested or simply taken. \end{DoxyCompactList}\item 
+List$<$ Component $>$ \hyperlink{class_photon_view_ae0c6ba75b4b849f41a2164c0ad7dbf8f}{Observed\+Components}
+\item 
+int \hyperlink{class_photon_view_aa32a59c1f2bd619673142ab75fc7c928}{instantiation\+Id}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_photon_view_aae1e4dcb7cf0cf2cd460490cefdcda46}{prefix}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+object\mbox{[}$\,$\mbox{]} \hyperlink{class_photon_view_a0d1e63579ed533e6394ca7f12b313c7c}{instantiation\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is the instantiation\+Data that was passed when calling \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate}$\ast$ (if that was used to spawn this prefab) \end{DoxyCompactList}\item 
+int \hyperlink{class_photon_view_a309ddedb443400696cf80da2ff579262}{view\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The ID of the \hyperlink{class_photon_view}{Photon\+View}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_view_a65ea130a5d46f64984ff5361518f6050}{is\+Scene\+View}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the \hyperlink{class_photon_view}{Photon\+View} was loaded with the scene (game object) or instantiated with Instantiate\+Scene\+Object. \end{DoxyCompactList}\item 
+\hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_view_ad696cb93fb9835d633b9def970650edc}{owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The owner of a \hyperlink{class_photon_view}{Photon\+View} is the player who created the Game\+Object with that view. \end{DoxyCompactList}\item 
+int \hyperlink{class_photon_view_a535e478c9fe2fce6af7102e32833135a}{Owner\+Actor\+Nr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \hyperlink{class_photon_view_afcf78ab953a119454750b7e85242eae4}{is\+Owner\+Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \hyperlink{class_photon_view_aa9d1d25847f25afbac6b68c99c7e286c}{Creator\+Actor\+Nr}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \hyperlink{class_photon_view_a823593ba0cf86454176b4f0d04a70590}{is\+Mine}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the \hyperlink{class_photon_view}{Photon\+View} is \char`\"{}mine\char`\"{} and can be controlled by this client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+UN\textquotesingle{}s Network\+View replacement class for networking. 
+
+Use it like a Network\+View. 
+
+\subsection{Member Function Documentation}
+\index{Photon\+View@{Photon\+View}!Deserialize\+View@{Deserialize\+View}}
+\index{Deserialize\+View@{Deserialize\+View}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Deserialize\+View(\+Photon\+Stream stream, Photon\+Message\+Info info)}{DeserializeView(PhotonStream stream, PhotonMessageInfo info)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Deserialize\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Stream}}]{stream, }
+\item[{{\bf Photon\+Message\+Info}}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_a677557c203df8f79277095ce5f9da001}{}\label{class_photon_view_a677557c203df8f79277095ce5f9da001}
+\index{Photon\+View@{Photon\+View}!Find@{Find}}
+\index{Find@{Find}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Find(int view\+I\+D)}{Find(int viewID)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Photon\+View} Photon\+View.\+Find (
+\begin{DoxyParamCaption}
+\item[{int}]{view\+ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_view_a84084cfaf09debaf88362629bb772907}{}\label{class_photon_view_a84084cfaf09debaf88362629bb772907}
+\index{Photon\+View@{Photon\+View}!Get@{Get}}
+\index{Get@{Get}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Get(\+Component component)}{Get(Component component)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Photon\+View} Photon\+View.\+Get (
+\begin{DoxyParamCaption}
+\item[{Component}]{component}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_view_ace8c64cae230e1fbd3356112274e4d8d}{}\label{class_photon_view_ace8c64cae230e1fbd3356112274e4d8d}
+\index{Photon\+View@{Photon\+View}!Get@{Get}}
+\index{Get@{Get}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Get(\+Game\+Object game\+Obj)}{Get(GameObject gameObj)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Photon\+View} Photon\+View.\+Get (
+\begin{DoxyParamCaption}
+\item[{Game\+Object}]{game\+Obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_view_a24370932ff0a1f79d6dcb83a2bd7a27b}{}\label{class_photon_view_a24370932ff0a1f79d6dcb83a2bd7a27b}
+\index{Photon\+View@{Photon\+View}!Refresh\+Rpc\+Mono\+Behaviour\+Cache@{Refresh\+Rpc\+Mono\+Behaviour\+Cache}}
+\index{Refresh\+Rpc\+Mono\+Behaviour\+Cache@{Refresh\+Rpc\+Mono\+Behaviour\+Cache}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Refresh\+Rpc\+Mono\+Behaviour\+Cache()}{RefreshRpcMonoBehaviourCache()}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Refresh\+Rpc\+Mono\+Behaviour\+Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_a869710e081df022bbb4fa160e7ab9e0a}{}\label{class_photon_view_a869710e081df022bbb4fa160e7ab9e0a}
+
+
+Can be used to refesh the list of Mono\+Behaviours on this Game\+Object while \hyperlink{class_photon_network_a2ea887525d418e088bf99d303673d2f3}{Photon\+Network.\+Use\+Rpc\+Mono\+Behaviour\+Cache} is true. 
+
+Set \hyperlink{class_photon_network_a2ea887525d418e088bf99d303673d2f3}{Photon\+Network.\+Use\+Rpc\+Mono\+Behaviour\+Cache} to true to enable the caching. Uses this.\+Get\+Components$<$\+Mono\+Behaviour$>$() to get a list of Mono\+Behaviours to call R\+P\+Cs on (potentially).
+
+While \hyperlink{class_photon_network_a2ea887525d418e088bf99d303673d2f3}{Photon\+Network.\+Use\+Rpc\+Mono\+Behaviour\+Cache} is false, this method has no effect, because the list is refreshed when a R\+PC gets called. \index{Photon\+View@{Photon\+View}!Request\+Ownership@{Request\+Ownership}}
+\index{Request\+Ownership@{Request\+Ownership}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Request\+Ownership()}{RequestOwnership()}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Request\+Ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_a0eee05bdd9c48c263a41ccfec45b8651}{}\label{class_photon_view_a0eee05bdd9c48c263a41ccfec45b8651}
+
+
+Depending on the \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s ownership\+Transfer setting, any client can request to become owner of the \hyperlink{class_photon_view}{Photon\+View}. 
+
+Requesting ownership can give you control over a \hyperlink{class_photon_view}{Photon\+View}, if the ownership\+Transfer setting allows that. The current owner might have to implement \hyperlink{interface_i_pun_callbacks_a02364f5144b6305bbffc886d530b7bd2}{I\+Pun\+Callbacks.\+On\+Ownership\+Request} to react to the ownership request.
+
+The owner/controller of a \hyperlink{class_photon_view}{Photon\+View} is also the client which sends position updates of the Game\+Object. \index{Photon\+View@{Photon\+View}!R\+PC@{R\+PC}}
+\index{R\+PC@{R\+PC}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{R\+P\+C(string method\+Name, Photon\+Targets target, params object[] parameters)}{RPC(string methodName, PhotonTargets target, params object[] parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+R\+PC (
+\begin{DoxyParamCaption}
+\item[{string}]{method\+Name, }
+\item[{{\bf Photon\+Targets}}]{target, }
+\item[{params object\mbox{[}$\,$\mbox{]}}]{parameters}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_ad288db13a15d581e0f7c5886f4036720}{}\label{class_photon_view_ad288db13a15d581e0f7c5886f4036720}
+
+
+Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). 
+
+Remote Procedure Calls are an essential tool in making multiplayer games with P\+UN. It enables you to make every client in a room call a specific method.
+
+R\+PC calls can target \char`\"{}\+All\char`\"{} or the \char`\"{}\+Others\char`\"{}. Usually, the target \char`\"{}\+All\char`\"{} gets executed locally immediately after sending the R\+PC. The \char`\"{}$\ast$\+Via\+Server\char`\"{} options send the R\+PC to the server and execute it on this client when it\textquotesingle{}s sent back. Of course, calls are affected by this client\textquotesingle{}s lag and that of remote clients.
+
+Each call automatically is routed to the same \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) that was used on the originating client.
+
+See\+: Remote Procedure Calls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em method\+Name} & The name of a fitting method that was has the R\+PC attribute.\\
+\hline
+{\em target} & The group of targets and the way the R\+PC gets sent.\\
+\hline
+{\em parameters} & The parameters that the R\+PC method has (must fit this call!).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+View@{Photon\+View}!R\+PC@{R\+PC}}
+\index{R\+PC@{R\+PC}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{R\+P\+C(string method\+Name, Photon\+Player target\+Player, params object[] parameters)}{RPC(string methodName, PhotonPlayer targetPlayer, params object[] parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+R\+PC (
+\begin{DoxyParamCaption}
+\item[{string}]{method\+Name, }
+\item[{{\bf Photon\+Player}}]{target\+Player, }
+\item[{params object\mbox{[}$\,$\mbox{]}}]{parameters}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_a6bc9726af14a8c7b8bdd7793c495a6e8}{}\label{class_photon_view_a6bc9726af14a8c7b8bdd7793c495a6e8}
+
+
+Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). 
+
+Remote Procedure Calls are an essential tool in making multiplayer games with P\+UN. It enables you to make every client in a room call a specific method.
+
+This method allows you to make an R\+PC calls on a specific player\textquotesingle{}s client. Of course, calls are affected by this client\textquotesingle{}s lag and that of remote clients.
+
+Each call automatically is routed to the same \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) that was used on the originating client.
+
+See\+: Remote Procedure Calls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em method\+Name} & The name of a fitting method that was has the R\+PC attribute.\\
+\hline
+{\em target\+Player} & The group of targets and the way the R\+PC gets sent.\\
+\hline
+{\em parameters} & The parameters that the R\+PC method has (must fit this call!).\\
+\hline
+\end{DoxyParams}
+\index{Photon\+View@{Photon\+View}!Rpc\+Secure@{Rpc\+Secure}}
+\index{Rpc\+Secure@{Rpc\+Secure}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Rpc\+Secure(string method\+Name, Photon\+Targets target, bool encrypt, params object[] parameters)}{RpcSecure(string methodName, PhotonTargets target, bool encrypt, params object[] parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Rpc\+Secure (
+\begin{DoxyParamCaption}
+\item[{string}]{method\+Name, }
+\item[{{\bf Photon\+Targets}}]{target, }
+\item[{bool}]{encrypt, }
+\item[{params object\mbox{[}$\,$\mbox{]}}]{parameters}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_a2950cb34198fa050a7e65a6b2f722c68}{}\label{class_photon_view_a2950cb34198fa050a7e65a6b2f722c68}
+
+
+Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). 
+
+Remote Procedure Calls are an essential tool in making multiplayer games with P\+UN. It enables you to make every client in a room call a specific method.
+
+R\+PC calls can target \char`\"{}\+All\char`\"{} or the \char`\"{}\+Others\char`\"{}. Usually, the target \char`\"{}\+All\char`\"{} gets executed locally immediately after sending the R\+PC. The \char`\"{}$\ast$\+Via\+Server\char`\"{} options send the R\+PC to the server and execute it on this client when it\textquotesingle{}s sent back. Of course, calls are affected by this client\textquotesingle{}s lag and that of remote clients.
+
+Each call automatically is routed to the same \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) that was used on the originating client.
+
+See\+: Remote Procedure Calls. 
+
+param name=\char`\"{}method\+Name\char`\"{}$>$The name of a fitting method that was has the R\+PC attribute.
+
+param name=\char`\"{}target\char`\"{}$>$The group of targets and the way the R\+PC gets sent.
+
+param name=\char`\"{}encrypt\char`\"{}$>$ 
+
+param name=\char`\"{}parameters\char`\"{}$>$The parameters that the R\+PC method has (must fit this call!).\index{Photon\+View@{Photon\+View}!Rpc\+Secure@{Rpc\+Secure}}
+\index{Rpc\+Secure@{Rpc\+Secure}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Rpc\+Secure(string method\+Name, Photon\+Player target\+Player, bool encrypt, params object[] parameters)}{RpcSecure(string methodName, PhotonPlayer targetPlayer, bool encrypt, params object[] parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Rpc\+Secure (
+\begin{DoxyParamCaption}
+\item[{string}]{method\+Name, }
+\item[{{\bf Photon\+Player}}]{target\+Player, }
+\item[{bool}]{encrypt, }
+\item[{params object\mbox{[}$\,$\mbox{]}}]{parameters}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_ab6f075ebed73c05fa1c9ea6e81b66cca}{}\label{class_photon_view_ab6f075ebed73c05fa1c9ea6e81b66cca}
+
+
+Call a R\+PC method of this Game\+Object on remote clients of this room (or on all, inclunding this client). 
+
+Remote Procedure Calls are an essential tool in making multiplayer games with P\+UN. It enables you to make every client in a room call a specific method.
+
+This method allows you to make an R\+PC calls on a specific player\textquotesingle{}s client. Of course, calls are affected by this client\textquotesingle{}s lag and that of remote clients.
+
+Each call automatically is routed to the same \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) that was used on the originating client.
+
+See\+: Remote Procedure Calls. 
+
+param name=\char`\"{}method\+Name\char`\"{}$>$The name of a fitting method that was has the R\+PC attribute.
+
+param name=\char`\"{}target\+Player\char`\"{}$>$The group of targets and the way the R\+PC gets sent.
+
+param name=\char`\"{}encrypt\char`\"{}$>$ 
+
+param name=\char`\"{}parameters\char`\"{}$>$The parameters that the R\+PC method has (must fit this call!).\index{Photon\+View@{Photon\+View}!Serialize\+View@{Serialize\+View}}
+\index{Serialize\+View@{Serialize\+View}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Serialize\+View(\+Photon\+Stream stream, Photon\+Message\+Info info)}{SerializeView(PhotonStream stream, PhotonMessageInfo info)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Serialize\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Stream}}]{stream, }
+\item[{{\bf Photon\+Message\+Info}}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_af1871faa617868760d00e59d443d2ad8}{}\label{class_photon_view_af1871faa617868760d00e59d443d2ad8}
+\index{Photon\+View@{Photon\+View}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{To\+String()}{ToString()}}]{\setlength{\rightskip}{0pt plus 5cm}override string Photon\+View.\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_aaa61ad448b005df342350762476e367d}{}\label{class_photon_view_aaa61ad448b005df342350762476e367d}
+\index{Photon\+View@{Photon\+View}!Transfer\+Ownership@{Transfer\+Ownership}}
+\index{Transfer\+Ownership@{Transfer\+Ownership}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Transfer\+Ownership(\+Photon\+Player new\+Owner)}{TransferOwnership(PhotonPlayer newOwner)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Transfer\+Ownership (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Player}}]{new\+Owner}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_a484df6eca8208330c00c317334dd8115}{}\label{class_photon_view_a484df6eca8208330c00c317334dd8115}
+
+
+Transfers the ownership of this \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) to another player. 
+
+The owner/controller of a \hyperlink{class_photon_view}{Photon\+View} is also the client which sends position updates of the Game\+Object. \index{Photon\+View@{Photon\+View}!Transfer\+Ownership@{Transfer\+Ownership}}
+\index{Transfer\+Ownership@{Transfer\+Ownership}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Transfer\+Ownership(int new\+Owner\+Id)}{TransferOwnership(int newOwnerId)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+View.\+Transfer\+Ownership (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Owner\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_view_ad892c308b04787c06907120e64f6bc03}{}\label{class_photon_view_ad892c308b04787c06907120e64f6bc03}
+
+
+Transfers the ownership of this \hyperlink{class_photon_view}{Photon\+View} (and Game\+Object) to another player. 
+
+The owner/controller of a \hyperlink{class_photon_view}{Photon\+View} is also the client which sends position updates of the Game\+Object. 
+
+\subsection{Member Data Documentation}
+\index{Photon\+View@{Photon\+View}!group@{group}}
+\index{group@{group}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{group}{group}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+group = 0}\hypertarget{class_photon_view_a9f8a7d9f0fa7703f07dcc2f0daf0e4db}{}\label{class_photon_view_a9f8a7d9f0fa7703f07dcc2f0daf0e4db}
+\index{Photon\+View@{Photon\+View}!instantiation\+Id@{instantiation\+Id}}
+\index{instantiation\+Id@{instantiation\+Id}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{instantiation\+Id}{instantiationId}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+instantiation\+Id}\hypertarget{class_photon_view_aa32a59c1f2bd619673142ab75fc7c928}{}\label{class_photon_view_aa32a59c1f2bd619673142ab75fc7c928}
+\index{Photon\+View@{Photon\+View}!observed@{observed}}
+\index{observed@{observed}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{observed}{observed}}]{\setlength{\rightskip}{0pt plus 5cm}Component Photon\+View.\+observed}\hypertarget{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}{}\label{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}
+\index{Photon\+View@{Photon\+View}!Observed\+Components@{Observed\+Components}}
+\index{Observed\+Components@{Observed\+Components}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Observed\+Components}{ObservedComponents}}]{\setlength{\rightskip}{0pt plus 5cm}List$<$Component$>$ Photon\+View.\+Observed\+Components}\hypertarget{class_photon_view_ae0c6ba75b4b849f41a2164c0ad7dbf8f}{}\label{class_photon_view_ae0c6ba75b4b849f41a2164c0ad7dbf8f}
+\index{Photon\+View@{Photon\+View}!on\+Serialize\+Rigid\+Body\+Option@{on\+Serialize\+Rigid\+Body\+Option}}
+\index{on\+Serialize\+Rigid\+Body\+Option@{on\+Serialize\+Rigid\+Body\+Option}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{on\+Serialize\+Rigid\+Body\+Option}{onSerializeRigidBodyOption}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf On\+Serialize\+Rigid\+Body} Photon\+View.\+on\+Serialize\+Rigid\+Body\+Option = {\bf On\+Serialize\+Rigid\+Body.\+All}}\hypertarget{class_photon_view_a57eb2e5b6b3aea9e4ac6cc494dc19a27}{}\label{class_photon_view_a57eb2e5b6b3aea9e4ac6cc494dc19a27}
+\index{Photon\+View@{Photon\+View}!on\+Serialize\+Transform\+Option@{on\+Serialize\+Transform\+Option}}
+\index{on\+Serialize\+Transform\+Option@{on\+Serialize\+Transform\+Option}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{on\+Serialize\+Transform\+Option}{onSerializeTransformOption}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf On\+Serialize\+Transform} Photon\+View.\+on\+Serialize\+Transform\+Option = {\bf On\+Serialize\+Transform.\+Position\+And\+Rotation}}\hypertarget{class_photon_view_a72f924cef0d24da2c542e80062cc3934}{}\label{class_photon_view_a72f924cef0d24da2c542e80062cc3934}
+\index{Photon\+View@{Photon\+View}!owner\+Id@{owner\+Id}}
+\index{owner\+Id@{owner\+Id}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{owner\+Id}{ownerId}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+owner\+Id}\hypertarget{class_photon_view_af37a856ac051d3882de691851c7d2d08}{}\label{class_photon_view_af37a856ac051d3882de691851c7d2d08}
+\index{Photon\+View@{Photon\+View}!ownership\+Transfer@{ownership\+Transfer}}
+\index{ownership\+Transfer@{ownership\+Transfer}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{ownership\+Transfer}{ownershipTransfer}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ownership\+Option} Photon\+View.\+ownership\+Transfer = {\bf Ownership\+Option.\+Fixed}}\hypertarget{class_photon_view_a29400fef2cf398230b2c63a7d66f6d9a}{}\label{class_photon_view_a29400fef2cf398230b2c63a7d66f6d9a}
+
+
+Defines if ownership of this \hyperlink{class_photon_view}{Photon\+View} is fixed, can be requested or simply taken. 
+
+Note that you can\textquotesingle{}t edit this value at runtime. The options are described in enum Ownership\+Option. The current owner has to implement \hyperlink{interface_i_pun_callbacks_a02364f5144b6305bbffc886d530b7bd2}{I\+Pun\+Callbacks.\+On\+Ownership\+Request} to react to the ownership request. \index{Photon\+View@{Photon\+View}!prefix\+Backup@{prefix\+Backup}}
+\index{prefix\+Backup@{prefix\+Backup}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{prefix\+Backup}{prefixBackup}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+prefix\+Backup = -\/1}\hypertarget{class_photon_view_a3a3650071e812aca9b9cd518638ebd7d}{}\label{class_photon_view_a3a3650071e812aca9b9cd518638ebd7d}
+\index{Photon\+View@{Photon\+View}!synchronization@{synchronization}}
+\index{synchronization@{synchronization}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{synchronization}{synchronization}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View\+Synchronization} Photon\+View.\+synchronization}\hypertarget{class_photon_view_a634144e72774beb34d84c3ab7cac9cd4}{}\label{class_photon_view_a634144e72774beb34d84c3ab7cac9cd4}
+
+
+\subsection{Property Documentation}
+\index{Photon\+View@{Photon\+View}!Creator\+Actor\+Nr@{Creator\+Actor\+Nr}}
+\index{Creator\+Actor\+Nr@{Creator\+Actor\+Nr}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Creator\+Actor\+Nr}{CreatorActorNr}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+Creator\+Actor\+Nr\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_view_aa9d1d25847f25afbac6b68c99c7e286c}{}\label{class_photon_view_aa9d1d25847f25afbac6b68c99c7e286c}
+\index{Photon\+View@{Photon\+View}!instantiation\+Data@{instantiation\+Data}}
+\index{instantiation\+Data@{instantiation\+Data}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{instantiation\+Data}{instantiationData}}]{\setlength{\rightskip}{0pt plus 5cm}object \mbox{[}$\,$\mbox{]} Photon\+View.\+instantiation\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_view_a0d1e63579ed533e6394ca7f12b313c7c}{}\label{class_photon_view_a0d1e63579ed533e6394ca7f12b313c7c}
+
+
+This is the instantiation\+Data that was passed when calling \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate}$\ast$ (if that was used to spawn this prefab) 
+
+\index{Photon\+View@{Photon\+View}!is\+Mine@{is\+Mine}}
+\index{is\+Mine@{is\+Mine}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{is\+Mine}{isMine}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+View.\+is\+Mine\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_view_a823593ba0cf86454176b4f0d04a70590}{}\label{class_photon_view_a823593ba0cf86454176b4f0d04a70590}
+
+
+True if the \hyperlink{class_photon_view}{Photon\+View} is \char`\"{}mine\char`\"{} and can be controlled by this client. 
+
+P\+UN has an ownership concept that defines who can control and destroy each \hyperlink{class_photon_view}{Photon\+View}. True in case the owner matches the local \hyperlink{class_photon_player}{Photon\+Player}. True if this is a scene photonview on the Master client. \index{Photon\+View@{Photon\+View}!is\+Owner\+Active@{is\+Owner\+Active}}
+\index{is\+Owner\+Active@{is\+Owner\+Active}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{is\+Owner\+Active}{isOwnerActive}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+View.\+is\+Owner\+Active\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_view_afcf78ab953a119454750b7e85242eae4}{}\label{class_photon_view_afcf78ab953a119454750b7e85242eae4}
+\index{Photon\+View@{Photon\+View}!is\+Scene\+View@{is\+Scene\+View}}
+\index{is\+Scene\+View@{is\+Scene\+View}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{is\+Scene\+View}{isSceneView}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+View.\+is\+Scene\+View\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_view_a65ea130a5d46f64984ff5361518f6050}{}\label{class_photon_view_a65ea130a5d46f64984ff5361518f6050}
+
+
+True if the \hyperlink{class_photon_view}{Photon\+View} was loaded with the scene (game object) or instantiated with Instantiate\+Scene\+Object. 
+
+Scene objects are not owned by a particular player but belong to the scene. Thus they don\textquotesingle{}t get destroyed when their creator leaves the game and the current Master Client can control them (whoever that is). The owner\+Id is 0 (player I\+Ds are 1 and up). \index{Photon\+View@{Photon\+View}!owner@{owner}}
+\index{owner@{owner}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{owner}{owner}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+View.\+owner\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_view_ad696cb93fb9835d633b9def970650edc}{}\label{class_photon_view_ad696cb93fb9835d633b9def970650edc}
+
+
+The owner of a \hyperlink{class_photon_view}{Photon\+View} is the player who created the Game\+Object with that view. 
+
+Objects in the scene don\textquotesingle{}t have an owner. 
+
+The owner/controller of a \hyperlink{class_photon_view}{Photon\+View} is also the client which sends position updates of the Game\+Object.
+
+Ownership can be transferred to another player with \hyperlink{class_photon_view_a484df6eca8208330c00c317334dd8115}{Photon\+View.\+Transfer\+Ownership} or any player can request ownership by calling the \hyperlink{class_photon_view}{Photon\+View}\textquotesingle{}s Request\+Ownership method. The current owner has to implement \hyperlink{interface_i_pun_callbacks_a02364f5144b6305bbffc886d530b7bd2}{I\+Pun\+Callbacks.\+On\+Ownership\+Request} to react to the ownership request. \index{Photon\+View@{Photon\+View}!Owner\+Actor\+Nr@{Owner\+Actor\+Nr}}
+\index{Owner\+Actor\+Nr@{Owner\+Actor\+Nr}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{Owner\+Actor\+Nr}{OwnerActorNr}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+Owner\+Actor\+Nr\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_view_a535e478c9fe2fce6af7102e32833135a}{}\label{class_photon_view_a535e478c9fe2fce6af7102e32833135a}
+\index{Photon\+View@{Photon\+View}!prefix@{prefix}}
+\index{prefix@{prefix}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{prefix}{prefix}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+prefix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_view_aae1e4dcb7cf0cf2cd460490cefdcda46}{}\label{class_photon_view_aae1e4dcb7cf0cf2cd460490cefdcda46}
+\index{Photon\+View@{Photon\+View}!view\+ID@{view\+ID}}
+\index{view\+ID@{view\+ID}!Photon\+View@{Photon\+View}}
+\subsubsection[{\texorpdfstring{view\+ID}{viewID}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+View.\+view\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_view_a309ddedb443400696cf80da2ff579262}{}\label{class_photon_view_a309ddedb443400696cf80da2ff579262}
+
+
+The ID of the \hyperlink{class_photon_view}{Photon\+View}. 
+
+Identifies it in a networked game (per room). 
+
+See\+: Network Instantiation
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_view_8cs}{Photon\+View.\+cs}\end{DoxyCompactItemize}

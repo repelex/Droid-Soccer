@@ -1,0 +1,595 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{}\section{Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}\index{Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client@{Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client}}
+
+
+Central class of the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} A\+PI to connect, handle channels and messages.  
+
+
+
+
+Inherits I\+Photon\+Peer\+Listener.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5088b919addd1ae88cf8ed72d68c52c2}{Chat\+Client} (\hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener}{I\+Chat\+Client\+Listener} listener, Connection\+Protocol protocol=Connection\+Protocol.\+Udp)
+\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4fb7f78c7820b02fb0ec3c173ff0d2d5}{Connect} (string app\+Id, string app\+Version, \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_authentication_values}{Authentication\+Values} auth\+Values)
+\begin{DoxyCompactList}\small\item\em Connects this client to the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Cloud service, which will also authenticate the user (and set a User\+Id). \end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4e5b2c3dc8f4e43b053bd3436dd39c5f}{Service} ()
+\begin{DoxyCompactList}\small\item\em Must be called regularly to keep connection between client and server alive and to process incoming messages. \end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a21acfc202dc0114eabdba678e03f21f1}{Disconnect} ()
+\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af9ac75f889489a06dbc8f6d7881367c4}{Stop\+Thread} ()
+\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aecfdac4a2de6577291597477bcaec9c7}{Subscribe} (string\mbox{[}$\,$\mbox{]} channels)
+\begin{DoxyCompactList}\small\item\em Sends operation to subscribe to a list of channels by name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a6f6d0d0942fff96f3be1d7efbe1c00be}{Subscribe} (string\mbox{[}$\,$\mbox{]} channels, int messages\+From\+History)
+\begin{DoxyCompactList}\small\item\em Sends operation to subscribe client to channels, optionally fetching a number of messages from the cache. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5d233da812511bdf2f833461d4a501b6}{Unsubscribe} (string\mbox{[}$\,$\mbox{]} channels)
+\begin{DoxyCompactList}\small\item\em Unsubscribes from a list of channels, which stops getting messages from those. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a0a8f7a1907bebc71607c3adedf11b9fd}{Publish\+Message} (string channel\+Name, object message)
+\begin{DoxyCompactList}\small\item\em Sends a message to a public channel which this client subscribed to. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a423b766a0d908278cdced1e149d197b4}{Send\+Private\+Message} (string target, object message)
+\begin{DoxyCompactList}\small\item\em Sends a private message to a single target user. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af671de33e90172784c8b0392571a1d72}{Send\+Private\+Message} (string target, object message, bool encrypt)
+\begin{DoxyCompactList}\small\item\em Sends a private message to a single target user. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af3dade275735d7490a9872e965e6830f}{Set\+Online\+Status} (int status)
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s status without changing your status-\/message. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a9ae2d62c65f72f1ebea7b22ca8ce3b91}{Set\+Online\+Status} (int status, object message)
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s status without changing your status-\/message. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a66aa30bff5ca81b1a1811d8e36b09546}{Add\+Friends} (string\mbox{[}$\,$\mbox{]} friends)
+\begin{DoxyCompactList}\small\item\em Adds friends to a list on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Server which will send you status updates for those. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a8071d5a27bc1828fdcb19deee57deac2}{Remove\+Friends} (string\mbox{[}$\,$\mbox{]} friends)
+\begin{DoxyCompactList}\small\item\em Removes the provided entries from the list on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Server and stops their status updates. \end{DoxyCompactList}\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a24f6e608fc1b838de8de908c6756571f}{Get\+Private\+Channel\+Name\+By\+User} (string user\+Name)
+\begin{DoxyCompactList}\small\item\em Get you the (locally used) channel name for the chat between this client and another user. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a518706086a60688c5dbe946e3b437491}{Try\+Get\+Channel} (string channel\+Name, bool is\+Private, out \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel}{Chat\+Channel} channel)
+\begin{DoxyCompactList}\small\item\em Simplified access to either private or public channels by name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_ad48f9b88b0635c9f2363322123044fb8}{Try\+Get\+Channel} (string channel\+Name, out \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel}{Chat\+Channel} channel)
+\begin{DoxyCompactList}\small\item\em Simplified access to all channels by name. \end{DoxyCompactList}\item 
+void \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a6b1cdbd8b56655e88e678441452f65a1}{Send\+Acks\+Only} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a66e028cd73b441bbdd8d37ee0e2b1dee}{Message\+Limit}
+\begin{DoxyCompactList}\small\item\em If greater than 0, new channels will limit the number of messages they cache locally. \end{DoxyCompactList}\item 
+readonly Dictionary$<$ string, \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel}{Chat\+Channel} $>$ \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aa3d4261b652969dd5f94971ca48f5a7e}{Public\+Channels}
+\item 
+readonly Dictionary$<$ string, \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel}{Chat\+Channel} $>$ \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a25f9db0c022bb0feda81d31f43053a81}{Private\+Channels}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_afc6baf1a806a9a9ea803b14889ffb8c3}{Name\+Server\+Address}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address of last connected Name Server.\end{DoxyCompactList}\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4693102ef8b77518b9eed0cbbdd650e1}{Frontend\+Address}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The address of the actual chat server assigned from Name\+Server. Public for read only.\end{DoxyCompactList}\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5b8e2b595533f33e5c298fe5ced2726b}{Chat\+Region}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Settable only before you connect! Defaults to \char`\"{}\+E\+U\char`\"{}.\end{DoxyCompactList}\item 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat_ad7d7f22d8741237f41e4b60779cdfa19}{Chat\+State} \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5d523809d52088df6fbd8927523d6238}{State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current state of the \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client}. Also use Can\+Chat.\end{DoxyCompactList}\item 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat_ae3a2988c8cb1fea31bb2d9eeafc0ed8b}{Chat\+Disconnect\+Cause} \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a05085dc638466b2660f1c694f90fbf8e}{Disconnected\+Cause}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a71c10e565150962413bb1abaa89af66a}{Can\+Chat}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a96bec51384215e8622397b8fe2fc90e1}{App\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The version of your client. A new version also creates a new \char`\"{}virtual app\char`\"{} to separate players from older client versions.\end{DoxyCompactList}\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a876c9a53400fe18fc365775ca728928f}{App\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The App\+ID as assigned from the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud. If you host yourself, this is the \char`\"{}regular\char`\"{} \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Server Application Name (most likely\+: \char`\"{}\+Load\+Balancing\char`\"{}).\end{DoxyCompactList}\item 
+\hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_authentication_values}{Authentication\+Values} \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5c03b22e8271f95ee0b46ebbd2bac651}{Auth\+Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Settable only before you connect!\end{DoxyCompactList}\item 
+string \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a8f757bc4e9f4038dc388a8fee3f47150}{User\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The unique ID of a user/person, stored in Auth\+Values.\+User\+Id. \end{DoxyCompactList}\item 
+Debug\+Level \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a3506656c033fb2bdc7822275aab6dac2}{Debug\+Out}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the level (and amount) of debug output provided by the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Central class of the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} A\+PI to connect, handle channels and messages. 
+
+This class must be instantiated with a \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener}{I\+Chat\+Client\+Listener} instance to get the callbacks. Integrate it into your game loop by calling Service regularly. Call Connect with an App\+Id that is setup as \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} application. Note\+: Connect covers multiple messages between this client and the servers. A short workflow will connect you to a chat server.
+
+Each \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client} resembles a user in chat (set in Connect). Each user automatically subscribes a channel for incoming private messages and can message any other user privately. Before you publish messages in any non-\/private channel, that channel must be subscribed.
+
+Public\+Channels is a list of subscribed channels, containing messages and senders. Private\+Channels contains all incoming and sent private messages. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Chat\+Client@{Chat\+Client}}
+\index{Chat\+Client@{Chat\+Client}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Chat\+Client(\+I\+Chat\+Client\+Listener listener, Connection\+Protocol protocol=\+Connection\+Protocol.\+Udp)}{ChatClient(IChatClientListener listener, ConnectionProtocol protocol=ConnectionProtocol.Udp)}}]{\setlength{\rightskip}{0pt plus 5cm}Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Chat\+Client (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Chat\+Client\+Listener}}]{listener, }
+\item[{Connection\+Protocol}]{protocol = {\ttfamily ConnectionProtocol.Udp}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5088b919addd1ae88cf8ed72d68c52c2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5088b919addd1ae88cf8ed72d68c52c2}
+
+
+\subsection{Member Function Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Add\+Friends@{Add\+Friends}}
+\index{Add\+Friends@{Add\+Friends}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Add\+Friends(string[] friends)}{AddFriends(string[] friends)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Add\+Friends (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{friends}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a66aa30bff5ca81b1a1811d8e36b09546}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a66aa30bff5ca81b1a1811d8e36b09546}
+
+
+Adds friends to a list on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Server which will send you status updates for those. 
+
+Add\+Friends and Remove\+Friends enable clients to handle their friend list in the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} server. Having users on your friends list gives you access to their current online status (and whatever info your client sets in it).
+
+Each user can set an online status consisting of an integer and an arbitratry (serializable) object. The object can be null, Hashtable, object\mbox{[}\mbox{]} or anything else \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} can serialize.
+
+The status is published automatically to friends (anyone who set your user ID with Add\+Friends).
+
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} flushes friends-\/list when a chat client disconnects, so it has to be set each time. If your community A\+PI gives you access to online status already, you could filter and set online friends in Add\+Friends.
+
+Actual friend relations are not persistent and have to be stored outside of \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em friends} & Array of friend user\+Ids.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the operation could be sent.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Connect@{Connect}}
+\index{Connect@{Connect}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Connect(string app\+Id, string app\+Version, Authentication\+Values auth\+Values)}{Connect(string appId, string appVersion, AuthenticationValues authValues)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Connect (
+\begin{DoxyParamCaption}
+\item[{string}]{app\+Id, }
+\item[{string}]{app\+Version, }
+\item[{{\bf Authentication\+Values}}]{auth\+Values}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4fb7f78c7820b02fb0ec3c173ff0d2d5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4fb7f78c7820b02fb0ec3c173ff0d2d5}
+
+
+Connects this client to the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Cloud service, which will also authenticate the user (and set a User\+Id). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\+Id} & Get your \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} App\+Id from the \href{https://www.photonengine.com/en/Chat/Dashboard}{\tt Dashboard}.\\
+\hline
+{\em app\+Version} & Any version string you make up. Used to separate users and variants of your clients, which might be incompatible.\\
+\hline
+{\em auth\+Values} & Values for authentication. You can leave this null, if you set a User\+Id before. If you set auth\+Values, they will override any User\+Id set before.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Disconnect()}{Disconnect()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a21acfc202dc0114eabdba678e03f21f1}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a21acfc202dc0114eabdba678e03f21f1}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Get\+Private\+Channel\+Name\+By\+User@{Get\+Private\+Channel\+Name\+By\+User}}
+\index{Get\+Private\+Channel\+Name\+By\+User@{Get\+Private\+Channel\+Name\+By\+User}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Get\+Private\+Channel\+Name\+By\+User(string user\+Name)}{GetPrivateChannelNameByUser(string userName)}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Get\+Private\+Channel\+Name\+By\+User (
+\begin{DoxyParamCaption}
+\item[{string}]{user\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a24f6e608fc1b838de8de908c6756571f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a24f6e608fc1b838de8de908c6756571f}
+
+
+Get you the (locally used) channel name for the chat between this client and another user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Name} & Remote user\textquotesingle{}s name or User\+Id.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The (locally used) channel name for a private channel.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Publish\+Message@{Publish\+Message}}
+\index{Publish\+Message@{Publish\+Message}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Publish\+Message(string channel\+Name, object message)}{PublishMessage(string channelName, object message)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Publish\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{channel\+Name, }
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a0a8f7a1907bebc71607c3adedf11b9fd}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a0a8f7a1907bebc71607c3adedf11b9fd}
+
+
+Sends a message to a public channel which this client subscribed to. 
+
+Before you publish to a channel, you have to subscribe it. Everyone in that channel will get the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Name} & Name of the channel to publish to.\\
+\hline
+{\em message} & Your message (string or any serializable data).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the client is not yet ready to send messages.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Remove\+Friends@{Remove\+Friends}}
+\index{Remove\+Friends@{Remove\+Friends}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Remove\+Friends(string[] friends)}{RemoveFriends(string[] friends)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Remove\+Friends (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{friends}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a8071d5a27bc1828fdcb19deee57deac2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a8071d5a27bc1828fdcb19deee57deac2}
+
+
+Removes the provided entries from the list on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Server and stops their status updates. 
+
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} flushes friends-\/list when a chat client disconnects. Unless you want to remove individual entries, you don\textquotesingle{}t have to Remove\+Friends.
+
+Add\+Friends and Remove\+Friends enable clients to handle their friend list in the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} server. Having users on your friends list gives you access to their current online status (and whatever info your client sets in it).
+
+Each user can set an online status consisting of an integer and an arbitratry (serializable) object. The object can be null, Hashtable, object\mbox{[}\mbox{]} or anything else \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} can serialize.
+
+The status is published automatically to friends (anyone who set your user ID with Add\+Friends).
+
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} flushes friends-\/list when a chat client disconnects, so it has to be set each time. If your community A\+PI gives you access to online status already, you could filter and set online friends in Add\+Friends.
+
+Actual friend relations are not persistent and have to be stored outside of \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}.
+
+Add\+Friends and Remove\+Friends enable clients to handle their friend list in the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} server. Having users on your friends list gives you access to their current online status (and whatever info your client sets in it).
+
+Each user can set an online status consisting of an integer and an arbitratry (serializable) object. The object can be null, Hashtable, object\mbox{[}\mbox{]} or anything else \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} can serialize.
+
+The status is published automatically to friends (anyone who set your user ID with Add\+Friends).
+
+Actual friend relations are not persistent and have to be stored outside of \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em friends} & Array of friend user\+Ids.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the operation could be sent.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Send\+Acks\+Only@{Send\+Acks\+Only}}
+\index{Send\+Acks\+Only@{Send\+Acks\+Only}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Send\+Acks\+Only()}{SendAcksOnly()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Send\+Acks\+Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a6b1cdbd8b56655e88e678441452f65a1}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a6b1cdbd8b56655e88e678441452f65a1}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Send\+Private\+Message@{Send\+Private\+Message}}
+\index{Send\+Private\+Message@{Send\+Private\+Message}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Send\+Private\+Message(string target, object message)}{SendPrivateMessage(string target, object message)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Send\+Private\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{target, }
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a423b766a0d908278cdced1e149d197b4}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a423b766a0d908278cdced1e149d197b4}
+
+
+Sends a private message to a single target user. 
+
+Calls On\+Private\+Message on the receiving client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Username to send this message to.\\
+\hline
+{\em message} & The message you want to send. Can be a simple string or anything serializable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this clients can send the message to the server.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Send\+Private\+Message@{Send\+Private\+Message}}
+\index{Send\+Private\+Message@{Send\+Private\+Message}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Send\+Private\+Message(string target, object message, bool encrypt)}{SendPrivateMessage(string target, object message, bool encrypt)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Send\+Private\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{target, }
+\item[{object}]{message, }
+\item[{bool}]{encrypt}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af671de33e90172784c8b0392571a1d72}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af671de33e90172784c8b0392571a1d72}
+
+
+Sends a private message to a single target user. 
+
+Calls On\+Private\+Message on the receiving client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Username to send this message to.\\
+\hline
+{\em message} & The message you want to send. Can be a simple string or anything serializable.\\
+\hline
+{\em encrypt} & Optionally, private messages can be encrypted. Encryption is not end-\/to-\/end as the server decrypts the message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this clients can send the message to the server.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Service@{Service}}
+\index{Service@{Service}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Service()}{Service()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4e5b2c3dc8f4e43b053bd3436dd39c5f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4e5b2c3dc8f4e43b053bd3436dd39c5f}
+
+
+Must be called regularly to keep connection between client and server alive and to process incoming messages. 
+
+This method limits the effort it does automatically using the private variable ms\+Delta\+For\+Service\+Calls. That value is lower for connect and multiplied by 4 when chat-\/server connection is ready. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Set\+Online\+Status@{Set\+Online\+Status}}
+\index{Set\+Online\+Status@{Set\+Online\+Status}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Set\+Online\+Status(int status)}{SetOnlineStatus(int status)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Set\+Online\+Status (
+\begin{DoxyParamCaption}
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af3dade275735d7490a9872e965e6830f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af3dade275735d7490a9872e965e6830f}
+
+
+Sets the user\textquotesingle{}s status without changing your status-\/message. 
+
+The predefined status values can be found in class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_user_status}{Chat\+User\+Status}. State \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_user_status_a5d307822db6e769821d9dc86477171e2}{Chat\+User\+Status.\+Invisible} will make you offline for everyone and send no message.
+
+You can set custom values in the status integer. Aside from the pre-\/configured ones, all states will be considered visible and online. Else, no one would see the custom state.
+
+This overload does not change the set message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Predefined states are in class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_user_status}{Chat\+User\+Status}. Other values can be used at will.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation gets called on the server.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Set\+Online\+Status@{Set\+Online\+Status}}
+\index{Set\+Online\+Status@{Set\+Online\+Status}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Set\+Online\+Status(int status, object message)}{SetOnlineStatus(int status, object message)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Set\+Online\+Status (
+\begin{DoxyParamCaption}
+\item[{int}]{status, }
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a9ae2d62c65f72f1ebea7b22ca8ce3b91}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a9ae2d62c65f72f1ebea7b22ca8ce3b91}
+
+
+Sets the user\textquotesingle{}s status without changing your status-\/message. 
+
+The predefined status values can be found in class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_user_status}{Chat\+User\+Status}. State \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_user_status_a5d307822db6e769821d9dc86477171e2}{Chat\+User\+Status.\+Invisible} will make you offline for everyone and send no message.
+
+You can set custom values in the status integer. Aside from the pre-\/configured ones, all states will be considered visible and online. Else, no one would see the custom state.
+
+The message object can be anything that \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} can serialize, including (but not limited to) Hashtable, object\mbox{[}\mbox{]} and string. This value is defined by your own conventions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Predefined states are in class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_user_status}{Chat\+User\+Status}. Other values can be used at will.\\
+\hline
+{\em message} & Also sets a status-\/message which your friends can get.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation gets called on the server.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Stop\+Thread@{Stop\+Thread}}
+\index{Stop\+Thread@{Stop\+Thread}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Stop\+Thread()}{StopThread()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Stop\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af9ac75f889489a06dbc8f6d7881367c4}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_af9ac75f889489a06dbc8f6d7881367c4}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Subscribe(string[] channels)}{Subscribe(string[] channels)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Subscribe (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{channels}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aecfdac4a2de6577291597477bcaec9c7}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aecfdac4a2de6577291597477bcaec9c7}
+
+
+Sends operation to subscribe to a list of channels by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channels} & List of channels to subscribe to. Avoid null or empty values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the operation could be sent at all (Example\+: Fails if not connected to \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Server).
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Subscribe(string[] channels, int messages\+From\+History)}{Subscribe(string[] channels, int messagesFromHistory)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Subscribe (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{channels, }
+\item[{int}]{messages\+From\+History}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a6f6d0d0942fff96f3be1d7efbe1c00be}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a6f6d0d0942fff96f3be1d7efbe1c00be}
+
+
+Sends operation to subscribe client to channels, optionally fetching a number of messages from the cache. 
+
+Subscribes channels will forward new messages to this user. Use Publish\+Message to do so. The messages cache is limited but can be useful to get into ongoing conversations, if that\textquotesingle{}s needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channels} & List of channels to subscribe to. Avoid null or empty values.\\
+\hline
+{\em messages\+From\+History} & 0\+: no history. 1 and higher\+: number of messages in history. -\/1\+: all available history.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the operation could be sent at all (Example\+: Fails if not connected to \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} Server).
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Try\+Get\+Channel@{Try\+Get\+Channel}}
+\index{Try\+Get\+Channel@{Try\+Get\+Channel}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Try\+Get\+Channel(string channel\+Name, bool is\+Private, out Chat\+Channel channel)}{TryGetChannel(string channelName, bool isPrivate, out ChatChannel channel)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Try\+Get\+Channel (
+\begin{DoxyParamCaption}
+\item[{string}]{channel\+Name, }
+\item[{bool}]{is\+Private, }
+\item[{out {\bf Chat\+Channel}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a518706086a60688c5dbe946e3b437491}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a518706086a60688c5dbe946e3b437491}
+
+
+Simplified access to either private or public channels by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Name} & Name of the channel to get. For private channels, the channel-\/name is composed of both user\textquotesingle{}s names.\\
+\hline
+{\em is\+Private} & Define if you expect a private or public channel.\\
+\hline
+{\em channel} & Out parameter gives you the found channel, if any.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the channel was found.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Try\+Get\+Channel@{Try\+Get\+Channel}}
+\index{Try\+Get\+Channel@{Try\+Get\+Channel}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Try\+Get\+Channel(string channel\+Name, out Chat\+Channel channel)}{TryGetChannel(string channelName, out ChatChannel channel)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Try\+Get\+Channel (
+\begin{DoxyParamCaption}
+\item[{string}]{channel\+Name, }
+\item[{out {\bf Chat\+Channel}}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_ad48f9b88b0635c9f2363322123044fb8}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_ad48f9b88b0635c9f2363322123044fb8}
+
+
+Simplified access to all channels by name. 
+
+Checks public channels first, then private ones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Name} & Name of the channel to get.\\
+\hline
+{\em channel} & Out parameter gives you the found channel, if any.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the channel was found.
+\end{DoxyReturn}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Unsubscribe@{Unsubscribe}}
+\index{Unsubscribe@{Unsubscribe}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Unsubscribe(string[] channels)}{Unsubscribe(string[] channels)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Unsubscribe (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{channels}
+\end{DoxyParamCaption}
+)}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5d233da812511bdf2f833461d4a501b6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5d233da812511bdf2f833461d4a501b6}
+
+
+Unsubscribes from a list of channels, which stops getting messages from those. 
+
+The client will remove these channels from the Public\+Channels dictionary once the server sent a response to this request.
+
+The request will be sent to the server and \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a9e1b1dd69f646b62d2958f9c49db2630}{I\+Chat\+Client\+Listener.\+On\+Unsubscribed} gets called when the server actually removed the channel subscriptions.
+
+Unsubscribe will fail if you include null or empty channel names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channels} & Names of channels to unsubscribe.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False, if not connected to a chat server.
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Message\+Limit@{Message\+Limit}}
+\index{Message\+Limit@{Message\+Limit}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Message\+Limit}{MessageLimit}}]{\setlength{\rightskip}{0pt plus 5cm}int Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Message\+Limit}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a66e028cd73b441bbdd8d37ee0e2b1dee}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a66e028cd73b441bbdd8d37ee0e2b1dee}
+
+
+If greater than 0, new channels will limit the number of messages they cache locally. 
+
+This can be useful to limit the amount of memory used by chats. You can set a Message\+Limit per channel but this value gets applied to new ones.
+
+Note\+: Changing this value, does not affect Chat\+Channels that are already in use! \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Private\+Channels@{Private\+Channels}}
+\index{Private\+Channels@{Private\+Channels}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Private\+Channels}{PrivateChannels}}]{\setlength{\rightskip}{0pt plus 5cm}readonly Dictionary$<$string, {\bf Chat\+Channel}$>$ Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Private\+Channels}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a25f9db0c022bb0feda81d31f43053a81}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a25f9db0c022bb0feda81d31f43053a81}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Public\+Channels@{Public\+Channels}}
+\index{Public\+Channels@{Public\+Channels}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Public\+Channels}{PublicChannels}}]{\setlength{\rightskip}{0pt plus 5cm}readonly Dictionary$<$string, {\bf Chat\+Channel}$>$ Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Public\+Channels}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aa3d4261b652969dd5f94971ca48f5a7e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_aa3d4261b652969dd5f94971ca48f5a7e}
+
+
+\subsection{Property Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!App\+Id@{App\+Id}}
+\index{App\+Id@{App\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{App\+Id}{AppId}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+App\+Id\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a876c9a53400fe18fc365775ca728928f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a876c9a53400fe18fc365775ca728928f}
+
+
+The App\+ID as assigned from the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud. If you host yourself, this is the \char`\"{}regular\char`\"{} \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Server Application Name (most likely\+: \char`\"{}\+Load\+Balancing\char`\"{}).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!App\+Version@{App\+Version}}
+\index{App\+Version@{App\+Version}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{App\+Version}{AppVersion}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+App\+Version\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a96bec51384215e8622397b8fe2fc90e1}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a96bec51384215e8622397b8fe2fc90e1}
+
+
+The version of your client. A new version also creates a new \char`\"{}virtual app\char`\"{} to separate players from older client versions.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Auth\+Values@{Auth\+Values}}
+\index{Auth\+Values@{Auth\+Values}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Auth\+Values}{AuthValues}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Authentication\+Values} Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Auth\+Values\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5c03b22e8271f95ee0b46ebbd2bac651}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5c03b22e8271f95ee0b46ebbd2bac651}
+
+
+Settable only before you connect!
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Can\+Chat@{Can\+Chat}}
+\index{Can\+Chat@{Can\+Chat}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Can\+Chat}{CanChat}}]{\setlength{\rightskip}{0pt plus 5cm}bool Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Can\+Chat\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a71c10e565150962413bb1abaa89af66a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a71c10e565150962413bb1abaa89af66a}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Chat\+Region@{Chat\+Region}}
+\index{Chat\+Region@{Chat\+Region}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Chat\+Region}{ChatRegion}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Chat\+Region\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5b8e2b595533f33e5c298fe5ced2726b}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5b8e2b595533f33e5c298fe5ced2726b}
+
+
+Settable only before you connect! Defaults to \char`\"{}\+E\+U\char`\"{}.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Debug\+Out}{DebugOut}}]{\setlength{\rightskip}{0pt plus 5cm}Debug\+Level Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Debug\+Out\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a3506656c033fb2bdc7822275aab6dac2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a3506656c033fb2bdc7822275aab6dac2}
+
+
+Sets the level (and amount) of debug output provided by the library. 
+
+This affects the callbacks to \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_ae4c3e779b7761f6a254231b9775fabcf}{I\+Chat\+Client\+Listener.\+Debug\+Return}. Default Level\+: Error. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Disconnected\+Cause@{Disconnected\+Cause}}
+\index{Disconnected\+Cause@{Disconnected\+Cause}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Disconnected\+Cause}{DisconnectedCause}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Chat\+Disconnect\+Cause} Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Disconnected\+Cause\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a05085dc638466b2660f1c694f90fbf8e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a05085dc638466b2660f1c694f90fbf8e}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Frontend\+Address@{Frontend\+Address}}
+\index{Frontend\+Address@{Frontend\+Address}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Frontend\+Address}{FrontendAddress}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Frontend\+Address\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4693102ef8b77518b9eed0cbbdd650e1}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a4693102ef8b77518b9eed0cbbdd650e1}
+
+
+The address of the actual chat server assigned from Name\+Server. Public for read only.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!Name\+Server\+Address@{Name\+Server\+Address}}
+\index{Name\+Server\+Address@{Name\+Server\+Address}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{Name\+Server\+Address}{NameServerAddress}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+Name\+Server\+Address\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_afc6baf1a806a9a9ea803b14889ffb8c3}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_afc6baf1a806a9a9ea803b14889ffb8c3}
+
+
+The address of last connected Name Server.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!State@{State}}
+\index{State@{State}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{State}{State}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Chat\+State} Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+State\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5d523809d52088df6fbd8927523d6238}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a5d523809d52088df6fbd8927523d6238}
+
+
+Current state of the \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client}. Also use Can\+Chat.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}!User\+Id@{User\+Id}}
+\index{User\+Id@{User\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+Chat\+Client}}
+\subsubsection[{\texorpdfstring{User\+Id}{UserId}}]{\setlength{\rightskip}{0pt plus 5cm}string Exit\+Games.\+Client.\+Photon.\+Chat.\+Chat\+Client.\+User\+Id\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a8f757bc4e9f4038dc388a8fee3f47150}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client_a8f757bc4e9f4038dc388a8fee3f47150}
+
+
+The unique ID of a user/person, stored in Auth\+Values.\+User\+Id. 
+
+Set it before you connect.
+
+This value wraps Auth\+Values.\+User\+Id. It\textquotesingle{}s not a nickname and we assume users with the same user\+ID are the same person.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Plugins/\+Chat\+Api/\hyperlink{_chat_client_8cs}{Chat\+Client.\+cs}\end{DoxyCompactItemize}

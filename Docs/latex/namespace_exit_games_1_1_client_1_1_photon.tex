@@ -1,0 +1,189 @@
+\hypertarget{namespace_exit_games_1_1_client_1_1_photon}{}\section{Exit\+Games.\+Client.\+Photon Namespace Reference}
+\label{namespace_exit_games_1_1_client_1_1_photon}\index{Exit\+Games.\+Client.\+Photon@{Exit\+Games.\+Client.\+Photon}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_actor_properties}{Actor\+Properties}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code} defines the default codes associated with \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} client/server communication. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code}{Event\+Code}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key}{Game\+Property\+Key}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class {\bfseries Loadbalancing\+Peer}
+\begin{DoxyCompactList}\small\item\em Internally used by P\+UN, a Loadbalancing\+Peer provides the operations and enum definitions needed to use the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Loadbalancing server (or the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud). \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code}{Operation\+Code}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code}{Parameter\+Code}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class {\bfseries Socket\+Udp}
+\begin{DoxyCompactList}\small\item\em Internal class to encapsulate the network i/o functionality for the realtime libary.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657}{Join\+Mode} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a7a1920d61156abc05a60135aefe8bc67}{Join\+Mode.\+Default} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a1e41e14c1f9344f2db61fe8653b5b001}{Join\+Mode.\+Create\+If\+Not\+Exists} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657aa63ce0e3e810c781a410d3addc56db7f}{Join\+Mode.\+Join\+Or\+Rejoin} = 2, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657adc2168ee308fc14616dfd264d45cfd15}{Join\+Mode.\+Rejoin\+Only} = 3
+ \}\begin{DoxyCompactList}\small\item\em Defines possible values for Op\+Join\+Room and Op\+Join\+Or\+Create. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}{Matchmaking\+Mode} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7daa5912f7a88c36ab01e9c1c38fd7bad9e}{Matchmaking\+Mode.\+Fill\+Room} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da85e600e069b55d677fcc38fe96002751}{Matchmaking\+Mode.\+Serial\+Matching} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da43f0360f3d6dd072a905e7bf6343b565}{Matchmaking\+Mode.\+Random\+Matching} = 2
+ \}\begin{DoxyCompactList}\small\item\em Options for matchmaking rules for Op\+Join\+Random. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bd}{Receiver\+Group} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bda52ef9633d88a7480b3a938ff9eaa2a25}{Receiver\+Group.\+Others} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdab1c94ca2fbc3e78fc30069c8d0f01680}{Receiver\+Group.\+All} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdad0209f4a40060d6e7c37d29979d8f444}{Receiver\+Group.\+Master\+Client} = 2
+ \}\begin{DoxyCompactList}\small\item\em Lite -\/ Op\+Raise\+Event lets you chose which actors in the room should receive events. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53}{Event\+Caching} \+: byte \{ \\*
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53aed89696ce2a8a4cfb22e37d482c72cbb}{Event\+Caching.\+Do\+Not\+Cache} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ac9a823ae99d397814cb62b335ba9e0a9}{Event\+Caching.\+Merge\+Cache} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a28f79c65a5ac3ff0e04978cf99f7e540}{Event\+Caching.\+Replace\+Cache} = 2, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ad45857356b7a23b7daac5ef397b3825e}{Event\+Caching.\+Remove\+Cache} = 3, 
+\\*
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a53f67bc41da305a88205d1ded2f35954}{Event\+Caching.\+Add\+To\+Room\+Cache} = 4, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a187c171b946f4fb73de86aaee4d7aad2}{Event\+Caching.\+Add\+To\+Room\+Cache\+Global} = 5, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a92cb14adcb4e187b188c94fb74c53dab}{Event\+Caching.\+Remove\+From\+Room\+Cache} = 6, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a06e5db15df6ca1969b38628518d71d76}{Event\+Caching.\+Remove\+From\+Room\+Cache\+For\+Actors\+Left} = 7, 
+\\*
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a0dc854abbac4ba563d1151c331e58c91}{Event\+Caching.\+Slice\+Increase\+Index} = 10, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53af8a05e1851a5563b3aff68bf8bf8486b}{Event\+Caching.\+Slice\+Set\+Index} = 11, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53acdf56f0af5cd6eecb93e8d808c131841}{Event\+Caching.\+Slice\+Purge\+Index} = 12, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ae426b4afc51b756484914daadb36ad4d}{Event\+Caching.\+Slice\+Purge\+Up\+To\+Index} = 13
+ \}\begin{DoxyCompactList}\small\item\em Lite -\/ Op\+Raise\+Event allows you to cache events and automatically send them to joining players in a room. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1}{Property\+Type\+Flag} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a6adf97f83acf6453d4a6a4b1070f3754}{Property\+Type\+Flag.\+None} = 0x00, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a63d72051e901c069f8aa1b32aa0c43bb}{Property\+Type\+Flag.\+Game} = 0x01, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a1cc84619677de81ee6e44149845270a3}{Property\+Type\+Flag.\+Actor} = 0x02, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a68ebb8ef1cbd0371b060a93d7788d460}{Property\+Type\+Flag.\+Game\+And\+Actor} = Game $\vert$ Actor
+ \}\begin{DoxyCompactList}\small\item\em Flags for \char`\"{}types of properties\char`\"{}, being used as filter in Op\+Get\+Properties. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Event\+Caching@{Event\+Caching}}
+\index{Event\+Caching@{Event\+Caching}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}
+\subsubsection[{\texorpdfstring{Event\+Caching}{EventCaching}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Exit\+Games.\+Client.\+Photon.\+Event\+Caching} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53}
+
+
+Lite -\/ Op\+Raise\+Event allows you to cache events and automatically send them to joining players in a room. 
+
+Events are cached per event code and player\+: Event 100 (example!) can be stored once per player. Cached events can be modified, replaced and removed. 
+
+Caching works only combination with Receiver\+Group options Others and All. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Do\+Not\+Cache@{Do\+Not\+Cache}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Do\+Not\+Cache@{Do\+Not\+Cache}}\item[{\em 
+Do\+Not\+Cache\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53aed89696ce2a8a4cfb22e37d482c72cbb}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53aed89696ce2a8a4cfb22e37d482c72cbb}
+}]Default value (not sent).\index{Merge\+Cache@{Merge\+Cache}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Merge\+Cache@{Merge\+Cache}}\item[{\em 
+Merge\+Cache\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ac9a823ae99d397814cb62b335ba9e0a9}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ac9a823ae99d397814cb62b335ba9e0a9}
+}]Will merge this event\textquotesingle{}s keys with those already cached.\index{Replace\+Cache@{Replace\+Cache}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Replace\+Cache@{Replace\+Cache}}\item[{\em 
+Replace\+Cache\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a28f79c65a5ac3ff0e04978cf99f7e540}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a28f79c65a5ac3ff0e04978cf99f7e540}
+}]Replaces the event cache for this event\+Code with this event\textquotesingle{}s content.\index{Remove\+Cache@{Remove\+Cache}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Remove\+Cache@{Remove\+Cache}}\item[{\em 
+Remove\+Cache\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ad45857356b7a23b7daac5ef397b3825e}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ad45857356b7a23b7daac5ef397b3825e}
+}]Removes this event (by event\+Code) from the cache.\index{Add\+To\+Room\+Cache@{Add\+To\+Room\+Cache}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Add\+To\+Room\+Cache@{Add\+To\+Room\+Cache}}\item[{\em 
+Add\+To\+Room\+Cache\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a53f67bc41da305a88205d1ded2f35954}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a53f67bc41da305a88205d1ded2f35954}
+}]Adds an event to the room\textquotesingle{}s cache\index{Add\+To\+Room\+Cache\+Global@{Add\+To\+Room\+Cache\+Global}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Add\+To\+Room\+Cache\+Global@{Add\+To\+Room\+Cache\+Global}}\item[{\em 
+Add\+To\+Room\+Cache\+Global\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a187c171b946f4fb73de86aaee4d7aad2}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a187c171b946f4fb73de86aaee4d7aad2}
+}]Adds this event to the cache for actor 0 (becoming a \char`\"{}globally owned\char`\"{} event in the cache).\index{Remove\+From\+Room\+Cache@{Remove\+From\+Room\+Cache}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Remove\+From\+Room\+Cache@{Remove\+From\+Room\+Cache}}\item[{\em 
+Remove\+From\+Room\+Cache\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a92cb14adcb4e187b188c94fb74c53dab}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a92cb14adcb4e187b188c94fb74c53dab}
+}]Remove fitting event from the room\textquotesingle{}s cache.\index{Remove\+From\+Room\+Cache\+For\+Actors\+Left@{Remove\+From\+Room\+Cache\+For\+Actors\+Left}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Remove\+From\+Room\+Cache\+For\+Actors\+Left@{Remove\+From\+Room\+Cache\+For\+Actors\+Left}}\item[{\em 
+Remove\+From\+Room\+Cache\+For\+Actors\+Left\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a06e5db15df6ca1969b38628518d71d76}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a06e5db15df6ca1969b38628518d71d76}
+}]Removes events of players who already left the room (cleaning up).\index{Slice\+Increase\+Index@{Slice\+Increase\+Index}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Slice\+Increase\+Index@{Slice\+Increase\+Index}}\item[{\em 
+Slice\+Increase\+Index\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a0dc854abbac4ba563d1151c331e58c91}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a0dc854abbac4ba563d1151c331e58c91}
+}]Increase the index of the sliced cache.\index{Slice\+Set\+Index@{Slice\+Set\+Index}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Slice\+Set\+Index@{Slice\+Set\+Index}}\item[{\em 
+Slice\+Set\+Index\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53af8a05e1851a5563b3aff68bf8bf8486b}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53af8a05e1851a5563b3aff68bf8bf8486b}
+}]Set the index of the sliced cache. You must set Raise\+Event\+Options.\+Cache\+Slice\+Index for this.\index{Slice\+Purge\+Index@{Slice\+Purge\+Index}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Slice\+Purge\+Index@{Slice\+Purge\+Index}}\item[{\em 
+Slice\+Purge\+Index\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53acdf56f0af5cd6eecb93e8d808c131841}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53acdf56f0af5cd6eecb93e8d808c131841}
+}]Purge cache slice with index. Exactly one slice is removed from cache. You must set Raise\+Event\+Options.\+Cache\+Slice\+Index for this.\index{Slice\+Purge\+Up\+To\+Index@{Slice\+Purge\+Up\+To\+Index}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Slice\+Purge\+Up\+To\+Index@{Slice\+Purge\+Up\+To\+Index}}\item[{\em 
+Slice\+Purge\+Up\+To\+Index\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ae426b4afc51b756484914daadb36ad4d}{}\label{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ae426b4afc51b756484914daadb36ad4d}
+}]Purge cache slices with specified index and anything lower than that. You must set Raise\+Event\+Options.\+Cache\+Slice\+Index for this.\end{description}
+\end{Desc}
+\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Join\+Mode@{Join\+Mode}}
+\index{Join\+Mode@{Join\+Mode}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}
+\subsubsection[{\texorpdfstring{Join\+Mode}{JoinMode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Exit\+Games.\+Client.\+Photon.\+Join\+Mode} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657}{}\label{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657}
+
+
+Defines possible values for Op\+Join\+Room and Op\+Join\+Or\+Create. 
+
+It tells the server if the room can be only be joined normally, created implicitly or found on a web-\/service for Turnbased games.
+
+These values are not directly used by a game but implicitly set.\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Default@{Default}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Default@{Default}}\item[{\em 
+Default\hypertarget{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a7a1920d61156abc05a60135aefe8bc67}{}\label{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a7a1920d61156abc05a60135aefe8bc67}
+}]Regular join. The room must exist.\index{Create\+If\+Not\+Exists@{Create\+If\+Not\+Exists}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Create\+If\+Not\+Exists@{Create\+If\+Not\+Exists}}\item[{\em 
+Create\+If\+Not\+Exists\hypertarget{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a1e41e14c1f9344f2db61fe8653b5b001}{}\label{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a1e41e14c1f9344f2db61fe8653b5b001}
+}]Join or create the room if it\textquotesingle{}s not existing. Used for Op\+Join\+Or\+Create for example.\index{Join\+Or\+Rejoin@{Join\+Or\+Rejoin}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Join\+Or\+Rejoin@{Join\+Or\+Rejoin}}\item[{\em 
+Join\+Or\+Rejoin\hypertarget{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657aa63ce0e3e810c781a410d3addc56db7f}{}\label{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657aa63ce0e3e810c781a410d3addc56db7f}
+}]The room might be out of memory and should be loaded (if possible) from a Turnbased web-\/service.\index{Rejoin\+Only@{Rejoin\+Only}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Rejoin\+Only@{Rejoin\+Only}}\item[{\em 
+Rejoin\+Only\hypertarget{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657adc2168ee308fc14616dfd264d45cfd15}{}\label{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657adc2168ee308fc14616dfd264d45cfd15}
+}]Only re-\/join will be allowed. If the user is not yet in the room, this will fail.\end{description}
+\end{Desc}
+\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Matchmaking\+Mode@{Matchmaking\+Mode}}
+\index{Matchmaking\+Mode@{Matchmaking\+Mode}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}
+\subsubsection[{\texorpdfstring{Matchmaking\+Mode}{MatchmakingMode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Exit\+Games.\+Client.\+Photon.\+Matchmaking\+Mode} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}{}\label{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}
+
+
+Options for matchmaking rules for Op\+Join\+Random. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Fill\+Room@{Fill\+Room}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Fill\+Room@{Fill\+Room}}\item[{\em 
+Fill\+Room\hypertarget{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7daa5912f7a88c36ab01e9c1c38fd7bad9e}{}\label{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7daa5912f7a88c36ab01e9c1c38fd7bad9e}
+}]Fills up rooms (oldest first) to get players together as fast as possible. Default.
+
+Makes most sense with Max\+Players $>$ 0 and games that can only start with more players.\index{Serial\+Matching@{Serial\+Matching}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Serial\+Matching@{Serial\+Matching}}\item[{\em 
+Serial\+Matching\hypertarget{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da85e600e069b55d677fcc38fe96002751}{}\label{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da85e600e069b55d677fcc38fe96002751}
+}]Distributes players across available rooms sequentially but takes filter into account. Without filter, rooms get players evenly distributed.\index{Random\+Matching@{Random\+Matching}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Random\+Matching@{Random\+Matching}}\item[{\em 
+Random\+Matching\hypertarget{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da43f0360f3d6dd072a905e7bf6343b565}{}\label{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da43f0360f3d6dd072a905e7bf6343b565}
+}]Joins a (fully) random room. Expected properties must match but aside from this, any available room might be selected.\end{description}
+\end{Desc}
+\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Property\+Type\+Flag@{Property\+Type\+Flag}}
+\index{Property\+Type\+Flag@{Property\+Type\+Flag}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}
+\subsubsection[{\texorpdfstring{Property\+Type\+Flag}{PropertyTypeFlag}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Exit\+Games.\+Client.\+Photon.\+Property\+Type\+Flag} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1}{}\label{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1}
+
+
+Flags for \char`\"{}types of properties\char`\"{}, being used as filter in Op\+Get\+Properties. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!None@{None}}\item[{\em 
+None\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a6adf97f83acf6453d4a6a4b1070f3754}{}\label{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a6adf97f83acf6453d4a6a4b1070f3754}
+}](0x00) Flag type for no property type.\index{Game@{Game}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Game@{Game}}\item[{\em 
+Game\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a63d72051e901c069f8aa1b32aa0c43bb}{}\label{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a63d72051e901c069f8aa1b32aa0c43bb}
+}](0x01) Flag type for game-\/attached properties.\index{Actor@{Actor}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Actor@{Actor}}\item[{\em 
+Actor\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a1cc84619677de81ee6e44149845270a3}{}\label{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a1cc84619677de81ee6e44149845270a3}
+}](0x02) Flag type for actor related propeties.\index{Game\+And\+Actor@{Game\+And\+Actor}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Game\+And\+Actor@{Game\+And\+Actor}}\item[{\em 
+Game\+And\+Actor\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a68ebb8ef1cbd0371b060a93d7788d460}{}\label{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a68ebb8ef1cbd0371b060a93d7788d460}
+}](0x01) Flag type for game A\+ND actor properties. Equal to \textquotesingle{}Game\textquotesingle{}\end{description}
+\end{Desc}
+\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Receiver\+Group@{Receiver\+Group}}
+\index{Receiver\+Group@{Receiver\+Group}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}
+\subsubsection[{\texorpdfstring{Receiver\+Group}{ReceiverGroup}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Exit\+Games.\+Client.\+Photon.\+Receiver\+Group} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bd}{}\label{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bd}
+
+
+Lite -\/ Op\+Raise\+Event lets you chose which actors in the room should receive events. 
+
+By default, events are sent to \char`\"{}\+Others\char`\"{} but you can overrule this. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Others@{Others}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Others@{Others}}\item[{\em 
+Others\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bda52ef9633d88a7480b3a938ff9eaa2a25}{}\label{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bda52ef9633d88a7480b3a938ff9eaa2a25}
+}]Default value (not sent). Anyone else gets my event.\index{All@{All}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!All@{All}}\item[{\em 
+All\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdab1c94ca2fbc3e78fc30069c8d0f01680}{}\label{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdab1c94ca2fbc3e78fc30069c8d0f01680}
+}]Everyone in the current room (including this peer) will get this event.\index{Master\+Client@{Master\+Client}!Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}}\index{Exit\+Games\+::\+Client\+::\+Photon@{Exit\+Games\+::\+Client\+::\+Photon}!Master\+Client@{Master\+Client}}\item[{\em 
+Master\+Client\hypertarget{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdad0209f4a40060d6e7c37d29979d8f444}{}\label{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdad0209f4a40060d6e7c37d29979d8f444}
+}]The server sends this event only to the actor with the lowest actor\+Number. The \char`\"{}master client\char`\"{} does not have special rights but is the one who is in this room the longest time.\end{description}
+\end{Desc}

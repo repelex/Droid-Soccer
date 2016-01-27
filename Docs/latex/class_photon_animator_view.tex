@@ -1,0 +1,242 @@
+\hypertarget{class_photon_animator_view}{}\section{Photon\+Animator\+View Class Reference}
+\label{class_photon_animator_view}\index{Photon\+Animator\+View@{Photon\+Animator\+View}}
+
+
+This class helps you to synchronize Mecanim animations Simply add the component to your Game\+Object and make sure that the \hyperlink{class_photon_animator_view}{Photon\+Animator\+View} is added to the list of observed components  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_photon_animator_view_1_1_synchronized_layer}{Synchronized\+Layer}
+\item 
+class \hyperlink{class_photon_animator_view_1_1_synchronized_parameter}{Synchronized\+Parameter}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894}{Parameter\+Type} \{ \hyperlink{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894a22ae0e2b89e5e3d477f988cc36d3272b}{Parameter\+Type.\+Float} = 1, 
+\hyperlink{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894a1686a6c336b71b36d77354cea19a8b52}{Parameter\+Type.\+Int} = 3, 
+\hyperlink{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894ac26f15e86e3de4c398a8273272aba034}{Parameter\+Type.\+Bool} = 4, 
+\hyperlink{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894af698f67f5666aff10729d8a1cb1c14d2}{Parameter\+Type.\+Trigger} = 9
+ \}
+\item 
+enum \hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}{Synchronize\+Type} \{ \hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fab9f5c797ebbf55adccdd8539a65a0241}{Synchronize\+Type.\+Disabled} = 0, 
+\hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fa4984667940802dedc139aa7a430a6553}{Synchronize\+Type.\+Discrete} = 1, 
+\hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fa535863a82f163709557e59e2eb8139a7}{Synchronize\+Type.\+Continuous} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_photon_animator_view_adc769a9e9d902955529aa36fd7f94c77}{Does\+Layer\+Synchronize\+Type\+Exist} (int layer\+Index)
+\begin{DoxyCompactList}\small\item\em Check if a specific layer is configured to be synchronize \end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_animator_view_a58c3ae7da3a1217062dd6f510c69e5a8}{Does\+Parameter\+Synchronize\+Type\+Exist} (string name)
+\begin{DoxyCompactList}\small\item\em Check if the specified parameter is configured to be synchronized \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_photon_animator_view_1_1_synchronized_layer}{Synchronized\+Layer} $>$ \hyperlink{class_photon_animator_view_a5cd222a56cf3364aea3fa1d2641383ed}{Get\+Synchronized\+Layers} ()
+\begin{DoxyCompactList}\small\item\em Get a list of all synchronized layers \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_photon_animator_view_1_1_synchronized_parameter}{Synchronized\+Parameter} $>$ \hyperlink{class_photon_animator_view_a03c466f84479ffeb0509324adfa27c5b}{Get\+Synchronized\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Get a list of all synchronized parameters \end{DoxyCompactList}\item 
+\hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}{Synchronize\+Type} \hyperlink{class_photon_animator_view_aca2599e3520233dd0a92550d2fef3781}{Get\+Layer\+Synchronize\+Type} (int layer\+Index)
+\begin{DoxyCompactList}\small\item\em Gets the type how the layer is synchronized \end{DoxyCompactList}\item 
+\hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}{Synchronize\+Type} \hyperlink{class_photon_animator_view_ab5c89d5d60a51fdd97b883f85d27a10f}{Get\+Parameter\+Synchronize\+Type} (string name)
+\begin{DoxyCompactList}\small\item\em Gets the type how the parameter is synchronized \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_animator_view_a1ee474865e5e736760591b1c50644413}{Set\+Layer\+Synchronized} (int layer\+Index, \hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}{Synchronize\+Type} synchronize\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the how a layer should be synchronized \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_animator_view_a4baf9e4d43b5cd41c0a1e0514ec63829}{Set\+Parameter\+Synchronized} (string name, \hyperlink{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894}{Parameter\+Type} type, \hyperlink{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}{Synchronize\+Type} synchronize\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the how a parameter should be synchronized \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class helps you to synchronize Mecanim animations Simply add the component to your Game\+Object and make sure that the \hyperlink{class_photon_animator_view}{Photon\+Animator\+View} is added to the list of observed components 
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Parameter\+Type@{Parameter\+Type}}
+\index{Parameter\+Type@{Parameter\+Type}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Parameter\+Type}{ParameterType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Photon\+Animator\+View.\+Parameter\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894}{}\label{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Float@{Float}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Float@{Float}}\item[{\em 
+Float\hypertarget{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894a22ae0e2b89e5e3d477f988cc36d3272b}{}\label{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894a22ae0e2b89e5e3d477f988cc36d3272b}
+}]\index{Int@{Int}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Int@{Int}}\item[{\em 
+Int\hypertarget{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894a1686a6c336b71b36d77354cea19a8b52}{}\label{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894a1686a6c336b71b36d77354cea19a8b52}
+}]\index{Bool@{Bool}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Bool@{Bool}}\item[{\em 
+Bool\hypertarget{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894ac26f15e86e3de4c398a8273272aba034}{}\label{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894ac26f15e86e3de4c398a8273272aba034}
+}]\index{Trigger@{Trigger}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Trigger@{Trigger}}\item[{\em 
+Trigger\hypertarget{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894af698f67f5666aff10729d8a1cb1c14d2}{}\label{class_photon_animator_view_aa41dc91e8da385b9f10cf9bf5dc47894af698f67f5666aff10729d8a1cb1c14d2}
+}]\end{description}
+\end{Desc}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Synchronize\+Type@{Synchronize\+Type}}
+\index{Synchronize\+Type@{Synchronize\+Type}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Synchronize\+Type}{SynchronizeType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Photon\+Animator\+View.\+Synchronize\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}{}\label{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Disabled@{Disabled}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Disabled@{Disabled}}\item[{\em 
+Disabled\hypertarget{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fab9f5c797ebbf55adccdd8539a65a0241}{}\label{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fab9f5c797ebbf55adccdd8539a65a0241}
+}]\index{Discrete@{Discrete}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Discrete@{Discrete}}\item[{\em 
+Discrete\hypertarget{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fa4984667940802dedc139aa7a430a6553}{}\label{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fa4984667940802dedc139aa7a430a6553}
+}]\index{Continuous@{Continuous}!Photon\+Animator\+View@{Photon\+Animator\+View}}\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Continuous@{Continuous}}\item[{\em 
+Continuous\hypertarget{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fa535863a82f163709557e59e2eb8139a7}{}\label{class_photon_animator_view_ae3ad07de936a811cbb923adffe1f167fa535863a82f163709557e59e2eb8139a7}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Does\+Layer\+Synchronize\+Type\+Exist@{Does\+Layer\+Synchronize\+Type\+Exist}}
+\index{Does\+Layer\+Synchronize\+Type\+Exist@{Does\+Layer\+Synchronize\+Type\+Exist}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Does\+Layer\+Synchronize\+Type\+Exist(int layer\+Index)}{DoesLayerSynchronizeTypeExist(int layerIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Animator\+View.\+Does\+Layer\+Synchronize\+Type\+Exist (
+\begin{DoxyParamCaption}
+\item[{int}]{layer\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_adc769a9e9d902955529aa36fd7f94c77}{}\label{class_photon_animator_view_adc769a9e9d902955529aa36fd7f94c77}
+
+
+Check if a specific layer is configured to be synchronize 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+Index} & Index of the layer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the layer is synchronized
+\end{DoxyReturn}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Does\+Parameter\+Synchronize\+Type\+Exist@{Does\+Parameter\+Synchronize\+Type\+Exist}}
+\index{Does\+Parameter\+Synchronize\+Type\+Exist@{Does\+Parameter\+Synchronize\+Type\+Exist}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Does\+Parameter\+Synchronize\+Type\+Exist(string name)}{DoesParameterSynchronizeTypeExist(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Animator\+View.\+Does\+Parameter\+Synchronize\+Type\+Exist (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_a58c3ae7da3a1217062dd6f510c69e5a8}{}\label{class_photon_animator_view_a58c3ae7da3a1217062dd6f510c69e5a8}
+
+
+Check if the specified parameter is configured to be synchronized 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the parameter is synchronized
+\end{DoxyReturn}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Get\+Layer\+Synchronize\+Type@{Get\+Layer\+Synchronize\+Type}}
+\index{Get\+Layer\+Synchronize\+Type@{Get\+Layer\+Synchronize\+Type}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Get\+Layer\+Synchronize\+Type(int layer\+Index)}{GetLayerSynchronizeType(int layerIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Synchronize\+Type} Photon\+Animator\+View.\+Get\+Layer\+Synchronize\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{layer\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_aca2599e3520233dd0a92550d2fef3781}{}\label{class_photon_animator_view_aca2599e3520233dd0a92550d2fef3781}
+
+
+Gets the type how the layer is synchronized 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+Index} & Index of the layer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Disabled/\+Discrete/\+Continuous
+\end{DoxyReturn}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Get\+Parameter\+Synchronize\+Type@{Get\+Parameter\+Synchronize\+Type}}
+\index{Get\+Parameter\+Synchronize\+Type@{Get\+Parameter\+Synchronize\+Type}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Get\+Parameter\+Synchronize\+Type(string name)}{GetParameterSynchronizeType(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Synchronize\+Type} Photon\+Animator\+View.\+Get\+Parameter\+Synchronize\+Type (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_ab5c89d5d60a51fdd97b883f85d27a10f}{}\label{class_photon_animator_view_ab5c89d5d60a51fdd97b883f85d27a10f}
+
+
+Gets the type how the parameter is synchronized 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Disabled/\+Discrete/\+Continuous
+\end{DoxyReturn}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Get\+Synchronized\+Layers@{Get\+Synchronized\+Layers}}
+\index{Get\+Synchronized\+Layers@{Get\+Synchronized\+Layers}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Get\+Synchronized\+Layers()}{GetSynchronizedLayers()}}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Synchronized\+Layer}$>$ Photon\+Animator\+View.\+Get\+Synchronized\+Layers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_a5cd222a56cf3364aea3fa1d2641383ed}{}\label{class_photon_animator_view_a5cd222a56cf3364aea3fa1d2641383ed}
+
+
+Get a list of all synchronized layers 
+
+\begin{DoxyReturn}{Returns}
+List of \hyperlink{class_photon_animator_view_1_1_synchronized_layer}{Synchronized\+Layer} objects
+\end{DoxyReturn}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Get\+Synchronized\+Parameters@{Get\+Synchronized\+Parameters}}
+\index{Get\+Synchronized\+Parameters@{Get\+Synchronized\+Parameters}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Get\+Synchronized\+Parameters()}{GetSynchronizedParameters()}}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Synchronized\+Parameter}$>$ Photon\+Animator\+View.\+Get\+Synchronized\+Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_a03c466f84479ffeb0509324adfa27c5b}{}\label{class_photon_animator_view_a03c466f84479ffeb0509324adfa27c5b}
+
+
+Get a list of all synchronized parameters 
+
+\begin{DoxyReturn}{Returns}
+List of \hyperlink{class_photon_animator_view_1_1_synchronized_parameter}{Synchronized\+Parameter} objects
+\end{DoxyReturn}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Set\+Layer\+Synchronized@{Set\+Layer\+Synchronized}}
+\index{Set\+Layer\+Synchronized@{Set\+Layer\+Synchronized}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Set\+Layer\+Synchronized(int layer\+Index, Synchronize\+Type synchronize\+Type)}{SetLayerSynchronized(int layerIndex, SynchronizeType synchronizeType)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Animator\+View.\+Set\+Layer\+Synchronized (
+\begin{DoxyParamCaption}
+\item[{int}]{layer\+Index, }
+\item[{{\bf Synchronize\+Type}}]{synchronize\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_a1ee474865e5e736760591b1c50644413}{}\label{class_photon_animator_view_a1ee474865e5e736760591b1c50644413}
+
+
+Sets the how a layer should be synchronized 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+Index} & Index of the layer.\\
+\hline
+{\em synchronize\+Type} & Disabled/\+Discrete/\+Continuous\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Animator\+View@{Photon\+Animator\+View}!Set\+Parameter\+Synchronized@{Set\+Parameter\+Synchronized}}
+\index{Set\+Parameter\+Synchronized@{Set\+Parameter\+Synchronized}!Photon\+Animator\+View@{Photon\+Animator\+View}}
+\subsubsection[{\texorpdfstring{Set\+Parameter\+Synchronized(string name, Parameter\+Type type, Synchronize\+Type synchronize\+Type)}{SetParameterSynchronized(string name, ParameterType type, SynchronizeType synchronizeType)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Animator\+View.\+Set\+Parameter\+Synchronized (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{{\bf Parameter\+Type}}]{type, }
+\item[{{\bf Synchronize\+Type}}]{synchronize\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_animator_view_a4baf9e4d43b5cd41c0a1e0514ec63829}{}\label{class_photon_animator_view_a4baf9e4d43b5cd41c0a1e0514ec63829}
+
+
+Sets the how a parameter should be synchronized 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the parameter.\\
+\hline
+{\em type} & The type of the parameter.\\
+\hline
+{\em synchronize\+Type} & Disabled/\+Discrete/\+Continuous\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Views/\hyperlink{_photon_animator_view_8cs}{Photon\+Animator\+View.\+cs}\end{DoxyCompactItemize}

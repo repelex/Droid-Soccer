@@ -1,0 +1,76 @@
+\hypertarget{interface_i_pun_prefab_pool}{}\section{I\+Pun\+Prefab\+Pool Interface Reference}
+\label{interface_i_pun_prefab_pool}\index{I\+Pun\+Prefab\+Pool@{I\+Pun\+Prefab\+Pool}}
+
+
+Defines all the methods that a Object Pool must implement, so that P\+UN can use it.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \hyperlink{interface_i_pun_prefab_pool_a7faad9f73d3ef1574d3bf512f5d870ea}{Instantiate} (string prefab\+Id, Vector3 position, Quaternion rotation)
+\begin{DoxyCompactList}\small\item\em This is called when P\+UN wants to create a new instance of an entity prefab. \end{DoxyCompactList}\item 
+void \hyperlink{interface_i_pun_prefab_pool_a7e4be9281d4a5d2474134e54ef766aa0}{Destroy} (Game\+Object game\+Object)
+\begin{DoxyCompactList}\small\item\em This is called when P\+UN wants to destroy the instance of an entity prefab. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines all the methods that a Object Pool must implement, so that P\+UN can use it. 
+
+To use a Object Pool for instantiation, you can set Photon\+Network.\+Object\+Pool. That is used for all objects, as long as Object\+Pool is not null. The pool has to return a valid non-\/null Game\+Object when P\+UN calls Instantiate. Also, the position and rotation must be applied.
+
+Please note that pooled Game\+Objects don\textquotesingle{}t get the usual Awake and Start calls. On\+Enable will be called (by your pool) but the networking values are not updated yet when that happens. On\+Enable will have outdated values for \hyperlink{class_photon_view}{Photon\+View} (is\+Mine, etc.). You might have to adjust scripts.
+
+P\+UN will call On\+Photon\+Instantiate (see \hyperlink{interface_i_pun_callbacks}{I\+Pun\+Callbacks}). This should be used to setup the re-\/used object with regards to networking values / ownership. 
+
+\subsection{Member Function Documentation}
+\index{I\+Pun\+Prefab\+Pool@{I\+Pun\+Prefab\+Pool}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!I\+Pun\+Prefab\+Pool@{I\+Pun\+Prefab\+Pool}}
+\subsubsection[{\texorpdfstring{Destroy(\+Game\+Object game\+Object)}{Destroy(GameObject gameObject)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+Pun\+Prefab\+Pool.\+Destroy (
+\begin{DoxyParamCaption}
+\item[{Game\+Object}]{game\+Object}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_i_pun_prefab_pool_a7e4be9281d4a5d2474134e54ef766aa0}{}\label{interface_i_pun_prefab_pool_a7e4be9281d4a5d2474134e54ef766aa0}
+
+
+This is called when P\+UN wants to destroy the instance of an entity prefab. 
+
+A pool needs some way to find out which type of Game\+Object got returned via \hyperlink{interface_i_pun_prefab_pool_a7e4be9281d4a5d2474134e54ef766aa0}{Destroy()}. It could be a tag or name or anything similar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object} & The instance to destroy.\\
+\hline
+\end{DoxyParams}
+\index{I\+Pun\+Prefab\+Pool@{I\+Pun\+Prefab\+Pool}!Instantiate@{Instantiate}}
+\index{Instantiate@{Instantiate}!I\+Pun\+Prefab\+Pool@{I\+Pun\+Prefab\+Pool}}
+\subsubsection[{\texorpdfstring{Instantiate(string prefab\+Id, Vector3 position, Quaternion rotation)}{Instantiate(string prefabId, Vector3 position, Quaternion rotation)}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object I\+Pun\+Prefab\+Pool.\+Instantiate (
+\begin{DoxyParamCaption}
+\item[{string}]{prefab\+Id, }
+\item[{Vector3}]{position, }
+\item[{Quaternion}]{rotation}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_i_pun_prefab_pool_a7faad9f73d3ef1574d3bf512f5d870ea}{}\label{interface_i_pun_prefab_pool_a7faad9f73d3ef1574d3bf512f5d870ea}
+
+
+This is called when P\+UN wants to create a new instance of an entity prefab. 
+
+Must return valid Game\+Object with \hyperlink{class_photon_view}{Photon\+View}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab\+Id} & The id of this prefab.\\
+\hline
+{\em position} & The position we want the instance instantiated at.\\
+\hline
+{\em rotation} & The rotation we want the instance to take.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly instantiated object, or null if a prefab with {\itshape prefab\+Id}  was not found.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_classes_8cs}{Photon\+Classes.\+cs}\end{DoxyCompactItemize}

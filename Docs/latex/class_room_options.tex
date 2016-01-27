@@ -1,0 +1,108 @@
+\hypertarget{class_room_options}{}\section{Room\+Options Class Reference}
+\label{class_room_options}\index{Room\+Options@{Room\+Options}}
+
+
+Wraps up common room properties needed when you create rooms.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+byte \hyperlink{class_room_options_aa6e8ee62ea58621a6ac3dc33deb319ba}{max\+Players}
+\begin{DoxyCompactList}\small\item\em Max number of players that can be in the room at any time. 0 means \char`\"{}no limit\char`\"{}.\end{DoxyCompactList}\item 
+\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} \hyperlink{class_room_options_a0bc17f8465ed615ce0126674af329a1f}{custom\+Room\+Properties}
+\begin{DoxyCompactList}\small\item\em The room\textquotesingle{}s custom properties to set. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \hyperlink{class_room_options_a8c4bca19c674840296f924ec701b9ee1}{custom\+Room\+Properties\+For\+Lobby} = new string\mbox{[}0\mbox{]}
+\begin{DoxyCompactList}\small\item\em Defines the custom room properties that get listed in the lobby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_room_options_a750b1c08061aa357ae1d1e189cf8b66c}{is\+Visible}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines if this room is listed in the lobby. \end{DoxyCompactList}\item 
+bool \hyperlink{class_room_options_adcfa176960d9ab8c0e3667d7c6810192}{is\+Open}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines if this room can be joined at all. \end{DoxyCompactList}\item 
+bool \hyperlink{class_room_options_a30d0b25a8b85c9232a8a9140bc7def4b}{cleanup\+Cache\+On\+Leave}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time To Live (T\+TL) for an \textquotesingle{}actor\textquotesingle{} in a room. If a client disconnects, this actor is inactive first and removed after this timeout. In milliseconds.\end{DoxyCompactList}\item 
+bool \hyperlink{class_room_options_a0322774781bc0f5a76e8ea607af453ee}{suppress\+Room\+Events}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tells the server to skip room events for joining and leaving players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wraps up common room properties needed when you create rooms. 
+
+This directly maps to what the fields in the \hyperlink{class_room}{Room} class.
+
+\subsection{Member Data Documentation}
+\index{Room\+Options@{Room\+Options}!custom\+Room\+Properties@{custom\+Room\+Properties}}
+\index{custom\+Room\+Properties@{custom\+Room\+Properties}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{custom\+Room\+Properties}{customRoomProperties}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hashtable} Room\+Options.\+custom\+Room\+Properties}\hypertarget{class_room_options_a0bc17f8465ed615ce0126674af329a1f}{}\label{class_room_options_a0bc17f8465ed615ce0126674af329a1f}
+
+
+The room\textquotesingle{}s custom properties to set. 
+
+Use string keys!
+
+Custom room properties are any key-\/values you need to define the game\textquotesingle{}s setup. The shorter your keys are, the better. Example\+: Map, Mode (could be \char`\"{}m\char`\"{} when used with \char`\"{}\+Map\char`\"{}), Tile\+Set (could be \char`\"{}t\char`\"{}). \index{Room\+Options@{Room\+Options}!custom\+Room\+Properties\+For\+Lobby@{custom\+Room\+Properties\+For\+Lobby}}
+\index{custom\+Room\+Properties\+For\+Lobby@{custom\+Room\+Properties\+For\+Lobby}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{custom\+Room\+Properties\+For\+Lobby}{customRoomPropertiesForLobby}}]{\setlength{\rightskip}{0pt plus 5cm}string \mbox{[}$\,$\mbox{]} Room\+Options.\+custom\+Room\+Properties\+For\+Lobby = new string\mbox{[}0\mbox{]}}\hypertarget{class_room_options_a8c4bca19c674840296f924ec701b9ee1}{}\label{class_room_options_a8c4bca19c674840296f924ec701b9ee1}
+
+
+Defines the custom room properties that get listed in the lobby. 
+
+Name the custom room properties that should be available to clients that are in a lobby. Use with care. Unless a custom property is essential for matchmaking or user info, it should not be sent to the lobby, which causes traffic and delays for clients in the lobby.
+
+Default\+: No custom properties are sent to the lobby. \index{Room\+Options@{Room\+Options}!max\+Players@{max\+Players}}
+\index{max\+Players@{max\+Players}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{max\+Players}{maxPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}byte Room\+Options.\+max\+Players}\hypertarget{class_room_options_aa6e8ee62ea58621a6ac3dc33deb319ba}{}\label{class_room_options_aa6e8ee62ea58621a6ac3dc33deb319ba}
+
+
+Max number of players that can be in the room at any time. 0 means \char`\"{}no limit\char`\"{}.
+
+
+
+\subsection{Property Documentation}
+\index{Room\+Options@{Room\+Options}!cleanup\+Cache\+On\+Leave@{cleanup\+Cache\+On\+Leave}}
+\index{cleanup\+Cache\+On\+Leave@{cleanup\+Cache\+On\+Leave}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{cleanup\+Cache\+On\+Leave}{cleanupCacheOnLeave}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Options.\+cleanup\+Cache\+On\+Leave\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_room_options_a30d0b25a8b85c9232a8a9140bc7def4b}{}\label{class_room_options_a30d0b25a8b85c9232a8a9140bc7def4b}
+
+
+Time To Live (T\+TL) for an \textquotesingle{}actor\textquotesingle{} in a room. If a client disconnects, this actor is inactive first and removed after this timeout. In milliseconds.
+
+Time To Live (T\+TL) for a room when the last player leaves. Keeps room in memory for case a player re-\/joins soon. In milliseconds.
+
+Time To Live (T\+TL) for a room when the last player leaves. Keeps room in memory for case a player re-\/joins soon. In milliseconds.
+
+Removes a user\textquotesingle{}s events and properties from the room when a user leaves.
+
+This makes sense when in rooms where players can\textquotesingle{}t place items in the room and just vanish entirely. When you disable this, the event history can become too long to load if the room stays in use indefinitely. Default\+: true. Cleans up the cache and props of leaving users. \index{Room\+Options@{Room\+Options}!is\+Open@{is\+Open}}
+\index{is\+Open@{is\+Open}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{is\+Open}{isOpen}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Options.\+is\+Open\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_room_options_adcfa176960d9ab8c0e3667d7c6810192}{}\label{class_room_options_adcfa176960d9ab8c0e3667d7c6810192}
+
+
+Defines if this room can be joined at all. 
+
+If a room is closed, no player can join this. As example this makes sense when 3 of 4 possible players start their gameplay early and don\textquotesingle{}t want anyone to join during the game. The room can still be listed in the lobby (set is\+Visible to control lobby-\/visibility). \index{Room\+Options@{Room\+Options}!is\+Visible@{is\+Visible}}
+\index{is\+Visible@{is\+Visible}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{is\+Visible}{isVisible}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Options.\+is\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_room_options_a750b1c08061aa357ae1d1e189cf8b66c}{}\label{class_room_options_a750b1c08061aa357ae1d1e189cf8b66c}
+
+
+Defines if this room is listed in the lobby. 
+
+If not, it also is not joined randomly.
+
+A room that is not visible will be excluded from the room lists that are sent to the clients in lobbies. An invisible room can be joined by name but is excluded from random matchmaking.
+
+Use this to \char`\"{}hide\char`\"{} a room and simulate \char`\"{}private rooms\char`\"{}. Players can exchange a roomname and create it invisble to avoid anyone else joining it. \index{Room\+Options@{Room\+Options}!suppress\+Room\+Events@{suppress\+Room\+Events}}
+\index{suppress\+Room\+Events@{suppress\+Room\+Events}!Room\+Options@{Room\+Options}}
+\subsubsection[{\texorpdfstring{suppress\+Room\+Events}{suppressRoomEvents}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Options.\+suppress\+Room\+Events\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_options_a0322774781bc0f5a76e8ea607af453ee}{}\label{class_room_options_a0322774781bc0f5a76e8ea607af453ee}
+
+
+Tells the server to skip room events for joining and leaving players. 
+
+Using this makes the client unaware of the other players in a room. That can save some traffic if you have some server logic that updates players but it can also limit the client\textquotesingle{}s usability.
+
+P\+UN will break if you use this, so it\textquotesingle{}s not settable. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_classes_8cs}{Photon\+Classes.\+cs}\end{DoxyCompactItemize}

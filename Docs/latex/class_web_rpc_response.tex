@@ -1,0 +1,102 @@
+\hypertarget{class_web_rpc_response}{}\section{Web\+Rpc\+Response Class Reference}
+\label{class_web_rpc_response}\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+
+
+Reads an operation response of a Web\+Rpc and provides convenient access to most common values.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_rpc_response_af5d1ea1f048ed2527f025c8c19d9b133}{Web\+Rpc\+Response} (Operation\+Response response)
+\begin{DoxyCompactList}\small\item\em An Operation\+Response for a Web\+Rpc is needed to read it\textquotesingle{}s values.\end{DoxyCompactList}\item 
+string \hyperlink{class_web_rpc_response_a26d3e8a8ae6afce9d309b4c8a7f6105e}{To\+String\+Full} ()
+\begin{DoxyCompactList}\small\item\em Turns the response into an easier to read string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_web_rpc_response_ab1431df146dda7dfd8c5771bf592504d}{Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the Web\+Rpc that was called.\end{DoxyCompactList}\item 
+int \hyperlink{class_web_rpc_response_ac0f2c0f4cf1ad20705f4bb1cff84461d}{Return\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return\+Code of the Web\+Service that answered the Web\+Rpc. \end{DoxyCompactList}\item 
+string \hyperlink{class_web_rpc_response_a328292c9db1a4c5559b00b9e6b7d1b69}{Debug\+Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Might be empty or null.\end{DoxyCompactList}\item 
+Dictionary$<$ string, object $>$ \hyperlink{class_web_rpc_response_a7c718bc7f77fa026307ac93f99c81c92}{Parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Other key/values returned by the webservice that answered the Web\+Rpc.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reads an operation response of a Web\+Rpc and provides convenient access to most common values. 
+
+See method \hyperlink{class_photon_network_ad9a866c73b3e417d55266ed548a52cb8}{Photon\+Network.\+Web\+Rpc}.~\newline
+ Create a \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response} to access common result values.~\newline
+ The operation\+Response.\+Operation\+Code should be\+: Operation\+Code.\+Web\+Rpc.~\newline
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\subsubsection[{\texorpdfstring{Web\+Rpc\+Response(\+Operation\+Response response)}{WebRpcResponse(OperationResponse response)}}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Rpc\+Response.\+Web\+Rpc\+Response (
+\begin{DoxyParamCaption}
+\item[{Operation\+Response}]{response}
+\end{DoxyParamCaption}
+)}\hypertarget{class_web_rpc_response_af5d1ea1f048ed2527f025c8c19d9b133}{}\label{class_web_rpc_response_af5d1ea1f048ed2527f025c8c19d9b133}
+
+
+An Operation\+Response for a Web\+Rpc is needed to read it\textquotesingle{}s values.
+
+
+
+\subsection{Member Function Documentation}
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!To\+String\+Full@{To\+String\+Full}}
+\index{To\+String\+Full@{To\+String\+Full}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\subsubsection[{\texorpdfstring{To\+String\+Full()}{ToStringFull()}}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Rpc\+Response.\+To\+String\+Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_web_rpc_response_a26d3e8a8ae6afce9d309b4c8a7f6105e}{}\label{class_web_rpc_response_a26d3e8a8ae6afce9d309b4c8a7f6105e}
+
+
+Turns the response into an easier to read string. 
+
+\begin{DoxyReturn}{Returns}
+String resembling the result.
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!Debug\+Message@{Debug\+Message}}
+\index{Debug\+Message@{Debug\+Message}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\subsubsection[{\texorpdfstring{Debug\+Message}{DebugMessage}}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Rpc\+Response.\+Debug\+Message\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_web_rpc_response_a328292c9db1a4c5559b00b9e6b7d1b69}{}\label{class_web_rpc_response_a328292c9db1a4c5559b00b9e6b7d1b69}
+
+
+Might be empty or null.
+
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!Name@{Name}}
+\index{Name@{Name}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\subsubsection[{\texorpdfstring{Name}{Name}}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Rpc\+Response.\+Name\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_web_rpc_response_ab1431df146dda7dfd8c5771bf592504d}{}\label{class_web_rpc_response_ab1431df146dda7dfd8c5771bf592504d}
+
+
+Name of the Web\+Rpc that was called.
+
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\subsubsection[{\texorpdfstring{Parameters}{Parameters}}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$string, object$>$ Web\+Rpc\+Response.\+Parameters\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_web_rpc_response_a7c718bc7f77fa026307ac93f99c81c92}{}\label{class_web_rpc_response_a7c718bc7f77fa026307ac93f99c81c92}
+
+
+Other key/values returned by the webservice that answered the Web\+Rpc.
+
+\index{Web\+Rpc\+Response@{Web\+Rpc\+Response}!Return\+Code@{Return\+Code}}
+\index{Return\+Code@{Return\+Code}!Web\+Rpc\+Response@{Web\+Rpc\+Response}}
+\subsubsection[{\texorpdfstring{Return\+Code}{ReturnCode}}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Rpc\+Response.\+Return\+Code\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_web_rpc_response_ac0f2c0f4cf1ad20705f4bb1cff84461d}{}\label{class_web_rpc_response_ac0f2c0f4cf1ad20705f4bb1cff84461d}
+
+
+Return\+Code of the Web\+Service that answered the Web\+Rpc. 
+
+0 is commonly used to signal success.~\newline
+ -\/1 tells you\+: Got no Return\+Code from Web\+Rpc service.~\newline
+ Other Return\+Codes are defined by the individual Web\+Rpc and service. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_classes_8cs}{Photon\+Classes.\+cs}\end{DoxyCompactItemize}

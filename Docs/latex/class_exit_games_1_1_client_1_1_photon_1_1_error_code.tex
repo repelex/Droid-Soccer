@@ -1,0 +1,207 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{}\section{Exit\+Games.\+Client.\+Photon.\+Error\+Code Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code}\index{Exit\+Games.\+Client.\+Photon.\+Error\+Code@{Exit\+Games.\+Client.\+Photon.\+Error\+Code}}
+
+
+\hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code} defines the default codes associated with \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} client/server communication.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a22e4adab4389f1eea01c8bbcf3b6fbd8}{Ok} = 0
+\begin{DoxyCompactList}\small\item\em (0) is always \char`\"{}\+O\+K\char`\"{}, anything else an error or specific situation.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a7a4b13bd9524022d433f5d70e1ae944a}{Operation\+Not\+Allowed\+In\+Current\+State} = -\/3
+\begin{DoxyCompactList}\small\item\em (-\/3) Operation can\textquotesingle{}t be executed yet (e.\+g. \end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a8d0df840a8f536d2466ee21ad7b293b1}{Invalid\+Operation\+Code} = -\/2
+\begin{DoxyCompactList}\small\item\em (-\/2) The operation you called is not implemented on the server (application) you connect to. Make sure you run the fitting applications.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a326bcb717b4766d05879e49c5f04ce5e}{Invalid\+Operation} = -\/2
+\begin{DoxyCompactList}\small\item\em (-\/2) The operation you called could not be executed on the server. \end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a6ec548a4e26dcc59ce47e6f1230247b9}{Internal\+Server\+Error} = -\/1
+\begin{DoxyCompactList}\small\item\em (-\/1) Something went wrong in the server. Try to reproduce and contact Exit Games.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a052f0ac657c546e750e91531393fa9c6}{Invalid\+Authentication} = 0x7\+F\+FF
+\begin{DoxyCompactList}\small\item\em (32767) Authentication failed. Possible cause\+: App\+Id is unknown to \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} (in cloud service).\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a2898552672360480d562a6f9958790d9}{Game\+Id\+Already\+Exists} = 0x7\+F\+F\+F -\/ 1
+\begin{DoxyCompactList}\small\item\em (32766) Game\+Id (name) already in use (can\textquotesingle{}t create another). Change name.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ae558d99e91f22c6e7c54a6b07f299a8a}{Game\+Full} = 0x7\+F\+F\+F -\/ 2
+\begin{DoxyCompactList}\small\item\em (32765) Game is full. This rarely happens when some player joined the room before your join completed.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ae684a99ed82da84e00412c0e24c37dd7}{Game\+Closed} = 0x7\+F\+F\+F -\/ 3
+\begin{DoxyCompactList}\small\item\em (32764) Game is closed and can\textquotesingle{}t be joined. Join another game.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a434e3c23f618eaad22e1ef1b99c47042}{Already\+Matched} = 0x7\+F\+F\+F -\/ 4
+\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab8516a7e5eb0152044f8befd5cc583c4}{Server\+Full} = 0x7\+F\+F\+F -\/ 5
+\begin{DoxyCompactList}\small\item\em (32762) Not in use currently.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_af82f564f81d5a4c27f09fe60c7854fc5}{User\+Blocked} = 0x7\+F\+F\+F -\/ 6
+\begin{DoxyCompactList}\small\item\em (32761) Not in use currently.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab72bc9e6c9cb2af830c33d613ddc2b6f}{No\+Random\+Match\+Found} = 0x7\+F\+F\+F -\/ 7
+\begin{DoxyCompactList}\small\item\em (32760) Random matchmaking only succeeds if a room exists thats neither closed nor full. Repeat in a few seconds or create a new room.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a06604e183d66776a53c489908f7126e0}{Game\+Does\+Not\+Exist} = 0x7\+F\+F\+F -\/ 9
+\begin{DoxyCompactList}\small\item\em (32758) Join can fail if the room (name) is not existing (anymore). This can happen when players leave while you join.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a7c5d773fe68373e9783828697d174d60}{Max\+Ccu\+Reached} = 0x7\+F\+F\+F -\/ 10
+\begin{DoxyCompactList}\small\item\em (32757) Authorization on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud failed becaus the concurrent users (C\+CU) limit of the app\textquotesingle{}s subscription is reached. \end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab6f8b7f747bbd61aa8e9853c2a4194f6}{Invalid\+Region} = 0x7\+F\+F\+F -\/ 11
+\begin{DoxyCompactList}\small\item\em (32756) Authorization on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud failed because the app\textquotesingle{}s subscription does not allow to use a particular region\textquotesingle{}s server. \end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a6b1fa4a285add5e81b8bda9dd343e215}{Custom\+Authentication\+Failed} = 0x7\+F\+F\+F -\/ 12
+\begin{DoxyCompactList}\small\item\em (32755) Custom Authentication of the user failed due to setup reasons (see Cloud Dashboard) or the provided user data (like username or token). \end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a47cd3a6d5d9453e152026f3c9cec5a89}{Authentication\+Ticket\+Expired} = 0x7\+F\+F1
+\begin{DoxyCompactList}\small\item\em (32753) The Authentication ticket expired. Usually, this is refreshed behind the scenes. Connect (and authorize) again.\end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_aae1b5ea63ffb0891abe77ebc4aca0e99}{Plugin\+Reported\+Error} = 0x7\+F\+F\+F -\/ 15
+\begin{DoxyCompactList}\small\item\em (32752) A server-\/side plugin (or webhook) failed to execute and reported an error. \end{DoxyCompactList}\item 
+const int \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a5dedf06ff727b7cd59d0850cc3afd5e9}{Plugin\+Mismatch} = 0x7\+F\+F\+F -\/ 16
+\begin{DoxyCompactList}\small\item\em (32751) Create\+Game/\+Join\+Game/\+Join operation fails if expected plugin does not correspond to loaded one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code} defines the default codes associated with \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} client/server communication. 
+
+
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Already\+Matched@{Already\+Matched}}
+\index{Already\+Matched@{Already\+Matched}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Already\+Matched}{AlreadyMatched}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Already\+Matched = 0x7\+F\+F\+F -\/ 4}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a434e3c23f618eaad22e1ef1b99c47042}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a434e3c23f618eaad22e1ef1b99c47042}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Authentication\+Ticket\+Expired@{Authentication\+Ticket\+Expired}}
+\index{Authentication\+Ticket\+Expired@{Authentication\+Ticket\+Expired}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Authentication\+Ticket\+Expired}{AuthenticationTicketExpired}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Authentication\+Ticket\+Expired = 0x7\+F\+F1}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a47cd3a6d5d9453e152026f3c9cec5a89}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a47cd3a6d5d9453e152026f3c9cec5a89}
+
+
+(32753) The Authentication ticket expired. Usually, this is refreshed behind the scenes. Connect (and authorize) again.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Custom\+Authentication\+Failed@{Custom\+Authentication\+Failed}}
+\index{Custom\+Authentication\+Failed@{Custom\+Authentication\+Failed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Custom\+Authentication\+Failed}{CustomAuthenticationFailed}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Custom\+Authentication\+Failed = 0x7\+F\+F\+F -\/ 12}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a6b1fa4a285add5e81b8bda9dd343e215}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a6b1fa4a285add5e81b8bda9dd343e215}
+
+
+(32755) Custom Authentication of the user failed due to setup reasons (see Cloud Dashboard) or the provided user data (like username or token). 
+
+Check error message for details. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Game\+Closed@{Game\+Closed}}
+\index{Game\+Closed@{Game\+Closed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Game\+Closed}{GameClosed}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Game\+Closed = 0x7\+F\+F\+F -\/ 3}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ae684a99ed82da84e00412c0e24c37dd7}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ae684a99ed82da84e00412c0e24c37dd7}
+
+
+(32764) Game is closed and can\textquotesingle{}t be joined. Join another game.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Game\+Does\+Not\+Exist@{Game\+Does\+Not\+Exist}}
+\index{Game\+Does\+Not\+Exist@{Game\+Does\+Not\+Exist}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Game\+Does\+Not\+Exist}{GameDoesNotExist}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Game\+Does\+Not\+Exist = 0x7\+F\+F\+F -\/ 9}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a06604e183d66776a53c489908f7126e0}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a06604e183d66776a53c489908f7126e0}
+
+
+(32758) Join can fail if the room (name) is not existing (anymore). This can happen when players leave while you join.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Game\+Full@{Game\+Full}}
+\index{Game\+Full@{Game\+Full}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Game\+Full}{GameFull}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Game\+Full = 0x7\+F\+F\+F -\/ 2}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ae558d99e91f22c6e7c54a6b07f299a8a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ae558d99e91f22c6e7c54a6b07f299a8a}
+
+
+(32765) Game is full. This rarely happens when some player joined the room before your join completed.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Game\+Id\+Already\+Exists@{Game\+Id\+Already\+Exists}}
+\index{Game\+Id\+Already\+Exists@{Game\+Id\+Already\+Exists}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Game\+Id\+Already\+Exists}{GameIdAlreadyExists}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Game\+Id\+Already\+Exists = 0x7\+F\+F\+F -\/ 1}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a2898552672360480d562a6f9958790d9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a2898552672360480d562a6f9958790d9}
+
+
+(32766) Game\+Id (name) already in use (can\textquotesingle{}t create another). Change name.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Internal\+Server\+Error@{Internal\+Server\+Error}}
+\index{Internal\+Server\+Error@{Internal\+Server\+Error}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Internal\+Server\+Error}{InternalServerError}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Internal\+Server\+Error = -\/1}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a6ec548a4e26dcc59ce47e6f1230247b9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a6ec548a4e26dcc59ce47e6f1230247b9}
+
+
+(-\/1) Something went wrong in the server. Try to reproduce and contact Exit Games.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Invalid\+Authentication@{Invalid\+Authentication}}
+\index{Invalid\+Authentication@{Invalid\+Authentication}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Invalid\+Authentication}{InvalidAuthentication}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Invalid\+Authentication = 0x7\+F\+FF}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a052f0ac657c546e750e91531393fa9c6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a052f0ac657c546e750e91531393fa9c6}
+
+
+(32767) Authentication failed. Possible cause\+: App\+Id is unknown to \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} (in cloud service).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Invalid\+Operation@{Invalid\+Operation}}
+\index{Invalid\+Operation@{Invalid\+Operation}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Invalid\+Operation}{InvalidOperation}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Invalid\+Operation = -\/2}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a326bcb717b4766d05879e49c5f04ce5e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a326bcb717b4766d05879e49c5f04ce5e}
+
+
+(-\/2) The operation you called could not be executed on the server. 
+
+Make sure you are connected to the server you expect.
+
+This code is used in several cases\+: The arguments/parameters of the operation might be out of range, missing entirely or conflicting. The operation you called is not implemented on the server (application). Server-\/side plugins affect the available operations. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Invalid\+Operation\+Code@{Invalid\+Operation\+Code}}
+\index{Invalid\+Operation\+Code@{Invalid\+Operation\+Code}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Invalid\+Operation\+Code}{InvalidOperationCode}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Invalid\+Operation\+Code = -\/2}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a8d0df840a8f536d2466ee21ad7b293b1}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a8d0df840a8f536d2466ee21ad7b293b1}
+
+
+(-\/2) The operation you called is not implemented on the server (application) you connect to. Make sure you run the fitting applications.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Invalid\+Region@{Invalid\+Region}}
+\index{Invalid\+Region@{Invalid\+Region}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Invalid\+Region}{InvalidRegion}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Invalid\+Region = 0x7\+F\+F\+F -\/ 11}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab6f8b7f747bbd61aa8e9853c2a4194f6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab6f8b7f747bbd61aa8e9853c2a4194f6}
+
+
+(32756) Authorization on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud failed because the app\textquotesingle{}s subscription does not allow to use a particular region\textquotesingle{}s server. 
+
+Some subscription plans for the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud are region-\/bound. Servers of other regions can\textquotesingle{}t be used then. Check your master server address and compare it with your \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud Dashboard\textquotesingle{}s info. \href{https://cloud.photonengine.com/dashboard}{\tt https\+://cloud.\+photonengine.\+com/dashboard}
+
+Op\+Authorize is part of connection workflow but only on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud, this error can happen. Self-\/hosted \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} servers with a C\+CU limited license won\textquotesingle{}t let a client connect at all. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Max\+Ccu\+Reached@{Max\+Ccu\+Reached}}
+\index{Max\+Ccu\+Reached@{Max\+Ccu\+Reached}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Max\+Ccu\+Reached}{MaxCcuReached}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Max\+Ccu\+Reached = 0x7\+F\+F\+F -\/ 10}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a7c5d773fe68373e9783828697d174d60}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a7c5d773fe68373e9783828697d174d60}
+
+
+(32757) Authorization on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud failed becaus the concurrent users (C\+CU) limit of the app\textquotesingle{}s subscription is reached. 
+
+Unless you have a plan with \char`\"{}\+C\+C\+U Burst\char`\"{}, clients might fail the authentication step during connect. Affected client are unable to call operations. Please note that players who end a game and return to the master server will disconnect and re-\/connect, which means that they just played and are rejected in the next minute / re-\/connect. This is a temporary measure. Once the C\+CU is below the limit, players will be able to connect an play again.
+
+Op\+Authorize is part of connection workflow but only on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud, this error can happen. Self-\/hosted \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} servers with a C\+CU limited license won\textquotesingle{}t let a client connect at all. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!No\+Random\+Match\+Found@{No\+Random\+Match\+Found}}
+\index{No\+Random\+Match\+Found@{No\+Random\+Match\+Found}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{No\+Random\+Match\+Found}{NoRandomMatchFound}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+No\+Random\+Match\+Found = 0x7\+F\+F\+F -\/ 7}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab72bc9e6c9cb2af830c33d613ddc2b6f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab72bc9e6c9cb2af830c33d613ddc2b6f}
+
+
+(32760) Random matchmaking only succeeds if a room exists thats neither closed nor full. Repeat in a few seconds or create a new room.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Ok@{Ok}}
+\index{Ok@{Ok}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Ok}{Ok}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Ok = 0}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a22e4adab4389f1eea01c8bbcf3b6fbd8}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a22e4adab4389f1eea01c8bbcf3b6fbd8}
+
+
+(0) is always \char`\"{}\+O\+K\char`\"{}, anything else an error or specific situation.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Operation\+Not\+Allowed\+In\+Current\+State@{Operation\+Not\+Allowed\+In\+Current\+State}}
+\index{Operation\+Not\+Allowed\+In\+Current\+State@{Operation\+Not\+Allowed\+In\+Current\+State}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Operation\+Not\+Allowed\+In\+Current\+State}{OperationNotAllowedInCurrentState}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Operation\+Not\+Allowed\+In\+Current\+State = -\/3}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a7a4b13bd9524022d433f5d70e1ae944a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a7a4b13bd9524022d433f5d70e1ae944a}
+
+
+(-\/3) Operation can\textquotesingle{}t be executed yet (e.\+g. 
+
+Op\+Join can\textquotesingle{}t be called before being authenticated, Raise\+Event cant be used before getting into a room). 
+
+Before you call any operations on the Cloud servers, the automated client workflow must complete its authorization. In P\+UN, wait until State is\+: Joined\+Lobby (with Auto\+Join\+Lobby = true) or Connected\+To\+Master (Auto\+Join\+Lobby = false) \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Plugin\+Mismatch@{Plugin\+Mismatch}}
+\index{Plugin\+Mismatch@{Plugin\+Mismatch}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Plugin\+Mismatch}{PluginMismatch}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Plugin\+Mismatch = 0x7\+F\+F\+F -\/ 16}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a5dedf06ff727b7cd59d0850cc3afd5e9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_a5dedf06ff727b7cd59d0850cc3afd5e9}
+
+
+(32751) Create\+Game/\+Join\+Game/\+Join operation fails if expected plugin does not correspond to loaded one. 
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Plugin\+Reported\+Error@{Plugin\+Reported\+Error}}
+\index{Plugin\+Reported\+Error@{Plugin\+Reported\+Error}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Plugin\+Reported\+Error}{PluginReportedError}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Plugin\+Reported\+Error = 0x7\+F\+F\+F -\/ 15}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_aae1b5ea63ffb0891abe77ebc4aca0e99}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_aae1b5ea63ffb0891abe77ebc4aca0e99}
+
+
+(32752) A server-\/side plugin (or webhook) failed to execute and reported an error. 
+
+Check the Operation\+Response.\+Debug\+Message. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!Server\+Full@{Server\+Full}}
+\index{Server\+Full@{Server\+Full}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{Server\+Full}{ServerFull}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+Server\+Full = 0x7\+F\+F\+F -\/ 5}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab8516a7e5eb0152044f8befd5cc583c4}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_ab8516a7e5eb0152044f8befd5cc583c4}
+
+
+(32762) Not in use currently.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}!User\+Blocked@{User\+Blocked}}
+\index{User\+Blocked@{User\+Blocked}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Error\+Code}}
+\subsubsection[{\texorpdfstring{User\+Blocked}{UserBlocked}}]{\setlength{\rightskip}{0pt plus 5cm}const int Exit\+Games.\+Client.\+Photon.\+Error\+Code.\+User\+Blocked = 0x7\+F\+F\+F -\/ 6}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_error_code_af82f564f81d5a4c27f09fe60c7854fc5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_error_code_af82f564f81d5a4c27f09fe60c7854fc5}
+
+
+(32761) Not in use currently.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_loadbalancing_peer_8cs}{Loadbalancing\+Peer.\+cs}\end{DoxyCompactItemize}

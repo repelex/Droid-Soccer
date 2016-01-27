@@ -1,0 +1,229 @@
+\hypertarget{class_room_info}{}\section{Room\+Info Class Reference}
+\label{class_room_info}\index{Room\+Info@{Room\+Info}}
+
+
+A simplified room with just the info required to list and join, used for the room listing in the lobby.  
+
+
+
+
+Inherited by \hyperlink{class_room}{Room}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \hyperlink{class_room_info_aeb8511ae1e05be7879605e4b19152733}{Equals} (object p)
+\begin{DoxyCompactList}\small\item\em Makes \hyperlink{class_room_info}{Room\+Info} comparable (by name). \end{DoxyCompactList}\item 
+override int \hyperlink{class_room_info_a016c74172ba8d6be63ed46526e0eebd4}{Get\+Hash\+Code} ()
+\begin{DoxyCompactList}\small\item\em Accompanies Equals, using the name\textquotesingle{}s Hash\+Code as return. \end{DoxyCompactList}\item 
+override string \hyperlink{class_room_info_ad299fe650504477562a3cdf0609aa0eb}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Simple printingin method. \end{DoxyCompactList}\item 
+string \hyperlink{class_room_info_a4ad3e14e919adab20770874e5b2a8e5d}{To\+String\+Full} ()
+\begin{DoxyCompactList}\small\item\em Simple printingin method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+byte \hyperlink{class_room_info_a46f07a9998e906a0adb4f45bb94f1994}{max\+Players\+Field} = 0
+\begin{DoxyCompactList}\small\item\em Backing field for property.\end{DoxyCompactList}\item 
+bool \hyperlink{class_room_info_a6ee1a8dc240cfc8f983192806e751f14}{open\+Field} = true
+\begin{DoxyCompactList}\small\item\em Backing field for property.\end{DoxyCompactList}\item 
+bool \hyperlink{class_room_info_a9fe8d4b4891f2d6e57dcd774048f2545}{visible\+Field} = true
+\begin{DoxyCompactList}\small\item\em Backing field for property.\end{DoxyCompactList}\item 
+bool \hyperlink{class_room_info_ad4cd6791bdb87d9af9b2bf37bee89c90}{auto\+Clean\+Up\+Field} = \hyperlink{class_photon_network_a6c6fb3cd57d7e2a13d1fc354db0c1fd7}{Photon\+Network.\+auto\+Clean\+Up\+Player\+Objects}
+\begin{DoxyCompactList}\small\item\em Backing field for property. False unless the Game\+Property is set to true (else it\textquotesingle{}s not sent).\end{DoxyCompactList}\item 
+string \hyperlink{class_room_info_a4a091adee00339d328654b93821ba49e}{name\+Field}
+\begin{DoxyCompactList}\small\item\em Backing field for property.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_room_info_af0811895b3b40f2b64d243d5fd8fd362}{removed\+From\+List}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used internally in lobby, to mark rooms that are no longer listed.\end{DoxyCompactList}\item 
+\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} \hyperlink{class_room_info_a928b103a3e88d2c090152440aa6fa874}{custom\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Read-\/only \char`\"{}cache\char`\"{} of custom properties of a room. \end{DoxyCompactList}\item 
+string \hyperlink{class_room_info_a77189ececa62ba47ff70359fd2db9af5}{name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of a room. Unique identifier (per Loadbalancing group) for a room/match.\end{DoxyCompactList}\item 
+int \hyperlink{class_room_info_a211655578d31b9fed0817cad42e8f0b5}{player\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Only used internally in lobby, to display number of players in room (while you\textquotesingle{}re not in). \end{DoxyCompactList}\item 
+bool \hyperlink{class_room_info_a1e862ae572d36aba8d35f57241450082}{is\+Local\+Client\+Inside}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em State if the local client is already in the game or still going to join it on gameserver (in lobby always false). \end{DoxyCompactList}\item 
+byte \hyperlink{class_room_info_a25abb4134a29834298f1c5abcfb85456}{max\+Players}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets a limit of players to this room. \end{DoxyCompactList}\item 
+bool \hyperlink{class_room_info_a870deed85986f1ca62f97ee3f50114ec}{open}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines if the room can be joined. \end{DoxyCompactList}\item 
+bool \hyperlink{class_room_info_addfd04015dca91382c6505cf0e7171f0}{visible}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines if the room is listed in its lobby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simplified room with just the info required to list and join, used for the room listing in the lobby. 
+
+The properties are not settable (open, max\+Players, etc). 
+
+This class resembles info about available rooms, as sent by the Master server\textquotesingle{}s lobby. Consider all values as readonly. None are synced (only updated by events by server). 
+
+\subsection{Member Function Documentation}
+\index{Room\+Info@{Room\+Info}!Equals@{Equals}}
+\index{Equals@{Equals}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{Equals(object p)}{Equals(object p)}}]{\setlength{\rightskip}{0pt plus 5cm}override bool Room\+Info.\+Equals (
+\begin{DoxyParamCaption}
+\item[{object}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_info_aeb8511ae1e05be7879605e4b19152733}{}\label{class_room_info_aeb8511ae1e05be7879605e4b19152733}
+
+
+Makes \hyperlink{class_room_info}{Room\+Info} comparable (by name). 
+
+\index{Room\+Info@{Room\+Info}!Get\+Hash\+Code@{Get\+Hash\+Code}}
+\index{Get\+Hash\+Code@{Get\+Hash\+Code}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}]{\setlength{\rightskip}{0pt plus 5cm}override int Room\+Info.\+Get\+Hash\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_info_a016c74172ba8d6be63ed46526e0eebd4}{}\label{class_room_info_a016c74172ba8d6be63ed46526e0eebd4}
+
+
+Accompanies Equals, using the name\textquotesingle{}s Hash\+Code as return. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{Room\+Info@{Room\+Info}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{To\+String()}{ToString()}}]{\setlength{\rightskip}{0pt plus 5cm}override string Room\+Info.\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_info_ad299fe650504477562a3cdf0609aa0eb}{}\label{class_room_info_ad299fe650504477562a3cdf0609aa0eb}
+
+
+Simple printingin method. 
+
+\begin{DoxyReturn}{Returns}
+Summary of this \hyperlink{class_room_info}{Room\+Info} instance.
+\end{DoxyReturn}
+\index{Room\+Info@{Room\+Info}!To\+String\+Full@{To\+String\+Full}}
+\index{To\+String\+Full@{To\+String\+Full}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{To\+String\+Full()}{ToStringFull()}}]{\setlength{\rightskip}{0pt plus 5cm}string Room\+Info.\+To\+String\+Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_info_a4ad3e14e919adab20770874e5b2a8e5d}{}\label{class_room_info_a4ad3e14e919adab20770874e5b2a8e5d}
+
+
+Simple printingin method. 
+
+\begin{DoxyReturn}{Returns}
+Summary of this \hyperlink{class_room_info}{Room\+Info} instance.
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Room\+Info@{Room\+Info}!auto\+Clean\+Up\+Field@{auto\+Clean\+Up\+Field}}
+\index{auto\+Clean\+Up\+Field@{auto\+Clean\+Up\+Field}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{auto\+Clean\+Up\+Field}{autoCleanUpField}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+auto\+Clean\+Up\+Field = {\bf Photon\+Network.\+auto\+Clean\+Up\+Player\+Objects}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_room_info_ad4cd6791bdb87d9af9b2bf37bee89c90}{}\label{class_room_info_ad4cd6791bdb87d9af9b2bf37bee89c90}
+
+
+Backing field for property. False unless the Game\+Property is set to true (else it\textquotesingle{}s not sent).
+
+\index{Room\+Info@{Room\+Info}!max\+Players\+Field@{max\+Players\+Field}}
+\index{max\+Players\+Field@{max\+Players\+Field}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{max\+Players\+Field}{maxPlayersField}}]{\setlength{\rightskip}{0pt plus 5cm}byte Room\+Info.\+max\+Players\+Field = 0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_room_info_a46f07a9998e906a0adb4f45bb94f1994}{}\label{class_room_info_a46f07a9998e906a0adb4f45bb94f1994}
+
+
+Backing field for property.
+
+\index{Room\+Info@{Room\+Info}!name\+Field@{name\+Field}}
+\index{name\+Field@{name\+Field}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{name\+Field}{nameField}}]{\setlength{\rightskip}{0pt plus 5cm}string Room\+Info.\+name\+Field\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_room_info_a4a091adee00339d328654b93821ba49e}{}\label{class_room_info_a4a091adee00339d328654b93821ba49e}
+
+
+Backing field for property.
+
+\index{Room\+Info@{Room\+Info}!open\+Field@{open\+Field}}
+\index{open\+Field@{open\+Field}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{open\+Field}{openField}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+open\+Field = true\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_room_info_a6ee1a8dc240cfc8f983192806e751f14}{}\label{class_room_info_a6ee1a8dc240cfc8f983192806e751f14}
+
+
+Backing field for property.
+
+\index{Room\+Info@{Room\+Info}!visible\+Field@{visible\+Field}}
+\index{visible\+Field@{visible\+Field}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{visible\+Field}{visibleField}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+visible\+Field = true\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_room_info_a9fe8d4b4891f2d6e57dcd774048f2545}{}\label{class_room_info_a9fe8d4b4891f2d6e57dcd774048f2545}
+
+
+Backing field for property.
+
+
+
+\subsection{Property Documentation}
+\index{Room\+Info@{Room\+Info}!custom\+Properties@{custom\+Properties}}
+\index{custom\+Properties@{custom\+Properties}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{custom\+Properties}{customProperties}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hashtable} Room\+Info.\+custom\+Properties\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_info_a928b103a3e88d2c090152440aa6fa874}{}\label{class_room_info_a928b103a3e88d2c090152440aa6fa874}
+
+
+Read-\/only \char`\"{}cache\char`\"{} of custom properties of a room. 
+
+Set via \hyperlink{class_room_a9f8ac164f4f24be4140221b72792250a}{Room.\+Set\+Custom\+Properties} (not available for \hyperlink{class_room_info}{Room\+Info} class!).
+
+All keys are string-\/typed and the values depend on the game/application.
+
+\hyperlink{class_room_a9f8ac164f4f24be4140221b72792250a}{Room.\+Set\+Custom\+Properties} \index{Room\+Info@{Room\+Info}!is\+Local\+Client\+Inside@{is\+Local\+Client\+Inside}}
+\index{is\+Local\+Client\+Inside@{is\+Local\+Client\+Inside}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{is\+Local\+Client\+Inside}{isLocalClientInside}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+is\+Local\+Client\+Inside\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_room_info_a1e862ae572d36aba8d35f57241450082}{}\label{class_room_info_a1e862ae572d36aba8d35f57241450082}
+
+
+State if the local client is already in the game or still going to join it on gameserver (in lobby always false). 
+
+\index{Room\+Info@{Room\+Info}!max\+Players@{max\+Players}}
+\index{max\+Players@{max\+Players}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{max\+Players}{maxPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}byte Room\+Info.\+max\+Players\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_info_a25abb4134a29834298f1c5abcfb85456}{}\label{class_room_info_a25abb4134a29834298f1c5abcfb85456}
+
+
+Sets a limit of players to this room. 
+
+This property is shown in lobby, too. If the room is full (players count == maxplayers), joining this room will fail. 
+
+As part of \hyperlink{class_room_info}{Room\+Info} this can\textquotesingle{}t be set. As part of a \hyperlink{class_room}{Room} (which the player joined), the setter will update the server and all clients. \index{Room\+Info@{Room\+Info}!name@{name}}
+\index{name@{name}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}string Room\+Info.\+name\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_info_a77189ececa62ba47ff70359fd2db9af5}{}\label{class_room_info_a77189ececa62ba47ff70359fd2db9af5}
+
+
+The name of a room. Unique identifier (per Loadbalancing group) for a room/match.
+
+\index{Room\+Info@{Room\+Info}!open@{open}}
+\index{open@{open}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{open}{open}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+open\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_info_a870deed85986f1ca62f97ee3f50114ec}{}\label{class_room_info_a870deed85986f1ca62f97ee3f50114ec}
+
+
+Defines if the room can be joined. 
+
+This does not affect listing in a lobby but joining the room will fail if not open. If not open, the room is excluded from random matchmaking. Due to racing conditions, found matches might become closed before they are joined. Simply re-\/connect to master and find another. Use property \char`\"{}\+Is\+Visible\char`\"{} to not list the room. 
+
+As part of \hyperlink{class_room_info}{Room\+Info} this can\textquotesingle{}t be set. As part of a \hyperlink{class_room}{Room} (which the player joined), the setter will update the server and all clients. \index{Room\+Info@{Room\+Info}!player\+Count@{player\+Count}}
+\index{player\+Count@{player\+Count}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{player\+Count}{playerCount}}]{\setlength{\rightskip}{0pt plus 5cm}int Room\+Info.\+player\+Count\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_info_a211655578d31b9fed0817cad42e8f0b5}{}\label{class_room_info_a211655578d31b9fed0817cad42e8f0b5}
+
+
+Only used internally in lobby, to display number of players in room (while you\textquotesingle{}re not in). 
+
+\index{Room\+Info@{Room\+Info}!removed\+From\+List@{removed\+From\+List}}
+\index{removed\+From\+List@{removed\+From\+List}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{removed\+From\+List}{removedFromList}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+removed\+From\+List\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_room_info_af0811895b3b40f2b64d243d5fd8fd362}{}\label{class_room_info_af0811895b3b40f2b64d243d5fd8fd362}
+
+
+Used internally in lobby, to mark rooms that are no longer listed.
+
+\index{Room\+Info@{Room\+Info}!visible@{visible}}
+\index{visible@{visible}!Room\+Info@{Room\+Info}}
+\subsubsection[{\texorpdfstring{visible}{visible}}]{\setlength{\rightskip}{0pt plus 5cm}bool Room\+Info.\+visible\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_room_info_addfd04015dca91382c6505cf0e7171f0}{}\label{class_room_info_addfd04015dca91382c6505cf0e7171f0}
+
+
+Defines if the room is listed in its lobby. 
+
+Rooms can be created invisible, or changed to invisible. To change if a room can be joined, use property\+: open. 
+
+As part of \hyperlink{class_room_info}{Room\+Info} this can\textquotesingle{}t be set. As part of a \hyperlink{class_room}{Room} (which the player joined), the setter will update the server and all clients. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_room_info_8cs}{Room\+Info.\+cs}\end{DoxyCompactItemize}

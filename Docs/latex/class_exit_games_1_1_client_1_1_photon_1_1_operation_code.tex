@@ -1,0 +1,172 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code}{}\section{Exit\+Games.\+Client.\+Photon.\+Operation\+Code Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code}\index{Exit\+Games.\+Client.\+Photon.\+Operation\+Code@{Exit\+Games.\+Client.\+Photon.\+Operation\+Code}}
+
+
+Class for constants.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_afa955a532c6293b315db995fc1cadd4a}{Exchange\+Keys\+For\+Encryption} = 250
+\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab40167d42ef70df40f89864db5085c68}{Join} = 255
+\begin{DoxyCompactList}\small\item\em (255) Code for Op\+Join, to get into a room.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a593c0164845113e55d36c4ab792620b9}{Authenticate} = 230
+\begin{DoxyCompactList}\small\item\em (230) Authenticates this peer and connects to a virtual application\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a160904b6b125f48aeee0a33f7745aa6b}{Join\+Lobby} = 229
+\begin{DoxyCompactList}\small\item\em (229) Joins lobby (on master)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ac9483ca214470e195bd3b4558aee3a08}{Leave\+Lobby} = 228
+\begin{DoxyCompactList}\small\item\em (228) Leaves lobby (on master)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a4ec87e6ee50ba49c669644c242053854}{Create\+Game} = 227
+\begin{DoxyCompactList}\small\item\em (227) Creates a game (or fails if name exists)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a98972f7fc4a8965ef0597387b298bba2}{Join\+Game} = 226
+\begin{DoxyCompactList}\small\item\em (226) Join game (by name)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a43219f5aad29ff41925811ef959dd442}{Join\+Random\+Game} = 225
+\begin{DoxyCompactList}\small\item\em (225) Joins random game (on master)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_aa11e391e152516015f509f474f6ac7ce}{Leave} = (byte)254
+\begin{DoxyCompactList}\small\item\em (254) Code for Op\+Leave, to get out of a room.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a629f95f520a21f28345366d84d9171bf}{Raise\+Event} = (byte)253
+\begin{DoxyCompactList}\small\item\em (253) Raise event (in a room, for other actors/players)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a1e9bdcbf6be26d2157af2df0daaef988}{Set\+Properties} = (byte)252
+\begin{DoxyCompactList}\small\item\em (252) Set Properties (of room or actor/player)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a7bfd447d57b228deb49cf59b9d442047}{Get\+Properties} = (byte)251
+\begin{DoxyCompactList}\small\item\em (251) Get Properties\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab92f32ca36b9c62c35e2e32c067e6158}{Change\+Groups} = (byte)248
+\begin{DoxyCompactList}\small\item\em (248) Operation code to change interest groups in Rooms (Lite application and extending ones).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a798a8291fd87aa865d470cd1f09f05b5}{Find\+Friends} = 222
+\begin{DoxyCompactList}\small\item\em (222) Request the rooms and online status for a list of friends (by name, which should be unique).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab495c557979c0d0bae83444712ce8acc}{Get\+Lobby\+Stats} = 221
+\begin{DoxyCompactList}\small\item\em (221) Request statistics about a specific list of lobbies (their user and game count).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a47ec5b6ce3097f6c31a440d679a39bd5}{Get\+Regions} = 220
+\begin{DoxyCompactList}\small\item\em (220) Get list of regional servers from a Name\+Server.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_af3a967de533671c1a5b04c698c19c84b}{Web\+Rpc} = 219
+\begin{DoxyCompactList}\small\item\em (219) Web\+Rpc Operation.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for constants. 
+
+Contains operation codes. Pun uses these constants internally. 
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Authenticate@{Authenticate}}
+\index{Authenticate@{Authenticate}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Authenticate}{Authenticate}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Authenticate = 230}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a593c0164845113e55d36c4ab792620b9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a593c0164845113e55d36c4ab792620b9}
+
+
+(230) Authenticates this peer and connects to a virtual application
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Change\+Groups@{Change\+Groups}}
+\index{Change\+Groups@{Change\+Groups}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Change\+Groups}{ChangeGroups}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Change\+Groups = (byte)248}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab92f32ca36b9c62c35e2e32c067e6158}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab92f32ca36b9c62c35e2e32c067e6158}
+
+
+(248) Operation code to change interest groups in Rooms (Lite application and extending ones).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Create\+Game@{Create\+Game}}
+\index{Create\+Game@{Create\+Game}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Create\+Game}{CreateGame}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Create\+Game = 227}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a4ec87e6ee50ba49c669644c242053854}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a4ec87e6ee50ba49c669644c242053854}
+
+
+(227) Creates a game (or fails if name exists)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Exchange\+Keys\+For\+Encryption@{Exchange\+Keys\+For\+Encryption}}
+\index{Exchange\+Keys\+For\+Encryption@{Exchange\+Keys\+For\+Encryption}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Exchange\+Keys\+For\+Encryption}{ExchangeKeysForEncryption}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Exchange\+Keys\+For\+Encryption = 250}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_afa955a532c6293b315db995fc1cadd4a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_afa955a532c6293b315db995fc1cadd4a}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Find\+Friends@{Find\+Friends}}
+\index{Find\+Friends@{Find\+Friends}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Find\+Friends}{FindFriends}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Find\+Friends = 222}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a798a8291fd87aa865d470cd1f09f05b5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a798a8291fd87aa865d470cd1f09f05b5}
+
+
+(222) Request the rooms and online status for a list of friends (by name, which should be unique).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Get\+Lobby\+Stats@{Get\+Lobby\+Stats}}
+\index{Get\+Lobby\+Stats@{Get\+Lobby\+Stats}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Get\+Lobby\+Stats}{GetLobbyStats}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Get\+Lobby\+Stats = 221}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab495c557979c0d0bae83444712ce8acc}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab495c557979c0d0bae83444712ce8acc}
+
+
+(221) Request statistics about a specific list of lobbies (their user and game count).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Get\+Properties@{Get\+Properties}}
+\index{Get\+Properties@{Get\+Properties}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Get\+Properties}{GetProperties}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Get\+Properties = (byte)251}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a7bfd447d57b228deb49cf59b9d442047}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a7bfd447d57b228deb49cf59b9d442047}
+
+
+(251) Get Properties
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Get\+Regions@{Get\+Regions}}
+\index{Get\+Regions@{Get\+Regions}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Get\+Regions}{GetRegions}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Get\+Regions = 220}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a47ec5b6ce3097f6c31a440d679a39bd5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a47ec5b6ce3097f6c31a440d679a39bd5}
+
+
+(220) Get list of regional servers from a Name\+Server.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Join@{Join}}
+\index{Join@{Join}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Join}{Join}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Join = 255}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab40167d42ef70df40f89864db5085c68}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ab40167d42ef70df40f89864db5085c68}
+
+
+(255) Code for Op\+Join, to get into a room.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Join\+Game@{Join\+Game}}
+\index{Join\+Game@{Join\+Game}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Join\+Game}{JoinGame}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Join\+Game = 226}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a98972f7fc4a8965ef0597387b298bba2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a98972f7fc4a8965ef0597387b298bba2}
+
+
+(226) Join game (by name)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Join\+Lobby@{Join\+Lobby}}
+\index{Join\+Lobby@{Join\+Lobby}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Join\+Lobby}{JoinLobby}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Join\+Lobby = 229}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a160904b6b125f48aeee0a33f7745aa6b}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a160904b6b125f48aeee0a33f7745aa6b}
+
+
+(229) Joins lobby (on master)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Join\+Random\+Game@{Join\+Random\+Game}}
+\index{Join\+Random\+Game@{Join\+Random\+Game}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Join\+Random\+Game}{JoinRandomGame}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Join\+Random\+Game = 225}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a43219f5aad29ff41925811ef959dd442}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a43219f5aad29ff41925811ef959dd442}
+
+
+(225) Joins random game (on master)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Leave@{Leave}}
+\index{Leave@{Leave}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Leave}{Leave}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Leave = (byte)254}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_aa11e391e152516015f509f474f6ac7ce}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_aa11e391e152516015f509f474f6ac7ce}
+
+
+(254) Code for Op\+Leave, to get out of a room.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Leave\+Lobby@{Leave\+Lobby}}
+\index{Leave\+Lobby@{Leave\+Lobby}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Leave\+Lobby}{LeaveLobby}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Leave\+Lobby = 228}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ac9483ca214470e195bd3b4558aee3a08}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_ac9483ca214470e195bd3b4558aee3a08}
+
+
+(228) Leaves lobby (on master)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Raise\+Event@{Raise\+Event}}
+\index{Raise\+Event@{Raise\+Event}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Raise\+Event}{RaiseEvent}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Raise\+Event = (byte)253}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a629f95f520a21f28345366d84d9171bf}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a629f95f520a21f28345366d84d9171bf}
+
+
+(253) Raise event (in a room, for other actors/players)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Set\+Properties@{Set\+Properties}}
+\index{Set\+Properties@{Set\+Properties}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Set\+Properties}{SetProperties}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Set\+Properties = (byte)252}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a1e9bdcbf6be26d2157af2df0daaef988}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_a1e9bdcbf6be26d2157af2df0daaef988}
+
+
+(252) Set Properties (of room or actor/player)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}!Web\+Rpc@{Web\+Rpc}}
+\index{Web\+Rpc@{Web\+Rpc}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Operation\+Code}}
+\subsubsection[{\texorpdfstring{Web\+Rpc}{WebRpc}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Operation\+Code.\+Web\+Rpc = 219}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_af3a967de533671c1a5b04c698c19c84b}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_operation_code_af3a967de533671c1a5b04c698c19c84b}
+
+
+(219) Web\+Rpc Operation.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_loadbalancing_peer_8cs}{Loadbalancing\+Peer.\+cs}\end{DoxyCompactItemize}

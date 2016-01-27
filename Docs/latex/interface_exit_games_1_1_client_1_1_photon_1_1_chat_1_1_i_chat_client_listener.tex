@@ -1,0 +1,212 @@
+\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener}{}\section{Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener Interface Reference}
+\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener}\index{Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener@{Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener}}
+
+
+Callback interface for \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} client side.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_ae4c3e779b7761f6a254231b9775fabcf}{Debug\+Return} (Debug\+Level level, string message)
+\begin{DoxyCompactList}\small\item\em All debug output of the library will be reported through this method. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a601455f328ead10ff4b8be9a30698170}{On\+Disconnected} ()
+\begin{DoxyCompactList}\small\item\em Disconnection happened. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_af843b2308e71621bedf3d8ee060eb1cc}{On\+Connected} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_exit_games_1_1_client}{Client} is connected now. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_aafb9a56eee22abe2c728d643629e8c28}{On\+Chat\+State\+Change} (\hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat_ad7d7f22d8741237f41e4b60779cdfa19}{Chat\+State} state)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client}\textquotesingle{}s state changed. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a84ca1d0eee402e737803930a6ee6ec73}{On\+Get\+Messages} (string channel\+Name, string\mbox{[}$\,$\mbox{]} senders, object\mbox{[}$\,$\mbox{]} messages)
+\begin{DoxyCompactList}\small\item\em Notifies app that client got new messages from server Number of senders is equal to number of messages in \textquotesingle{}messages\textquotesingle{}. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a40b8c46d27d74b519f0fa34abd6fb81a}{On\+Private\+Message} (string sender, object message, string channel\+Name)
+\begin{DoxyCompactList}\small\item\em Notifies client about private message \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a4dae08c2527025369671d13d8d67853e}{On\+Subscribed} (string\mbox{[}$\,$\mbox{]} channels, bool\mbox{[}$\,$\mbox{]} results)
+\begin{DoxyCompactList}\small\item\em Result of Subscribe operation. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a9e1b1dd69f646b62d2958f9c49db2630}{On\+Unsubscribed} (string\mbox{[}$\,$\mbox{]} channels)
+\begin{DoxyCompactList}\small\item\em Result of Unsubscribe operation. \end{DoxyCompactList}\item 
+void \hyperlink{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_aa2165bd3e01be72b48d2cd1f7b7a94e9}{On\+Status\+Update} (string user, int status, bool got\+Message, object message)
+\begin{DoxyCompactList}\small\item\em New status of another user (you get updates for users set in your friends list). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Callback interface for \hyperlink{namespace_exit_games_1_1_client_1_1_photon_1_1_chat}{Chat} client side. 
+
+Contains callback methods to notify your app about updates. Must be provided to new \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client} in constructor 
+
+\subsection{Member Function Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!Debug\+Return@{Debug\+Return}}
+\index{Debug\+Return@{Debug\+Return}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{Debug\+Return(\+Debug\+Level level, string message)}{DebugReturn(DebugLevel level, string message)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+Debug\+Return (
+\begin{DoxyParamCaption}
+\item[{Debug\+Level}]{level, }
+\item[{string}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_ae4c3e779b7761f6a254231b9775fabcf}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_ae4c3e779b7761f6a254231b9775fabcf}
+
+
+All debug output of the library will be reported through this method. 
+
+Print it or put it in a buffer to use it on-\/screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Debug\+Level (severity) of the message.\\
+\hline
+{\em message} & Debug text. Print to System.\+Console or screen.\\
+\hline
+\end{DoxyParams}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Chat\+State\+Change@{On\+Chat\+State\+Change}}
+\index{On\+Chat\+State\+Change@{On\+Chat\+State\+Change}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Chat\+State\+Change(\+Chat\+State state)}{OnChatStateChange(ChatState state)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Chat\+State\+Change (
+\begin{DoxyParamCaption}
+\item[{{\bf Chat\+State}}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_aafb9a56eee22abe2c728d643629e8c28}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_aafb9a56eee22abe2c728d643629e8c28}
+
+
+The \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client}{Chat\+Client}\textquotesingle{}s state changed. 
+
+Usually, On\+Connected and On\+Disconnected are the callbacks to react to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state.\\
+\hline
+\end{DoxyParams}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Connected@{On\+Connected}}
+\index{On\+Connected@{On\+Connected}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Connected()}{OnConnected()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_af843b2308e71621bedf3d8ee060eb1cc}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_af843b2308e71621bedf3d8ee060eb1cc}
+
+
+\hyperlink{namespace_exit_games_1_1_client}{Client} is connected now. 
+
+Clients have to be connected before they can send their state, subscribe to channels and send any messages. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Disconnected@{On\+Disconnected}}
+\index{On\+Disconnected@{On\+Disconnected}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Disconnected()}{OnDisconnected()}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Disconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a601455f328ead10ff4b8be9a30698170}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a601455f328ead10ff4b8be9a30698170}
+
+
+Disconnection happened. 
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Get\+Messages@{On\+Get\+Messages}}
+\index{On\+Get\+Messages@{On\+Get\+Messages}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Get\+Messages(string channel\+Name, string[] senders, object[] messages)}{OnGetMessages(string channelName, string[] senders, object[] messages)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Get\+Messages (
+\begin{DoxyParamCaption}
+\item[{string}]{channel\+Name, }
+\item[{string\mbox{[}$\,$\mbox{]}}]{senders, }
+\item[{object\mbox{[}$\,$\mbox{]}}]{messages}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a84ca1d0eee402e737803930a6ee6ec73}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a84ca1d0eee402e737803930a6ee6ec73}
+
+
+Notifies app that client got new messages from server Number of senders is equal to number of messages in \textquotesingle{}messages\textquotesingle{}. 
+
+Sender with number \textquotesingle{}0\textquotesingle{} corresponds to message with number \textquotesingle{}0\textquotesingle{}, sender with number \textquotesingle{}1\textquotesingle{} corresponds to message with number \textquotesingle{}1\textquotesingle{} and so on 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Name} & channel from where messages came\\
+\hline
+{\em senders} & list of users who sent messages\\
+\hline
+{\em messages} & list of messages it self\\
+\hline
+\end{DoxyParams}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Private\+Message@{On\+Private\+Message}}
+\index{On\+Private\+Message@{On\+Private\+Message}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Private\+Message(string sender, object message, string channel\+Name)}{OnPrivateMessage(string sender, object message, string channelName)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Private\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{sender, }
+\item[{object}]{message, }
+\item[{string}]{channel\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a40b8c46d27d74b519f0fa34abd6fb81a}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a40b8c46d27d74b519f0fa34abd6fb81a}
+
+
+Notifies client about private message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & user who sent this message\\
+\hline
+{\em message} & message it self\\
+\hline
+{\em channel\+Name} & channel\+Name for private messages (messages you sent yourself get added to a channel per target username)\\
+\hline
+\end{DoxyParams}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Status\+Update@{On\+Status\+Update}}
+\index{On\+Status\+Update@{On\+Status\+Update}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Status\+Update(string user, int status, bool got\+Message, object message)}{OnStatusUpdate(string user, int status, bool gotMessage, object message)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Status\+Update (
+\begin{DoxyParamCaption}
+\item[{string}]{user, }
+\item[{int}]{status, }
+\item[{bool}]{got\+Message, }
+\item[{object}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_aa2165bd3e01be72b48d2cd1f7b7a94e9}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_aa2165bd3e01be72b48d2cd1f7b7a94e9}
+
+
+New status of another user (you get updates for users set in your friends list). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Name of the user.\\
+\hline
+{\em status} & New status of that user.\\
+\hline
+{\em got\+Message} & True if the status contains a message you should cache locally. False\+: This status update does not include a message (keep any you have).\\
+\hline
+{\em message} & Message that user set.\\
+\hline
+\end{DoxyParams}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Subscribed@{On\+Subscribed}}
+\index{On\+Subscribed@{On\+Subscribed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Subscribed(string[] channels, bool[] results)}{OnSubscribed(string[] channels, bool[] results)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Subscribed (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{channels, }
+\item[{bool\mbox{[}$\,$\mbox{]}}]{results}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a4dae08c2527025369671d13d8d67853e}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a4dae08c2527025369671d13d8d67853e}
+
+
+Result of Subscribe operation. 
+
+Returns per channelname if the channel is now subscribed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channels} & Array of channel names.\\
+\hline
+{\em results} & Per channel result if subscribed.\\
+\hline
+\end{DoxyParams}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}!On\+Unsubscribed@{On\+Unsubscribed}}
+\index{On\+Unsubscribed@{On\+Unsubscribed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Chat\+::\+I\+Chat\+Client\+Listener}}
+\subsubsection[{\texorpdfstring{On\+Unsubscribed(string[] channels)}{OnUnsubscribed(string[] channels)}}]{\setlength{\rightskip}{0pt plus 5cm}void Exit\+Games.\+Client.\+Photon.\+Chat.\+I\+Chat\+Client\+Listener.\+On\+Unsubscribed (
+\begin{DoxyParamCaption}
+\item[{string\mbox{[}$\,$\mbox{]}}]{channels}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a9e1b1dd69f646b62d2958f9c49db2630}{}\label{interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener_a9e1b1dd69f646b62d2958f9c49db2630}
+
+
+Result of Unsubscribe operation. 
+
+Returns per channelname if the channel is now unsubscribed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channels} & Array of channel names that are no longer subscribed.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Plugins/\+Chat\+Api/\hyperlink{_i_chat_client_listener_8cs}{I\+Chat\+Client\+Listener.\+cs}\end{DoxyCompactItemize}

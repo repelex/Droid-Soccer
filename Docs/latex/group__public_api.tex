@@ -1,0 +1,547 @@
+\hypertarget{group__public_api}{}\section{Public A\+PI}
+\label{group__public_api}\index{Public A\+PI@{Public A\+PI}}
+
+
+Groups the most important classes that you need to understand early on.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interface_i_pun_observable}{I\+Pun\+Observable}
+\begin{DoxyCompactList}\small\item\em Defines the On\+Photon\+Serialize\+View method to make it easy to implement correctly for observable scripts. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_i_pun_callbacks}{I\+Pun\+Callbacks}
+\begin{DoxyCompactList}\small\item\em This interface is used as definition of all callback methods of P\+UN, except On\+Photon\+Serialize\+View. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_1_1_pun_behaviour}{Photon.\+Pun\+Behaviour}
+\begin{DoxyCompactList}\small\item\em This class provides a .photon\+View and all callbacks/events that P\+UN can call. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_message_info}{Photon\+Message\+Info}
+\begin{DoxyCompactList}\small\item\em Container class for info about a particular message, R\+PC or update. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_stream}{Photon\+Stream}
+\begin{DoxyCompactList}\small\item\em This container is used in \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}{On\+Photon\+Serialize\+View()} to either provide incoming data of a \hyperlink{class_photon_view}{Photon\+View} or for you to provide it. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_network}{Photon\+Network}
+\begin{DoxyCompactList}\small\item\em The main class to use the \hyperlink{class_photon_network}{Photon\+Network} plugin. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_player}{Photon\+Player}
+\begin{DoxyCompactList}\small\item\em Summarizes a \char`\"{}player\char`\"{} within a room, identified (in that room) by actor\+ID. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_view}{Photon\+View}
+\begin{DoxyCompactList}\small\item\em P\+UN\textquotesingle{}s Network\+View replacement class for networking. \end{DoxyCompactList}\item 
+class \hyperlink{class_room}{Room}
+\begin{DoxyCompactList}\small\item\em This class resembles a room that P\+UN joins (or joined). \end{DoxyCompactList}\item 
+class \hyperlink{class_room_info}{Room\+Info}
+\begin{DoxyCompactList}\small\item\em A simplified room with just the info required to list and join, used for the room listing in the lobby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__public_api_gaf30bbea51cc8c4b1ddc239d1c5c1468f}{Photon\+Networking\+Message} \{ \\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa9583b114e6efdfd8068051d562391dc0}{Photon\+Networking\+Message.\+On\+Connected\+To\+Photon}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faf0e999adc414b29857944d5e5fabfe2e}{Photon\+Networking\+Message.\+On\+Left\+Room}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fadf130e855b7c27f0f10f66db4a7e83c4}{Photon\+Networking\+Message.\+On\+Master\+Client\+Switched}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab6273c525ff9cd304d2a8b0adb61a5ea}{Photon\+Networking\+Message.\+On\+Photon\+Create\+Room\+Failed}, 
+\\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3ad62b9539e5cf97eacf06e2268dea5a}{Photon\+Networking\+Message.\+On\+Photon\+Join\+Room\+Failed}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2959bccbe2dabb6a8d2024ea241f6f2f}{Photon\+Networking\+Message.\+On\+Created\+Room}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2af1a9ab5a169e8800132c0625d3c6b2}{Photon\+Networking\+Message.\+On\+Joined\+Lobby}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa62d34f824fc4c61b693dd35ff3e7e79b}{Photon\+Networking\+Message.\+On\+Left\+Lobby}, 
+\\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa6fae9412143c8e2158841c492b22d698}{Photon\+Networking\+Message.\+On\+Disconnected\+From\+Photon}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{Photon\+Networking\+Message.\+On\+Connection\+Fail}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{Photon\+Networking\+Message.\+On\+Failed\+To\+Connect\+To\+Photon}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa75519954740466351e71d794425f6b12}{Photon\+Networking\+Message.\+On\+Received\+Room\+List\+Update}, 
+\\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}{Photon\+Networking\+Message.\+On\+Joined\+Room}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faccfd8b0940a4981818cc4147e29de834}{Photon\+Networking\+Message.\+On\+Photon\+Player\+Connected}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa39b1e276b8dab1e7620a643b7e01d71c}{Photon\+Networking\+Message.\+On\+Photon\+Player\+Disconnected}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fad07f29ca1e2135927cf0966873408125}{Photon\+Networking\+Message.\+On\+Photon\+Random\+Join\+Failed}, 
+\\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa883ba3af22ed6fc336cde8cb71624d30}{Photon\+Networking\+Message.\+On\+Connected\+To\+Master}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}{Photon\+Networking\+Message.\+On\+Photon\+Serialize\+View}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa8bb589bf7df8d2be1f0b4b586ba8001}{Photon\+Networking\+Message.\+On\+Photon\+Instantiate}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa1d2567b2c2f8ec1799a293b0359b4046}{Photon\+Networking\+Message.\+On\+Photon\+Max\+Cccu\+Reached}, 
+\\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fafbc17ce96afe80127d732de2d4be0378}{Photon\+Networking\+Message.\+On\+Photon\+Custom\+Room\+Properties\+Changed}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa67402d95c324cda2b6d6e2fc391ae941}{Photon\+Networking\+Message.\+On\+Photon\+Player\+Properties\+Changed}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab39600c160a074fb0b76467956dadec9}{Photon\+Networking\+Message.\+On\+Updated\+Friend\+List}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa03351bfa4fb9325a5b0486862d4be3be}{Photon\+Networking\+Message.\+On\+Custom\+Authentication\+Failed}, 
+\\*
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa98a8b15d4aa12e02e5ccbc98172eecc}{Photon\+Networking\+Message.\+On\+Web\+Rpc\+Response}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fac859a296d058a67508e48b2a0363e71c}{Photon\+Networking\+Message.\+On\+Ownership\+Request}, 
+\hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab1a1f76626b99f398def802effe4908a}{Photon\+Networking\+Message.\+On\+Lobby\+Statistics\+Update}
+ \}\begin{DoxyCompactList}\small\item\em This enum defines the set of Mono\+Messages \hyperlink{namespace_photon}{Photon} Unity Networking is using as callbacks. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__public_api_gaf0468f6a0c8ab8caec09678e6dc6f3d5}{Photon\+Log\+Level} \{ \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5ae0a1284706116eec7a83a489235a9ef8}{Photon\+Log\+Level.\+Errors\+Only}, 
+\hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}, 
+\hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5abbd47109890259c0127154db1af26c75}{Photon\+Log\+Level.\+Full}
+ \}\begin{DoxyCompactList}\small\item\em Used to define the level of logging output created by the P\+UN classes. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__public_api_gab84b274b6aa3b3a3d7810361da16170f}{Photon\+Targets} \{ \\*
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fab1c94ca2fbc3e78fc30069c8d0f01680}{Photon\+Targets.\+All}, 
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa52ef9633d88a7480b3a938ff9eaa2a25}{Photon\+Targets.\+Others}, 
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fad0209f4a40060d6e7c37d29979d8f444}{Photon\+Targets.\+Master\+Client}, 
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170faf1983fc6b424304e28f91977e06f5881}{Photon\+Targets.\+All\+Buffered}, 
+\\*
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa7eb09c07159c5b57395510a1c3755705}{Photon\+Targets.\+Others\+Buffered}, 
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa07d978b16f68f868668a6384df9bc11b}{Photon\+Targets.\+All\+Via\+Server}, 
+\hyperlink{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa2dd089935363426140d8d54fee80464c}{Photon\+Targets.\+All\+Buffered\+Via\+Server}
+ \}\begin{DoxyCompactList}\small\item\em Enum of \char`\"{}target\char`\"{} options for R\+P\+Cs. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__public_api_ga91cc003c03acb26c6f1530440ebdbc88}{Peer\+State} \{ \\*
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88af704f57ea420275ad51bf55b7dec2c96}{Peer\+State.\+Uninitialized}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a8f20319172b2aa6813ba3359f8790a39}{Peer\+State.\+Peer\+Created}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7b2f31b90fe1c2cc33a52233c1925df3}{Peer\+State.\+Queued}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa927b3e1f83aa1b3c6feff945ca18f77}{Peer\+State.\+Authenticated}, 
+\\*
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a628d81b73c9e217e7388d07c448d98bf}{Peer\+State.\+Joined\+Lobby}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ab468dfbd5b304bf96c74152856bd09a7}{Peer\+State.\+Disconnecting\+From\+Masterserver}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a2adb83359e79fb5cfc94ab00dcf2184b}{Peer\+State.\+Connecting\+To\+Gameserver}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a5310d1fb96be7d3ddd41079a9249c2b3}{Peer\+State.\+Connected\+To\+Gameserver}, 
+\\*
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88af6807db4ae3a5c82b99bced82a0ca92b}{Peer\+State.\+Joining}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7d50c09f1ad7d098e0a847bcdcab7efb}{Peer\+State.\+Joined}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa9c7b1d7219fa9d3de551ba5bc639eb6}{Peer\+State.\+Leaving}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ac2b8e7a526f5bdbd0ca4e42a1fc87fdf}{Peer\+State.\+Disconnecting\+From\+Gameserver}, 
+\\*
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a6bfd906f466d549d660a2e7356ac58dd}{Peer\+State.\+Connecting\+To\+Masterserver}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a88a122d877a08d17b85e005b97321320}{Peer\+State.\+Queued\+Coming\+From\+Gameserver}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a10b0501000c144cb2a7424bd45e1bcde}{Peer\+State.\+Disconnecting}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aef70e46fd3bbc21e3e1f0b6815e750c0}{Peer\+State.\+Disconnected}, 
+\\*
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aaf3c26fc49c920a4779844921baeeef8}{Peer\+State.\+Connected\+To\+Master}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ae047588dabb5a0b1e059604b80289791}{Peer\+State.\+Connecting\+To\+Name\+Server}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ac495884e9133962e72063062d1382466}{Peer\+State.\+Connected\+To\+Name\+Server}, 
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa3db59f96790ca93f6c8ac703735f401}{Peer\+State.\+Disconnecting\+From\+Name\+Server}, 
+\\*
+\hyperlink{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aedb214653d9f3cecd840463790ac2894}{Peer\+State.\+Authenticating}
+ \}\begin{DoxyCompactList}\small\item\em Detailed connection / networking peer state. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__public_api_gad61b1461cf60ad9e8d86923d111d5cc9}{Disconnect\+Cause} \{ \\*
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ae28f71975b160263c7e6438b4b4429ef}{Disconnect\+Cause.\+Exception\+On\+Connect} = Status\+Code.\+Exception\+On\+Connect, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a281086f3f83f5f38b4b9a4572b60a368}{Disconnect\+Cause.\+Security\+Exception\+On\+Connect} = Status\+Code.\+Security\+Exception\+On\+Connect, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ad376a854099d47f8a5279893e854ec27}{Disconnect\+Cause.\+Timeout\+Disconnect} = Status\+Code.\+Timeout\+Disconnect, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a9b962f813e1575d4d311a9ab3e60afd4}{Disconnect\+Cause.\+Disconnect\+By\+Client\+Timeout} = Status\+Code.\+Timeout\+Disconnect, 
+\\*
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a927b48448e5111f5bac2a7d59833f051}{Disconnect\+Cause.\+Internal\+Receive\+Exception} = Status\+Code.\+Exception\+On\+Receive, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a0777deff381bd76ec1ab2dc434860022}{Disconnect\+Cause.\+Disconnect\+By\+Server} = Status\+Code.\+Disconnect\+By\+Server, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a354c849d41c85993a8a28975e0d1c996}{Disconnect\+Cause.\+Disconnect\+By\+Server\+Timeout} = Status\+Code.\+Disconnect\+By\+Server, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9abbec862190460d01acb3557a0e9a13f5}{Disconnect\+Cause.\+Disconnect\+By\+Server\+Logic} = Status\+Code.\+Disconnect\+By\+Server\+Logic, 
+\\*
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a443ec8de9a697e190f4b24ab3ab36a9d}{Disconnect\+Cause.\+Disconnect\+By\+Server\+User\+Limit} = Status\+Code.\+Disconnect\+By\+Server\+User\+Limit, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ab0d4998a26f5b5742ad38c4af8817e32}{Disconnect\+Cause.\+Exception} = Status\+Code.\+Exception, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9aa8534012cb63e62c0b3a2335206117cc}{Disconnect\+Cause.\+Invalid\+Region} = Error\+Code.\+Invalid\+Region, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a522f961eb7a2b35f0ef4b99b4ad3bb0a}{Disconnect\+Cause.\+Max\+Ccu\+Reached} = Error\+Code.\+Max\+Ccu\+Reached, 
+\\*
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ab67551dad56fc73fd4a580e810dc5f7f}{Disconnect\+Cause.\+Invalid\+Authentication} = Error\+Code.\+Invalid\+Authentication, 
+\hyperlink{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a65537dc549af3f90695ff7cf0002b17b}{Disconnect\+Cause.\+Authentication\+Ticket\+Expired} = 32753
+ \}\begin{DoxyCompactList}\small\item\em Summarizes the cause for a disconnect. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__public_api_ga78c69bbb6f79d1e4fb23d3f761eaf4aa}{I\+Pun\+Observable.\+On\+Photon\+Serialize\+View} (\hyperlink{class_photon_stream}{Photon\+Stream} stream, \hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
+\begin{DoxyCompactList}\small\item\em Called by P\+UN several times per second, so that your script can write and read synchronization data for the \hyperlink{class_photon_view}{Photon\+View}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Groups the most important classes that you need to understand early on. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{Public A\+PI@{Public A\+PI}!Disconnect\+Cause@{Disconnect\+Cause}}
+\index{Disconnect\+Cause@{Disconnect\+Cause}!Public A\+PI@{Public A\+PI}}
+\subsubsection[{\texorpdfstring{Disconnect\+Cause}{DisconnectCause}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Disconnect\+Cause}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{group__public_api_gad61b1461cf60ad9e8d86923d111d5cc9}{}\label{group__public_api_gad61b1461cf60ad9e8d86923d111d5cc9}
+
+
+Summarizes the cause for a disconnect. 
+
+Used in\+: On\+Connection\+Fail and On\+Failed\+To\+Connect\+To\+Photon. 
+
+Extracted from the status codes from Exit\+Games.\+Client.\+Photon.\+Status\+Code.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__public_api_gaf30bbea51cc8c4b1ddc239d1c5c1468f}{Photon\+Networking\+Message}
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Exception\+On\+Connect@{Exception\+On\+Connect}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Exception\+On\+Connect@{Exception\+On\+Connect}}\item[{\em 
+Exception\+On\+Connect\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ae28f71975b160263c7e6438b4b4429ef}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ae28f71975b160263c7e6438b4b4429ef}
+}]Connection could not be established. Possible cause\+: Local server not running.\index{Security\+Exception\+On\+Connect@{Security\+Exception\+On\+Connect}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Security\+Exception\+On\+Connect@{Security\+Exception\+On\+Connect}}\item[{\em 
+Security\+Exception\+On\+Connect\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a281086f3f83f5f38b4b9a4572b60a368}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a281086f3f83f5f38b4b9a4572b60a368}
+}]The security settings for client or server don\textquotesingle{}t allow a connection (see remarks). A common cause for this is that browser clients read a \char`\"{}crossdomain\char`\"{} file from the server. If that file is unavailable or not configured to let the client connect, this exception is thrown. \hyperlink{namespace_photon}{Photon} usually provides this crossdomain file for Unity. If it fails, read\+: \href{http://doc.exitgames.com/photon-server/PolicyApp}{\tt http\+://doc.\+exitgames.\+com/photon-\/server/\+Policy\+App} \index{Timeout\+Disconnect@{Timeout\+Disconnect}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Timeout\+Disconnect@{Timeout\+Disconnect}}\item[{\em 
+Timeout\+Disconnect\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ad376a854099d47f8a5279893e854ec27}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ad376a854099d47f8a5279893e854ec27}
+}]Connection timed out. Possible cause\+: Remote server not running or required ports blocked (due to router or firewall).\index{Disconnect\+By\+Client\+Timeout@{Disconnect\+By\+Client\+Timeout}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnect\+By\+Client\+Timeout@{Disconnect\+By\+Client\+Timeout}}\item[{\em 
+Disconnect\+By\+Client\+Timeout\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a9b962f813e1575d4d311a9ab3e60afd4}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a9b962f813e1575d4d311a9ab3e60afd4}
+}]Timeout disconnect by client (which decided an A\+CK was missing for too long).\index{Internal\+Receive\+Exception@{Internal\+Receive\+Exception}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Internal\+Receive\+Exception@{Internal\+Receive\+Exception}}\item[{\em 
+Internal\+Receive\+Exception\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a927b48448e5111f5bac2a7d59833f051}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a927b48448e5111f5bac2a7d59833f051}
+}]Exception in the receive-\/loop. Possible cause\+: Socket failure.\index{Disconnect\+By\+Server@{Disconnect\+By\+Server}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnect\+By\+Server@{Disconnect\+By\+Server}}\item[{\em 
+Disconnect\+By\+Server\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a0777deff381bd76ec1ab2dc434860022}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a0777deff381bd76ec1ab2dc434860022}
+}]Server actively disconnected this client.\index{Disconnect\+By\+Server\+Timeout@{Disconnect\+By\+Server\+Timeout}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnect\+By\+Server\+Timeout@{Disconnect\+By\+Server\+Timeout}}\item[{\em 
+Disconnect\+By\+Server\+Timeout\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a354c849d41c85993a8a28975e0d1c996}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a354c849d41c85993a8a28975e0d1c996}
+}]Timeout disconnect by server (which decided an A\+CK was missing for too long).\index{Disconnect\+By\+Server\+Logic@{Disconnect\+By\+Server\+Logic}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnect\+By\+Server\+Logic@{Disconnect\+By\+Server\+Logic}}\item[{\em 
+Disconnect\+By\+Server\+Logic\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9abbec862190460d01acb3557a0e9a13f5}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9abbec862190460d01acb3557a0e9a13f5}
+}]Server actively disconnected this client. Possible cause\+: Server\textquotesingle{}s send buffer full (too much data for client).\index{Disconnect\+By\+Server\+User\+Limit@{Disconnect\+By\+Server\+User\+Limit}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnect\+By\+Server\+User\+Limit@{Disconnect\+By\+Server\+User\+Limit}}\item[{\em 
+Disconnect\+By\+Server\+User\+Limit\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a443ec8de9a697e190f4b24ab3ab36a9d}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a443ec8de9a697e190f4b24ab3ab36a9d}
+}]Server actively disconnected this client. Possible cause\+: The server\textquotesingle{}s user limit was hit and client was forced to disconnect (on connect).\index{Exception@{Exception}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Exception@{Exception}}\item[{\em 
+Exception\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ab0d4998a26f5b5742ad38c4af8817e32}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ab0d4998a26f5b5742ad38c4af8817e32}
+}]Some exception caused the connection to close.\index{Invalid\+Region@{Invalid\+Region}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Invalid\+Region@{Invalid\+Region}}\item[{\em 
+Invalid\+Region\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9aa8534012cb63e62c0b3a2335206117cc}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9aa8534012cb63e62c0b3a2335206117cc}
+}](32756) Authorization on the \hyperlink{namespace_photon}{Photon} Cloud failed because the app\textquotesingle{}s subscription does not allow to use a particular region\textquotesingle{}s server.\index{Max\+Ccu\+Reached@{Max\+Ccu\+Reached}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Max\+Ccu\+Reached@{Max\+Ccu\+Reached}}\item[{\em 
+Max\+Ccu\+Reached\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a522f961eb7a2b35f0ef4b99b4ad3bb0a}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a522f961eb7a2b35f0ef4b99b4ad3bb0a}
+}](32757) Authorization on the \hyperlink{namespace_photon}{Photon} Cloud failed because the concurrent users (C\+CU) limit of the app\textquotesingle{}s subscription is reached.\index{Invalid\+Authentication@{Invalid\+Authentication}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Invalid\+Authentication@{Invalid\+Authentication}}\item[{\em 
+Invalid\+Authentication\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ab67551dad56fc73fd4a580e810dc5f7f}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9ab67551dad56fc73fd4a580e810dc5f7f}
+}](32767) The \hyperlink{namespace_photon}{Photon} Cloud rejected the sent App\+Id. Check your Dashboard and make sure the App\+Id you use is complete and correct.\index{Authentication\+Ticket\+Expired@{Authentication\+Ticket\+Expired}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Authentication\+Ticket\+Expired@{Authentication\+Ticket\+Expired}}\item[{\em 
+Authentication\+Ticket\+Expired\hypertarget{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a65537dc549af3f90695ff7cf0002b17b}{}\label{group__public_api_ggad61b1461cf60ad9e8d86923d111d5cc9a65537dc549af3f90695ff7cf0002b17b}
+}](32753) The Authentication ticket expired. Handle this by connecting again (which includes an authenticate to get a fresh ticket).\end{description}
+\end{Desc}
+\index{Public A\+PI@{Public A\+PI}!Peer\+State@{Peer\+State}}
+\index{Peer\+State@{Peer\+State}!Public A\+PI@{Public A\+PI}}
+\subsubsection[{\texorpdfstring{Peer\+State}{PeerState}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Peer\+State}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{group__public_api_ga91cc003c03acb26c6f1530440ebdbc88}{}\label{group__public_api_ga91cc003c03acb26c6f1530440ebdbc88}
+
+
+Detailed connection / networking peer state. 
+
+P\+UN implements a loadbalancing and authentication workflow \char`\"{}behind the scenes\char`\"{}, so some states will automatically advance to some follow up state. Those states are commented with \char`\"{}(will-\/change)\char`\"{}. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Uninitialized@{Uninitialized}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Uninitialized@{Uninitialized}}\item[{\em 
+Uninitialized\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88af704f57ea420275ad51bf55b7dec2c96}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88af704f57ea420275ad51bf55b7dec2c96}
+}]Not running. Only set before initialization and first use.\index{Peer\+Created@{Peer\+Created}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Peer\+Created@{Peer\+Created}}\item[{\em 
+Peer\+Created\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a8f20319172b2aa6813ba3359f8790a39}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a8f20319172b2aa6813ba3359f8790a39}
+}]Created and available to connect.\index{Queued@{Queued}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Queued@{Queued}}\item[{\em 
+Queued\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7b2f31b90fe1c2cc33a52233c1925df3}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7b2f31b90fe1c2cc33a52233c1925df3}
+}]Not used at the moment.\index{Authenticated@{Authenticated}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Authenticated@{Authenticated}}\item[{\em 
+Authenticated\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa927b3e1f83aa1b3c6feff945ca18f77}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa927b3e1f83aa1b3c6feff945ca18f77}
+}]The application is authenticated. P\+UN usually joins the lobby now.
+
+(will-\/change) Unless Auto\+Join\+Lobby is false.\index{Joined\+Lobby@{Joined\+Lobby}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Joined\+Lobby@{Joined\+Lobby}}\item[{\em 
+Joined\+Lobby\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a628d81b73c9e217e7388d07c448d98bf}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a628d81b73c9e217e7388d07c448d98bf}
+}]Client is in the lobby of the Master Server and gets room listings. Use Join, Create or Join\+Random to get into a room to play.\index{Disconnecting\+From\+Masterserver@{Disconnecting\+From\+Masterserver}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnecting\+From\+Masterserver@{Disconnecting\+From\+Masterserver}}\item[{\em 
+Disconnecting\+From\+Masterserver\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ab468dfbd5b304bf96c74152856bd09a7}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ab468dfbd5b304bf96c74152856bd09a7}
+}]Disconnecting. (will-\/change)\index{Connecting\+To\+Gameserver@{Connecting\+To\+Gameserver}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Connecting\+To\+Gameserver@{Connecting\+To\+Gameserver}}\item[{\em 
+Connecting\+To\+Gameserver\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a2adb83359e79fb5cfc94ab00dcf2184b}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a2adb83359e79fb5cfc94ab00dcf2184b}
+}]Connecting to game server (to join/create a room and play). (will-\/change)\index{Connected\+To\+Gameserver@{Connected\+To\+Gameserver}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Connected\+To\+Gameserver@{Connected\+To\+Gameserver}}\item[{\em 
+Connected\+To\+Gameserver\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a5310d1fb96be7d3ddd41079a9249c2b3}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a5310d1fb96be7d3ddd41079a9249c2b3}
+}]Similar to Connected state but on game server. Still in process to join/create room.
+
+(will-\/change)\index{Joining@{Joining}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Joining@{Joining}}\item[{\em 
+Joining\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88af6807db4ae3a5c82b99bced82a0ca92b}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88af6807db4ae3a5c82b99bced82a0ca92b}
+}]In process to join/create room (on game server). (will-\/change)\index{Joined@{Joined}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Joined@{Joined}}\item[{\em 
+Joined\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7d50c09f1ad7d098e0a847bcdcab7efb}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a7d50c09f1ad7d098e0a847bcdcab7efb}
+}]Final state of a room join/create sequence. This client can now exchange events / call R\+P\+Cs with other clients.\index{Leaving@{Leaving}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Leaving@{Leaving}}\item[{\em 
+Leaving\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa9c7b1d7219fa9d3de551ba5bc639eb6}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa9c7b1d7219fa9d3de551ba5bc639eb6}
+}]Leaving a room. (will-\/change)\index{Disconnecting\+From\+Gameserver@{Disconnecting\+From\+Gameserver}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnecting\+From\+Gameserver@{Disconnecting\+From\+Gameserver}}\item[{\em 
+Disconnecting\+From\+Gameserver\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ac2b8e7a526f5bdbd0ca4e42a1fc87fdf}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ac2b8e7a526f5bdbd0ca4e42a1fc87fdf}
+}]Workflow is leaving the game server and will re-\/connect to the master server. (will-\/change)\index{Connecting\+To\+Masterserver@{Connecting\+To\+Masterserver}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Connecting\+To\+Masterserver@{Connecting\+To\+Masterserver}}\item[{\em 
+Connecting\+To\+Masterserver\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a6bfd906f466d549d660a2e7356ac58dd}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a6bfd906f466d549d660a2e7356ac58dd}
+}]Workflow is connected to master server and will establish encryption and authenticate your app. (will-\/change)\index{Queued\+Coming\+From\+Gameserver@{Queued\+Coming\+From\+Gameserver}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Queued\+Coming\+From\+Gameserver@{Queued\+Coming\+From\+Gameserver}}\item[{\em 
+Queued\+Coming\+From\+Gameserver\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a88a122d877a08d17b85e005b97321320}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a88a122d877a08d17b85e005b97321320}
+}]Same Queued but coming from game server. (will-\/change)\index{Disconnecting@{Disconnecting}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnecting@{Disconnecting}}\item[{\em 
+Disconnecting\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a10b0501000c144cb2a7424bd45e1bcde}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88a10b0501000c144cb2a7424bd45e1bcde}
+}]P\+UN is disconnecting. This leads to Disconnected.
+
+(will-\/change)\index{Disconnected@{Disconnected}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnected@{Disconnected}}\item[{\em 
+Disconnected\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aef70e46fd3bbc21e3e1f0b6815e750c0}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aef70e46fd3bbc21e3e1f0b6815e750c0}
+}]No connection is setup, ready to connect. Similar to Peer\+Created.\index{Connected\+To\+Master@{Connected\+To\+Master}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Connected\+To\+Master@{Connected\+To\+Master}}\item[{\em 
+Connected\+To\+Master\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aaf3c26fc49c920a4779844921baeeef8}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aaf3c26fc49c920a4779844921baeeef8}
+}]Final state for connecting to master without joining the lobby (Auto\+Join\+Lobby is false).\index{Connecting\+To\+Name\+Server@{Connecting\+To\+Name\+Server}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Connecting\+To\+Name\+Server@{Connecting\+To\+Name\+Server}}\item[{\em 
+Connecting\+To\+Name\+Server\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ae047588dabb5a0b1e059604b80289791}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ae047588dabb5a0b1e059604b80289791}
+}]Client connects to the Name\+Server. This process includes low level connecting and setting up encryption. When done, state becomes Connected\+To\+Name\+Server.\index{Connected\+To\+Name\+Server@{Connected\+To\+Name\+Server}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Connected\+To\+Name\+Server@{Connected\+To\+Name\+Server}}\item[{\em 
+Connected\+To\+Name\+Server\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ac495884e9133962e72063062d1382466}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88ac495884e9133962e72063062d1382466}
+}]Client is connected to the Name\+Server and established enctryption already. You should call Op\+Get\+Regions or Connect\+To\+Region\+Master.\index{Disconnecting\+From\+Name\+Server@{Disconnecting\+From\+Name\+Server}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Disconnecting\+From\+Name\+Server@{Disconnecting\+From\+Name\+Server}}\item[{\em 
+Disconnecting\+From\+Name\+Server\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa3db59f96790ca93f6c8ac703735f401}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aa3db59f96790ca93f6c8ac703735f401}
+}]When disconnecting from a \hyperlink{namespace_photon}{Photon} Name\+Server. (will-\/change)\index{Authenticating@{Authenticating}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Authenticating@{Authenticating}}\item[{\em 
+Authenticating\hypertarget{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aedb214653d9f3cecd840463790ac2894}{}\label{group__public_api_gga91cc003c03acb26c6f1530440ebdbc88aedb214653d9f3cecd840463790ac2894}
+}]When connecting to a \hyperlink{namespace_photon}{Photon} Server, this state is intermediate before you can call any operations. (will-\/change)\end{description}
+\end{Desc}
+\index{Public A\+PI@{Public A\+PI}!Photon\+Log\+Level@{Photon\+Log\+Level}}
+\index{Photon\+Log\+Level@{Photon\+Log\+Level}!Public A\+PI@{Public A\+PI}}
+\subsubsection[{\texorpdfstring{Photon\+Log\+Level}{PhotonLogLevel}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Photon\+Log\+Level}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{group__public_api_gaf0468f6a0c8ab8caec09678e6dc6f3d5}{}\label{group__public_api_gaf0468f6a0c8ab8caec09678e6dc6f3d5}
+
+
+Used to define the level of logging output created by the P\+UN classes. 
+
+Either log errors, info (some more) or full.\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Errors\+Only@{Errors\+Only}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Errors\+Only@{Errors\+Only}}\item[{\em 
+Errors\+Only\hypertarget{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5ae0a1284706116eec7a83a489235a9ef8}{}\label{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5ae0a1284706116eec7a83a489235a9ef8}
+}]Show only errors. Minimal output. Note\+: Some might be \char`\"{}runtime errors\char`\"{} which you have to expect.\index{Informational@{Informational}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Informational@{Informational}}\item[{\em 
+Informational\hypertarget{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{}\label{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}
+}]Logs some of the workflow, calls and results.\index{Full@{Full}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Full@{Full}}\item[{\em 
+Full\hypertarget{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5abbd47109890259c0127154db1af26c75}{}\label{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5abbd47109890259c0127154db1af26c75}
+}]Every available log call gets into the console/log. Only use for debugging.\end{description}
+\end{Desc}
+\index{Public A\+PI@{Public A\+PI}!Photon\+Networking\+Message@{Photon\+Networking\+Message}}
+\index{Photon\+Networking\+Message@{Photon\+Networking\+Message}!Public A\+PI@{Public A\+PI}}
+\subsubsection[{\texorpdfstring{Photon\+Networking\+Message}{PhotonNetworkingMessage}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Photon\+Networking\+Message}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{group__public_api_gaf30bbea51cc8c4b1ddc239d1c5c1468f}{}\label{group__public_api_gaf30bbea51cc8c4b1ddc239d1c5c1468f}
+
+
+This enum defines the set of Mono\+Messages \hyperlink{namespace_photon}{Photon} Unity Networking is using as callbacks. 
+
+Implemented by Pun\+Behaviour. 
+
+Much like \char`\"{}\+Update()\char`\"{} in Unity, P\+UN will call methods in specific situations. Often, these methods are triggered when network operations complete (example\+: when joining a room).
+
+All those methods are defined and described in this enum and implemented by Pun\+Behaviour (which makes it easy to implement them as override).
+
+Each entry is the name of such a method and the description tells you when it gets used by P\+UN.
+
+Make sure to read the remarks per entry as some methods have optional parameters. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{On\+Connected\+To\+Photon@{On\+Connected\+To\+Photon}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Connected\+To\+Photon@{On\+Connected\+To\+Photon}}\item[{\em 
+On\+Connected\+To\+Photon\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa9583b114e6efdfd8068051d562391dc0}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa9583b114e6efdfd8068051d562391dc0}
+}]Called when the initial connection got established but before you can use the server. On\+Joined\+Lobby() or On\+Connected\+To\+Master() are called when P\+UN is ready. 
+
+This callback is only useful to detect if the server can be reached at all (technically). Most often, it\textquotesingle{}s enough to implement On\+Failed\+To\+Connect\+To\+Photon() and On\+Disconnected\+From\+Photon().
+
+{\itshape On\+Joined\+Lobby() or On\+Connected\+To\+Master() are called when P\+UN is ready.}
+
+When this is called, the low level connection is established and P\+UN will send your App\+Id, the user, etc in the background. This is not called for transitions from the masterserver to game servers.
+
+Example\+: void On\+Connected\+To\+Photon() \{ ... \} \index{On\+Left\+Room@{On\+Left\+Room}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Left\+Room@{On\+Left\+Room}}\item[{\em 
+On\+Left\+Room\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faf0e999adc414b29857944d5e5fabfe2e}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faf0e999adc414b29857944d5e5fabfe2e}
+}]Called when the local user/client left a room. When leaving a room, P\+UN brings you back to the Master Server. Before you can use lobbies and join or create rooms, On\+Joined\+Lobby() or On\+Connected\+To\+Master() will get called again.
+
+Example\+: void On\+Left\+Room() \{ ... \} \index{On\+Master\+Client\+Switched@{On\+Master\+Client\+Switched}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Master\+Client\+Switched@{On\+Master\+Client\+Switched}}\item[{\em 
+On\+Master\+Client\+Switched\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fadf130e855b7c27f0f10f66db4a7e83c4}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fadf130e855b7c27f0f10f66db4a7e83c4}
+}]Called after switching to a new Master\+Client when the current one leaves. This is not called when this client enters a room. The former Master\+Client is still in the player list when this method get called.
+
+Example\+: void On\+Master\+Client\+Switched(\+Photon\+Player new\+Master\+Client) \{ ... \} \index{On\+Photon\+Create\+Room\+Failed@{On\+Photon\+Create\+Room\+Failed}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Create\+Room\+Failed@{On\+Photon\+Create\+Room\+Failed}}\item[{\em 
+On\+Photon\+Create\+Room\+Failed\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab6273c525ff9cd304d2a8b0adb61a5ea}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab6273c525ff9cd304d2a8b0adb61a5ea}
+}]Called when a Create\+Room() call failed. Optional parameters provide Error\+Code and message. 
+
+Most likely because the room name is already in use (some other client was faster than you). P\+UN logs some info if the \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{Photon\+Network.\+log\+Level} is $>$= \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}.
+
+Example\+: void On\+Photon\+Create\+Room\+Failed() \{ ... \}
+
+Example\+: void On\+Photon\+Create\+Room\+Failed(object\mbox{[}$\,$\mbox{]} code\+And\+Msg) \{ // code\+And\+Msg\mbox{[}0\mbox{]} is short Error\+Code. code\+And\+Msg\mbox{[}1\mbox{]} is string debug msg. \} \index{On\+Photon\+Join\+Room\+Failed@{On\+Photon\+Join\+Room\+Failed}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Join\+Room\+Failed@{On\+Photon\+Join\+Room\+Failed}}\item[{\em 
+On\+Photon\+Join\+Room\+Failed\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3ad62b9539e5cf97eacf06e2268dea5a}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3ad62b9539e5cf97eacf06e2268dea5a}
+}]Called when a Join\+Room() call failed. Optional parameters provide Error\+Code and message. 
+
+Most likely error is that the room does not exist or the room is full (some other client was faster than you). P\+UN logs some info if the \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{Photon\+Network.\+log\+Level} is $>$= \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}.
+
+Example\+: void On\+Photon\+Join\+Room\+Failed() \{ ... \}
+
+Example\+: void On\+Photon\+Join\+Room\+Failed(object\mbox{[}$\,$\mbox{]} code\+And\+Msg) \{ // code\+And\+Msg\mbox{[}0\mbox{]} is short Error\+Code. code\+And\+Msg\mbox{[}1\mbox{]} is string debug msg. \} \index{On\+Created\+Room@{On\+Created\+Room}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Created\+Room@{On\+Created\+Room}}\item[{\em 
+On\+Created\+Room\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2959bccbe2dabb6a8d2024ea241f6f2f}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2959bccbe2dabb6a8d2024ea241f6f2f}
+}]Called when this client created a room and entered it. On\+Joined\+Room() will be called as well. 
+
+This callback is only called on the client which created a room (see \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Photon\+Network.\+Create\+Room}).
+
+As any client might close (or drop connection) anytime, there is a chance that the creator of a room does not execute On\+Created\+Room.
+
+If you need specific room properties or a \char`\"{}start signal\char`\"{}, it is safer to implement On\+Master\+Client\+Switched() and to make the new Master\+Client check the room\textquotesingle{}s state.
+
+Example\+: void On\+Created\+Room() \{ ... \} \index{On\+Joined\+Lobby@{On\+Joined\+Lobby}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Joined\+Lobby@{On\+Joined\+Lobby}}\item[{\em 
+On\+Joined\+Lobby\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2af1a9ab5a169e8800132c0625d3c6b2}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa2af1a9ab5a169e8800132c0625d3c6b2}
+}]Called on entering a lobby on the Master Server. The actual room-\/list updates will call On\+Received\+Room\+List\+Update(). 
+
+Note\+: When \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} is false, On\+Connected\+To\+Master() will be called and the room list won\textquotesingle{}t become available.
+
+While in the lobby, the roomlist is automatically updated in fixed intervals (which you can\textquotesingle{}t modify). The room list gets available when On\+Received\+Room\+List\+Update() gets called after On\+Joined\+Lobby().
+
+Example\+: void On\+Joined\+Lobby() \{ ... \} \index{On\+Left\+Lobby@{On\+Left\+Lobby}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Left\+Lobby@{On\+Left\+Lobby}}\item[{\em 
+On\+Left\+Lobby\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa62d34f824fc4c61b693dd35ff3e7e79b}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa62d34f824fc4c61b693dd35ff3e7e79b}
+}]Called after leaving a lobby. When you leave a lobby, \hyperlink{class_photon_network_a5ab80136622c2ae46b0e4f766e489d74}{Create\+Room} and \hyperlink{class_photon_network_aa9a112ccaaf71a296b823e9637584445}{Join\+Random\+Room} automatically refer to the default lobby.
+
+Example\+: void On\+Left\+Lobby() \{ ... \} \index{On\+Disconnected\+From\+Photon@{On\+Disconnected\+From\+Photon}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Disconnected\+From\+Photon@{On\+Disconnected\+From\+Photon}}\item[{\em 
+On\+Disconnected\+From\+Photon\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa6fae9412143c8e2158841c492b22d698}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa6fae9412143c8e2158841c492b22d698}
+}]Called after disconnecting from the \hyperlink{namespace_photon}{Photon} server. In some cases, other callbacks are called before On\+Disconnected\+From\+Photon is called. Examples\+: On\+Connection\+Fail() and On\+Failed\+To\+Connect\+To\+Photon().
+
+Example\+: void On\+Disconnected\+From\+Photon() \{ ... \} \index{On\+Connection\+Fail@{On\+Connection\+Fail}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Connection\+Fail@{On\+Connection\+Fail}}\item[{\em 
+On\+Connection\+Fail\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa90c9be8eb52ae376a236bfd0a28d7918}
+}]Called when something causes the connection to fail (after it was established), followed by a call to On\+Disconnected\+From\+Photon(). If the server could not be reached in the first place, On\+Failed\+To\+Connect\+To\+Photon is called instead. The reason for the error is provided as Status\+Code.
+
+Example\+: void On\+Connection\+Fail(\+Disconnect\+Cause cause) \{ ... \} \index{On\+Failed\+To\+Connect\+To\+Photon@{On\+Failed\+To\+Connect\+To\+Photon}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Failed\+To\+Connect\+To\+Photon@{On\+Failed\+To\+Connect\+To\+Photon}}\item[{\em 
+On\+Failed\+To\+Connect\+To\+Photon\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa7546497495fd3c2f785966943e8d0568}
+}]Called if a connect call to the \hyperlink{namespace_photon}{Photon} server failed before the connection was established, followed by a call to On\+Disconnected\+From\+Photon(). On\+Connection\+Fail only gets called when a connection to a \hyperlink{namespace_photon}{Photon} server was established in the first place.
+
+Example\+: void On\+Failed\+To\+Connect\+To\+Photon(\+Disconnect\+Cause cause) \{ ... \} \index{On\+Received\+Room\+List\+Update@{On\+Received\+Room\+List\+Update}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Received\+Room\+List\+Update@{On\+Received\+Room\+List\+Update}}\item[{\em 
+On\+Received\+Room\+List\+Update\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa75519954740466351e71d794425f6b12}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa75519954740466351e71d794425f6b12}
+}]Called for any update of the room-\/listing while in a lobby (\hyperlink{class_photon_network_a8ad64b1a76c7918bbe5642639afff458}{Photon\+Network.\+inside\+Lobby}) on the Master Server. P\+UN provides the list of rooms by \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Photon\+Network.\+Get\+Room\+List()}.~\newline
+ Each item is a \hyperlink{class_room_info}{Room\+Info} which might include custom properties (provided you defined those as lobby-\/listed when creating a room).
+
+Not all types of lobbies provide a listing of rooms to the client. Some are silent and specialized for server-\/side matchmaking.
+
+Example\+: void On\+Received\+Room\+List\+Update() \{ ... \} \index{On\+Joined\+Room@{On\+Joined\+Room}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Joined\+Room@{On\+Joined\+Room}}\item[{\em 
+On\+Joined\+Room\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa3f4efa6b23780a66a9462d8634cca4c8}
+}]Called when entering a room (by creating or joining it). Called on all clients (including the Master Client). 
+
+This method is commonly used to instantiate player characters. If a match has to be started \char`\"{}actively\char`\"{}, you can instead call an \hyperlink{class_photon_view_ad288db13a15d581e0f7c5886f4036720}{Pun\+R\+PC} triggered by a user\textquotesingle{}s button-\/press or a timer.
+
+When this is called, you can usually already access the existing players in the room via \hyperlink{class_photon_network_a2dc5e6cba79f899d9952f804db35b2f3}{Photon\+Network.\+player\+List}. Also, all custom properties should be already available as \hyperlink{class_room_info_a928b103a3e88d2c090152440aa6fa874}{Room.\+custom\+Properties}. Check \hyperlink{class_room_aa9d85e54b2ff1b151de3670e87549966}{Room.\+player\+Count} to find out if enough players are in the room to start playing.
+
+Example\+: void On\+Joined\+Room() \{ ... \} \index{On\+Photon\+Player\+Connected@{On\+Photon\+Player\+Connected}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Player\+Connected@{On\+Photon\+Player\+Connected}}\item[{\em 
+On\+Photon\+Player\+Connected\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faccfd8b0940a4981818cc4147e29de834}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faccfd8b0940a4981818cc4147e29de834}
+}]Called when a remote player entered the room. This \hyperlink{class_photon_player}{Photon\+Player} is already added to the playerlist at this time. 
+
+If your game starts with a certain number of players, this callback can be useful to check the \hyperlink{class_room_aa9d85e54b2ff1b151de3670e87549966}{Room.\+player\+Count} and find out if you can start.
+
+Example\+: void On\+Photon\+Player\+Connected(\+Photon\+Player new\+Player) \{ ... \} \index{On\+Photon\+Player\+Disconnected@{On\+Photon\+Player\+Disconnected}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Player\+Disconnected@{On\+Photon\+Player\+Disconnected}}\item[{\em 
+On\+Photon\+Player\+Disconnected\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa39b1e276b8dab1e7620a643b7e01d71c}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa39b1e276b8dab1e7620a643b7e01d71c}
+}]Called when a remote player left the room. This \hyperlink{class_photon_player}{Photon\+Player} is already removed from the playerlist at this time. 
+
+When your client calls Photon\+Network.\+leave\+Room, P\+UN will call this method on the remaining clients. When a remote client drops connection or gets closed, this callback gets executed. after a timeout of several seconds.
+
+Example\+: void On\+Photon\+Player\+Disconnected(\+Photon\+Player other\+Player) \{ ... \} \index{On\+Photon\+Random\+Join\+Failed@{On\+Photon\+Random\+Join\+Failed}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Random\+Join\+Failed@{On\+Photon\+Random\+Join\+Failed}}\item[{\em 
+On\+Photon\+Random\+Join\+Failed\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fad07f29ca1e2135927cf0966873408125}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fad07f29ca1e2135927cf0966873408125}
+}]Called after a Join\+Random() call failed. Optional parameters provide Error\+Code and message. 
+
+Most likely all rooms are full or no rooms are available. When using multiple lobbies (via Join\+Lobby or \hyperlink{class_typed_lobby}{Typed\+Lobby}), another lobby might have more/fitting rooms. P\+UN logs some info if the \hyperlink{class_photon_network_aa7c0c32ec0a25f37438436f10c5bde59}{Photon\+Network.\+log\+Level} is $>$= \hyperlink{group__public_api_ggaf0468f6a0c8ab8caec09678e6dc6f3d5a5391f9a882a54c787b206138ed6d28b0}{Photon\+Log\+Level.\+Informational}.
+
+Example\+: void On\+Photon\+Random\+Join\+Failed() \{ ... \}
+
+Example\+: void On\+Photon\+Random\+Join\+Failed(object\mbox{[}$\,$\mbox{]} code\+And\+Msg) \{ // code\+And\+Msg\mbox{[}0\mbox{]} is short Error\+Code. code\+And\+Msg\mbox{[}1\mbox{]} is string debug msg. \} \index{On\+Connected\+To\+Master@{On\+Connected\+To\+Master}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Connected\+To\+Master@{On\+Connected\+To\+Master}}\item[{\em 
+On\+Connected\+To\+Master\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa883ba3af22ed6fc336cde8cb71624d30}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa883ba3af22ed6fc336cde8cb71624d30}
+}]Called after the connection to the master is established and authenticated but only when \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} is false. If you set \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} to true, On\+Joined\+Lobby() will be called instead of this.
+
+You can join rooms and create them even without being in a lobby. The default lobby is used in that case. The list of available rooms won\textquotesingle{}t become available unless you join a lobby via Photon\+Network.\+join\+Lobby.
+
+Example\+: void On\+Connected\+To\+Master() \{ ... \} \index{On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}}\item[{\em 
+On\+Photon\+Serialize\+View\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}
+}]Implement to customize the data a \hyperlink{class_photon_view}{Photon\+View} regularly synchronizes. Called every \textquotesingle{}network-\/update\textquotesingle{} when observed by \hyperlink{class_photon_view}{Photon\+View}. 
+
+This method will be called in scripts that are assigned as Observed component of a \hyperlink{class_photon_view}{Photon\+View}. \hyperlink{class_photon_network_ac23d14ad150a87d51f4ffaa286db29e1}{Photon\+Network.\+send\+Rate\+On\+Serialize} affects how often this method is called. \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{Photon\+Network.\+send\+Rate} affects how often packages are sent by this client.
+
+Implementing this method, you can customize which data a \hyperlink{class_photon_view}{Photon\+View} regularly synchronizes. Your code defines what is being sent (content) and how your data is used by receiving clients.
+
+Unlike other callbacks, {\itshape On\+Photon\+Serialize\+View only gets called when it is assigned to a \hyperlink{class_photon_view}{Photon\+View}} as \hyperlink{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}{Photon\+View.\+observed} script.
+
+To make use of this method, the \hyperlink{class_photon_stream}{Photon\+Stream} is essential. It will be in \char`\"{}writing\char`\"{} mode\char`\"{} on the
+    client that controls a Photon\+View (\+Photon\+Stream.\+is\+Writing == true) and in \char`\"{}reading mode" on the remote clients that just receive that the controlling client sends.
+
+If you skip writing any value into the stream, P\+UN will skip the update. Used carefully, this can conserve bandwidth and messages (which have a limit per room/second).
+
+Note that On\+Photon\+Serialize\+View is not called on remote clients when the sender does not send any update. This can\textquotesingle{}t be used as \char`\"{}x-\/times per second Update()\char`\"{}.
+
+Example\+: void On\+Photon\+Serialize\+View(\+Photon\+Stream stream, Photon\+Message\+Info info) \{ ... \} \index{On\+Photon\+Instantiate@{On\+Photon\+Instantiate}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Instantiate@{On\+Photon\+Instantiate}}\item[{\em 
+On\+Photon\+Instantiate\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa8bb589bf7df8d2be1f0b4b586ba8001}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa8bb589bf7df8d2be1f0b4b586ba8001}
+}]Called on all scripts on a Game\+Object (and children) that have been Instantiated using \hyperlink{class_photon_network_a843d9f62d28ab123c83291c1e6bb857d}{Photon\+Network.\+Instantiate}. \hyperlink{class_photon_message_info}{Photon\+Message\+Info} parameter provides info about who created the object and when (based off Photon\+Networking.\+time).
+
+Example\+: void On\+Photon\+Instantiate(\+Photon\+Message\+Info info) \{ ... \} \index{On\+Photon\+Max\+Cccu\+Reached@{On\+Photon\+Max\+Cccu\+Reached}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Max\+Cccu\+Reached@{On\+Photon\+Max\+Cccu\+Reached}}\item[{\em 
+On\+Photon\+Max\+Cccu\+Reached\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa1d2567b2c2f8ec1799a293b0359b4046}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa1d2567b2c2f8ec1799a293b0359b4046}
+}]Because the concurrent user limit was (temporarily) reached, this client is rejected by the server and disconnecting. When this happens, the user might try again later. You can\textquotesingle{}t create or join rooms in On\+Photon\+Max\+Ccu\+Reached(), cause the client will be disconnecting. You can raise the C\+CU limits with a new license (when you host yourself) or extended subscription (when using the \hyperlink{namespace_photon}{Photon} Cloud). The \hyperlink{namespace_photon}{Photon} Cloud will mail you when the C\+CU limit was reached. This is also visible in the Dashboard (webpage).
+
+Example\+: void On\+Photon\+Max\+Cccu\+Reached() \{ ... \} \index{On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}}\item[{\em 
+On\+Photon\+Custom\+Room\+Properties\+Changed\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fafbc17ce96afe80127d732de2d4be0378}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fafbc17ce96afe80127d732de2d4be0378}
+}]Called when a room\textquotesingle{}s custom properties changed. The properties\+That\+Changed contains all that was set via \hyperlink{class_room_a9f8ac164f4f24be4140221b72792250a}{Room.\+Set\+Custom\+Properties}. 
+
+Since v1.\+25 this method has one parameter\+: Hashtable properties\+That\+Changed. Changing properties must be done by \hyperlink{class_room_a9f8ac164f4f24be4140221b72792250a}{Room.\+Set\+Custom\+Properties}, which causes this callback locally, too.
+
+Example\+: void On\+Photon\+Custom\+Room\+Properties\+Changed(\+Hashtable properties\+That\+Changed) \{ ... \} \index{On\+Photon\+Player\+Properties\+Changed@{On\+Photon\+Player\+Properties\+Changed}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Player\+Properties\+Changed@{On\+Photon\+Player\+Properties\+Changed}}\item[{\em 
+On\+Photon\+Player\+Properties\+Changed\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa67402d95c324cda2b6d6e2fc391ae941}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa67402d95c324cda2b6d6e2fc391ae941}
+}]Called when custom player-\/properties are changed. Player and the changed properties are passed as object\mbox{[}\mbox{]}. 
+
+Since v1.\+25 this method has one parameter\+: object\mbox{[}\mbox{]} player\+And\+Updated\+Props, which contains two entries.~\newline
+ \mbox{[}0\mbox{]} is the affected \hyperlink{class_photon_player}{Photon\+Player}.~\newline
+ \mbox{[}1\mbox{]} is the Hashtable of properties that changed.~\newline
+
+
+We are using a object\mbox{[}\mbox{]} due to limitations of Unity\textquotesingle{}s Game\+Object.\+Send\+Message (which has only one optional parameter).
+
+Changing properties must be done by \hyperlink{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{Photon\+Player.\+Set\+Custom\+Properties}, which causes this callback locally, too.
+
+Example\+:
+\begin{DoxyPre}
+    void OnPhotonPlayerPropertiesChanged(object[] playerAndUpdatedProps) \{
+        \hyperlink{class_photon_player}{PhotonPlayer} player = playerAndUpdatedProps[0] as \hyperlink{class_photon_player}{PhotonPlayer};
+        Hashtable props = playerAndUpdatedProps[1] as Hashtable;
+        //...
+    \}\end{DoxyPre}
+ \index{On\+Updated\+Friend\+List@{On\+Updated\+Friend\+List}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Updated\+Friend\+List@{On\+Updated\+Friend\+List}}\item[{\em 
+On\+Updated\+Friend\+List\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab39600c160a074fb0b76467956dadec9}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab39600c160a074fb0b76467956dadec9}
+}]Called when the server sent the response to a Find\+Friends request and updated \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}. The friends list is available as \hyperlink{class_photon_network_afd22fd553d52fdc63e975c32ea47514f}{Photon\+Network.\+Friends}, listing name, online state and the room a user is in (if any).
+
+Example\+: void On\+Updated\+Friend\+List() \{ ... \} \index{On\+Custom\+Authentication\+Failed@{On\+Custom\+Authentication\+Failed}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Custom\+Authentication\+Failed@{On\+Custom\+Authentication\+Failed}}\item[{\em 
+On\+Custom\+Authentication\+Failed\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa03351bfa4fb9325a5b0486862d4be3be}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa03351bfa4fb9325a5b0486862d4be3be}
+}]Called when the custom authentication failed. Followed by disconnect! 
+
+Custom Authentication can fail due to user-\/input, bad tokens/secrets. If authentication is successful, this method is not called. Implement On\+Joined\+Lobby() or On\+Connected\+To\+Master() (as usual).
+
+During development of a game, it might also fail due to wrong configuration on the server side. In those cases, logging the debug\+Message is very important.
+
+Unless you setup a custom authentication service for your app (in the \href{https://www.exitgames.com/dashboard}{\tt Dashboard}), this won\textquotesingle{}t be called!
+
+Example\+: void On\+Custom\+Authentication\+Failed(string debug\+Message) \{ ... \} \index{On\+Web\+Rpc\+Response@{On\+Web\+Rpc\+Response}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Web\+Rpc\+Response@{On\+Web\+Rpc\+Response}}\item[{\em 
+On\+Web\+Rpc\+Response\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa98a8b15d4aa12e02e5ccbc98172eecc}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468faa98a8b15d4aa12e02e5ccbc98172eecc}
+}]Called by P\+UN when the response to a Web\+R\+PC is available. See Photon\+Network.\+Web\+R\+PC. 
+
+Important\+: The response.\+Return\+Code is 0 if \hyperlink{namespace_photon}{Photon} was able to reach your web-\/service. The content of the response is what your web-\/service sent. You can create a Web\+Response instance from it. Example\+: \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response} web\+Response = new \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response(operation\+Response)};
+
+Please note\+: Class Operation\+Response is in a namespace which needs to be \char`\"{}used\char`\"{}\+: using \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Exit\+Games.\+Client.\+Photon}; // includes Operation\+Response (and other classes)
+
+The Operation\+Response.\+Return\+Code by \hyperlink{namespace_photon}{Photon} is\+: 0 for \char`\"{}\+O\+K\char`\"{} -\/3 for \char`\"{}\+Web-\/\+Service not configured\char`\"{} (see Dashboard / Web\+Hooks) -\/5 for \char`\"{}\+Web-\/\+Service does now have R\+P\+C path/name\char`\"{} (at least for Azure)
+
+Example\+: void On\+Web\+Rpc\+Response(\+Operation\+Response response) \{ ... \} \index{On\+Ownership\+Request@{On\+Ownership\+Request}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Ownership\+Request@{On\+Ownership\+Request}}\item[{\em 
+On\+Ownership\+Request\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fac859a296d058a67508e48b2a0363e71c}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fac859a296d058a67508e48b2a0363e71c}
+}]Called when another player requests ownership of a \hyperlink{class_photon_view}{Photon\+View} from you (the current owner). The parameter view\+And\+Player contains\+:
+
+\hyperlink{class_photon_view}{Photon\+View} view = view\+And\+Player\mbox{[}0\mbox{]} as \hyperlink{class_photon_view}{Photon\+View};
+
+\hyperlink{class_photon_player}{Photon\+Player} requesting\+Player = view\+And\+Player\mbox{[}1\mbox{]} as \hyperlink{class_photon_player}{Photon\+Player}; 
+
+void On\+Ownership\+Request(object\mbox{[}$\,$\mbox{]} view\+And\+Player) \{\} //\index{On\+Lobby\+Statistics\+Update@{On\+Lobby\+Statistics\+Update}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!On\+Lobby\+Statistics\+Update@{On\+Lobby\+Statistics\+Update}}\item[{\em 
+On\+Lobby\+Statistics\+Update\hypertarget{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab1a1f76626b99f398def802effe4908a}{}\label{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fab1a1f76626b99f398def802effe4908a}
+}]Called when the Master Server sent an update for the Lobby Statistics, updating \hyperlink{class_photon_network_abdced09cccf61ae817cb97705ffce137}{Photon\+Network.\+Lobby\+Statistics}. This callback has two preconditions\+: Enable\+Lobby\+Statistics must be set to true, before this client connects. And the client has to be connected to the Master Server, which is providing the info about lobbies. \end{description}
+\end{Desc}
+\index{Public A\+PI@{Public A\+PI}!Photon\+Targets@{Photon\+Targets}}
+\index{Photon\+Targets@{Photon\+Targets}!Public A\+PI@{Public A\+PI}}
+\subsubsection[{\texorpdfstring{Photon\+Targets}{PhotonTargets}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Photon\+Targets}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{group__public_api_gab84b274b6aa3b3a3d7810361da16170f}{}\label{group__public_api_gab84b274b6aa3b3a3d7810361da16170f}
+
+
+Enum of \char`\"{}target\char`\"{} options for R\+P\+Cs. 
+
+These define which remote clients get your R\+PC call. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{All@{All}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!All@{All}}\item[{\em 
+All\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fab1c94ca2fbc3e78fc30069c8d0f01680}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fab1c94ca2fbc3e78fc30069c8d0f01680}
+}]Sends the R\+PC to everyone else and executes it immediately on this client. Player who join later will not execute this R\+PC.\index{Others@{Others}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Others@{Others}}\item[{\em 
+Others\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa52ef9633d88a7480b3a938ff9eaa2a25}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa52ef9633d88a7480b3a938ff9eaa2a25}
+}]Sends the R\+PC to everyone else. This client does not execute the R\+PC. Player who join later will not execute this R\+PC.\index{Master\+Client@{Master\+Client}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Master\+Client@{Master\+Client}}\item[{\em 
+Master\+Client\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fad0209f4a40060d6e7c37d29979d8f444}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fad0209f4a40060d6e7c37d29979d8f444}
+}]Sends the R\+PC to Master\+Client only. Careful\+: The Master\+Client might disconnect before it executes the R\+PC and that might cause dropped R\+P\+Cs.\index{All\+Buffered@{All\+Buffered}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!All\+Buffered@{All\+Buffered}}\item[{\em 
+All\+Buffered\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170faf1983fc6b424304e28f91977e06f5881}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170faf1983fc6b424304e28f91977e06f5881}
+}]Sends the R\+PC to everyone else and executes it immediately on this client. New players get the R\+PC when they join as it\textquotesingle{}s buffered (until this client leaves).\index{Others\+Buffered@{Others\+Buffered}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!Others\+Buffered@{Others\+Buffered}}\item[{\em 
+Others\+Buffered\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa7eb09c07159c5b57395510a1c3755705}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa7eb09c07159c5b57395510a1c3755705}
+}]Sends the R\+PC to everyone. This client does not execute the R\+PC. New players get the R\+PC when they join as it\textquotesingle{}s buffered (until this client leaves).\index{All\+Via\+Server@{All\+Via\+Server}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!All\+Via\+Server@{All\+Via\+Server}}\item[{\em 
+All\+Via\+Server\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa07d978b16f68f868668a6384df9bc11b}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa07d978b16f68f868668a6384df9bc11b}
+}]Sends the R\+PC to everyone (including this client) through the server. This client executes the R\+PC like any other when it received it from the server. Benefit\+: The server\textquotesingle{}s order of sending the R\+P\+Cs is the same on all clients. \index{All\+Buffered\+Via\+Server@{All\+Buffered\+Via\+Server}!Public A\+PI@{Public A\+PI}}\index{Public A\+PI@{Public A\+PI}!All\+Buffered\+Via\+Server@{All\+Buffered\+Via\+Server}}\item[{\em 
+All\+Buffered\+Via\+Server\hypertarget{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa2dd089935363426140d8d54fee80464c}{}\label{group__public_api_ggab84b274b6aa3b3a3d7810361da16170fa2dd089935363426140d8d54fee80464c}
+}]Sends the R\+PC to everyone (including this client) through the server and buffers it for players joining later. This client executes the R\+PC like any other when it received it from the server. Benefit\+: The server\textquotesingle{}s order of sending the R\+P\+Cs is the same on all clients. \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{Public A\+PI@{Public A\+PI}!On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}}
+\index{On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}!Public A\+PI@{Public A\+PI}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Serialize\+View(\+Photon\+Stream stream, Photon\+Message\+Info info)}{OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+Pun\+Observable.\+On\+Photon\+Serialize\+View (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Stream}}]{stream, }
+\item[{{\bf Photon\+Message\+Info}}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{group__public_api_ga78c69bbb6f79d1e4fb23d3f761eaf4aa}{}\label{group__public_api_ga78c69bbb6f79d1e4fb23d3f761eaf4aa}
+
+
+Called by P\+UN several times per second, so that your script can write and read synchronization data for the \hyperlink{class_photon_view}{Photon\+View}. 
+
+This method will be called in scripts that are assigned as Observed component of a \hyperlink{class_photon_view}{Photon\+View}.~\newline
+ \hyperlink{class_photon_network_ac23d14ad150a87d51f4ffaa286db29e1}{Photon\+Network.\+send\+Rate\+On\+Serialize} affects how often this method is called.~\newline
+ \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{Photon\+Network.\+send\+Rate} affects how often packages are sent by this client.~\newline
+
+
+Implementing this method, you can customize which data a \hyperlink{class_photon_view}{Photon\+View} regularly synchronizes. Your code defines what is being sent (content) and how your data is used by receiving clients.
+
+Unlike other callbacks, {\itshape On\+Photon\+Serialize\+View only gets called when it is assigned to a \hyperlink{class_photon_view}{Photon\+View}} as \hyperlink{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}{Photon\+View.\+observed} script.
+
+To make use of this method, the \hyperlink{class_photon_stream}{Photon\+Stream} is essential. It will be in \char`\"{}writing\char`\"{} mode\char`\"{} on the
+client that controls a Photon\+View (\+Photon\+Stream.\+is\+Writing == true) and in \char`\"{}reading mode" on the remote clients that just receive that the controlling client sends.
+
+If you skip writing any value into the stream, P\+UN will skip the update. Used carefully, this can conserve bandwidth and messages (which have a limit per room/second).
+
+Note that On\+Photon\+Serialize\+View is not called on remote clients when the sender does not send any update. This can\textquotesingle{}t be used as \char`\"{}x-\/times per second Update()\char`\"{}. 
+
+Implemented in \hyperlink{class_photon_transform_view_a5d1d6606c9c935b2326b31b292f37a7e}{Photon\+Transform\+View}, and \hyperlink{class_pickup_item_a7b6809bac46d2eaddc309e2ad97167fa}{Pickup\+Item}.
+

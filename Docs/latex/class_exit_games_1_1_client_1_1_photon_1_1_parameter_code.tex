@@ -1,0 +1,576 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code}{}\section{Exit\+Games.\+Client.\+Photon.\+Parameter\+Code Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code}\index{Exit\+Games.\+Client.\+Photon.\+Parameter\+Code@{Exit\+Games.\+Client.\+Photon.\+Parameter\+Code}}
+
+
+Class for constants.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a89faf31fa005273789198373b5e3dabf}{Suppress\+Room\+Events} = 237
+\begin{DoxyCompactList}\small\item\em (237) A bool parameter for creating games. If set to true, no room events are sent to the clients on join and leave. Default\+: false (and not sent).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a0574262c253d27175d80c8ca7771300d}{Empty\+Room\+T\+TL} = 236
+\begin{DoxyCompactList}\small\item\em (236) Time To Live (T\+TL) for a room when the last player leaves. Keeps room in memory for case a player re-\/joins soon. In milliseconds.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a90062be6045e858dfdefc63c6bb26cc9}{Player\+T\+TL} = 235
+\begin{DoxyCompactList}\small\item\em (235) Time To Live (T\+TL) for an \textquotesingle{}actor\textquotesingle{} in a room. If a client disconnects, this actor is inactive first and removed after this timeout. In milliseconds.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1b563d7ed2a72e96474490ee5b95a613}{Event\+Forward} = 234
+\begin{DoxyCompactList}\small\item\em (234) Optional parameter of Op\+Raise\+Event to forward the event to some web-\/service.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aafa0f3452290ec0f74bdb406580fe31a}{Is\+Coming\+Back} = (byte)233
+\begin{DoxyCompactList}\small\item\em (233) Optional parameter of Op\+Leave in async games. If false, the player does abandons the game (forever). By default players become inactive and can re-\/join.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_add307b46f4a69da70ff2e917d9e36da6}{Is\+Inactive} = (byte)233
+\begin{DoxyCompactList}\small\item\em (233) Used in Ev\+Leave to describe if a user is inactive (and might come back) or not. In async / Turnbased games, inactive is default.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_adfdc1774ad56abfc3aad08013ed26a56}{Check\+User\+On\+Join} = (byte)232
+\begin{DoxyCompactList}\small\item\em (232) Used when creating rooms to define if any userid can join the room only once.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aac4c8524d492e71f0f7285db64872860}{Expected\+Values} = (byte)231
+\begin{DoxyCompactList}\small\item\em (231) Code for \char`\"{}\+Check And Swap\char`\"{} (C\+AS) when changing properties.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_acf4cf60ff38fc481c7b1a9becd0d42c5}{Address} = 230
+\begin{DoxyCompactList}\small\item\em (230) Address of a (game) server to use.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ace022047377b9cce0b571defc06a021e}{Peer\+Count} = 229
+\begin{DoxyCompactList}\small\item\em (229) Count of players in this application in a rooms (used in stats event)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af1c484be2b1e6474d46204e7cc7b6fde}{Game\+Count} = 228
+\begin{DoxyCompactList}\small\item\em (228) Count of games in this application (used in stats event)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a362ac423e3572752f5b8b29270d059c8}{Master\+Peer\+Count} = 227
+\begin{DoxyCompactList}\small\item\em (227) Count of players on the master server (in this app, looking for rooms)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a661b2eb09801e8a113253f52615bcb00}{User\+Id} = 225
+\begin{DoxyCompactList}\small\item\em (225) User\textquotesingle{}s ID\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a705a32c44b18fe1c8d700c90ecbd03df}{Application\+Id} = 224
+\begin{DoxyCompactList}\small\item\em (224) Your application\textquotesingle{}s ID\+: a name on your own \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} or a G\+U\+ID on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad01a54fbf9cfe164bab3b2d3fae052f3}{Position} = 223
+\begin{DoxyCompactList}\small\item\em (223) Not used currently (as \char`\"{}\+Position\char`\"{}). If you get queued before connect, this is your position\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aaad13b916a824219a4f7277f41f46858}{Match\+Making\+Type} = 223
+\begin{DoxyCompactList}\small\item\em (223) Modifies the matchmaking algorithm used for Op\+Join\+Random. Allowed parameter values are defined in enum Matchmaking\+Mode.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a901f1fba81f5c3613cd88ffb8c8ca4c1}{Game\+List} = 222
+\begin{DoxyCompactList}\small\item\em (222) List of Room\+Infos about open / listed rooms\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ae8b26169fb98f652d3ace0899c8a13e7}{Secret} = 221
+\begin{DoxyCompactList}\small\item\em (221) Internally used to establish encryption\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad3fdb932852194ba542b5524c4487722}{App\+Version} = 220
+\begin{DoxyCompactList}\small\item\em (220) Version of your application\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a3a10ea7f7cb16b61743291cd3c19300a}{Azure\+Node\+Info} = 210
+\begin{DoxyCompactList}\small\item\em (210) Internally used in case of hosting by Azure\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aa32eb38e508a98688fbd6345be0d20eb}{Azure\+Local\+Node\+Id} = 209
+\begin{DoxyCompactList}\small\item\em (209) Internally used in case of hosting by Azure\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a20bf98696dfb8802ccd199adfeb62978}{Azure\+Master\+Node\+Id} = 208
+\begin{DoxyCompactList}\small\item\em (208) Internally used in case of hosting by Azure\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a50a66ff56a083c37980d0ef14d721c7e}{Room\+Name} = (byte)255
+\begin{DoxyCompactList}\small\item\em (255) Code for the game\+Id/room\+Name (a unique name per room). Used in Op\+Join and similar.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aed4f6c5478998620b924bc944fd61799}{Broadcast} = (byte)250
+\begin{DoxyCompactList}\small\item\em (250) Code for broadcast parameter of Op\+Set\+Properties method.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a30b1064fb0e5cb00925779c51b7be59f}{Actor\+List} = (byte)252
+\begin{DoxyCompactList}\small\item\em (252) Code for list of players in a room. Currently not used.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a54da07a3fc0088b2b6a6dac914f7a75f}{Actor\+Nr} = (byte)254
+\begin{DoxyCompactList}\small\item\em (254) Code of the Actor of an operation. Used for property get and set.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ab173474caabd7353e0477f3a04760204}{Player\+Properties} = (byte)249
+\begin{DoxyCompactList}\small\item\em (249) Code for property set (Hashtable).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a170f80778c72f6090e53334c5fe05e3d}{Custom\+Event\+Content} = (byte)245
+\begin{DoxyCompactList}\small\item\em (245) Code of data/custom content of an event. Used in Op\+Raise\+Event.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af0ac326ecfd07601a765a21130f74d81}{Data} = (byte)245
+\begin{DoxyCompactList}\small\item\em (245) Code of data of an event. Used in Op\+Raise\+Event.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aba38939b84deab55de596db4d7f13d6e}{Code} = (byte)244
+\begin{DoxyCompactList}\small\item\em (244) Code used when sending some code-\/related parameter, like Op\+Raise\+Event\textquotesingle{}s event-\/code. \end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a0637f72ee1fd11dfd90022bf7c758720}{Game\+Properties} = (byte)248
+\begin{DoxyCompactList}\small\item\em (248) Code for property set (Hashtable).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a9fbcbc9fff142b9064f18c9efc91f6ac}{Properties} = (byte)251
+\begin{DoxyCompactList}\small\item\em (251) Code for property-\/set (Hashtable). \end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a95715a5fafe5254ee1e792419867a8da}{Target\+Actor\+Nr} = (byte)253
+\begin{DoxyCompactList}\small\item\em (253) Code of the target Actor of an operation. Used for property set. Is 0 for game\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a66d8a56e50e4d9b1864ef0dfe6b7c64a}{Receiver\+Group} = (byte)246
+\begin{DoxyCompactList}\small\item\em (246) Code to select the receivers of events (used in Lite, Operation Raise\+Event).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1b6065b6632880edd0321b1e3b8a2fb9}{Cache} = (byte)247
+\begin{DoxyCompactList}\small\item\em (247) Code for caching events while raising them.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a2a7ab40a8165c6fda2186d813ffe37b6}{Cleanup\+Cache\+On\+Leave} = (byte)241
+\begin{DoxyCompactList}\small\item\em (241) Bool parameter of Create\+Game Operation. If true, server cleans up roomcache of leaving players (their cached events get removed).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a008a132b4295de442fa7fe27eac3e2b9}{Group} = 240
+\begin{DoxyCompactList}\small\item\em (240) Code for \char`\"{}group\char`\"{} operation-\/parameter (as used in Op Raise\+Event).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad82cf7aa56c20446c23e6f7b1c341a76}{Remove} = 239
+\begin{DoxyCompactList}\small\item\em (239) The \char`\"{}\+Remove\char`\"{} operation-\/parameter can be used to remove something from a list. E.\+g. remove groups from player\textquotesingle{}s interest groups.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a108e552f24426fdb1155733903ccb998}{Publish\+User\+Id} = 239
+\begin{DoxyCompactList}\small\item\em (239) Used in Op Join to define if User\+Ids of the players are broadcast in the room. Useful for Find\+Friends and reserving slots for expected users.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a413bb55ac84cebf0dd90e85640e14746}{Add} = 238
+\begin{DoxyCompactList}\small\item\em (238) The \char`\"{}\+Add\char`\"{} operation-\/parameter can be used to add something to some list or set. E.\+g. add groups to player\textquotesingle{}s interest groups.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad7faa8ed1297c1ca6954f85cff1e7da2}{Info} = 218
+\begin{DoxyCompactList}\small\item\em (218) Content for \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a5515318245655c141be84934f461053c}{Event\+Code.\+Error\+Info} and internal debug operations.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aced7dd5821acb92b52696d064e19714b}{Client\+Authentication\+Type} = 217
+\begin{DoxyCompactList}\small\item\em (217) This key\textquotesingle{}s (byte) value defines the target custom authentication type/service the client connects with. Used in Op\+Authenticate\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aa038563acd329dd1ec796bc3dbda94ed}{Client\+Authentication\+Params} = 216
+\begin{DoxyCompactList}\small\item\em (216) This key\textquotesingle{}s (string) value provides parameters sent to the custom authentication type/service the client connects with. Used in Op\+Authenticate\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ac9b4c279b2c2447d2b6a92d048279534}{Join\+Mode} = 215
+\begin{DoxyCompactList}\small\item\em (215) Makes the server create a room if it doesn\textquotesingle{}t exist. Op\+Join uses this to always enter a room, unless it exists and is full/closed.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a02245ae597165f8efbdc27cdc2465521}{Client\+Authentication\+Data} = 214
+\begin{DoxyCompactList}\small\item\em (214) This key\textquotesingle{}s (string or byte\mbox{[}\mbox{]}) value provides parameters sent to the custom authentication service setup in \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Dashboard. Used in Op\+Authenticate\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1f3cfe3d4e33a66a1b43f69b61c1371d}{Master\+Client\+Id} = (byte)203
+\begin{DoxyCompactList}\small\item\em (203) Code for Master\+Client\+Id, which is synced by server. \end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ab6913b8ff2c8f5ac9c63989399140e00}{Find\+Friends\+Request\+List} = (byte)1
+\begin{DoxyCompactList}\small\item\em (1) Used in Op Find\+Friends request. Value must be string\mbox{[}\mbox{]} of friends to look up.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af6846009bdef571db627b0944560166b}{Find\+Friends\+Response\+Online\+List} = (byte)1
+\begin{DoxyCompactList}\small\item\em (1) Used in Op Find\+Friends response. Contains bool\mbox{[}\mbox{]} list of online states (false if not online).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ac902f48f2bf554c848ddf4da57b8c828}{Find\+Friends\+Response\+Room\+Id\+List} = (byte)2
+\begin{DoxyCompactList}\small\item\em (2) Used in Op Find\+Friends response. Contains string\mbox{[}\mbox{]} of room names (\char`\"{}\char`\"{} where not known or no room joined).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a9fa51cb55e1c0c7d02e372d57279e639}{Lobby\+Name} = (byte)213
+\begin{DoxyCompactList}\small\item\em (213) Used in matchmaking-\/related methods and when creating a room to name a lobby (to join or to attach a room to).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a195d283fab30f59f8f0d3b9646ab3af4}{Lobby\+Type} = (byte)212
+\begin{DoxyCompactList}\small\item\em (212) Used in matchmaking-\/related methods and when creating a room to define the type of a lobby. Combined with the lobby name this identifies the lobby.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aabb8a502fb565bc4cbdfd48a23b4e7bc}{Lobby\+Stats} = (byte)211
+\begin{DoxyCompactList}\small\item\em (211) This (optional) parameter can be sent in Op Authenticate to turn on Lobby Stats (info about lobby names and their user-\/ and game-\/counts). See\+: Photon\+Network.\+Lobbies\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a7349c22fccf111d81e61d6fc37239939}{Region} = (byte)210
+\begin{DoxyCompactList}\small\item\em (210) Used for region values in Op\+Auth and Op\+Get\+Regions.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a2283a31554fd7e99130958b622aabb8e}{Uri\+Path} = 209
+\begin{DoxyCompactList}\small\item\em (209) Path of the Web\+R\+PC that got called. Also known as \char`\"{}\+Web\+Rpc Name\char`\"{}. Type\+: string.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a878eff4bd7eff73e35a277b64efe5d21}{Web\+Rpc\+Parameters} = 208
+\begin{DoxyCompactList}\small\item\em (208) Parameters for a Web\+R\+PC as\+: Dictionaryy$<$string, objecty$>$. This will get serialized to J\+Son.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_afee06b263ad9c6f084efb578b4e29bd5}{Web\+Rpc\+Return\+Code} = 207
+\begin{DoxyCompactList}\small\item\em (207) Return\+Code for the Web\+R\+PC, as sent by the web service (not by \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}, which uses \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code}). Type\+: byte.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_acb800c4d8182c1f318eac4fe788cd9f6}{Web\+Rpc\+Return\+Message} = 206
+\begin{DoxyCompactList}\small\item\em (206) Message returned by Web\+R\+PC server. Analog to \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}\textquotesingle{}s debug message. Type\+: string.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_adb42ad64e327b8226f09f99b470a525d}{Cache\+Slice\+Index} = 205
+\begin{DoxyCompactList}\small\item\em (205) Used to define a \char`\"{}slice\char`\"{} for cached events. Slices can easily be removed from cache. Type\+: int.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a3d221707fef5b7a3f98507d7376d008f}{Plugins} = 204
+\begin{DoxyCompactList}\small\item\em Informs the server of the expected plugin setup. \end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a347bdffcd091fd5db0ac8eb8612cd7ad}{Plugin\+Name} = 201
+\begin{DoxyCompactList}\small\item\em (201) Informs user about name of plugin load to game\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a7e1a62d2c1df9bb4b8c013e6a8e3c42f}{Plugin\+Version} = 200
+\begin{DoxyCompactList}\small\item\em (200) Informs user about version of plugin load to game\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for constants. 
+
+Codes for parameters of Operations and Events. Pun uses these constants internally. 
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Actor\+List@{Actor\+List}}
+\index{Actor\+List@{Actor\+List}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Actor\+List}{ActorList}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Actor\+List = (byte)252}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a30b1064fb0e5cb00925779c51b7be59f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a30b1064fb0e5cb00925779c51b7be59f}
+
+
+(252) Code for list of players in a room. Currently not used.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Actor\+Nr@{Actor\+Nr}}
+\index{Actor\+Nr@{Actor\+Nr}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Actor\+Nr}{ActorNr}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Actor\+Nr = (byte)254}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a54da07a3fc0088b2b6a6dac914f7a75f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a54da07a3fc0088b2b6a6dac914f7a75f}
+
+
+(254) Code of the Actor of an operation. Used for property get and set.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Add@{Add}}
+\index{Add@{Add}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Add}{Add}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Add = 238}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a413bb55ac84cebf0dd90e85640e14746}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a413bb55ac84cebf0dd90e85640e14746}
+
+
+(238) The \char`\"{}\+Add\char`\"{} operation-\/parameter can be used to add something to some list or set. E.\+g. add groups to player\textquotesingle{}s interest groups.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Address@{Address}}
+\index{Address@{Address}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Address}{Address}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Address = 230}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_acf4cf60ff38fc481c7b1a9becd0d42c5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_acf4cf60ff38fc481c7b1a9becd0d42c5}
+
+
+(230) Address of a (game) server to use.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Application\+Id@{Application\+Id}}
+\index{Application\+Id@{Application\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Application\+Id}{ApplicationId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Application\+Id = 224}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a705a32c44b18fe1c8d700c90ecbd03df}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a705a32c44b18fe1c8d700c90ecbd03df}
+
+
+(224) Your application\textquotesingle{}s ID\+: a name on your own \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} or a G\+U\+ID on the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!App\+Version@{App\+Version}}
+\index{App\+Version@{App\+Version}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{App\+Version}{AppVersion}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+App\+Version = 220}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad3fdb932852194ba542b5524c4487722}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad3fdb932852194ba542b5524c4487722}
+
+
+(220) Version of your application
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Azure\+Local\+Node\+Id@{Azure\+Local\+Node\+Id}}
+\index{Azure\+Local\+Node\+Id@{Azure\+Local\+Node\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Azure\+Local\+Node\+Id}{AzureLocalNodeId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Azure\+Local\+Node\+Id = 209}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aa32eb38e508a98688fbd6345be0d20eb}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aa32eb38e508a98688fbd6345be0d20eb}
+
+
+(209) Internally used in case of hosting by Azure
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Azure\+Master\+Node\+Id@{Azure\+Master\+Node\+Id}}
+\index{Azure\+Master\+Node\+Id@{Azure\+Master\+Node\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Azure\+Master\+Node\+Id}{AzureMasterNodeId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Azure\+Master\+Node\+Id = 208}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a20bf98696dfb8802ccd199adfeb62978}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a20bf98696dfb8802ccd199adfeb62978}
+
+
+(208) Internally used in case of hosting by Azure
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Azure\+Node\+Info@{Azure\+Node\+Info}}
+\index{Azure\+Node\+Info@{Azure\+Node\+Info}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Azure\+Node\+Info}{AzureNodeInfo}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Azure\+Node\+Info = 210}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a3a10ea7f7cb16b61743291cd3c19300a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a3a10ea7f7cb16b61743291cd3c19300a}
+
+
+(210) Internally used in case of hosting by Azure
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Broadcast@{Broadcast}}
+\index{Broadcast@{Broadcast}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Broadcast}{Broadcast}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Broadcast = (byte)250}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aed4f6c5478998620b924bc944fd61799}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aed4f6c5478998620b924bc944fd61799}
+
+
+(250) Code for broadcast parameter of Op\+Set\+Properties method.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Cache@{Cache}}
+\index{Cache@{Cache}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Cache}{Cache}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Cache = (byte)247}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1b6065b6632880edd0321b1e3b8a2fb9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1b6065b6632880edd0321b1e3b8a2fb9}
+
+
+(247) Code for caching events while raising them.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Cache\+Slice\+Index@{Cache\+Slice\+Index}}
+\index{Cache\+Slice\+Index@{Cache\+Slice\+Index}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Cache\+Slice\+Index}{CacheSliceIndex}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Cache\+Slice\+Index = 205}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_adb42ad64e327b8226f09f99b470a525d}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_adb42ad64e327b8226f09f99b470a525d}
+
+
+(205) Used to define a \char`\"{}slice\char`\"{} for cached events. Slices can easily be removed from cache. Type\+: int.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Check\+User\+On\+Join@{Check\+User\+On\+Join}}
+\index{Check\+User\+On\+Join@{Check\+User\+On\+Join}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Check\+User\+On\+Join}{CheckUserOnJoin}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Check\+User\+On\+Join = (byte)232}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_adfdc1774ad56abfc3aad08013ed26a56}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_adfdc1774ad56abfc3aad08013ed26a56}
+
+
+(232) Used when creating rooms to define if any userid can join the room only once.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Cleanup\+Cache\+On\+Leave@{Cleanup\+Cache\+On\+Leave}}
+\index{Cleanup\+Cache\+On\+Leave@{Cleanup\+Cache\+On\+Leave}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Cleanup\+Cache\+On\+Leave}{CleanupCacheOnLeave}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Cleanup\+Cache\+On\+Leave = (byte)241}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a2a7ab40a8165c6fda2186d813ffe37b6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a2a7ab40a8165c6fda2186d813ffe37b6}
+
+
+(241) Bool parameter of Create\+Game Operation. If true, server cleans up roomcache of leaving players (their cached events get removed).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Client\+Authentication\+Data@{Client\+Authentication\+Data}}
+\index{Client\+Authentication\+Data@{Client\+Authentication\+Data}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Client\+Authentication\+Data}{ClientAuthenticationData}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Client\+Authentication\+Data = 214}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a02245ae597165f8efbdc27cdc2465521}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a02245ae597165f8efbdc27cdc2465521}
+
+
+(214) This key\textquotesingle{}s (string or byte\mbox{[}\mbox{]}) value provides parameters sent to the custom authentication service setup in \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Dashboard. Used in Op\+Authenticate
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Client\+Authentication\+Params@{Client\+Authentication\+Params}}
+\index{Client\+Authentication\+Params@{Client\+Authentication\+Params}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Client\+Authentication\+Params}{ClientAuthenticationParams}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Client\+Authentication\+Params = 216}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aa038563acd329dd1ec796bc3dbda94ed}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aa038563acd329dd1ec796bc3dbda94ed}
+
+
+(216) This key\textquotesingle{}s (string) value provides parameters sent to the custom authentication type/service the client connects with. Used in Op\+Authenticate
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Client\+Authentication\+Type@{Client\+Authentication\+Type}}
+\index{Client\+Authentication\+Type@{Client\+Authentication\+Type}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Client\+Authentication\+Type}{ClientAuthenticationType}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Client\+Authentication\+Type = 217}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aced7dd5821acb92b52696d064e19714b}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aced7dd5821acb92b52696d064e19714b}
+
+
+(217) This key\textquotesingle{}s (byte) value defines the target custom authentication type/service the client connects with. Used in Op\+Authenticate
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Code@{Code}}
+\index{Code@{Code}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Code}{Code}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Code = (byte)244}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aba38939b84deab55de596db4d7f13d6e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aba38939b84deab55de596db4d7f13d6e}
+
+
+(244) Code used when sending some code-\/related parameter, like Op\+Raise\+Event\textquotesingle{}s event-\/code. 
+
+This is not the same as the Operation\textquotesingle{}s code, which is no longer sent as part of the parameter Dictionary in \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} 3.\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Custom\+Event\+Content@{Custom\+Event\+Content}}
+\index{Custom\+Event\+Content@{Custom\+Event\+Content}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Custom\+Event\+Content}{CustomEventContent}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Custom\+Event\+Content = (byte)245}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a170f80778c72f6090e53334c5fe05e3d}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a170f80778c72f6090e53334c5fe05e3d}
+
+
+(245) Code of data/custom content of an event. Used in Op\+Raise\+Event.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Data@{Data}}
+\index{Data@{Data}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Data}{Data}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Data = (byte)245}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af0ac326ecfd07601a765a21130f74d81}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af0ac326ecfd07601a765a21130f74d81}
+
+
+(245) Code of data of an event. Used in Op\+Raise\+Event.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Empty\+Room\+T\+TL@{Empty\+Room\+T\+TL}}
+\index{Empty\+Room\+T\+TL@{Empty\+Room\+T\+TL}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Empty\+Room\+T\+TL}{EmptyRoomTTL}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Empty\+Room\+T\+TL = 236}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a0574262c253d27175d80c8ca7771300d}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a0574262c253d27175d80c8ca7771300d}
+
+
+(236) Time To Live (T\+TL) for a room when the last player leaves. Keeps room in memory for case a player re-\/joins soon. In milliseconds.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Event\+Forward@{Event\+Forward}}
+\index{Event\+Forward@{Event\+Forward}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Event\+Forward}{EventForward}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Event\+Forward = 234}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1b563d7ed2a72e96474490ee5b95a613}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1b563d7ed2a72e96474490ee5b95a613}
+
+
+(234) Optional parameter of Op\+Raise\+Event to forward the event to some web-\/service.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Expected\+Values@{Expected\+Values}}
+\index{Expected\+Values@{Expected\+Values}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Expected\+Values}{ExpectedValues}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Expected\+Values = (byte)231}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aac4c8524d492e71f0f7285db64872860}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aac4c8524d492e71f0f7285db64872860}
+
+
+(231) Code for \char`\"{}\+Check And Swap\char`\"{} (C\+AS) when changing properties.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Find\+Friends\+Request\+List@{Find\+Friends\+Request\+List}}
+\index{Find\+Friends\+Request\+List@{Find\+Friends\+Request\+List}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Find\+Friends\+Request\+List}{FindFriendsRequestList}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Find\+Friends\+Request\+List = (byte)1}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ab6913b8ff2c8f5ac9c63989399140e00}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ab6913b8ff2c8f5ac9c63989399140e00}
+
+
+(1) Used in Op Find\+Friends request. Value must be string\mbox{[}\mbox{]} of friends to look up.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Find\+Friends\+Response\+Online\+List@{Find\+Friends\+Response\+Online\+List}}
+\index{Find\+Friends\+Response\+Online\+List@{Find\+Friends\+Response\+Online\+List}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Find\+Friends\+Response\+Online\+List}{FindFriendsResponseOnlineList}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Find\+Friends\+Response\+Online\+List = (byte)1}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af6846009bdef571db627b0944560166b}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af6846009bdef571db627b0944560166b}
+
+
+(1) Used in Op Find\+Friends response. Contains bool\mbox{[}\mbox{]} list of online states (false if not online).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Find\+Friends\+Response\+Room\+Id\+List@{Find\+Friends\+Response\+Room\+Id\+List}}
+\index{Find\+Friends\+Response\+Room\+Id\+List@{Find\+Friends\+Response\+Room\+Id\+List}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Find\+Friends\+Response\+Room\+Id\+List}{FindFriendsResponseRoomIdList}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Find\+Friends\+Response\+Room\+Id\+List = (byte)2}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ac902f48f2bf554c848ddf4da57b8c828}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ac902f48f2bf554c848ddf4da57b8c828}
+
+
+(2) Used in Op Find\+Friends response. Contains string\mbox{[}\mbox{]} of room names (\char`\"{}\char`\"{} where not known or no room joined).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Game\+Count@{Game\+Count}}
+\index{Game\+Count@{Game\+Count}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Game\+Count}{GameCount}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Game\+Count = 228}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af1c484be2b1e6474d46204e7cc7b6fde}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_af1c484be2b1e6474d46204e7cc7b6fde}
+
+
+(228) Count of games in this application (used in stats event)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Game\+List@{Game\+List}}
+\index{Game\+List@{Game\+List}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Game\+List}{GameList}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Game\+List = 222}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a901f1fba81f5c3613cd88ffb8c8ca4c1}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a901f1fba81f5c3613cd88ffb8c8ca4c1}
+
+
+(222) List of Room\+Infos about open / listed rooms
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Game\+Properties@{Game\+Properties}}
+\index{Game\+Properties@{Game\+Properties}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Game\+Properties}{GameProperties}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Game\+Properties = (byte)248}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a0637f72ee1fd11dfd90022bf7c758720}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a0637f72ee1fd11dfd90022bf7c758720}
+
+
+(248) Code for property set (Hashtable).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Group@{Group}}
+\index{Group@{Group}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Group}{Group}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Group = 240}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a008a132b4295de442fa7fe27eac3e2b9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a008a132b4295de442fa7fe27eac3e2b9}
+
+
+(240) Code for \char`\"{}group\char`\"{} operation-\/parameter (as used in Op Raise\+Event).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Info@{Info}}
+\index{Info@{Info}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Info}{Info}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Info = 218}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad7faa8ed1297c1ca6954f85cff1e7da2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad7faa8ed1297c1ca6954f85cff1e7da2}
+
+
+(218) Content for \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a5515318245655c141be84934f461053c}{Event\+Code.\+Error\+Info} and internal debug operations.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Is\+Coming\+Back@{Is\+Coming\+Back}}
+\index{Is\+Coming\+Back@{Is\+Coming\+Back}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Is\+Coming\+Back}{IsComingBack}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Is\+Coming\+Back = (byte)233}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aafa0f3452290ec0f74bdb406580fe31a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aafa0f3452290ec0f74bdb406580fe31a}
+
+
+(233) Optional parameter of Op\+Leave in async games. If false, the player does abandons the game (forever). By default players become inactive and can re-\/join.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Is\+Inactive@{Is\+Inactive}}
+\index{Is\+Inactive@{Is\+Inactive}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Is\+Inactive}{IsInactive}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Is\+Inactive = (byte)233}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_add307b46f4a69da70ff2e917d9e36da6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_add307b46f4a69da70ff2e917d9e36da6}
+
+
+(233) Used in Ev\+Leave to describe if a user is inactive (and might come back) or not. In async / Turnbased games, inactive is default.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Join\+Mode@{Join\+Mode}}
+\index{Join\+Mode@{Join\+Mode}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Join\+Mode}{JoinMode}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Join\+Mode = 215}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ac9b4c279b2c2447d2b6a92d048279534}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ac9b4c279b2c2447d2b6a92d048279534}
+
+
+(215) Makes the server create a room if it doesn\textquotesingle{}t exist. Op\+Join uses this to always enter a room, unless it exists and is full/closed.
+
+(215) The Join\+Mode enum defines which variant of joining a room will be executed\+: Join only if available, create if not exists or re-\/join.
+
+Replaces Create\+If\+Not\+Exists which was only a bool-\/value.\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Lobby\+Name@{Lobby\+Name}}
+\index{Lobby\+Name@{Lobby\+Name}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Lobby\+Name}{LobbyName}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Lobby\+Name = (byte)213}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a9fa51cb55e1c0c7d02e372d57279e639}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a9fa51cb55e1c0c7d02e372d57279e639}
+
+
+(213) Used in matchmaking-\/related methods and when creating a room to name a lobby (to join or to attach a room to).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Lobby\+Stats@{Lobby\+Stats}}
+\index{Lobby\+Stats@{Lobby\+Stats}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Lobby\+Stats}{LobbyStats}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Lobby\+Stats = (byte)211}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aabb8a502fb565bc4cbdfd48a23b4e7bc}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aabb8a502fb565bc4cbdfd48a23b4e7bc}
+
+
+(211) This (optional) parameter can be sent in Op Authenticate to turn on Lobby Stats (info about lobby names and their user-\/ and game-\/counts). See\+: Photon\+Network.\+Lobbies
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Lobby\+Type@{Lobby\+Type}}
+\index{Lobby\+Type@{Lobby\+Type}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Lobby\+Type}{LobbyType}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Lobby\+Type = (byte)212}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a195d283fab30f59f8f0d3b9646ab3af4}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a195d283fab30f59f8f0d3b9646ab3af4}
+
+
+(212) Used in matchmaking-\/related methods and when creating a room to define the type of a lobby. Combined with the lobby name this identifies the lobby.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Master\+Client\+Id@{Master\+Client\+Id}}
+\index{Master\+Client\+Id@{Master\+Client\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Master\+Client\+Id}{MasterClientId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Master\+Client\+Id = (byte)203}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1f3cfe3d4e33a66a1b43f69b61c1371d}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a1f3cfe3d4e33a66a1b43f69b61c1371d}
+
+
+(203) Code for Master\+Client\+Id, which is synced by server. 
+
+When sent as op-\/parameter this is code 203.
+
+Tightly related to \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key_ae06d85caaaad94ef81bb048f4e8a9c3c}{Game\+Property\+Key.\+Master\+Client\+Id}.\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Master\+Peer\+Count@{Master\+Peer\+Count}}
+\index{Master\+Peer\+Count@{Master\+Peer\+Count}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Master\+Peer\+Count}{MasterPeerCount}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Master\+Peer\+Count = 227}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a362ac423e3572752f5b8b29270d059c8}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a362ac423e3572752f5b8b29270d059c8}
+
+
+(227) Count of players on the master server (in this app, looking for rooms)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Match\+Making\+Type@{Match\+Making\+Type}}
+\index{Match\+Making\+Type@{Match\+Making\+Type}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Match\+Making\+Type}{MatchMakingType}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Match\+Making\+Type = 223}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aaad13b916a824219a4f7277f41f46858}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_aaad13b916a824219a4f7277f41f46858}
+
+
+(223) Modifies the matchmaking algorithm used for Op\+Join\+Random. Allowed parameter values are defined in enum Matchmaking\+Mode.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Peer\+Count@{Peer\+Count}}
+\index{Peer\+Count@{Peer\+Count}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Peer\+Count}{PeerCount}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Peer\+Count = 229}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ace022047377b9cce0b571defc06a021e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ace022047377b9cce0b571defc06a021e}
+
+
+(229) Count of players in this application in a rooms (used in stats event)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Player\+Properties@{Player\+Properties}}
+\index{Player\+Properties@{Player\+Properties}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Player\+Properties}{PlayerProperties}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Player\+Properties = (byte)249}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ab173474caabd7353e0477f3a04760204}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ab173474caabd7353e0477f3a04760204}
+
+
+(249) Code for property set (Hashtable).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Player\+T\+TL@{Player\+T\+TL}}
+\index{Player\+T\+TL@{Player\+T\+TL}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Player\+T\+TL}{PlayerTTL}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Player\+T\+TL = 235}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a90062be6045e858dfdefc63c6bb26cc9}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a90062be6045e858dfdefc63c6bb26cc9}
+
+
+(235) Time To Live (T\+TL) for an \textquotesingle{}actor\textquotesingle{} in a room. If a client disconnects, this actor is inactive first and removed after this timeout. In milliseconds.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Plugin\+Name@{Plugin\+Name}}
+\index{Plugin\+Name@{Plugin\+Name}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Plugin\+Name}{PluginName}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Plugin\+Name = 201}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a347bdffcd091fd5db0ac8eb8612cd7ad}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a347bdffcd091fd5db0ac8eb8612cd7ad}
+
+
+(201) Informs user about name of plugin load to game
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Plugins@{Plugins}}
+\index{Plugins@{Plugins}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Plugins}{Plugins}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Plugins = 204}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a3d221707fef5b7a3f98507d7376d008f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a3d221707fef5b7a3f98507d7376d008f}
+
+
+Informs the server of the expected plugin setup. 
+
+The operation will fail in case of a plugin mismatch returning error code Plugin\+Mismatch 32751(0x7\+F\+FF -\/ 16). Setting string\mbox{[}\mbox{]}\{\} means the client expects no plugin to be setup. Note\+: for backwards compatibility null omits any check. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Plugin\+Version@{Plugin\+Version}}
+\index{Plugin\+Version@{Plugin\+Version}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Plugin\+Version}{PluginVersion}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Plugin\+Version = 200}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a7e1a62d2c1df9bb4b8c013e6a8e3c42f}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a7e1a62d2c1df9bb4b8c013e6a8e3c42f}
+
+
+(200) Informs user about version of plugin load to game
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Position@{Position}}
+\index{Position@{Position}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Position}{Position}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Position = 223}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad01a54fbf9cfe164bab3b2d3fae052f3}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad01a54fbf9cfe164bab3b2d3fae052f3}
+
+
+(223) Not used currently (as \char`\"{}\+Position\char`\"{}). If you get queued before connect, this is your position
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Properties@{Properties}}
+\index{Properties@{Properties}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Properties}{Properties}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Properties = (byte)251}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a9fbcbc9fff142b9064f18c9efc91f6ac}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a9fbcbc9fff142b9064f18c9efc91f6ac}
+
+
+(251) Code for property-\/set (Hashtable). 
+
+This key is used when sending only one set of properties. If either \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_actor_properties}{Actor\+Properties} or Game\+Properties are used (or both), check those keys. \index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Publish\+User\+Id@{Publish\+User\+Id}}
+\index{Publish\+User\+Id@{Publish\+User\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Publish\+User\+Id}{PublishUserId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Publish\+User\+Id = 239}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a108e552f24426fdb1155733903ccb998}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a108e552f24426fdb1155733903ccb998}
+
+
+(239) Used in Op Join to define if User\+Ids of the players are broadcast in the room. Useful for Find\+Friends and reserving slots for expected users.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Receiver\+Group@{Receiver\+Group}}
+\index{Receiver\+Group@{Receiver\+Group}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Receiver\+Group}{ReceiverGroup}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Receiver\+Group = (byte)246}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a66d8a56e50e4d9b1864ef0dfe6b7c64a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a66d8a56e50e4d9b1864ef0dfe6b7c64a}
+
+
+(246) Code to select the receivers of events (used in Lite, Operation Raise\+Event).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Region@{Region}}
+\index{Region@{Region}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Region}{Region}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Region = (byte)210}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a7349c22fccf111d81e61d6fc37239939}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a7349c22fccf111d81e61d6fc37239939}
+
+
+(210) Used for region values in Op\+Auth and Op\+Get\+Regions.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Remove@{Remove}}
+\index{Remove@{Remove}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Remove}{Remove}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Remove = 239}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad82cf7aa56c20446c23e6f7b1c341a76}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad82cf7aa56c20446c23e6f7b1c341a76}
+
+
+(239) The \char`\"{}\+Remove\char`\"{} operation-\/parameter can be used to remove something from a list. E.\+g. remove groups from player\textquotesingle{}s interest groups.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Room\+Name@{Room\+Name}}
+\index{Room\+Name@{Room\+Name}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Room\+Name}{RoomName}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Room\+Name = (byte)255}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a50a66ff56a083c37980d0ef14d721c7e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a50a66ff56a083c37980d0ef14d721c7e}
+
+
+(255) Code for the game\+Id/room\+Name (a unique name per room). Used in Op\+Join and similar.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Secret@{Secret}}
+\index{Secret@{Secret}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Secret}{Secret}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Secret = 221}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ae8b26169fb98f652d3ace0899c8a13e7}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ae8b26169fb98f652d3ace0899c8a13e7}
+
+
+(221) Internally used to establish encryption
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Suppress\+Room\+Events@{Suppress\+Room\+Events}}
+\index{Suppress\+Room\+Events@{Suppress\+Room\+Events}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Suppress\+Room\+Events}{SuppressRoomEvents}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Suppress\+Room\+Events = 237}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a89faf31fa005273789198373b5e3dabf}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a89faf31fa005273789198373b5e3dabf}
+
+
+(237) A bool parameter for creating games. If set to true, no room events are sent to the clients on join and leave. Default\+: false (and not sent).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Target\+Actor\+Nr@{Target\+Actor\+Nr}}
+\index{Target\+Actor\+Nr@{Target\+Actor\+Nr}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Target\+Actor\+Nr}{TargetActorNr}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Target\+Actor\+Nr = (byte)253}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a95715a5fafe5254ee1e792419867a8da}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a95715a5fafe5254ee1e792419867a8da}
+
+
+(253) Code of the target Actor of an operation. Used for property set. Is 0 for game
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Uri\+Path@{Uri\+Path}}
+\index{Uri\+Path@{Uri\+Path}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Uri\+Path}{UriPath}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Uri\+Path = 209}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a2283a31554fd7e99130958b622aabb8e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a2283a31554fd7e99130958b622aabb8e}
+
+
+(209) Path of the Web\+R\+PC that got called. Also known as \char`\"{}\+Web\+Rpc Name\char`\"{}. Type\+: string.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!User\+Id@{User\+Id}}
+\index{User\+Id@{User\+Id}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{User\+Id}{UserId}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+User\+Id = 225}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a661b2eb09801e8a113253f52615bcb00}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a661b2eb09801e8a113253f52615bcb00}
+
+
+(225) User\textquotesingle{}s ID
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Web\+Rpc\+Parameters@{Web\+Rpc\+Parameters}}
+\index{Web\+Rpc\+Parameters@{Web\+Rpc\+Parameters}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Web\+Rpc\+Parameters}{WebRpcParameters}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Web\+Rpc\+Parameters = 208}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a878eff4bd7eff73e35a277b64efe5d21}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_a878eff4bd7eff73e35a277b64efe5d21}
+
+
+(208) Parameters for a Web\+R\+PC as\+: Dictionaryy$<$string, objecty$>$. This will get serialized to J\+Son.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Web\+Rpc\+Return\+Code@{Web\+Rpc\+Return\+Code}}
+\index{Web\+Rpc\+Return\+Code@{Web\+Rpc\+Return\+Code}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Web\+Rpc\+Return\+Code}{WebRpcReturnCode}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Web\+Rpc\+Return\+Code = 207}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_afee06b263ad9c6f084efb578b4e29bd5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_afee06b263ad9c6f084efb578b4e29bd5}
+
+
+(207) Return\+Code for the Web\+R\+PC, as sent by the web service (not by \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}, which uses \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code}). Type\+: byte.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}!Web\+Rpc\+Return\+Message@{Web\+Rpc\+Return\+Message}}
+\index{Web\+Rpc\+Return\+Message@{Web\+Rpc\+Return\+Message}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Parameter\+Code}}
+\subsubsection[{\texorpdfstring{Web\+Rpc\+Return\+Message}{WebRpcReturnMessage}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Parameter\+Code.\+Web\+Rpc\+Return\+Message = 206}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_acb800c4d8182c1f318eac4fe788cd9f6}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_acb800c4d8182c1f318eac4fe788cd9f6}
+
+
+(206) Message returned by Web\+R\+PC server. Analog to \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon}\textquotesingle{}s debug message. Type\+: string.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_loadbalancing_peer_8cs}{Loadbalancing\+Peer.\+cs}\end{DoxyCompactItemize}

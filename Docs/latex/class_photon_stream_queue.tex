@@ -1,0 +1,148 @@
+\hypertarget{class_photon_stream_queue}{}\section{Photon\+Stream\+Queue Class Reference}
+\label{class_photon_stream_queue}\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+
+
+The \hyperlink{class_photon_stream_queue}{Photon\+Stream\+Queue} helps you poll object states at higher frequencies then what \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{Photon\+Network.\+send\+Rate} dictates and then sends all those states at once when \hyperlink{class_photon_stream_queue_ae75447cd718116990e0d0304eebc6935}{Serialize()} is called.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_photon_stream_queue_a1c2a5d3c8a990b78b07650b0e1370eeb}{Photon\+Stream\+Queue} (int sample\+Rate)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class_photon_stream_queue}{Photon\+Stream\+Queue} class. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_queue_a8034450d68cdf1a16e3f33a53b0ad2dd}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the \hyperlink{class_photon_stream_queue}{Photon\+Stream\+Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_queue_acbae2dbbf5e5b4fd8c589fb7019adbf8}{Send\+Next} (object obj)
+\begin{DoxyCompactList}\small\item\em Adds the next object to the queue. \end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_stream_queue_a9e8e0b7a881aea56cb21148def4b5c5d}{Has\+Queued\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Determines whether the queue has stored any objects \end{DoxyCompactList}\item 
+object \hyperlink{class_photon_stream_queue_ab9b77bbe2ddf53638dd96b63af8a533c}{Receive\+Next} ()
+\begin{DoxyCompactList}\small\item\em Receives the next object from the queue. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_queue_ae75447cd718116990e0d0304eebc6935}{Serialize} (\hyperlink{class_photon_stream}{Photon\+Stream} stream)
+\begin{DoxyCompactList}\small\item\em Serializes the specified stream. \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stream_queue_a40bc2e04c1641f36da8cb36423fd13c3}{Deserialize} (\hyperlink{class_photon_stream}{Photon\+Stream} stream)
+\begin{DoxyCompactList}\small\item\em Deserializes the specified stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_photon_stream_queue}{Photon\+Stream\+Queue} helps you poll object states at higher frequencies then what \hyperlink{class_photon_network_a154fc601fac7f0fddd704231189457fb}{Photon\+Network.\+send\+Rate} dictates and then sends all those states at once when \hyperlink{class_photon_stream_queue_ae75447cd718116990e0d0304eebc6935}{Serialize()} is called. 
+
+On the receiving end you can call \hyperlink{class_photon_stream_queue_a40bc2e04c1641f36da8cb36423fd13c3}{Deserialize()} and then the stream will roll out the received object states in the same order and time\+Step they were recorded in. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Photon\+Stream\+Queue(int sample\+Rate)}{PhotonStreamQueue(int sampleRate)}}]{\setlength{\rightskip}{0pt plus 5cm}Photon\+Stream\+Queue.\+Photon\+Stream\+Queue (
+\begin{DoxyParamCaption}
+\item[{int}]{sample\+Rate}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_a1c2a5d3c8a990b78b07650b0e1370eeb}{}\label{class_photon_stream_queue_a1c2a5d3c8a990b78b07650b0e1370eeb}
+
+
+Initializes a new instance of the \hyperlink{class_photon_stream_queue}{Photon\+Stream\+Queue} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample\+Rate} & How many times per second should the object states be sampled\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Deserialize(\+Photon\+Stream stream)}{Deserialize(PhotonStream stream)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream\+Queue.\+Deserialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Stream}}]{stream}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_a40bc2e04c1641f36da8cb36423fd13c3}{}\label{class_photon_stream_queue_a40bc2e04c1641f36da8cb36423fd13c3}
+
+
+Deserializes the specified stream. 
+
+Call this in your On\+Photon\+Serialize\+View method to receive the whole recorded stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The \hyperlink{class_photon_stream}{Photon\+Stream} you receive as a parameter in On\+Photon\+Serialize\+View\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Has\+Queued\+Objects@{Has\+Queued\+Objects}}
+\index{Has\+Queued\+Objects@{Has\+Queued\+Objects}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Has\+Queued\+Objects()}{HasQueuedObjects()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stream\+Queue.\+Has\+Queued\+Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_a9e8e0b7a881aea56cb21148def4b5c5d}{}\label{class_photon_stream_queue_a9e8e0b7a881aea56cb21148def4b5c5d}
+
+
+Determines whether the queue has stored any objects 
+
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Receive\+Next@{Receive\+Next}}
+\index{Receive\+Next@{Receive\+Next}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Receive\+Next()}{ReceiveNext()}}]{\setlength{\rightskip}{0pt plus 5cm}object Photon\+Stream\+Queue.\+Receive\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_ab9b77bbe2ddf53638dd96b63af8a533c}{}\label{class_photon_stream_queue_ab9b77bbe2ddf53638dd96b63af8a533c}
+
+
+Receives the next object from the queue. 
+
+This works just like \hyperlink{class_photon_stream_ae1bda0f78819d5b29d72c968b856781b}{Photon\+Stream.\+Receive\+Next} 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Reset@{Reset}}
+\index{Reset@{Reset}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Reset()}{Reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream\+Queue.\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_a8034450d68cdf1a16e3f33a53b0ad2dd}{}\label{class_photon_stream_queue_a8034450d68cdf1a16e3f33a53b0ad2dd}
+
+
+Resets the \hyperlink{class_photon_stream_queue}{Photon\+Stream\+Queue}. 
+
+You need to do this whenever the amount of objects you are observing changes \index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Send\+Next@{Send\+Next}}
+\index{Send\+Next@{Send\+Next}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Send\+Next(object obj)}{SendNext(object obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream\+Queue.\+Send\+Next (
+\begin{DoxyParamCaption}
+\item[{object}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_acbae2dbbf5e5b4fd8c589fb7019adbf8}{}\label{class_photon_stream_queue_acbae2dbbf5e5b4fd8c589fb7019adbf8}
+
+
+Adds the next object to the queue. 
+
+This works just like \hyperlink{class_photon_stream_a8b1a1e59820ff95d2d2dd4c376841322}{Photon\+Stream.\+Send\+Next} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object you want to add to the queue\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Stream\+Queue@{Photon\+Stream\+Queue}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Photon\+Stream\+Queue@{Photon\+Stream\+Queue}}
+\subsubsection[{\texorpdfstring{Serialize(\+Photon\+Stream stream)}{Serialize(PhotonStream stream)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stream\+Queue.\+Serialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Stream}}]{stream}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stream_queue_ae75447cd718116990e0d0304eebc6935}{}\label{class_photon_stream_queue_ae75447cd718116990e0d0304eebc6935}
+
+
+Serializes the specified stream. 
+
+Call this in your On\+Photon\+Serialize\+View method to send the whole recorded stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & The \hyperlink{class_photon_stream}{Photon\+Stream} you receive as a parameter in On\+Photon\+Serialize\+View\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_stream_queue_8cs}{Photon\+Stream\+Queue.\+cs}\end{DoxyCompactItemize}

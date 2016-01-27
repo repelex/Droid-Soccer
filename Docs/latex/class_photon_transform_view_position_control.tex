@@ -1,0 +1,112 @@
+\hypertarget{class_photon_transform_view_position_control}{}\section{Photon\+Transform\+View\+Position\+Control Class Reference}
+\label{class_photon_transform_view_position_control}\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_photon_transform_view_position_control_a3f4cd754b21276bef76609b608e9e774}{Photon\+Transform\+View\+Position\+Control} (\hyperlink{class_photon_transform_view_position_model}{Photon\+Transform\+View\+Position\+Model} model)
+\item 
+void \hyperlink{class_photon_transform_view_position_control_af8893b17871604614de5d5f80721d0e9}{Set\+Synchronized\+Values} (Vector3 speed, float turn\+Speed)
+\begin{DoxyCompactList}\small\item\em These values are synchronized to the remote objects if the interpolation mode or the extrapolation mode Synchronize\+Values is used. \end{DoxyCompactList}\item 
+Vector3 \hyperlink{class_photon_transform_view_position_control_aea906d59f0637f9a1ee8a8c6504ad217}{Update\+Position} (Vector3 current\+Position)
+\begin{DoxyCompactList}\small\item\em Calculates the new position based on the values setup in the inspector \end{DoxyCompactList}\item 
+Vector3 \hyperlink{class_photon_transform_view_position_control_a7c378517491ed0878fa78f8834fa5c0b}{Get\+Network\+Position} ()
+\begin{DoxyCompactList}\small\item\em Gets the last position that was received through the network \end{DoxyCompactList}\item 
+Vector3 \hyperlink{class_photon_transform_view_position_control_a995fea08fe2aa2ad1c004513c5ba7d65}{Get\+Extrapolated\+Position\+Offset} ()
+\begin{DoxyCompactList}\small\item\em Calculates an estimated position based on the last synchronized position, the time when the last position was received and the movement speed of the object \end{DoxyCompactList}\item 
+void \hyperlink{class_photon_transform_view_position_control_ac7cc0066925dc4ccf46f2a1ae8a7216f}{On\+Photon\+Serialize\+View} (Vector3 current\+Position, \hyperlink{class_photon_stream}{Photon\+Stream} stream, \hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsubsection[{\texorpdfstring{Photon\+Transform\+View\+Position\+Control(\+Photon\+Transform\+View\+Position\+Model model)}{PhotonTransformViewPositionControl(PhotonTransformViewPositionModel model)}}]{\setlength{\rightskip}{0pt plus 5cm}Photon\+Transform\+View\+Position\+Control.\+Photon\+Transform\+View\+Position\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf Photon\+Transform\+View\+Position\+Model}}]{model}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_transform_view_position_control_a3f4cd754b21276bef76609b608e9e774}{}\label{class_photon_transform_view_position_control_a3f4cd754b21276bef76609b608e9e774}
+
+
+\subsection{Member Function Documentation}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!Get\+Extrapolated\+Position\+Offset@{Get\+Extrapolated\+Position\+Offset}}
+\index{Get\+Extrapolated\+Position\+Offset@{Get\+Extrapolated\+Position\+Offset}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsubsection[{\texorpdfstring{Get\+Extrapolated\+Position\+Offset()}{GetExtrapolatedPositionOffset()}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Photon\+Transform\+View\+Position\+Control.\+Get\+Extrapolated\+Position\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_transform_view_position_control_a995fea08fe2aa2ad1c004513c5ba7d65}{}\label{class_photon_transform_view_position_control_a995fea08fe2aa2ad1c004513c5ba7d65}
+
+
+Calculates an estimated position based on the last synchronized position, the time when the last position was received and the movement speed of the object 
+
+\begin{DoxyReturn}{Returns}
+Estimated position of the remote object
+\end{DoxyReturn}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!Get\+Network\+Position@{Get\+Network\+Position}}
+\index{Get\+Network\+Position@{Get\+Network\+Position}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsubsection[{\texorpdfstring{Get\+Network\+Position()}{GetNetworkPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Photon\+Transform\+View\+Position\+Control.\+Get\+Network\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_transform_view_position_control_a7c378517491ed0878fa78f8834fa5c0b}{}\label{class_photon_transform_view_position_control_a7c378517491ed0878fa78f8834fa5c0b}
+
+
+Gets the last position that was received through the network 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}}
+\index{On\+Photon\+Serialize\+View@{On\+Photon\+Serialize\+View}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsubsection[{\texorpdfstring{On\+Photon\+Serialize\+View(\+Vector3 current\+Position, Photon\+Stream stream, Photon\+Message\+Info info)}{OnPhotonSerializeView(Vector3 currentPosition, PhotonStream stream, PhotonMessageInfo info)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Transform\+View\+Position\+Control.\+On\+Photon\+Serialize\+View (
+\begin{DoxyParamCaption}
+\item[{Vector3}]{current\+Position, }
+\item[{{\bf Photon\+Stream}}]{stream, }
+\item[{{\bf Photon\+Message\+Info}}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_transform_view_position_control_ac7cc0066925dc4ccf46f2a1ae8a7216f}{}\label{class_photon_transform_view_position_control_ac7cc0066925dc4ccf46f2a1ae8a7216f}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!Set\+Synchronized\+Values@{Set\+Synchronized\+Values}}
+\index{Set\+Synchronized\+Values@{Set\+Synchronized\+Values}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsubsection[{\texorpdfstring{Set\+Synchronized\+Values(\+Vector3 speed, float turn\+Speed)}{SetSynchronizedValues(Vector3 speed, float turnSpeed)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Transform\+View\+Position\+Control.\+Set\+Synchronized\+Values (
+\begin{DoxyParamCaption}
+\item[{Vector3}]{speed, }
+\item[{float}]{turn\+Speed}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_transform_view_position_control_af8893b17871604614de5d5f80721d0e9}{}\label{class_photon_transform_view_position_control_af8893b17871604614de5d5f80721d0e9}
+
+
+These values are synchronized to the remote objects if the interpolation mode or the extrapolation mode Synchronize\+Values is used. 
+
+Your movement script should pass on the current speed (in units/second) and turning speed (in angles/second) so the remote object can use them to predict the objects movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & The current movement vector of the object in units/second.\\
+\hline
+{\em turn\+Speed} & The current turn speed of the object in angles/second.\\
+\hline
+\end{DoxyParams}
+\index{Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}!Update\+Position@{Update\+Position}}
+\index{Update\+Position@{Update\+Position}!Photon\+Transform\+View\+Position\+Control@{Photon\+Transform\+View\+Position\+Control}}
+\subsubsection[{\texorpdfstring{Update\+Position(\+Vector3 current\+Position)}{UpdatePosition(Vector3 currentPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Photon\+Transform\+View\+Position\+Control.\+Update\+Position (
+\begin{DoxyParamCaption}
+\item[{Vector3}]{current\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_transform_view_position_control_aea906d59f0637f9a1ee8a8c6504ad217}{}\label{class_photon_transform_view_position_control_aea906d59f0637f9a1ee8a8c6504ad217}
+
+
+Calculates the new position based on the values setup in the inspector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Position} & The current position.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new position.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Views/\hyperlink{_photon_transform_view_position_control_8cs}{Photon\+Transform\+View\+Position\+Control.\+cs}\end{DoxyCompactItemize}

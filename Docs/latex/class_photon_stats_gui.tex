@@ -1,0 +1,136 @@
+\hypertarget{class_photon_stats_gui}{}\section{Photon\+Stats\+Gui Class Reference}
+\label{class_photon_stats_gui}\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+
+
+Basic G\+UI to show traffic and health statistics of the connection to \hyperlink{namespace_photon}{Photon}, toggled by shift+tab.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_photon_stats_gui_ae7fb408f7fb6e9525337271d2363ae33}{Start} ()
+\item 
+void \hyperlink{class_photon_stats_gui_a222bbb9f4b1c640489101a5f3bcada8a}{Update} ()
+\begin{DoxyCompactList}\small\item\em Checks for shift+tab input combination (to toggle stats\+On).\end{DoxyCompactList}\item 
+void \hyperlink{class_photon_stats_gui_a8aa98b7db81d540b6e9c42f37d3a927b}{On\+G\+UI} ()
+\item 
+void \hyperlink{class_photon_stats_gui_a58101a043bbe7de9d53f14ac111646b2}{Traffic\+Stats\+Window} (int window\+ID)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_photon_stats_gui_aac6e6189d7a7723ef4fbcbb5c7a6b6e8}{stats\+Window\+On} = true
+\begin{DoxyCompactList}\small\item\em Shows or hides G\+UI (does not affect if stats are collected).\end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_stats_gui_a7e1cb11640167171f7b160089b71e5d7}{stats\+On} = true
+\begin{DoxyCompactList}\small\item\em Option to turn collecting stats on or off (used in \hyperlink{class_photon_stats_gui_a222bbb9f4b1c640489101a5f3bcada8a}{Update()}).\end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_stats_gui_a05204c8969fd4fc0546f7926e5e5da8e}{health\+Stats\+Visible}
+\begin{DoxyCompactList}\small\item\em Shows additional \char`\"{}health\char`\"{} values of connection.\end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_stats_gui_ac8015189e49ffdb616367c7d9f9e91db}{traffic\+Stats\+On}
+\begin{DoxyCompactList}\small\item\em Shows additional \char`\"{}lower level\char`\"{} traffic stats.\end{DoxyCompactList}\item 
+bool \hyperlink{class_photon_stats_gui_ac7c5c8556de5ac92dd227339b2e3c36b}{buttons\+On}
+\begin{DoxyCompactList}\small\item\em Show buttons to control stats and reset them.\end{DoxyCompactList}\item 
+Rect \hyperlink{class_photon_stats_gui_af9e7598de2be45c63c6368727bb60ae5}{stats\+Rect} = new Rect(0, 100, 200, 50)
+\begin{DoxyCompactList}\small\item\em Positioning rect for window.\end{DoxyCompactList}\item 
+int \hyperlink{class_photon_stats_gui_a9e96e77b74435c5ff2eeccf2d409685f}{Window\+Id} = 100
+\begin{DoxyCompactList}\small\item\em Unity G\+UI Window ID (must be unique or will cause issues).\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic G\+UI to show traffic and health statistics of the connection to \hyperlink{namespace_photon}{Photon}, toggled by shift+tab. 
+
+The shown health values can help identify problems with connection losses or performance. Example\+: If the time delta between two consecutive Send\+Outgoing\+Commands calls is a second or more, chances rise for a disconnect being caused by this (because acknowledgements to the server need to be sent in due time). 
+
+\subsection{Member Function Documentation}
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!On\+G\+UI@{On\+G\+UI}}
+\index{On\+G\+UI@{On\+G\+UI}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{On\+G\+U\+I()}{OnGUI()}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stats\+Gui.\+On\+G\+UI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stats_gui_a8aa98b7db81d540b6e9c42f37d3a927b}{}\label{class_photon_stats_gui_a8aa98b7db81d540b6e9c42f37d3a927b}
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!Start@{Start}}
+\index{Start@{Start}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stats\+Gui.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stats_gui_ae7fb408f7fb6e9525337271d2363ae33}{}\label{class_photon_stats_gui_ae7fb408f7fb6e9525337271d2363ae33}
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!Traffic\+Stats\+Window@{Traffic\+Stats\+Window}}
+\index{Traffic\+Stats\+Window@{Traffic\+Stats\+Window}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{Traffic\+Stats\+Window(int window\+I\+D)}{TrafficStatsWindow(int windowID)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stats\+Gui.\+Traffic\+Stats\+Window (
+\begin{DoxyParamCaption}
+\item[{int}]{window\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stats_gui_a58101a043bbe7de9d53f14ac111646b2}{}\label{class_photon_stats_gui_a58101a043bbe7de9d53f14ac111646b2}
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!Update@{Update}}
+\index{Update@{Update}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Stats\+Gui.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_photon_stats_gui_a222bbb9f4b1c640489101a5f3bcada8a}{}\label{class_photon_stats_gui_a222bbb9f4b1c640489101a5f3bcada8a}
+
+
+Checks for shift+tab input combination (to toggle stats\+On).
+
+
+
+\subsection{Member Data Documentation}
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!buttons\+On@{buttons\+On}}
+\index{buttons\+On@{buttons\+On}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{buttons\+On}{buttonsOn}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stats\+Gui.\+buttons\+On}\hypertarget{class_photon_stats_gui_ac7c5c8556de5ac92dd227339b2e3c36b}{}\label{class_photon_stats_gui_ac7c5c8556de5ac92dd227339b2e3c36b}
+
+
+Show buttons to control stats and reset them.
+
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!health\+Stats\+Visible@{health\+Stats\+Visible}}
+\index{health\+Stats\+Visible@{health\+Stats\+Visible}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{health\+Stats\+Visible}{healthStatsVisible}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stats\+Gui.\+health\+Stats\+Visible}\hypertarget{class_photon_stats_gui_a05204c8969fd4fc0546f7926e5e5da8e}{}\label{class_photon_stats_gui_a05204c8969fd4fc0546f7926e5e5da8e}
+
+
+Shows additional \char`\"{}health\char`\"{} values of connection.
+
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!stats\+On@{stats\+On}}
+\index{stats\+On@{stats\+On}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{stats\+On}{statsOn}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stats\+Gui.\+stats\+On = true}\hypertarget{class_photon_stats_gui_a7e1cb11640167171f7b160089b71e5d7}{}\label{class_photon_stats_gui_a7e1cb11640167171f7b160089b71e5d7}
+
+
+Option to turn collecting stats on or off (used in \hyperlink{class_photon_stats_gui_a222bbb9f4b1c640489101a5f3bcada8a}{Update()}).
+
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!stats\+Rect@{stats\+Rect}}
+\index{stats\+Rect@{stats\+Rect}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{stats\+Rect}{statsRect}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Photon\+Stats\+Gui.\+stats\+Rect = new Rect(0, 100, 200, 50)}\hypertarget{class_photon_stats_gui_af9e7598de2be45c63c6368727bb60ae5}{}\label{class_photon_stats_gui_af9e7598de2be45c63c6368727bb60ae5}
+
+
+Positioning rect for window.
+
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!stats\+Window\+On@{stats\+Window\+On}}
+\index{stats\+Window\+On@{stats\+Window\+On}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{stats\+Window\+On}{statsWindowOn}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stats\+Gui.\+stats\+Window\+On = true}\hypertarget{class_photon_stats_gui_aac6e6189d7a7723ef4fbcbb5c7a6b6e8}{}\label{class_photon_stats_gui_aac6e6189d7a7723ef4fbcbb5c7a6b6e8}
+
+
+Shows or hides G\+UI (does not affect if stats are collected).
+
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!traffic\+Stats\+On@{traffic\+Stats\+On}}
+\index{traffic\+Stats\+On@{traffic\+Stats\+On}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{traffic\+Stats\+On}{trafficStatsOn}}]{\setlength{\rightskip}{0pt plus 5cm}bool Photon\+Stats\+Gui.\+traffic\+Stats\+On}\hypertarget{class_photon_stats_gui_ac8015189e49ffdb616367c7d9f9e91db}{}\label{class_photon_stats_gui_ac8015189e49ffdb616367c7d9f9e91db}
+
+
+Shows additional \char`\"{}lower level\char`\"{} traffic stats.
+
+\index{Photon\+Stats\+Gui@{Photon\+Stats\+Gui}!Window\+Id@{Window\+Id}}
+\index{Window\+Id@{Window\+Id}!Photon\+Stats\+Gui@{Photon\+Stats\+Gui}}
+\subsubsection[{\texorpdfstring{Window\+Id}{WindowId}}]{\setlength{\rightskip}{0pt plus 5cm}int Photon\+Stats\+Gui.\+Window\+Id = 100}\hypertarget{class_photon_stats_gui_a9e96e77b74435c5ff2eeccf2d409685f}{}\label{class_photon_stats_gui_a9e96e77b74435c5ff2eeccf2d409685f}
+
+
+Unity G\+UI Window ID (must be unique or will cause issues).
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_stats_gui_8cs}{Photon\+Stats\+Gui.\+cs}\end{DoxyCompactItemize}

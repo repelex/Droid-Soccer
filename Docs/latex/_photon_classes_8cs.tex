@@ -1,0 +1,61 @@
+\hypertarget{_photon_classes_8cs}{}\section{C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Photon\+Classes.cs File Reference}
+\label{_photon_classes_8cs}\index{C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Photon\+Classes.\+cs@{C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Photon\+Classes.\+cs}}
+
+
+Wraps up smaller classes that don\textquotesingle{}t need their own file.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interface_i_pun_observable}{I\+Pun\+Observable}
+\begin{DoxyCompactList}\small\item\em Defines the On\+Photon\+Serialize\+View method to make it easy to implement correctly for observable scripts. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_i_pun_callbacks}{I\+Pun\+Callbacks}
+\begin{DoxyCompactList}\small\item\em This interface is used as definition of all callback methods of P\+UN, except On\+Photon\+Serialize\+View. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_i_pun_prefab_pool}{I\+Pun\+Prefab\+Pool}
+\begin{DoxyCompactList}\small\item\em Defines all the methods that a Object Pool must implement, so that P\+UN can use it. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}
+\begin{DoxyCompactList}\small\item\em This class adds the property photon\+View, while logging a warning when your game still uses the network\+View. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_1_1_pun_behaviour}{Photon.\+Pun\+Behaviour}
+\begin{DoxyCompactList}\small\item\em This class provides a .photon\+View and all callbacks/events that P\+UN can call. \end{DoxyCompactList}\item 
+class \hyperlink{class_photon_message_info}{Photon\+Message\+Info}
+\begin{DoxyCompactList}\small\item\em Container class for info about a particular message, R\+PC or update. \end{DoxyCompactList}\item 
+class \hyperlink{class_room_options}{Room\+Options}
+\begin{DoxyCompactList}\small\item\em Wraps up common room properties needed when you create rooms. \end{DoxyCompactList}\item 
+class {\bfseries Pun\+Event}
+\begin{DoxyCompactList}\small\item\em Defines \hyperlink{namespace_photon}{Photon} event-\/codes as used by P\+UN.\end{DoxyCompactList}\item 
+class \hyperlink{class_photon_stream}{Photon\+Stream}
+\begin{DoxyCompactList}\small\item\em This container is used in \hyperlink{group__public_api_ggaf30bbea51cc8c4b1ddc239d1c5c1468fa864e7f0d7510922caf9c107b8dd771a3}{On\+Photon\+Serialize\+View()} to either provide incoming data of a \hyperlink{class_photon_view}{Photon\+View} or for you to provide it. \end{DoxyCompactList}\item 
+class \hyperlink{class_help_u_r_l}{Help\+U\+RL}
+\begin{DoxyCompactList}\small\item\em Empty implementation of the upcoming \hyperlink{class_help_u_r_l}{Help\+U\+RL} of Unity 5.\+1. \end{DoxyCompactList}\item 
+class \hyperlink{class_unity_engine_1_1_scene_management_1_1_scene_manager}{Unity\+Engine.\+Scene\+Management.\+Scene\+Manager}
+\begin{DoxyCompactList}\small\item\em Minimal implementation of the \hyperlink{class_unity_engine_1_1_scene_management_1_1_scene_manager}{Scene\+Manager} for older Unity, up to v5.\+2.\end{DoxyCompactList}\item 
+class \hyperlink{class_scene_manager_helper}{Scene\+Manager\+Helper}
+\item 
+class \hyperlink{class_web_rpc_response}{Web\+Rpc\+Response}
+\begin{DoxyCompactList}\small\item\em Reads an operation response of a Web\+Rpc and provides convenient access to most common values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_photon}{Photon}
+\item 
+namespace \hyperlink{namespace_unity_engine_1_1_scene_management}{Unity\+Engine.\+Scene\+Management}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{_photon_classes_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} = Exit\+Games.\+Client.\+Photon.\+Hashtable
+\item 
+using \hyperlink{namespace_photon_ac2f4b49a218ef814d00e31cd5f32bf4e}{Photon.\+Hashtable} = Exit\+Games.\+Client.\+Photon.\+Hashtable
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wraps up smaller classes that don\textquotesingle{}t need their own file. 
+
+
+
+\subsection{Typedef Documentation}
+\index{Photon\+Classes.\+cs@{Photon\+Classes.\+cs}!Hashtable@{Hashtable}}
+\index{Hashtable@{Hashtable}!Photon\+Classes.\+cs@{Photon\+Classes.\+cs}}
+\subsubsection[{\texorpdfstring{Hashtable}{Hashtable}}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf Hashtable} =  Exit\+Games.\+Client.\+Photon.\+Hashtable}\hypertarget{_photon_classes_8cs_afa613ef589c02dbd94acc273b62cdcfd}{}\label{_photon_classes_8cs_afa613ef589c02dbd94acc273b62cdcfd}

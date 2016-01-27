@@ -1,0 +1,144 @@
+\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code}{}\section{Exit\+Games.\+Client.\+Photon.\+Event\+Code Class Reference}
+\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code}\index{Exit\+Games.\+Client.\+Photon.\+Event\+Code@{Exit\+Games.\+Client.\+Photon.\+Event\+Code}}
+
+
+Class for constants.  
+
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a76ee5ffbffe8b7deeb9592635b3e2ea8}{Game\+List} = 230
+\begin{DoxyCompactList}\small\item\em (230) Initial list of Room\+Infos (in lobby on Master)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a188e6424527bad132c9d5b0bfc4e5e4d}{Game\+List\+Update} = 229
+\begin{DoxyCompactList}\small\item\em (229) Update of Room\+Infos to be merged into \char`\"{}initial\char`\"{} list (in lobby on Master)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a6fc53cb6aad4fcf42ee4b1340443d10b}{Queue\+State} = 228
+\begin{DoxyCompactList}\small\item\em (228) Currently not used. State of queueing in case of server-\/full\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a4ae30567f95504ae53132588271fe8c5}{Match} = 227
+\begin{DoxyCompactList}\small\item\em (227) Currently not used. Event for matchmaking\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ad91a28567590ac06accfd7ab9df53b9e}{App\+Stats} = 226
+\begin{DoxyCompactList}\small\item\em (226) Event with stats about this application (players, rooms, etc)\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_af1be950c284d416e8a91433c0cb2e9d4}{Lobby\+Stats} = 224
+\begin{DoxyCompactList}\small\item\em (224) This event provides a list of lobbies with their player and game counts.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_aac53b6b53140c724713d30add1c116cf}{Azure\+Node\+Info} = 210
+\begin{DoxyCompactList}\small\item\em (210) Internally used in case of hosting by Azure\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a27fcfba85aa603b1f153cc7f102acb84}{Join} = (byte)255
+\begin{DoxyCompactList}\small\item\em (255) Event Join\+: someone joined the game. The new actor\+Number is provided as well as the properties of that actor (if set in Op\+Join).\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ae060da1572222a61fd822406e5df1ef2}{Leave} = (byte)254
+\begin{DoxyCompactList}\small\item\em (254) Event Leave\+: The player who left the game can be identified by the actor\+Number.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a8a72126057d0a742d14a2013a1f3415a}{Properties\+Changed} = (byte)253
+\begin{DoxyCompactList}\small\item\em (253) When you call Op\+Set\+Properties with the broadcast option \char`\"{}on\char`\"{}, this event is fired. It contains the properties being set.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a922342a5a2475fccf3e2eb887059d7bf}{Set\+Properties} = (byte)253
+\begin{DoxyCompactList}\small\item\em (253) When you call Op\+Set\+Properties with the broadcast option \char`\"{}on\char`\"{}, this event is fired. It contains the properties being set.\end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a5515318245655c141be84934f461053c}{Error\+Info} = 251
+\begin{DoxyCompactList}\small\item\em (252) When player left game unexpected and the room has a player\+Ttl $>$ 0, this event is fired to let everyone know about the timeout. \end{DoxyCompactList}\item 
+const byte \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ae7cdbabb27d642ad791221180e5ff1f0}{Cache\+Slice\+Changed} = 250
+\begin{DoxyCompactList}\small\item\em (250) Sent by \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} whent he event cache slice was changed. Done by Op\+Raise\+Event.\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for constants. 
+
+These values are for events defined by \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Loadbalancing. Pun uses these constants internally. 
+
+They start at 255 and go D\+O\+WN. Your own in-\/game events can start at 0.
+
+\subsection{Member Data Documentation}
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!App\+Stats@{App\+Stats}}
+\index{App\+Stats@{App\+Stats}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{App\+Stats}{AppStats}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+App\+Stats = 226}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ad91a28567590ac06accfd7ab9df53b9e}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ad91a28567590ac06accfd7ab9df53b9e}
+
+
+(226) Event with stats about this application (players, rooms, etc)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Azure\+Node\+Info@{Azure\+Node\+Info}}
+\index{Azure\+Node\+Info@{Azure\+Node\+Info}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Azure\+Node\+Info}{AzureNodeInfo}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Azure\+Node\+Info = 210}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_aac53b6b53140c724713d30add1c116cf}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_aac53b6b53140c724713d30add1c116cf}
+
+
+(210) Internally used in case of hosting by Azure
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Cache\+Slice\+Changed@{Cache\+Slice\+Changed}}
+\index{Cache\+Slice\+Changed@{Cache\+Slice\+Changed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Cache\+Slice\+Changed}{CacheSliceChanged}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Cache\+Slice\+Changed = 250}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ae7cdbabb27d642ad791221180e5ff1f0}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ae7cdbabb27d642ad791221180e5ff1f0}
+
+
+(250) Sent by \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} whent he event cache slice was changed. Done by Op\+Raise\+Event.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Error\+Info@{Error\+Info}}
+\index{Error\+Info@{Error\+Info}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Error\+Info}{ErrorInfo}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Error\+Info = 251}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a5515318245655c141be84934f461053c}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a5515318245655c141be84934f461053c}
+
+
+(252) When player left game unexpected and the room has a player\+Ttl $>$ 0, this event is fired to let everyone know about the timeout. 
+
+Obsolete. Replaced by Leave. public const byte Disconnect = Lite\+Event\+Code.\+Disconnect; 
+
+(251) Sent by \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud when a plugin-\/call failed. Usually, the execution on the server continues, despite the issue. Contains\+: \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code_ad7faa8ed1297c1ca6954f85cff1e7da2}{Parameter\+Code.\+Info}.\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Game\+List@{Game\+List}}
+\index{Game\+List@{Game\+List}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Game\+List}{GameList}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Game\+List = 230}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a76ee5ffbffe8b7deeb9592635b3e2ea8}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a76ee5ffbffe8b7deeb9592635b3e2ea8}
+
+
+(230) Initial list of Room\+Infos (in lobby on Master)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Game\+List\+Update@{Game\+List\+Update}}
+\index{Game\+List\+Update@{Game\+List\+Update}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Game\+List\+Update}{GameListUpdate}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Game\+List\+Update = 229}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a188e6424527bad132c9d5b0bfc4e5e4d}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a188e6424527bad132c9d5b0bfc4e5e4d}
+
+
+(229) Update of Room\+Infos to be merged into \char`\"{}initial\char`\"{} list (in lobby on Master)
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Join@{Join}}
+\index{Join@{Join}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Join}{Join}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Join = (byte)255}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a27fcfba85aa603b1f153cc7f102acb84}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a27fcfba85aa603b1f153cc7f102acb84}
+
+
+(255) Event Join\+: someone joined the game. The new actor\+Number is provided as well as the properties of that actor (if set in Op\+Join).
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Leave@{Leave}}
+\index{Leave@{Leave}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Leave}{Leave}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Leave = (byte)254}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ae060da1572222a61fd822406e5df1ef2}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_ae060da1572222a61fd822406e5df1ef2}
+
+
+(254) Event Leave\+: The player who left the game can be identified by the actor\+Number.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Lobby\+Stats@{Lobby\+Stats}}
+\index{Lobby\+Stats@{Lobby\+Stats}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Lobby\+Stats}{LobbyStats}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Lobby\+Stats = 224}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_af1be950c284d416e8a91433c0cb2e9d4}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_af1be950c284d416e8a91433c0cb2e9d4}
+
+
+(224) This event provides a list of lobbies with their player and game counts.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Match@{Match}}
+\index{Match@{Match}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Match}{Match}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Match = 227}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a4ae30567f95504ae53132588271fe8c5}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a4ae30567f95504ae53132588271fe8c5}
+
+
+(227) Currently not used. Event for matchmaking
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Properties\+Changed@{Properties\+Changed}}
+\index{Properties\+Changed@{Properties\+Changed}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Properties\+Changed}{PropertiesChanged}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Properties\+Changed = (byte)253}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a8a72126057d0a742d14a2013a1f3415a}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a8a72126057d0a742d14a2013a1f3415a}
+
+
+(253) When you call Op\+Set\+Properties with the broadcast option \char`\"{}on\char`\"{}, this event is fired. It contains the properties being set.
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Queue\+State@{Queue\+State}}
+\index{Queue\+State@{Queue\+State}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Queue\+State}{QueueState}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Queue\+State = 228}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a6fc53cb6aad4fcf42ee4b1340443d10b}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a6fc53cb6aad4fcf42ee4b1340443d10b}
+
+
+(228) Currently not used. State of queueing in case of server-\/full
+
+\index{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}!Set\+Properties@{Set\+Properties}}
+\index{Set\+Properties@{Set\+Properties}!Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code@{Exit\+Games\+::\+Client\+::\+Photon\+::\+Event\+Code}}
+\subsubsection[{\texorpdfstring{Set\+Properties}{SetProperties}}]{\setlength{\rightskip}{0pt plus 5cm}const byte Exit\+Games.\+Client.\+Photon.\+Event\+Code.\+Set\+Properties = (byte)253}\hypertarget{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a922342a5a2475fccf3e2eb887059d7bf}{}\label{class_exit_games_1_1_client_1_1_photon_1_1_event_code_a922342a5a2475fccf3e2eb887059d7bf}
+
+
+(253) When you call Op\+Set\+Properties with the broadcast option \char`\"{}on\char`\"{}, this event is fired. It contains the properties being set.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_loadbalancing_peer_8cs}{Loadbalancing\+Peer.\+cs}\end{DoxyCompactItemize}
