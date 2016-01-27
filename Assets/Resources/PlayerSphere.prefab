@@ -181,8 +181,8 @@ MonoBehaviour:
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 10
     InterpolateOption: 1
-    InterpolateMoveTowardsSpeed: 200
-    InterpolateLerpSpeed: 1
+    InterpolateMoveTowardsSpeed: 7
+    InterpolateLerpSpeed: 0.1
     InterpolateMoveTowardsAcceleration: 2
     InterpolateMoveTowardsDeceleration: 2
     InterpolateSpeedCurve:
@@ -212,7 +212,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     ExtrapolateOption: 0
-    ExtrapolateSpeed: 1
+    ExtrapolateSpeed: 7
     ExtrapolateIncludingRoundTripTime: 1
     ExtrapolateNumberOfStoredPositions: 1
     DrawErrorGizmo: 1
@@ -335,11 +335,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_PositionModel.InterpolateMoveTowardsSpeed
-      value: 200
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Offset
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PositionModel.InterpolateLerpSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PositionModel.ExtrapolateSpeed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
