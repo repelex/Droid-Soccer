@@ -7,8 +7,8 @@ public class OnJoinedInstantiate : MonoBehaviour
     public float PositionOffset = 2.0f;
     public GameObject[] PrefabsToInstantiate;   // set in inspector
     public GameObject PlayerCamera;
-    public int redPlayers = 0, bluePlayers = 0;
-    public GameObject player;
+    private int redPlayers = 0, bluePlayers = 0;
+    private GameObject player;
     
 
     public void OnJoinedRoom()
@@ -16,7 +16,6 @@ public class OnJoinedInstantiate : MonoBehaviour
         if (this.PrefabsToInstantiate != null)
         {
             GameObject controller = GameObject.Find("Control");
-            PlayerCamera= GameObject.FindGameObjectWithTag("Camera");
 
             foreach (GameObject o in this.PrefabsToInstantiate)
             {

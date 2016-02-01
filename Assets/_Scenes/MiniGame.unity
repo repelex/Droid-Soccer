@@ -1758,10 +1758,7 @@ MonoBehaviour:
   PositionOffset: 2
   PrefabsToInstantiate:
   - {fileID: 100000, guid: bb733c4e80dbde84eaf61d8aace88c3d, type: 2}
-  PlayerCamera: {fileID: 0}
-  redPlayers: 0
-  bluePlayers: 0
-  player: {fileID: 0}
+  PlayerCamera: {fileID: 812052029}
 --- !u!114 &1656012109
 MonoBehaviour:
   m_ObjectHideFlags: 0
