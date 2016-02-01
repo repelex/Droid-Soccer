@@ -696,7 +696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da621ac4796f53b49b2d04944f33f0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1867837067}
+  target: {fileID: 1867837067}
+  player: {fileID: 100000, guid: bb733c4e80dbde84eaf61d8aace88c3d, type: 2}
+  experimental: 0
 --- !u!45 &812052036
 Skybox:
   m_ObjectHideFlags: 0
