@@ -366,6 +366,10 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: 1ed6a16015b274642b2d9893df0c8d1b,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: experimental
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

@@ -16,6 +16,10 @@ public class CameraController : MonoBehaviour {
 
     void LateUpdate ()
     {
+        if (Input.GetKeyUp(KeyCode.F1))
+        {
+            experimental = !experimental;
+        }
         if (!experimental)
         {
             transform.position = player.transform.position + offset;
