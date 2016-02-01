@@ -47,10 +47,7 @@ public class MoveByKeys : Photon.MonoBehaviour
 
         experimental = GameObject.FindGameObjectWithTag("Camera").GetComponent<CameraController>().experimental;
 
-        if (Input.GetKey(KeyCode.F1))
-        {
-            experimental = !experimental;
-        }
+
 
         if (!experimental)
         {
