@@ -5,27 +5,27 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour {
 
 
-     //Switches to the MiniGame scene
+    //MiniGame
 	public void PlayGame()
     {
           SceneManager.LoadScene("MiniGame");  
     }
-    //Quit Game 
-    public void QuitGame()
-    {
-        Application.Quit();
 
+    //Controls Menu
+    public void Controls()
+    {
+        SceneManager.LoadScene("ControlMenu");
     }
+
+    //Credits Menu
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
     }
-    public void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
 
+    //Quit Game 
+    public void QuitGame()
+    {
+        Application.Quit();
     }
  }
