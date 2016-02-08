@@ -1,25 +1,27 @@
 fileFormatVersion: 2
-guid: 1fae260556c521f4d9d36affe0679ee6
-timeCreated: 1454282660
+guid: e63f550c4a0901a448f92ea9e64e2c2a
+timeCreated: 1454903641
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Camera
-    100002: Camera.001
-    100004: Cube.000
-    100006: Lamp
-    100008: Lamp.001
-    100010: //RootNode
-    400000: Camera
-    400002: Camera.001
-    400004: Cube.000
-    400006: Lamp
-    400008: Lamp.001
-    400010: //RootNode
-    2300000: Cube.000
-    3300000: Cube.000
-    4300000: Cube.000
+    100000: //RootNode
+    100002: SketchUp.014
+    100004: SketchUp.016
+    100006: SketchUp.042
+    400000: //RootNode
+    400002: SketchUp.014
+    400004: SketchUp.016
+    400006: SketchUp.042
+    2300000: SketchUp.014
+    2300002: SketchUp.016
+    2300004: SketchUp.042
+    3300000: SketchUp.014
+    3300002: SketchUp.016
+    3300004: SketchUp.042
+    4300000: SketchUp.042
+    4300002: SketchUp.016
+    4300004: SketchUp.014
   materials:
     importMaterials: 1
     materialName: 0
