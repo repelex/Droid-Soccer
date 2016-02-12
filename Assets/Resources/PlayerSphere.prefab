@@ -137,9 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b4daedc5e674a429acdf1e77da6a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
+  thrust: 5000
   JumpForce: 200
+  drag: 0.1
   JumpTimeout: 0.5
+  dir: {x: 0, y: 0, z: 0}
+  rad: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
