@@ -15,15 +15,19 @@ using UnityEngine;
 public class MoveByKeys : Photon.MonoBehaviour
 {
     public float thrust = 5000;
-    public float JumpForce = 20000;
+    //public float JumpForce = 20000;
     public float drag = 0.1f;
     public float JumpTimeout = 0.5f;
+	private int currPowerUp = 1;
+	public int speedBoosts = 10;
+	public int spikes = 10;
     //private bool isSprite;
     private Rigidbody body;
     //private Rigidbody2D body2d;
     private Collider coll;
     public Vector3 dir;
     public float rad;
+	public Time disableTime;
 
     public void Start()
     {
@@ -32,9 +36,8 @@ public class MoveByKeys : Photon.MonoBehaviour
 
         //this.body2d = GetComponent<Rigidbody2D>();
         this.body = GetComponent<Rigidbody>();
-        //this.coll = GetComponent<Collider>();
+        this.coll = GetComponent<Collider>();
         this.rad = GetComponent<SphereCollider>().radius;
-        JumpForce = 20000; 
     }
 
     public bool IsGrounded()
@@ -45,7 +48,10 @@ public class MoveByKeys : Photon.MonoBehaviour
         return false;
         //return Physics.CheckSphere(transform.position, rad);
     }
-
+	IEnumerator WaitFive()
+	{
+		yield return new WaitForSeconds(5);
+	}
     // Update is called once per frame
     public void FixedUpdate()
     {
@@ -53,6 +59,26 @@ public class MoveByKeys : Photon.MonoBehaviour
         {
             return;
         }
+		if (Input.GetKeyDown(KeyCode.X)) {
+			if (currPowerUp == 1 && speedBoosts > 0) {
+				speedBoosts--;
+				body.AddForce (body.velocity.normalized * 200000);
+			} else if (currPowerUp == 2 && spikes > 0) {
+				body.AddForce (-Vector3.up * 100000);
+				spikes--;
+			}
+				
+		}
+		if(Input.GetKeyDown(KeyCode.V)) {
+			body.AddExplosionForce(250000,coll.bounds.center,10);
+
+		}
+		if (Input.GetKeyDown (KeyCode.Z)) {
+			currPowerUp--;
+		}
+		if (Input.GetKeyDown (KeyCode.C)) {
+			currPowerUp++;
+		}
         if (IsGrounded())
         {
             dir = Vector3.zero;
@@ -83,7 +109,7 @@ public class MoveByKeys : Photon.MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
 
-                body.AddRelativeForce(Vector3.up * JumpForce);
+                body.AddRelativeForce(Vector3.up * 20000);
             }
         }
     }
