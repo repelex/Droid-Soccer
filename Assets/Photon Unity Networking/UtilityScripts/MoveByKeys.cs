@@ -26,6 +26,7 @@ public class MoveByKeys : Photon.MonoBehaviour
     //private Rigidbody2D body2d;
     private Collider coll;
     public Vector3 dir;
+	public Vector3 dirFix;
     public float rad;
 	public Time disableTime;
 
@@ -55,6 +56,7 @@ public class MoveByKeys : Photon.MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
+		
         if (!photonView.isMine)
         {
             return;
@@ -81,30 +83,39 @@ public class MoveByKeys : Photon.MonoBehaviour
 		}
         if (IsGrounded())
         {
-            dir = Vector3.zero;
+			dir = (body.transform.position - Camera.main.transform.position);
+			dir.y = 0;
+			dir.Normalize ();
+            //dir = Vector3.zero;
             if (Input.GetKey(KeyCode.A))
             {
-                dir.x -= 1;
+				dirFix = new Vector3 (dir.z, dir.y, -dir.x);
+				dirFix = -dirFix;
+				body.AddForce (dirFix * thrust);
                 //body.AddRelativeForce(-Vector3.right * thrust);
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                dir.x += 1;
+
+				dirFix = new Vector3(dir.z, dir.y, -dir.x);
+				body.AddForce (dirFix * thrust);
                 //body.AddRelativeForce(Vector3.right * thrust);
             }
             if (Input.GetKey(KeyCode.W))
             {
-                dir.z += 1;
+				body.AddForce (dir * thrust);
+                //dir.z += 1;
                 //body.AddRelativeForce(Vector3.forward * thrust);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                dir.z -= 1;
+				dir = -dir;
+				body.AddForce (dir * thrust);
                 //body.AddRelativeForce(-Vector3.forward * thrust);
             }
 
-            body.AddForce(dir * thrust);
+
 
             if (Input.GetKey(KeyCode.Space))
             {
