@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 /// <summary>
 /// Very basic component to move a GameObject by WASD and Space.
 /// </summary>
