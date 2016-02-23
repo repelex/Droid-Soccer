@@ -14,18 +14,30 @@ Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}.
 \item 
 void \hyperlink{class_move_by_keys_a12c386cc63b886a811e2801c6631f7c6}{Start} ()
 \item 
-void \hyperlink{class_move_by_keys_aeeea5b489d6daab0aa8e9fc1672f5310}{Fixed\+Update} ()
+bool \hyperlink{class_move_by_keys_a12f570fff90c264f8ff855d82886d732}{Is\+Grounded} ()
 \item 
-void \hyperlink{class_move_by_keys_ac525502eb52c76a17385c13ba9168247}{jump} ()
+void \hyperlink{class_move_by_keys_aeeea5b489d6daab0aa8e9fc1672f5310}{Fixed\+Update} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-float \hyperlink{class_move_by_keys_aaa10538c39f807176b9edecb494f6ace}{Speed} = 10f
+float \hyperlink{class_move_by_keys_a5702f7b18a522ed877f1c1683e3acd6e}{thrust} = 5000
 \item 
-float \hyperlink{class_move_by_keys_a88d3e6e148a44325eb48ec6cc3fd0f03}{Jump\+Force} = 200f
+float \hyperlink{class_move_by_keys_a5edbdd945711dcfbe8bb4f167ba58792}{drag} = 0.\+1f
 \item 
 float \hyperlink{class_move_by_keys_a78f351dfc4cfdf17213df54dee9ba73f}{Jump\+Timeout} = 0.\+5f
+\item 
+int \hyperlink{class_move_by_keys_abe7c462b0359cd7923ee81166dcbce50}{speed\+Boosts} = 10
+\item 
+int \hyperlink{class_move_by_keys_a69b4ceaaa671fa3a62ee1281b7c755b7}{spikes} = 10
+\item 
+Vector3 \hyperlink{class_move_by_keys_a06a0f4cd939aba5cf42ad4aa1626ec55}{dir}
+\item 
+Vector3 \hyperlink{class_move_by_keys_abf85f85c6014dd249ceb5d5d6bd54353}{dir\+Fix}
+\item 
+float \hyperlink{class_move_by_keys_ab257d4fc7ebb9aa457bb19c85dc7874d}{rad}
+\item 
+Time \hyperlink{class_move_by_keys_abc8e3273ebda7bbcfb644708d97d00af}{disable\+Time}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -35,7 +47,7 @@ Very basic component to move a Game\+Object by W\+A\+SD and Space.
 
 Requires a \hyperlink{class_photon_view}{Photon\+View}. Disables itself on Game\+Objects that are not owned on Start.
 
-Speed affects movement-\/speed. Jump\+Force defines how high the object \char`\"{}jumps\char`\"{}. Jump\+Timeout defines after how many seconds you can jump again. 
+thrust affects movement-\/thrust. Jump\+Force defines how high the object \char`\"{}jumps\char`\"{}. Jump\+Timeout defines after how many seconds you can jump again. 
 
 \subsection{Member Function Documentation}
 \index{Move\+By\+Keys@{Move\+By\+Keys}!Fixed\+Update@{Fixed\+Update}}
@@ -45,13 +57,13 @@ Speed affects movement-\/speed. Jump\+Force defines how high the object \char`\"
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_move_by_keys_aeeea5b489d6daab0aa8e9fc1672f5310}{}\label{class_move_by_keys_aeeea5b489d6daab0aa8e9fc1672f5310}
-\index{Move\+By\+Keys@{Move\+By\+Keys}!jump@{jump}}
-\index{jump@{jump}!Move\+By\+Keys@{Move\+By\+Keys}}
-\subsubsection[{\texorpdfstring{jump()}{jump()}}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+By\+Keys.\+jump (
+\index{Move\+By\+Keys@{Move\+By\+Keys}!Is\+Grounded@{Is\+Grounded}}
+\index{Is\+Grounded@{Is\+Grounded}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{Is\+Grounded()}{IsGrounded()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Move\+By\+Keys.\+Is\+Grounded (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_move_by_keys_ac525502eb52c76a17385c13ba9168247}{}\label{class_move_by_keys_ac525502eb52c76a17385c13ba9168247}
+)}\hypertarget{class_move_by_keys_a12f570fff90c264f8ff855d82886d732}{}\label{class_move_by_keys_a12f570fff90c264f8ff855d82886d732}
 \index{Move\+By\+Keys@{Move\+By\+Keys}!Start@{Start}}
 \index{Start@{Start}!Move\+By\+Keys@{Move\+By\+Keys}}
 \subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+By\+Keys.\+Start (
@@ -62,15 +74,33 @@ Speed affects movement-\/speed. Jump\+Force defines how high the object \char`\"
 
 
 \subsection{Member Data Documentation}
-\index{Move\+By\+Keys@{Move\+By\+Keys}!Jump\+Force@{Jump\+Force}}
-\index{Jump\+Force@{Jump\+Force}!Move\+By\+Keys@{Move\+By\+Keys}}
-\subsubsection[{\texorpdfstring{Jump\+Force}{JumpForce}}]{\setlength{\rightskip}{0pt plus 5cm}float Move\+By\+Keys.\+Jump\+Force = 200f}\hypertarget{class_move_by_keys_a88d3e6e148a44325eb48ec6cc3fd0f03}{}\label{class_move_by_keys_a88d3e6e148a44325eb48ec6cc3fd0f03}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!dir@{dir}}
+\index{dir@{dir}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{dir}{dir}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Move\+By\+Keys.\+dir}\hypertarget{class_move_by_keys_a06a0f4cd939aba5cf42ad4aa1626ec55}{}\label{class_move_by_keys_a06a0f4cd939aba5cf42ad4aa1626ec55}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!dir\+Fix@{dir\+Fix}}
+\index{dir\+Fix@{dir\+Fix}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{dir\+Fix}{dirFix}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Move\+By\+Keys.\+dir\+Fix}\hypertarget{class_move_by_keys_abf85f85c6014dd249ceb5d5d6bd54353}{}\label{class_move_by_keys_abf85f85c6014dd249ceb5d5d6bd54353}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!disable\+Time@{disable\+Time}}
+\index{disable\+Time@{disable\+Time}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{disable\+Time}{disableTime}}]{\setlength{\rightskip}{0pt plus 5cm}Time Move\+By\+Keys.\+disable\+Time}\hypertarget{class_move_by_keys_abc8e3273ebda7bbcfb644708d97d00af}{}\label{class_move_by_keys_abc8e3273ebda7bbcfb644708d97d00af}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!drag@{drag}}
+\index{drag@{drag}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{drag}{drag}}]{\setlength{\rightskip}{0pt plus 5cm}float Move\+By\+Keys.\+drag = 0.\+1f}\hypertarget{class_move_by_keys_a5edbdd945711dcfbe8bb4f167ba58792}{}\label{class_move_by_keys_a5edbdd945711dcfbe8bb4f167ba58792}
 \index{Move\+By\+Keys@{Move\+By\+Keys}!Jump\+Timeout@{Jump\+Timeout}}
 \index{Jump\+Timeout@{Jump\+Timeout}!Move\+By\+Keys@{Move\+By\+Keys}}
 \subsubsection[{\texorpdfstring{Jump\+Timeout}{JumpTimeout}}]{\setlength{\rightskip}{0pt plus 5cm}float Move\+By\+Keys.\+Jump\+Timeout = 0.\+5f}\hypertarget{class_move_by_keys_a78f351dfc4cfdf17213df54dee9ba73f}{}\label{class_move_by_keys_a78f351dfc4cfdf17213df54dee9ba73f}
-\index{Move\+By\+Keys@{Move\+By\+Keys}!Speed@{Speed}}
-\index{Speed@{Speed}!Move\+By\+Keys@{Move\+By\+Keys}}
-\subsubsection[{\texorpdfstring{Speed}{Speed}}]{\setlength{\rightskip}{0pt plus 5cm}float Move\+By\+Keys.\+Speed = 10f}\hypertarget{class_move_by_keys_aaa10538c39f807176b9edecb494f6ace}{}\label{class_move_by_keys_aaa10538c39f807176b9edecb494f6ace}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!rad@{rad}}
+\index{rad@{rad}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{rad}{rad}}]{\setlength{\rightskip}{0pt plus 5cm}float Move\+By\+Keys.\+rad}\hypertarget{class_move_by_keys_ab257d4fc7ebb9aa457bb19c85dc7874d}{}\label{class_move_by_keys_ab257d4fc7ebb9aa457bb19c85dc7874d}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!speed\+Boosts@{speed\+Boosts}}
+\index{speed\+Boosts@{speed\+Boosts}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{speed\+Boosts}{speedBoosts}}]{\setlength{\rightskip}{0pt plus 5cm}int Move\+By\+Keys.\+speed\+Boosts = 10}\hypertarget{class_move_by_keys_abe7c462b0359cd7923ee81166dcbce50}{}\label{class_move_by_keys_abe7c462b0359cd7923ee81166dcbce50}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!spikes@{spikes}}
+\index{spikes@{spikes}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{spikes}{spikes}}]{\setlength{\rightskip}{0pt plus 5cm}int Move\+By\+Keys.\+spikes = 10}\hypertarget{class_move_by_keys_a69b4ceaaa671fa3a62ee1281b7c755b7}{}\label{class_move_by_keys_a69b4ceaaa671fa3a62ee1281b7c755b7}
+\index{Move\+By\+Keys@{Move\+By\+Keys}!thrust@{thrust}}
+\index{thrust@{thrust}!Move\+By\+Keys@{Move\+By\+Keys}}
+\subsubsection[{\texorpdfstring{thrust}{thrust}}]{\setlength{\rightskip}{0pt plus 5cm}float Move\+By\+Keys.\+thrust = 5000}\hypertarget{class_move_by_keys_a5702f7b18a522ed877f1c1683e3acd6e}{}\label{class_move_by_keys_a5702f7b18a522ed877f1c1683e3acd6e}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
