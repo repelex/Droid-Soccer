@@ -19,8 +19,8 @@ public class MoveByKeys : Photon.MonoBehaviour
     public float drag = 0.1f;
     public float JumpTimeout = 0.5f;
 	private int currPowerUp = 1;
-	public int speedBoosts = 10;
-	public int spikes = 10;
+	public int speedBoosts = 99;
+	public int spikes = 99;
     //private bool isSprite;
     private Rigidbody body;
     //private Rigidbody2D body2d;
@@ -43,16 +43,11 @@ public class MoveByKeys : Photon.MonoBehaviour
 
     public bool IsGrounded()
     {
-        //return Physics.Raycast(transform.position, -Vector3.up, coll.bounds.extents.y + 0.1f);
-        Collider[] hits = Physics.OverlapSphere(transform.position, rad + 0.7f);
+        //return Physics.Raycast(transform.position, -Vector3.up, coll.bounds.extents.y + 0.1f); //detects objects directly below ball
+        Collider[] hits = Physics.OverlapSphere(transform.position, rad + 0.7f); //detects objects touching surface of ball
         if (hits.Length > 1) return true;
         return false;
-        //return Physics.CheckSphere(transform.position, rad);
     }
-	IEnumerator WaitFive()
-	{
-		yield return new WaitForSeconds(5);
-	}
     // Update is called once per frame
     public void FixedUpdate()
     {
@@ -62,30 +57,27 @@ public class MoveByKeys : Photon.MonoBehaviour
             return;
         }
 		if (Input.GetKeyDown(KeyCode.X)) {
-			if (currPowerUp == 1 && speedBoosts > 0) {
+			if (speedBoosts > 0) {
 				speedBoosts--;
-				body.AddForce (body.velocity.normalized * 200000);
-			} else if (currPowerUp == 2 && spikes > 0) {
-				body.AddForce (-Vector3.up * 100000);
-				spikes--;
-			}
+				body.AddForce (body.velocity.normalized * 200000); //adds force in direction body is moving
+			} 
 				
 		}
 		if(Input.GetKeyDown(KeyCode.V)) {
-			body.AddExplosionForce(250000,coll.bounds.center,10);
+			body.AddExplosionForce(250000,coll.bounds.center,10);  //adds explosive force at players location
 
 		}
 		if (Input.GetKeyDown (KeyCode.Z)) {
-			currPowerUp--;
-		}
-		if (Input.GetKeyDown (KeyCode.C)) {
-			currPowerUp++;
+			if (spikes > 0) {
+				body.AddForce (-Vector3.up * 100000); //add downward force to the the player
+				spikes--;
+			}
 		}
         if (IsGrounded())
         {
 			dir = (body.transform.position - Camera.main.transform.position);
 			dir.y = 0;
-			dir.Normalize ();
+			dir.Normalize (); //gets base 'forward' direction based on camera and player position
             //dir = Vector3.zero;
             if (Input.GetKey(KeyCode.A))
             {
@@ -120,7 +112,7 @@ public class MoveByKeys : Photon.MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
 
-                body.AddRelativeForce(Vector3.up * 20000);
+                body.AddRelativeForce(Vector3.up * 20000); //player jumping
             }
         }
     }
