@@ -30,10 +30,11 @@ public class CameraController : MonoBehaviour {
             Vector3 playerballvec = new Vector3(target.transform.position.x - player.transform.position.x, target.transform.position.y - player.transform.position.y, target.transform.position.z - player.transform.position.z);
             playerballvec.Normalize();
             playerballvec.Scale(new Vector3(3, 3, 3));
-            transform.position = new Vector3(player.transform.position.x - playerballvec.x,
+            transform.position = new Vector3(player.transform.position.x - 3*playerballvec.x,
                                             player.transform.position.y - playerballvec.y + 3,
-                                            player.transform.position.z - playerballvec.z);
+                                            player.transform.position.z - 3*playerballvec.z);
             transform.LookAt(target.transform);
+            
         }
     }
 
