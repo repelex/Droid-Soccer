@@ -17,7 +17,7 @@ using UnityEngine;
 /// </remarks>
 public class InRoomRoundTimer : MonoBehaviour
 {
-    public int SecondsPerTurn = 5;                  // time per round/turn
+    public int SecondsPerTurn = 500;                  // time per round/turn
     public double StartTime;                        // this should could also be a private. i just like to see this in inspector
     public Rect TextPos = new Rect(0,80,150,300);   // default gui position. inspector overrides this!
 
@@ -103,12 +103,10 @@ public class InRoomRoundTimer : MonoBehaviour
         // simple gui for output
         GUILayout.BeginArea(TextPos);
         GUILayout.Label(string.Format("elapsed: {0:0.000}", elapsedTime));
-        GUILayout.Label(string.Format("remaining: {0:0.000}", remainingTime));
-        GUILayout.Label(string.Format("turn: {0:0}", turn));
-        if (GUILayout.Button("new round"))
-        {
-            this.StartRoundNow();
-        }
+       // GUILayout.Label(string.Format("remaining: {0:0.000}", remainingTime));
+        //GUILayout.Label(string.Format("turn: {0:0}", turn));
+        
+
         GUILayout.EndArea();
     }
 }

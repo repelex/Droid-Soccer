@@ -1348,6 +1348,7 @@ GameObject:
   - 222: {fileID: 1381555727}
   - 114: {fileID: 1381555726}
   - 114: {fileID: 1381555728}
+  - 114: {fileID: 1381555729}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -1423,6 +1424,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 500
+--- !u!114 &1381555729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381555724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcc1d657cd6ad9409b44f15d3deb78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SecondsPerTurn: 5
+  StartTime: 0
+  TextPos:
+    serializedVersion: 2
+    x: 0
+    y: 80
+    width: 150
+    height: 300
 --- !u!1 &1472073620
 GameObject:
   m_ObjectHideFlags: 0
