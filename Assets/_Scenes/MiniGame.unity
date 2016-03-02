@@ -203,7 +203,7 @@ Transform:
   m_Children:
   - {fileID: 373447140}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &207418324
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &773857263
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ Transform:
   - {fileID: 1472073621}
   - {fileID: 56033612}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &812052029
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
 --- !u!114 &812052035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,9 +1372,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1656012105}
-  - 114: {fileID: 1656012104}
-  - 114: {fileID: 1656012106}
   - 114: {fileID: 1656012109}
+  - 114: {fileID: 1656012104}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -1390,11 +1389,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656012103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1b84a427010e0469ce0df07ab64dbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 276c081a8b297b84681bf852907ae73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoConnect: 1
-  Version: 1
+  PlayerCamera: {fileID: 812052029}
 --- !u!4 &1656012105
 Transform:
   m_ObjectHideFlags: 0
@@ -1407,22 +1405,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!114 &1656012106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1656012103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3b5dcba7bf9114cb13fc59e0a71f55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnPosition: {fileID: 0}
-  PositionOffset: 2
-  PrefabsToInstantiate:
-  - {fileID: 100000, guid: bb733c4e80dbde84eaf61d8aace88c3d, type: 2}
-  PlayerCamera: {fileID: 812052029}
 --- !u!114 &1656012109
 MonoBehaviour:
   m_ObjectHideFlags: 0

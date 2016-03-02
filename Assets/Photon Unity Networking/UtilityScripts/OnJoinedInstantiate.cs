@@ -41,6 +41,8 @@ public class OnJoinedInstantiate : MonoBehaviour
                 redPlayers = PunTeams.PlayersPerTeam[PunTeams.Team.red].Count;
                 bluePlayers = PunTeams.PlayersPerTeam[PunTeams.Team.blue].Count;
                 
+                
+
                 if (redPlayers > bluePlayers)
                 {
                     PhotonNetwork.player.SetTeam(PunTeams.Team.blue);
