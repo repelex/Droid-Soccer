@@ -1347,6 +1347,7 @@ GameObject:
   - 224: {fileID: 1381555725}
   - 222: {fileID: 1381555727}
   - 114: {fileID: 1381555726}
+  - 114: {fileID: 1381555728}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -1410,6 +1411,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381555724}
+--- !u!114 &1381555728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381555724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3c4658d7de8724ca13e16430e0c887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 500
 --- !u!1 &1472073620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1867837067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 10, y: 5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
