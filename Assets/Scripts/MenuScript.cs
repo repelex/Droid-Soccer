@@ -28,4 +28,10 @@ public class MenuScript : MonoBehaviour {
     {
         Application.Quit();
     }
- }
+
+    //Quit Game from Pause
+    public void Quit()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+}
