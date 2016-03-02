@@ -29,6 +29,7 @@ public class MoveByKeys : Photon.MonoBehaviour
 	public Vector3 dirFix;
     public float rad;
 	public Time disableTime;
+    private GameObject ball;
 
     public void Start()
     {
@@ -75,6 +76,7 @@ public class MoveByKeys : Photon.MonoBehaviour
 		}
         if (IsGrounded())
         {
+            /*
 			dir = (body.transform.position - Camera.main.transform.position);
 			dir.y = 0;
 			dir.Normalize (); //gets base 'forward' direction based on camera and player position
@@ -105,6 +107,30 @@ public class MoveByKeys : Photon.MonoBehaviour
 				dir = -dir;
 				body.AddForce (dir * thrust);
                 //body.AddRelativeForce(-Vector3.forward * thrust);
+            }
+            */
+
+            ball = GameObject.FindGameObjectWithTag("Ball");
+            transform.LookAt(ball.transform.position);
+
+            Vector3 pbvec = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
+            pbvec.Normalize();
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                body.AddForce(new Vector3(pbvec.z * -1, pbvec.y, pbvec.x) * thrust);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                body.AddForce(new Vector3(pbvec.z * -1, pbvec.y, pbvec.x) * thrust *-1);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                body.AddForce(pbvec*thrust);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                body.AddForce(-1 * pbvec * thrust);
             }
 
 

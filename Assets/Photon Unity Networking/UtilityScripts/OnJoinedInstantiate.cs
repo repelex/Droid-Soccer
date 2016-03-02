@@ -40,7 +40,12 @@ public class OnJoinedInstantiate : MonoBehaviour
                 camera.player = player;
                 redPlayers = PunTeams.PlayersPerTeam[PunTeams.Team.red].Count;
                 bluePlayers = PunTeams.PlayersPerTeam[PunTeams.Team.blue].Count;
+                ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable();
+                ht.Add("ready", false);
+                PhotonNetwork.player.SetCustomProperties(ht);
                 
+                
+
                 if (redPlayers > bluePlayers)
                 {
                     PhotonNetwork.player.SetTeam(PunTeams.Team.blue);

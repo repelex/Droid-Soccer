@@ -19,9 +19,10 @@ GameObject:
   - 114: {fileID: 11484916}
   - 114: {fileID: 11493534}
   - 114: {fileID: 11471326}
+  - 114: {fileID: 11428032}
   m_Layer: 0
   m_Name: PlayerSphere
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,10 +139,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 5000
-  JumpForce: 200
   drag: 0.1
   JumpTimeout: 0.5
+  speedBoosts: 99
+  spikes: 99
   dir: {x: 0, y: 0, z: 0}
+  dirFix: {x: 0, y: 0, z: 0}
   rad: 0
 --- !u!114 &11400012
 MonoBehaviour:
@@ -156,6 +159,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointerPrefab: {fileID: 100000, guid: 9c6977a9ecda14e4e96ea3a71c749c2c, type: 2}
   Offset: 1.5
+--- !u!114 &11428032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae98e0dfb94e80b479b4e4619f047481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readyStatus: 0
 --- !u!114 &11471326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,6 +387,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: experimental
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
