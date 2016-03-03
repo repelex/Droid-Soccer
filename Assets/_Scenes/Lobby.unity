@@ -158,7 +158,7 @@ GameObject:
   - 114: {fileID: 510903592}
   - 132: {fileID: 510903591}
   m_Layer: 5
-  m_Name: Pause Menu
+  m_Name: Game Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,13 +230,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Paused
+  m_Text: Game Menu
 --- !u!222 &510903593
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1007,7 +1007,7 @@ TerrainCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1747400390}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 84c3b3a1c0a8ebf48abf6f03dff1aca5, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: dcbcc4911d822cb46b4f34f0e29b584c, type: 2}
   m_EnableTreeColliders: 1
