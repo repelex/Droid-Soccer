@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/ControlMenu.unity
   - enabled: 1
     path: Assets/_Scenes/Credits.unity
+  - enabled: 1
+    path: Assets/_Scenes/Lobby.unity

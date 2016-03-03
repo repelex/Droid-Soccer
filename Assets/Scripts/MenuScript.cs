@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour {
     //MiniGame
 	public void PlayGame()
     {
-          SceneManager.LoadScene("MiniGame");  
+          SceneManager.LoadScene("Lobby");  
     }
 
     //Controls Menu
