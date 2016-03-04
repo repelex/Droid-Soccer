@@ -249,17 +249,17 @@ MonoBehaviour:
     m_LineSpacing: 1.5
   m_Text: 'Credits
 
-    UI:
+    User Interface and Art:
 
     David Byers
 
-    Kevin McDonald
+    Kevin MacDonald
 
     Allan McCutcheon
 
 
 
-    Networking:
+    Networking and Multiplayer:
 
     Alex Repec
 
@@ -267,10 +267,9 @@ MonoBehaviour:
 
 
 
-    Game Logic:
+    Gameplay and Level Design:
 
-
-    Cody Antclffe
+    Cody Antcliffe
 
     Dillon Small'
 --- !u!222 &361687359
@@ -406,7 +405,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 61a45013c89e03049bf3ad6133903557, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -418,9 +417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Return to Main menu
-
-'
+  m_Text: BACK
 --- !u!222 &1113444759
 CanvasRenderer:
   m_ObjectHideFlags: 0
