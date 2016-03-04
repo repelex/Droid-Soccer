@@ -1,5 +1,7 @@
 using ExitGames.Client.Photon;
 using UnityEngine;
+//using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -103,9 +105,14 @@ public class InRoomRoundTimer : MonoBehaviour
         // simple gui for output
         GUILayout.BeginArea(TextPos);
         GUILayout.Label(string.Format("elapsed: {0:0.000}", elapsedTime));
-       // GUILayout.Label(string.Format("remaining: {0:0.000}", remainingTime));
+        if (elapsedTime == 1000000)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        // GUILayout.Label(string.Format("remaining: {0:0.000}", remainingTime));
         //GUILayout.Label(string.Format("turn: {0:0}", turn));
-        
+
 
         GUILayout.EndArea();
     }
