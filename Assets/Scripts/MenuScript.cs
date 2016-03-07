@@ -32,6 +32,7 @@ public class MenuScript : MonoBehaviour {
     //Quit Game from Pause
     public void Quit()
     {
+        PhotonNetwork.Disconnect();
         SceneManager.LoadScene("MainMenu");
     }
 }
