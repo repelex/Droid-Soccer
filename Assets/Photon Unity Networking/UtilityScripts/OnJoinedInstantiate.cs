@@ -10,20 +10,6 @@ public class OnJoinedInstantiate : MonoBehaviour
     private int redPlayers = 0, bluePlayers = 0;
     private GameObject player;
 
-    public void OnPhotonPlayerDisconnected(PhotonPlayer player)
-    {
-        Debug.Log("Player Disconnected " + player.name);
-        PhotonPlayer newMaster = PhotonNetwork.playerList[0];
-        if (newMaster.Equals(player))
-        {
-            newMaster = PhotonNetwork.playerList[1];
-        }
-        PhotonNetwork.SetMasterClient(newMaster);
-        PhotonNetwork.DestroyPlayerObjects(player);
-    }
-
-
-
     public void OnJoinedRoom()
     {
         if (this.PrefabsToInstantiate != null)
