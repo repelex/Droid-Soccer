@@ -19,7 +19,6 @@ GameObject:
   - 114: {fileID: 11484916}
   - 114: {fileID: 11493534}
   - 114: {fileID: 11471326}
-  - 114: {fileID: 11428032}
   m_Layer: 0
   m_Name: PlayerSphere
   m_TagString: Player
@@ -159,18 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointerPrefab: {fileID: 100000, guid: 9c6977a9ecda14e4e96ea3a71c749c2c, type: 2}
   Offset: 1.5
---- !u!114 &11428032
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae98e0dfb94e80b479b4e4619f047481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  readyStatus: 0
 --- !u!114 &11471326
 MonoBehaviour:
   m_ObjectHideFlags: 1

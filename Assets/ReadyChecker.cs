@@ -15,10 +15,11 @@ public class ReadyChecker : MonoBehaviour {
             readyStatus = !readyStatus;
             ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable();
             ht.Add("ready", readyStatus);
-            PhotonNetwork.player.SetCustomProperties(ht);
+            
             Debug.Log("status is now " + readyStatus);
             if (PhotonNetwork.playerList.Length > 0)
             {
+                PhotonNetwork.player.SetCustomProperties(ht);
                 allReady = true;
                 foreach (PhotonPlayer player in PhotonNetwork.playerList)
                 {
