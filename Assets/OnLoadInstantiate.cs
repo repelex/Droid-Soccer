@@ -34,6 +34,12 @@ public class OnLoadInstantiate : MonoBehaviour {
     public void OnPhotonPlayerDisconnected(PhotonPlayer player)
     {
         Debug.Log("Player Disconnected " + player.name);
+        PhotonPlayer newMaster = PhotonNetwork.playerList[0];
+        if (newMaster.Equals(player))
+        {
+            newMaster = PhotonNetwork.playerList[1];
+        }
+        PhotonNetwork.SetMasterClient(newMaster);
         PhotonNetwork.DestroyPlayerObjects(player);
     }
 
