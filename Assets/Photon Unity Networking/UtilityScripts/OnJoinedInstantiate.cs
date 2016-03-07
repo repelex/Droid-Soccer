@@ -10,11 +10,10 @@ public class OnJoinedInstantiate : MonoBehaviour
     private int redPlayers = 0, bluePlayers = 0;
     private GameObject player;
 
-    void OnPlayerDisconnected(NetworkPlayer player)
+    public void OnPhotonPlayerDisconnected(PhotonPlayer player)
     {
-        Debug.Log("Clean up after player " + player);
-        Network.RemoveRPCs(player);
-        Network.DestroyPlayerObjects(player);
+        Debug.Log("Player Disconnected " + player.name);
+        PhotonNetwork.DestroyPlayerObjects(player);
     }
 
 
