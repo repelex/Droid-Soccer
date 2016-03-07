@@ -28,4 +28,15 @@ public class OnLoadInstantiate : MonoBehaviour {
             photonView.RPC("ChangeColorToBlue", PhotonTargets.AllBuffered);
         }
     }
+
+
+
+    void OnPlayerDisconnected(NetworkPlayer player)
+    {
+        Debug.Log("Clean up after player " + player);
+        Network.RemoveRPCs(player);
+        Network.DestroyPlayerObjects(player);
+    }
+
+
 }

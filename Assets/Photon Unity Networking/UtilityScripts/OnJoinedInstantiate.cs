@@ -9,7 +9,15 @@ public class OnJoinedInstantiate : MonoBehaviour
     public GameObject PlayerCamera;
     private int redPlayers = 0, bluePlayers = 0;
     private GameObject player;
-    
+
+    void OnPlayerDisconnected(NetworkPlayer player)
+    {
+        Debug.Log("Clean up after player " + player);
+        Network.RemoveRPCs(player);
+        Network.DestroyPlayerObjects(player);
+    }
+
+
 
     public void OnJoinedRoom()
     {
