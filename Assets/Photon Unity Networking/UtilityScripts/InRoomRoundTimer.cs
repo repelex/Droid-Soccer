@@ -108,6 +108,7 @@ public class InRoomRoundTimer : MonoBehaviour
         if (elapsedTime == 1000000)
         {
             SceneManager.LoadScene("MainMenu");
+            PhotonNetwork.Disconnect();
         }
 
         // GUILayout.Label(string.Format("remaining: {0:0.000}", remainingTime));
