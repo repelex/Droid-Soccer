@@ -6,7 +6,11 @@ public class OnLoadInstantiate : MonoBehaviour {
     public GameObject PlayerCamera;
     // Use this for initialization
     void Awake() {
-	
+        if (PhotonNetwork.room.open)
+        {
+            PhotonNetwork.room.open = false;
+            PhotonNetwork.room.visible = false;
+        }
 	}
 	
 	// Update is called once per frame
