@@ -41,6 +41,7 @@ public class OnJoinedInstantiate : MonoBehaviour
                 bluePlayers = PunTeams.PlayersPerTeam[PunTeams.Team.blue].Count;
                 ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable();
                 ht.Add("ready", false);
+                ht.Add("all ready", false);
                 PhotonNetwork.player.SetCustomProperties(ht);
                 
                 

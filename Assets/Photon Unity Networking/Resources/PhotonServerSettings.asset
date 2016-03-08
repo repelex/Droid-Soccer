@@ -40,4 +40,5 @@ MonoBehaviour:
   - ChangeColorToRed
   - JoinBlue
   - JoinRed
+  - changeLevel
   DisableAutoOpenWizard: 1
