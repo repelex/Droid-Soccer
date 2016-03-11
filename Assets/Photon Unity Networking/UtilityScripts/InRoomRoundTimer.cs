@@ -26,7 +26,8 @@ public class InRoomRoundTimer : MonoBehaviour
     private bool startRoundWhenTimeIsSynced;        // used in an edge-case when we wanted to set a start time but don't know it yet.
     private const string StartTimeKey = "st";       // the name of our "start time" custom property.
 
-
+   public double starting_severtime;
+   public int update_truth=0;
     private void StartRoundNow()
     {
         // in some cases, when you enter a room, the server time is not available immediately.
@@ -39,11 +40,16 @@ public class InRoomRoundTimer : MonoBehaviour
         }
         startRoundWhenTimeIsSynced = false;
 
+        if (update_truth == 0)
+        {
+            starting_severtime = (PhotonNetwork.time);
+        }
         
 
         ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable();  // only use ExitGames.Client.Photon.Hashtable for Photon
         startTimeProp[StartTimeKey] = PhotonNetwork.time;
         PhotonNetwork.room.SetCustomProperties(startTimeProp);              // implement OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged) to get this change everywhere
+        
     }
 
     
@@ -90,22 +96,24 @@ public class InRoomRoundTimer : MonoBehaviour
         if (startRoundWhenTimeIsSynced)
         {
             this.StartRoundNow();   // the "time is known" check is done inside the method.
+            update_truth = 1;
         }
+        else update_truth = 0;
     }
 
     public void OnGUI()
     {
         // alternatively to doing this calculation here:
         // calculate these values in Update() and make them publicly available to all other scripts
-        double elapsedTime = (PhotonNetwork.time - StartTime);
-        double remainingTime = SecondsPerTurn - (elapsedTime % SecondsPerTurn);
-        int turn = (int)(elapsedTime / SecondsPerTurn);
+        double elapsedTime = (PhotonNetwork.time - (StartTime - starting_severtime));
 
-
+        
+        
         // simple gui for output
         GUILayout.BeginArea(TextPos);
-        GUILayout.Label(string.Format("elapsed: {0:0.000}", elapsedTime));
-        if (elapsedTime == 1000000)
+        GUILayout.Label(string.Format("elapsed: {0:0.000}", (elapsedTime )));
+        
+        if (starting_severtime == 300)
         {
             SceneManager.LoadScene("MainMenu");
             PhotonNetwork.Disconnect();

@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     {
         timer -= Time.deltaTime;
         txt.text = timer.ToString("00:00");
+        
         if (timer <= 0)
         {
             timer = 0;
