@@ -7,6 +7,7 @@ TagManager:
   - Pickup
   - Camera
   - Ball
+  - UIDisplay
   layers:
   - Default
   - TransparentFX

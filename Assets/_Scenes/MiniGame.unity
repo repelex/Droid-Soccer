@@ -1455,6 +1455,8 @@ MonoBehaviour:
     y: 80
     width: 150
     height: 300
+  starting_severtime: 0
+  update_truth: 0
 --- !u!1 &1472073620
 GameObject:
   m_ObjectHideFlags: 0
