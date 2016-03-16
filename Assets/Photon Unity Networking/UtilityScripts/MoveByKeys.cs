@@ -15,12 +15,11 @@ using System.Collections;
 public class MoveByKeys : Photon.MonoBehaviour
 {
     public float thrust = 5000;
-    //public float JumpForce = 20000;
+    public float JumpForce = 60000;
     public float drag = 0.1f;
     public float JumpTimeout = 0.5f;
-	private int currPowerUp = 1;
-	public int speedBoosts = 99;
-	public int spikes = 99;
+	public int maxPowerups = 5;
+	public int powerups = 3;
     //private bool isSprite;
     private Rigidbody body;
     //private Rigidbody2D body2d;
@@ -40,6 +39,7 @@ public class MoveByKeys : Photon.MonoBehaviour
         this.body = GetComponent<Rigidbody>();
         this.coll = GetComponent<Collider>();
         this.rad = GetComponent<SphereCollider>().radius;
+		this.ball = GameObject.FindGameObjectWithTag("Ball");
     }
 
     public bool IsGrounded()
@@ -52,26 +52,29 @@ public class MoveByKeys : Photon.MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
+		if (body.position.y < -10) {
+			body.position = new Vector3 (2.83f,0f,21.43f);
+			body.velocity = Vector3.zero;
+		}
 		
         if (!photonView.isMine)
         {
             return;
         }
 		if (Input.GetKeyDown(KeyCode.X)) {
-			if (speedBoosts > 0) {
-				speedBoosts--;
+			if (powerups > 0) {
+				powerups--;
 				body.AddForce (body.velocity.normalized * 200000); //adds force in direction body is moving
 			} 
 				
 		}
 		if(Input.GetKeyDown(KeyCode.V)) {
-			body.AddExplosionForce(250000,coll.bounds.center,10);  //adds explosive force at players location
-
+			body.velocity = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
 		}
 		if (Input.GetKeyDown (KeyCode.Z)) {
-			if (spikes > 0) {
-				body.AddForce (-Vector3.up * 100000); //add downward force to the the player
-				spikes--;
+			if (powerups > 0) {
+				powerups--;
+				body.AddForce (-Vector3.up * 200000); //add downward force to the the player
 			}
 		}
         if (IsGrounded())
@@ -110,10 +113,10 @@ public class MoveByKeys : Photon.MonoBehaviour
             }
             */
 
-            ball = GameObject.FindGameObjectWithTag("Ball");
+            
             transform.LookAt(ball.transform.position);
-
-            Vector3 pbvec = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
+			//ball.transform.position.y - transform.position.y
+            Vector3 pbvec = new Vector3(ball.transform.position.x - transform.position.x, 0, ball.transform.position.z - transform.position.z);
             pbvec.Normalize();
 
             if (Input.GetKey(KeyCode.A))
@@ -138,7 +141,7 @@ public class MoveByKeys : Photon.MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
 
-                body.AddRelativeForce(Vector3.up * 20000); //player jumping
+				body.AddRelativeForce(Vector3.up * JumpForce); //player jumping
             }
         }
     }
