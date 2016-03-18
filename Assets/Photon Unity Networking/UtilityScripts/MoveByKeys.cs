@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 /// <summary>
 /// Very basic component to move a GameObject by WASD and Space.
 /// </summary>
@@ -29,6 +30,7 @@ public class MoveByKeys : Photon.MonoBehaviour
     public float rad;
 	public Time disableTime;
     private GameObject ball;
+    public Text powerText;
 
     public void Start()
     {
@@ -39,7 +41,14 @@ public class MoveByKeys : Photon.MonoBehaviour
         this.body = GetComponent<Rigidbody>();
         this.coll = GetComponent<Collider>();
         this.rad = GetComponent<SphereCollider>().radius;
-		this.ball = GameObject.FindGameObjectWithTag("Ball");
+        this.ball = GameObject.FindGameObjectWithTag("Ball");
+
+        powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
+    }
+
+    void setPowerText()
+    {
+        powerText.text = "Power Ups: " + powerups.ToString();
     }
 
     public bool IsGrounded()
@@ -52,6 +61,8 @@ public class MoveByKeys : Photon.MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
+        setPowerText();
+
 		if (body.position.y < -10) {
 			body.position = new Vector3 (2.83f,0f,21.43f);
 			body.velocity = Vector3.zero;

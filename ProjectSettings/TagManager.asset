@@ -8,6 +8,7 @@ TagManager:
   - Camera
   - Ball
   - UIDisplay
+  - powerups
   layers:
   - Default
   - TransparentFX
