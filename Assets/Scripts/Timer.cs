@@ -2,20 +2,25 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon;
 
-public class Timer : MonoBehaviour
+public class Timer : Photon.MonoBehaviour
 {
+    //300 seconds = 5 minutes
+    //when adjusting play time you must also adjust the Timer(Script)
 
-    public float timer = 500;
+    public float timer = 300;
     Text txt;
+    int minutes;
+    int seconds;
     
 
     void Update()
     {
         timer -= Time.deltaTime;
-        
-        txt.text = string.Format("00:00", timer.ToString());
-
+        minutes = (int) timer / 60;
+        seconds = (int) timer % 60;
+        txt.text = minutes.ToString() + ":" + seconds.ToString();
         if (timer <= 0)
         {
             timer = 0;
