@@ -27,7 +27,8 @@ public class InRoomRoundTimer : MonoBehaviour
     private const string StartTimeKey = "st";       // the name of our "start time" custom property.
 
    public double starting_severtime;
-   public int update_truth=0;
+    public double timetostart = 0.0f;
+    public double secondsbeforeend = 0;
     private void StartRoundNow()
     {
         // in some cases, when you enter a room, the server time is not available immediately.
@@ -39,12 +40,8 @@ public class InRoomRoundTimer : MonoBehaviour
             return;
         }
         startRoundWhenTimeIsSynced = false;
-
-        if (update_truth == 0)
-        {
-            starting_severtime = (PhotonNetwork.time);
-        }
         
+      
 
         ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable();  // only use ExitGames.Client.Photon.Hashtable for Photon
         startTimeProp[StartTimeKey] = PhotonNetwork.time;
@@ -96,9 +93,13 @@ public class InRoomRoundTimer : MonoBehaviour
         if (startRoundWhenTimeIsSynced)
         {
             this.StartRoundNow();   // the "time is known" check is done inside the method.
-            update_truth = 1;
+           
         }
-        else update_truth = 0;
+       if (PhotonNetwork.isMasterClient)
+        {
+            if (PhotonNetwork.time > 0.0001f) ;
+            this.timetostart = PhotonNetwork.time;
+        }
     }
 
     public void OnGUI()
@@ -107,12 +108,12 @@ public class InRoomRoundTimer : MonoBehaviour
         // calculate these values in Update() and make them publicly available to all other scripts
         double elapsedTime = (PhotonNetwork.time - (StartTime - starting_severtime));
 
-        
-        
+
+
         // simple gui for output
         GUILayout.BeginArea(TextPos);
-        GUILayout.Label(string.Format("elapsed: {0:0.000}", (elapsedTime )));
-        
+        GUILayout.Label(string.Format("elapsed: {0:0.000}", (elapsedTime)));
+        GUILayout.Label(string.Format("test:{0:0.000)}",(timetostart)));
         if (starting_severtime == 300)
         {
             SceneManager.LoadScene("MainMenu");
