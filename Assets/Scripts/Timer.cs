@@ -20,7 +20,7 @@ public class Timer : Photon.MonoBehaviour
         timer -= Time.deltaTime;
         minutes = (int) timer / 60;
         seconds = (int) timer % 60;
-        txt.text = minutes.ToString() + ":" + seconds.ToString();
+        txt.text = minutes.ToString() + ":" + seconds.ToString("00");
         if (timer <= 0)
         {
             timer = 0;
