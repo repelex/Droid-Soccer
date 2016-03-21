@@ -43,12 +43,18 @@ public class MoveByKeys : Photon.MonoBehaviour
         this.rad = GetComponent<SphereCollider>().radius;
         this.ball = GameObject.FindGameObjectWithTag("Ball");
 
-        powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
+        if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
+            { 
+            powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
+            }
     }
 
     void setPowerText()
     {
-        powerText.text = "Power Ups: " + powerups.ToString();
+        if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
+        {
+            powerText.text = "Power Ups: " + powerups.ToString();
+        }
     }
 
     public bool IsGrounded()
