@@ -45,7 +45,7 @@ public class MoveByKeys : Photon.MonoBehaviour
 
         if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
             { 
-            powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
+                powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
             }
     }
 
@@ -78,22 +78,31 @@ public class MoveByKeys : Photon.MonoBehaviour
         {
             return;
         }
-		if (Input.GetKeyDown(KeyCode.X)) {
-			if (powerups > 0) {
-				powerups--;
-				body.AddForce (body.velocity.normalized * 200000); //adds force in direction body is moving
-			} 
-				
-		}
-		if(Input.GetKeyDown(KeyCode.V)) {
-			body.velocity = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
-		}
-		if (Input.GetKeyDown (KeyCode.Z)) {
-			if (powerups > 0) {
-				powerups--;
-				body.AddForce (-Vector3.up * 200000); //add downward force to the the player
-			}
-		}
+
+        if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
+        {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                if (powerups > 0)
+                {
+                    powerups--;
+                    body.AddForce(body.velocity.normalized * 200000); //adds force in direction body is moving
+                }
+
+            }
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                body.velocity = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
+            }
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                if (powerups > 0)
+                {
+                    powerups--;
+                    body.AddForce(-Vector3.up * 200000); //add downward force to the the player
+                }
+            }
+        }
         if (IsGrounded())
         {
             /*
