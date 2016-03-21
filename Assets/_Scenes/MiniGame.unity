@@ -1488,7 +1488,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Hello this is a Test
+
+'
 --- !u!222 &1272758752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1670,7 +1672,8 @@ MonoBehaviour:
     width: 150
     height: 300
   starting_severtime: 0
-  update_truth: 0
+  timetostart: 0
+  secondsbeforeend: 0
 --- !u!1 &1472073620
 GameObject:
   m_ObjectHideFlags: 0
