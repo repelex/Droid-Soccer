@@ -111,9 +111,9 @@ public class InRoomRoundTimer : MonoBehaviour
 
 
         // simple gui for output
-        GUILayout.BeginArea(TextPos);
-        GUILayout.Label(string.Format("elapsed: {0:0.000}", (elapsedTime)));
-        GUILayout.Label(string.Format("test:{0:0.000)}",(timetostart)));
+       // GUILayout.BeginArea(TextPos);
+     //   GUILayout.Label(string.Format("elapsed: {0:0.000}", (elapsedTime)));
+       // GUILayout.Label(string.Format("test:{0:0.000)}",(timetostart)));
         if (starting_severtime == 300)
         {
             SceneManager.LoadScene("MainMenu");

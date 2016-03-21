@@ -25,6 +25,7 @@ public class Timer : Photon.MonoBehaviour
         {
             timer = 0;
             SceneManager.LoadScene("Lobby");
+            
         }
     }
 
