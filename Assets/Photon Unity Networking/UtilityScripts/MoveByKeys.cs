@@ -43,18 +43,20 @@ public class MoveByKeys : Photon.MonoBehaviour
         this.rad = GetComponent<SphereCollider>().radius;
         this.ball = GameObject.FindGameObjectWithTag("Ball");
 
-        if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
-            { 
-                powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
-            }
+        if (isGame())
+        {
+            powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
+        }
+    }
+
+    bool isGame()
+    {
+        return SceneManagerHelper.ActiveSceneName.Equals("MiniGame");
     }
 
     void setPowerText()
     {
-        if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
-        {
-            powerText.text = "Power Ups: " + powerups.ToString();
-        }
+        powerText.text = "Power Ups: " + powerups.ToString();
     }
 
     public bool IsGrounded()
@@ -67,8 +69,6 @@ public class MoveByKeys : Photon.MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
-        setPowerText();
-
 		if (body.position.y < -10) {
 			body.position = new Vector3 (2.83f,0f,21.43f);
 			body.velocity = Vector3.zero;
@@ -79,8 +79,10 @@ public class MoveByKeys : Photon.MonoBehaviour
             return;
         }
 
-        if (SceneManagerHelper.ActiveSceneName.Equals("MiniGame"))
+        if (isGame()) //we are in main game
         {
+            setPowerText();
+
             if (Input.GetKeyDown(KeyCode.X))
             {
                 if (powerups > 0)
@@ -161,8 +163,6 @@ public class MoveByKeys : Photon.MonoBehaviour
             {
                 body.AddForce(-1 * pbvec * thrust);
             }
-
-
 
             if (Input.GetKey(KeyCode.Space))
             {
