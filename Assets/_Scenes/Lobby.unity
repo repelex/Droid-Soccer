@@ -1358,7 +1358,8 @@ MonoBehaviour:
     width: 150
     height: 300
   starting_severtime: 0
-  update_truth: 0
+  timetostart: 0
+  secondsbeforeend: 0
 --- !u!114 &1879727324
 MonoBehaviour:
   m_ObjectHideFlags: 0
