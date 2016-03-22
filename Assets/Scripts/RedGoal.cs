@@ -29,7 +29,11 @@ public class RedGoal : MonoBehaviour {
      // Update is called once per frame
      void Update()
      {
-          
+          if (isTimerOn)
+          {
+               
+               afterGoalTimer();
+          }
      }
 
      //Detect when ball entes goal area
@@ -40,10 +44,28 @@ public class RedGoal : MonoBehaviour {
                Debug.Log("Blue Team Scored!");
                incrementScore();
                BTS.SetActive(true);
-               
+               isTimerOn = true;
+          }
+     }
+
+     //Wait 3 seconds before reloading the scene
+     public float timer = 4;
+     int minutes;
+     int seconds;
+     bool isTimerOn = false;
+     void afterGoalTimer()
+     {
+          timer -= Time.deltaTime;
+          minutes = (int)timer / 60;
+          seconds = (int)timer % 60;
+
+          if (timer <= 0)
+          {
                SceneManager.LoadScene("MiniGame");
           }
      }
-          
      
 }
+
+
+
