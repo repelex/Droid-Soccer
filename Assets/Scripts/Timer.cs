@@ -28,6 +28,10 @@ public class Timer : Photon.MonoBehaviour
             
         }
     }
+	public float GetTime()
+	{
+		return timer;
+	}
 
     void Start()
     {

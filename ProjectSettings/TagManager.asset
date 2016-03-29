@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - UIDisplay
   - powerups
+  - Timer
   layers:
   - Default
   - TransparentFX

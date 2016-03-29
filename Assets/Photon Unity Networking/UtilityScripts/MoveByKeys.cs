@@ -30,6 +30,8 @@ public class MoveByKeys : Photon.MonoBehaviour
     public float rad;
 	public Time disableTime;
     private GameObject ball;
+	private GameObject timer;
+	public float lastPowerup = 300;
     public Text powerText;
 
     public void Start()
@@ -43,9 +45,11 @@ public class MoveByKeys : Photon.MonoBehaviour
         this.rad = GetComponent<SphereCollider>().radius;
         this.ball = GameObject.FindGameObjectWithTag("Ball");
 
+
         if (isGame())
         {
             powerText = GameObject.FindGameObjectWithTag("powerups").GetComponent<Text>() as Text;
+			this.timer = GameObject.FindGameObjectWithTag ("Timer");
         }
     }
 
@@ -81,6 +85,12 @@ public class MoveByKeys : Photon.MonoBehaviour
 
         if (isGame()) //we are in main game
         {
+			if (timer.GetComponent<Timer>().GetTime() < lastPowerup - 5) {
+				if (powerups < maxPowerups) {
+					powerups++;
+					lastPowerup = timer.GetComponent<Timer>().GetTime();
+				}
+			}
             setPowerText();
 
             if (Input.GetKeyDown(KeyCode.X))
@@ -94,8 +104,15 @@ public class MoveByKeys : Photon.MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.V))
             {
-                body.velocity = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
-            }
+				if (powerups == maxPowerups) {
+					powerups = 0;
+					Vector3 temp = new Vector3 (ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
+					temp.Scale(new Vector3 (100 / temp.magnitude, 100 / temp.magnitude, 100 / temp.magnitude));
+					Debug.Log (temp.magnitude);
+					body.velocity = temp;
+
+				}
+			}
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 if (powerups > 0)
