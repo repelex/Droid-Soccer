@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class ReadyChecker : MonoBehaviour {
 
     public bool readyStatus = false;
@@ -52,6 +52,7 @@ public class ReadyChecker : MonoBehaviour {
                 }
                 if (allReady)
                 {
+                    initializeVars();
                     PhotonView photonView = GameObject.Find("Control").GetComponent<PhotonView>();
                     photonView.RPC("changeLevel", PhotonTargets.AllBuffered);
                 }
@@ -65,4 +66,11 @@ public class ReadyChecker : MonoBehaviour {
         PhotonNetwork.LoadLevel("MiniGame");
     }
 
+     //Intialize timer and scores
+     void initializeVars()
+     {
+          PlayerPrefs.SetInt("BlueScore", 0);
+          PlayerPrefs.SetInt("RedScore", 0);
+          PlayerPrefs.SetInt("Time", 300);
+     }
 }
