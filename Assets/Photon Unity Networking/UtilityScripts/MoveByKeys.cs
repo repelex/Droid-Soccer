@@ -105,11 +105,16 @@ public class MoveByKeys : Photon.MonoBehaviour
             if (Input.GetKeyDown(KeyCode.V))
             {
 				if (powerups == maxPowerups) {
-					powerups = 0;
-					Vector3 temp = new Vector3 (ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
-					temp.Scale(new Vector3 (100 / temp.magnitude, 100 / temp.magnitude, 100 / temp.magnitude));
-					Debug.Log (temp.magnitude);
-					body.velocity = temp;
+                    Vector3 temp = new Vector3(ball.transform.position.x - transform.position.x, ball.transform.position.y - transform.position.y, ball.transform.position.z - transform.position.z);
+                    if (temp.magnitude > 80)
+                    {
+                        powerups = 0;
+					
+                    
+                        temp.Scale(new Vector3(100 / temp.magnitude, 100 / temp.magnitude, 100 / temp.magnitude));
+                        Debug.Log(temp.magnitude);
+                        body.velocity = temp;
+                    }
 
 				}
 			}

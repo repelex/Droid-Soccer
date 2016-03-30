@@ -124,6 +124,6 @@ public class InRoomRoundTimer : MonoBehaviour
         //GUILayout.Label(string.Format("turn: {0:0}", turn));
 
 
-        GUILayout.EndArea();
+        //GUILayout.EndArea();
     }
 }
