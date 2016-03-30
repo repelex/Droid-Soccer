@@ -38,11 +38,11 @@ public class ReadyChecker : MonoBehaviour {
                 foreach (PhotonPlayer player in PhotonNetwork.playerList)
                 {
                     
-                    GUILayout.BeginArea(TextPos);
+                    //GUILayout.BeginArea(TextPos);
 
                     
                     
-                    GUILayout.Label(string.Format("",names));
+                    //GUILayout.Label(string.Format("",names));
                     // GUILayout.Label(string.Format("test:{0:0.000)}",(timetostart)));
                     Debug.Log(player.ID + " " + player.customProperties["ready"] + " out of " + PhotonNetwork.playerList.Length);  
                     if ((bool)player.customProperties["ready"] == false)
