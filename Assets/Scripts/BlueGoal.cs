@@ -7,9 +7,29 @@ public class BlueGoal : MonoBehaviour {
 
      GameObject RTS;
      int RScore;
+     GameObject RScoreOb = GameObject.Find("Red Team Score");
+     GameObject BScoreOb = GameObject.Find("Blue Team Score");
      void Start()
      {
           
+          if (!PlayerPrefs.HasKey("BlueScore"))
+          {
+               Debug.Log("Set Blue");
+               PlayerPrefs.SetInt("BlueScore", 0);
+          }
+          
+          if (!PlayerPrefs.HasKey("RedScore"))
+          {
+               Debug.Log("Set Red");
+               PlayerPrefs.SetInt("RedScore", 0);
+
+          }
+          RScoreOb.GetComponent<Text>().text = PlayerPrefs.GetInt("RedScore").ToString();
+          BScoreOb.GetComponent<Text>().text = PlayerPrefs.GetInt("BlueScore").ToString();
+
+          Debug.Log(PlayerPrefs.GetInt("RedScore"));
+          Debug.Log(PlayerPrefs.GetInt("BlueScore"));
+
           //Create ref to the object before deactivating
           RTS = GameObject.Find("RedTeamScored");
           RTS.SetActive(false);
@@ -17,11 +37,11 @@ public class BlueGoal : MonoBehaviour {
      bool canScore = true;
      void incrementScore()
      {
-          GameObject RScoreOb = GameObject.Find("Red Team Score");
-      
-          int r = int.Parse(RScoreOb.GetComponent<Text>().text);
-          r++;
-          RScoreOb.GetComponent<Text>().text = r.ToString();
+          SceneManager.LoadScene("MiniGame");
+          int RScore = PlayerPrefs.GetInt("RedScore");
+          RScore++;
+          PlayerPrefs.SetInt("RedScore", RScore);
+          RScoreOb.GetComponent<Text>().text = RScore.ToString();
           canScore = false;
           
      }
@@ -32,7 +52,6 @@ public class BlueGoal : MonoBehaviour {
      {
           if (isTimerOn)
           {
-
                afterGoalTimer();
           }
      }
@@ -46,8 +65,10 @@ public class BlueGoal : MonoBehaviour {
           {
                Debug.Log("Red Team Scored!");
                incrementScore();
+               SceneManager.LoadScene("MiniGame");
                RTS.SetActive(true);
-               isTimerOn = true;
+             
+               //isTimerOn = true;
                
           }
      }
@@ -57,6 +78,8 @@ public class BlueGoal : MonoBehaviour {
      int minutes;
      int seconds;
      bool isTimerOn = false;
+
+
      void afterGoalTimer()
      {
           timer -= Time.deltaTime;
@@ -66,6 +89,7 @@ public class BlueGoal : MonoBehaviour {
           if (timer <= 0)
           {
                SceneManager.LoadScene("MiniGame");
+               
           }
      }
 }
