@@ -919,6 +919,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   readyStatus: 0
+  names: 
+  TextPos:
+    serializedVersion: 2
+    x: 1
+    y: 80
+    width: 150
+    height: 300
 --- !u!1 &1620822894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed1512fb7fe8cc4db69f301e9fea537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
+  menu: {fileID: 1775991591}
 --- !u!114 &1879727319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,3 +1534,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   readyStatus: 0
+  names: 
+  TextPos:
+    serializedVersion: 2
+    x: 1
+    y: 80
+    width: 150
+    height: 300
