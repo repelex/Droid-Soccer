@@ -11,16 +11,7 @@ public class ReadyChecker : MonoBehaviour {
     int counterforarray = 0;
     // Update is called once per frame
     public void Update () {
-       /* if (numberofplayers != PhotonNetwork.countOfPlayers)
-        {
-            while (numberofplayers != PhotonNetwork.countOfPlayers)
-            {
-                names[counterforarray] = (PhotonNetwork.playerName[counterforarray]);
 
-
-                counterforarray += 1;
-            }
-        }*/
         numberofplayers = PhotonNetwork.countOfPlayers;
 
         if (Input.GetKeyUp(KeyCode.F2))
@@ -37,13 +28,13 @@ public class ReadyChecker : MonoBehaviour {
                 allReady = true;
                 foreach (PhotonPlayer player in PhotonNetwork.playerList)
                 {
-                    
-                    //GUILayout.BeginArea(TextPos);
 
-                    
-                    
-                    //GUILayout.Label(string.Format("",names));
-                    // GUILayout.Label(string.Format("test:{0:0.000)}",(timetostart)));
+                   
+
+
+                    GameObject.Find("Player Status").GetComponent<Text>().text = "player status: "+player.customProperties["ready"];
+                                   
+                  
                     Debug.Log(player.ID + " " + player.customProperties["ready"] + " out of " + PhotonNetwork.playerList.Length);  
                     if ((bool)player.customProperties["ready"] == false)
                     {
