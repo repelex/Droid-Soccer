@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51558954e6f16fd4c9d4c0a91d06399f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSound: {fileID: 8300000, guid: 113d2ff204a994ef8848ff0d54548bc9, type: 3}
   timer: 4
 --- !u!23 &14678071
 MeshRenderer:
@@ -1722,6 +1723,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2157,6 +2159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fa156dfde3af24391cc7e43955c833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSound: {fileID: 8300000, guid: 113d2ff204a994ef8848ff0d54548bc9, type: 3}
   timer: 4
 --- !u!23 &1921898929
 MeshRenderer:
