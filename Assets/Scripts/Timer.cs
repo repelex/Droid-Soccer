@@ -24,7 +24,8 @@ public class Timer : Photon.MonoBehaviour
         if (timer <= 0)
         {
             timer = 0;
-            SceneManager.LoadScene("Lobby");
+            PhotonNetwork.JoinLobby();
+            PhotonNetwork.LoadLevel("Lobby");
             
         }
     }
