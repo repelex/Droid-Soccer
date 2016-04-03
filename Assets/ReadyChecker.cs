@@ -14,7 +14,7 @@ public class ReadyChecker : MonoBehaviour {
 
         numberofplayers = PhotonNetwork.countOfPlayers;
 
-        if (Input.GetKeyUp(KeyCode.F2))
+		if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             readyStatus = !readyStatus;
             ExitGames.Client.Photon.Hashtable ht = new ExitGames.Client.Photon.Hashtable();
