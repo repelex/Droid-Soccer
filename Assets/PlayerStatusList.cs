@@ -19,7 +19,18 @@ public class PlayerStatusList : Photon.MonoBehaviour {
         GameObject.Find("Player Status").GetComponent<Text>().text = "";
         foreach (PhotonPlayer player in PhotonNetwork.playerList)
         {
-            GameObject.Find("Player Status").GetComponent<Text>().text += "player "+player.ID+" status: " + player.customProperties["ready"] + "\n";
+            if (player.ID != -1) {
+
+                string status = "Ready";
+                if (player.customProperties["ready"].Equals(false))
+                {
+                    status = "Not Ready";
+                }
+
+                GameObject.Find("Player Status").GetComponent<Text>().text += "player " + player.ID + " status: " + status + "\n";
+
+
+            }
         }
 
     }
