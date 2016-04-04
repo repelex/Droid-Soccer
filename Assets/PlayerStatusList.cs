@@ -21,10 +21,10 @@ public class PlayerStatusList : Photon.MonoBehaviour {
         {
             if (player.ID != -1) {
 
-                string status = "Ready";
-                if (player.customProperties["ready"].Equals(false))
+                string status = "Not Ready";
+                if (player.customProperties["ready"].Equals(true))
                 {
-                    status = "Not Ready";
+                    status = "Ready";
                 }
 
                 GameObject.Find("Player Status").GetComponent<Text>().text += "player " + player.ID + " status: " + status + "\n";
