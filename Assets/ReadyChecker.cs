@@ -8,13 +8,13 @@ public class ReadyChecker : MonoBehaviour {
     private static bool allReady = false;
     public char[] names = new char[] {  };
     public Rect TextPos = new Rect(1, 80, 150, 300);
-    ExitGames.Client.Photon.Hashtable h;
+     ExitGames.Client.Photon.Hashtable h = new ExitGames.Client.Photon.Hashtable();
      //int numberofplayers = 0;
      //int counterforarray = 0;
      // Update is called once per frame
 
      public void Start() {
-          //validateVars();
+          validateVars();
      }
     public void Update () {
 
@@ -34,6 +34,7 @@ public class ReadyChecker : MonoBehaviour {
                 allReady = true;
                 foreach (PhotonPlayer player in PhotonNetwork.playerList)
                 {
+                    
                     GameObject.Find("Player Status").GetComponent<Text>().text = "player status: "+player.customProperties["ready"];
                                   
                     Debug.Log(player.ID + " " + player.customProperties["ready"] + " out of " + PhotonNetwork.playerList.Length);  
@@ -70,14 +71,12 @@ public class ReadyChecker : MonoBehaviour {
      void validateVars() 
      {
           //Get player object who is master client
-          
-          
           if (PhotonNetwork.isMasterClient)
           {
-              // h.Add("t", "t");
-              // if(h.ContainsKey("t"))
-               Debug.Log("Worked");
+               h.Add("t", "t");
           }
+          if (h.ContainsKey("t"))
+               Debug.Log("Worked");
           //Check their current values for timer and scores
           //Take those values
      }
