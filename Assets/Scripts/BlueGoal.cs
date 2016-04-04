@@ -120,4 +120,6 @@ public class BlueGoal : MonoBehaviour
         int timeRemaining = (Int32.Parse(times[0]) * 60) + Int32.Parse(times[1]);
         PlayerPrefs.SetInt("Time", timeRemaining);
     }
+
+
 }

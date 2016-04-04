@@ -6,10 +6,10 @@ using Photon;
 
 public class Timer : Photon.MonoBehaviour
 {
-    //300 seconds = 5 minutes
-    //when adjusting play time you must also adjust the Timer(Script)
+     //300 seconds = 5 minutes
+     //when adjusting play time you must also adjust the Timer(Script)
 
-    public float timer = (float)PlayerPrefs.GetInt("Time");
+     public float timer = 300;
     Text txt;
     int minutes;
     int seconds;
@@ -36,7 +36,8 @@ public class Timer : Photon.MonoBehaviour
 
     void Start()
     {
-        txt = GetComponent<Text>();
+          timer = (float)PlayerPrefs.GetInt("Time");
+          txt = GetComponent<Text>();
         txt.text = "00.00";
     }
 }

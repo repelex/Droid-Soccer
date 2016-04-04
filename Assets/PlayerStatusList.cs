@@ -19,8 +19,6 @@ public class PlayerStatusList : Photon.MonoBehaviour {
         GameObject.Find("Player Status").GetComponent<Text>().text = "";
         foreach (PhotonPlayer player in PhotonNetwork.playerList)
         {
-            
-            Debug.Log(PhotonNetwork.playerList.Length);
             GameObject.Find("Player Status").GetComponent<Text>().text += "player "+player.ID+" status: " + player.customProperties["ready"] + "\n";
         }
 
