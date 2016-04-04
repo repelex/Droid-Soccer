@@ -60,10 +60,10 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ad255ee623b704af8d6995bd2a6eca292"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292">Origin</a> : byte { <a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292ae7a3a8e2f3e15102959481b9c2334647">Origin.ServerWeb</a> = 1, 
-<a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292af704e8ac42b36e2873466f04fb12be26">Origin.CloudWeb</a> = 2, 
-<a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292a6644a7352d32c9c4443017798130b61f">Origin.Pun</a> = 3, 
-<a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292af9c18932d87693c2cdfd5c6042b27687">Origin.Playmaker</a> = 4
+<tr class="memitem:ad255ee623b704af8d6995bd2a6eca292"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad255ee623b704af8d6995bd2a6eca292"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Origin</b> : byte { <b>ServerWeb</b> = 1, 
+<b>CloudWeb</b> = 2, 
+<b>Pun</b> = 3, 
+<b>Playmaker</b> = 4
  }</td></tr>
 <tr class="separator:ad255ee623b704af8d6995bd2a6eca292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -72,58 +72,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af440e845bf59207f2abab64155ac78fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#af440e845bf59207f2abab64155ac78fd">AccountService</a> ()</td></tr>
 <tr class="memdesc:af440e845bf59207f2abab64155ac78fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a instance of the Account Service to register <a class="el" href="namespace_photon.html">Photon</a> Cloud accounts.  <a href="#af440e845bf59207f2abab64155ac78fd">More...</a><br /></td></tr>
 <tr class="separator:af440e845bf59207f2abab64155ac78fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a879044e72d8362127dd106cef0dee0a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#a879044e72d8362127dd106cef0dee0a6">RegisterByEmail</a> (string email, <a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292">Origin</a> origin)</td></tr>
+<tr class="memitem:a879044e72d8362127dd106cef0dee0a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#a879044e72d8362127dd106cef0dee0a6">RegisterByEmail</a> (string email, Origin origin)</td></tr>
 <tr class="memdesc:a879044e72d8362127dd106cef0dee0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to create a <a class="el" href="namespace_photon.html">Photon</a> Cloud Account.  <a href="#a879044e72d8362127dd106cef0dee0a6">More...</a><br /></td></tr>
 <tr class="separator:a879044e72d8362127dd106cef0dee0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21f4161e664bf917292634c78d96d343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#a21f4161e664bf917292634c78d96d343">RegisterByEmailAsync</a> (string email, <a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292">Origin</a> origin, Action&lt; <a class="el" href="class_account_service.html">AccountService</a> &gt; callback=null)</td></tr>
+<tr class="memitem:a21f4161e664bf917292634c78d96d343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#a21f4161e664bf917292634c78d96d343">RegisterByEmailAsync</a> (string email, Origin origin, Action&lt; <a class="el" href="class_account_service.html">AccountService</a> &gt; callback=null)</td></tr>
 <tr class="memdesc:a21f4161e664bf917292634c78d96d343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to create a <a class="el" href="namespace_photon.html">Photon</a> Cloud Account asynchronously.  <a href="#a21f4161e664bf917292634c78d96d343">More...</a><br /></td></tr>
 <tr class="separator:a21f4161e664bf917292634c78d96d343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:adb8216071aff4ae5088e65879f824376"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#adb8216071aff4ae5088e65879f824376">Validator</a> (object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)</td></tr>
+<tr class="memitem:adb8216071aff4ae5088e65879f824376"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb8216071aff4ae5088e65879f824376"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Validator</b> (object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)</td></tr>
 <tr class="separator:adb8216071aff4ae5088e65879f824376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:af80209c3fba8bbd0d70a19fac0efda34"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#af80209c3fba8bbd0d70a19fac0efda34">Message</a><code> [get]</code></td></tr>
+<tr class="memitem:af80209c3fba8bbd0d70a19fac0efda34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af80209c3fba8bbd0d70a19fac0efda34"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b><code> [get]</code></td></tr>
 <tr class="separator:af80209c3fba8bbd0d70a19fac0efda34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac56e602baed20f1f03bd6647da7ce0e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#aac56e602baed20f1f03bd6647da7ce0e">AppId</a><code> [get]</code></td></tr>
+<tr class="memitem:aac56e602baed20f1f03bd6647da7ce0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac56e602baed20f1f03bd6647da7ce0e"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>AppId</b><code> [get]</code></td></tr>
 <tr class="separator:aac56e602baed20f1f03bd6647da7ce0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a203023d7caa8f3f41cc71bf538903ceb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_account_service.html#a203023d7caa8f3f41cc71bf538903ceb">ReturnCode</a><code> [get]</code></td></tr>
+<tr class="memitem:a203023d7caa8f3f41cc71bf538903ceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a203023d7caa8f3f41cc71bf538903ceb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnCode</b><code> [get]</code></td></tr>
 <tr class="separator:a203023d7caa8f3f41cc71bf538903ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="ad255ee623b704af8d6995bd2a6eca292"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292">AccountService.Origin</a> : byte</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad255ee623b704af8d6995bd2a6eca292ae7a3a8e2f3e15102959481b9c2334647"></a>ServerWeb&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad255ee623b704af8d6995bd2a6eca292af704e8ac42b36e2873466f04fb12be26"></a>CloudWeb&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad255ee623b704af8d6995bd2a6eca292a6644a7352d32c9c4443017798130b61f"></a>Pun&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ad255ee623b704af8d6995bd2a6eca292af9c18932d87693c2cdfd5c6042b27687"></a>Playmaker&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af440e845bf59207f2abab64155ac78fd"></a>
 <div class="memitem">
@@ -156,7 +129,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292">Origin</a>&#160;</td>
+          <td class="paramtype">Origin&#160;</td>
           <td class="paramname"><em>origin</em>&#160;</td>
         </tr>
         <tr>
@@ -192,7 +165,7 @@ Properties</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_account_service.html#ad255ee623b704af8d6995bd2a6eca292">Origin</a>&#160;</td>
+          <td class="paramtype">Origin&#160;</td>
           <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
@@ -222,120 +195,13 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adb8216071aff4ae5088e65879f824376"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool AccountService.Validator </td>
-          <td>(</td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>sender</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">X509Certificate&#160;</td>
-          <td class="paramname"><em>certificate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">X509Chain&#160;</td>
-          <td class="paramname"><em>chain</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SslPolicyErrors&#160;</td>
-          <td class="paramname"><em>policyErrors</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a class="anchor" id="aac56e602baed20f1f03bd6647da7ce0e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string AccountService.AppId</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af80209c3fba8bbd0d70a19fac0efda34"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string AccountService.Message</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a203023d7caa8f3f41cc71bf538903ceb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int AccountService.ReturnCode</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/Editor/PhotonNetwork/<a class="el" href="_account_service_8cs.html">AccountService.cs</a></li>
+<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/Editor/PhotonNetwork/AccountService.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 2 2016 10:20:10 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 4 2016 11:26:38 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

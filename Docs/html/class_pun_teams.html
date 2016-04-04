@@ -60,21 +60,28 @@
 
 <p>Implements teams in a room/game with help of player properties.  
  <a href="class_pun_teams.html#details">More...</a></p>
-
-<p>Inherits MonoBehaviour.</p>
+<div class="dynheader">
+Inheritance diagram for PunTeams:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_pun_teams.png" usemap="#PunTeams_map" alt=""/>
+  <map id="PunTeams_map" name="PunTeams_map">
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a933d84000474f43931805990b241a2a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pun_teams.html#a933d84000474f43931805990b241a2a7">Team</a> : byte { <a class="el" href="class_pun_teams.html#a933d84000474f43931805990b241a2a7a334c4a4c42fdb79d7ebc3e73b517e6f8">Team.none</a>, 
-<a class="el" href="class_pun_teams.html#a933d84000474f43931805990b241a2a7abda9643ac6601722a28f238714274da4">Team.red</a>, 
-<a class="el" href="class_pun_teams.html#a933d84000474f43931805990b241a2a7a48d6215903dff56238e52e8891380c8f">Team.blue</a>
+<tr class="memitem:a933d84000474f43931805990b241a2a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pun_teams.html#a933d84000474f43931805990b241a2a7">Team</a> : byte { <b>none</b>, 
+<b>red</b>, 
+<b>blue</b>
  }<tr class="memdesc:a933d84000474f43931805990b241a2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum defining the teams available. First team should be neutral (it's the default value any field of this enum gets). <a href="class_pun_teams.html#a933d84000474f43931805990b241a2a7">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a933d84000474f43931805990b241a2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a34a0c084356816754542a6299e5cad94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pun_teams.html#a34a0c084356816754542a6299e5cad94">Start</a> ()</td></tr>
+<tr class="memitem:a34a0c084356816754542a6299e5cad94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34a0c084356816754542a6299e5cad94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
 <tr class="separator:a34a0c084356816754542a6299e5cad94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b844f234f8c18f9336458f14c1e10d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pun_teams.html#a9b844f234f8c18f9336458f14c1e10d5">OnJoinedRoom</a> ()</td></tr>
 <tr class="memdesc:a9b844f234f8c18f9336458f14c1e10d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needed to update the team lists when joining a room.  <a href="#a9b844f234f8c18f9336458f14c1e10d5">More...</a><br /></td></tr>
@@ -82,7 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8478309a7c3a43014901f5ae2ed3ddc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pun_teams.html#a8478309a7c3a43014901f5ae2ed3ddc7">OnPhotonPlayerPropertiesChanged</a> (object[] playerAndUpdatedProps)</td></tr>
 <tr class="memdesc:a8478309a7c3a43014901f5ae2ed3ddc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refreshes the team lists.  <a href="#a8478309a7c3a43014901f5ae2ed3ddc7">More...</a><br /></td></tr>
 <tr class="separator:a8478309a7c3a43014901f5ae2ed3ddc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03fd4ce6acb2bd7a4b02ac15858740a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pun_teams.html#a03fd4ce6acb2bd7a4b02ac15858740a0">UpdateTeams</a> ()</td></tr>
+<tr class="memitem:a03fd4ce6acb2bd7a4b02ac15858740a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03fd4ce6acb2bd7a4b02ac15858740a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateTeams</b> ()</td></tr>
 <tr class="separator:a03fd4ce6acb2bd7a4b02ac15858740a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -121,14 +129,6 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enum defining the teams available. First team should be neutral (it's the default value any field of this enum gets).</p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a933d84000474f43931805990b241a2a7a334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a933d84000474f43931805990b241a2a7abda9643ac6601722a28f238714274da4"></a>red&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a933d84000474f43931805990b241a2a7a48d6215903dff56238e52e8891380c8f"></a>blue&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
 
 </div>
 </div>
@@ -168,36 +168,6 @@ Static Public Attributes</h2></td></tr>
 <p>Refreshes the team lists. </p>
 <p>It could be a non-team related property change, too.</p>
 <p>Called by PUN. See enum PhotonNetworkingMessage for an explanation.</p>
-
-</div>
-</div>
-<a class="anchor" id="a34a0c084356816754542a6299e5cad94"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PunTeams.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a03fd4ce6acb2bd7a4b02ac15858740a0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PunTeams.UpdateTeams </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -241,12 +211,12 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/UtilityScripts/<a class="el" href="_pun_teams_8cs.html">PunTeams.cs</a></li>
+<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/UtilityScripts/PunTeams.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 2 2016 10:20:17 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 4 2016 11:27:04 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

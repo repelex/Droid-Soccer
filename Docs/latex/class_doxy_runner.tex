@@ -8,11 +8,14 @@ This class spawns and runs Doxygen in a separate thread, and could serve as an e
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_doxy_runner_aed7742f6732027e7427393d727898eba}{Doxy\+Runner} (string exepath, string\mbox{[}$\,$\mbox{]} args, \hyperlink{class_doxy_thread_safe_output}{Doxy\+Thread\+Safe\+Output} safeoutput, Action$<$ int $>$ callback)
+{\bfseries Doxy\+Runner} (string exepath, string\mbox{[}$\,$\mbox{]} args, \hyperlink{class_doxy_thread_safe_output}{Doxy\+Thread\+Safe\+Output} safeoutput, Action$<$ int $>$ callback)\hypertarget{class_doxy_runner_aed7742f6732027e7427393d727898eba}{}\label{class_doxy_runner_aed7742f6732027e7427393d727898eba}
+
 \item 
-void \hyperlink{class_doxy_runner_a4474ed980f895f97ac3517fe85834259}{update\+Ouput\+String} (string output)
+void {\bfseries update\+Ouput\+String} (string output)\hypertarget{class_doxy_runner_a4474ed980f895f97ac3517fe85834259}{}\label{class_doxy_runner_a4474ed980f895f97ac3517fe85834259}
+
 \item 
-void \hyperlink{class_doxy_runner_a0a838402bf7b6661d4a1959c1b57aeb6}{Run\+Threaded\+Doxy} ()
+void {\bfseries Run\+Threaded\+Doxy} ()\hypertarget{class_doxy_runner_a0a838402bf7b6661d4a1959c1b57aeb6}{}\label{class_doxy_runner_a0a838402bf7b6661d4a1959c1b57aeb6}
+
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -26,30 +29,20 @@ static string \hyperlink{class_doxy_runner_a0923bf6769c3b99b4fb8e9ce67877a94}{Fi
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Action$<$ int $>$ \hyperlink{class_doxy_runner_ac1401822d6b3dea5626b786a94aa98d5}{on\+Complete\+Call\+Back}
+Action$<$ int $>$ {\bfseries on\+Complete\+Call\+Back}\hypertarget{class_doxy_runner_ac1401822d6b3dea5626b786a94aa98d5}{}\label{class_doxy_runner_ac1401822d6b3dea5626b786a94aa98d5}
+
 \item 
-string \hyperlink{class_doxy_runner_a9661f03da50c7783e9bc99e2a92f14e6}{E\+XE} = null
+string {\bfseries E\+XE} = null\hypertarget{class_doxy_runner_a9661f03da50c7783e9bc99e2a92f14e6}{}\label{class_doxy_runner_a9661f03da50c7783e9bc99e2a92f14e6}
+
 \item 
-string\mbox{[}$\,$\mbox{]} \hyperlink{class_doxy_runner_a015e8e8211c24140065dfc92f5fba71b}{Args}
+string\mbox{[}$\,$\mbox{]} {\bfseries Args}\hypertarget{class_doxy_runner_a015e8e8211c24140065dfc92f5fba71b}{}\label{class_doxy_runner_a015e8e8211c24140065dfc92f5fba71b}
+
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This class spawns and runs Doxygen in a separate thread, and could serve as an example of how to create plugins for unity that call a command line application and then get the data back into Unity safely. 
 
-
-
-\subsection{Constructor \& Destructor Documentation}
-\index{Doxy\+Runner@{Doxy\+Runner}!Doxy\+Runner@{Doxy\+Runner}}
-\index{Doxy\+Runner@{Doxy\+Runner}!Doxy\+Runner@{Doxy\+Runner}}
-\subsubsection[{\texorpdfstring{Doxy\+Runner(string exepath, string[] args, Doxy\+Thread\+Safe\+Output safeoutput, Action$<$ int $>$ callback)}{DoxyRunner(string exepath, string[] args, DoxyThreadSafeOutput safeoutput, Action< int > callback)}}]{\setlength{\rightskip}{0pt plus 5cm}Doxy\+Runner.\+Doxy\+Runner (
-\begin{DoxyParamCaption}
-\item[{string}]{exepath, }
-\item[{string\mbox{[}$\,$\mbox{]}}]{args, }
-\item[{{\bf Doxy\+Thread\+Safe\+Output}}]{safeoutput, }
-\item[{Action$<$ int $>$}]{callback}
-\end{DoxyParamCaption}
-)}\hypertarget{class_doxy_runner_aed7742f6732027e7427393d727898eba}{}\label{class_doxy_runner_aed7742f6732027e7427393d727898eba}
 
 
 \subsection{Member Function Documentation}
@@ -143,34 +136,8 @@ Returns process\textquotesingle{} exit code after the program exits
 \textquotesingle{} \\
 \hline
 \end{DoxyExceptions}
-\index{Doxy\+Runner@{Doxy\+Runner}!Run\+Threaded\+Doxy@{Run\+Threaded\+Doxy}}
-\index{Run\+Threaded\+Doxy@{Run\+Threaded\+Doxy}!Doxy\+Runner@{Doxy\+Runner}}
-\subsubsection[{\texorpdfstring{Run\+Threaded\+Doxy()}{RunThreadedDoxy()}}]{\setlength{\rightskip}{0pt plus 5cm}void Doxy\+Runner.\+Run\+Threaded\+Doxy (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_doxy_runner_a0a838402bf7b6661d4a1959c1b57aeb6}{}\label{class_doxy_runner_a0a838402bf7b6661d4a1959c1b57aeb6}
-\index{Doxy\+Runner@{Doxy\+Runner}!update\+Ouput\+String@{update\+Ouput\+String}}
-\index{update\+Ouput\+String@{update\+Ouput\+String}!Doxy\+Runner@{Doxy\+Runner}}
-\subsubsection[{\texorpdfstring{update\+Ouput\+String(string output)}{updateOuputString(string output)}}]{\setlength{\rightskip}{0pt plus 5cm}void Doxy\+Runner.\+update\+Ouput\+String (
-\begin{DoxyParamCaption}
-\item[{string}]{output}
-\end{DoxyParamCaption}
-)}\hypertarget{class_doxy_runner_a4474ed980f895f97ac3517fe85834259}{}\label{class_doxy_runner_a4474ed980f895f97ac3517fe85834259}
-
-
-\subsection{Member Data Documentation}
-\index{Doxy\+Runner@{Doxy\+Runner}!Args@{Args}}
-\index{Args@{Args}!Doxy\+Runner@{Doxy\+Runner}}
-\subsubsection[{\texorpdfstring{Args}{Args}}]{\setlength{\rightskip}{0pt plus 5cm}string \mbox{[}$\,$\mbox{]} Doxy\+Runner.\+Args}\hypertarget{class_doxy_runner_a015e8e8211c24140065dfc92f5fba71b}{}\label{class_doxy_runner_a015e8e8211c24140065dfc92f5fba71b}
-\index{Doxy\+Runner@{Doxy\+Runner}!E\+XE@{E\+XE}}
-\index{E\+XE@{E\+XE}!Doxy\+Runner@{Doxy\+Runner}}
-\subsubsection[{\texorpdfstring{E\+XE}{EXE}}]{\setlength{\rightskip}{0pt plus 5cm}string Doxy\+Runner.\+E\+XE = null}\hypertarget{class_doxy_runner_a9661f03da50c7783e9bc99e2a92f14e6}{}\label{class_doxy_runner_a9661f03da50c7783e9bc99e2a92f14e6}
-\index{Doxy\+Runner@{Doxy\+Runner}!on\+Complete\+Call\+Back@{on\+Complete\+Call\+Back}}
-\index{on\+Complete\+Call\+Back@{on\+Complete\+Call\+Back}!Doxy\+Runner@{Doxy\+Runner}}
-\subsubsection[{\texorpdfstring{on\+Complete\+Call\+Back}{onCompleteCallBack}}]{\setlength{\rightskip}{0pt plus 5cm}Action$<$int$>$ Doxy\+Runner.\+on\+Complete\+Call\+Back}\hypertarget{class_doxy_runner_ac1401822d6b3dea5626b786a94aa98d5}{}\label{class_doxy_runner_ac1401822d6b3dea5626b786a94aa98d5}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Editor/\+Doxygen/\hyperlink{_doxygen_window_8cs}{Doxygen\+Window.\+cs}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Editor/\+Doxygen/Doxygen\+Window.\+cs\end{DoxyCompactItemize}

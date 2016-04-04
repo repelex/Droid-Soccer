@@ -58,30 +58,49 @@
 
 <p>Simple script that uses a property to sync a start time for a multiplayer game.  
  <a href="class_in_room_round_timer.html#details">More...</a></p>
-
-<p>Inherits MonoBehaviour.</p>
+<div class="dynheader">
+Inheritance diagram for InRoomRoundTimer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_in_room_round_timer.png" usemap="#InRoomRoundTimer_map" alt=""/>
+  <map id="InRoomRoundTimer_map" name="InRoomRoundTimer_map">
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a17202ffb28b9e93f1d2379d79d1e9262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a17202ffb28b9e93f1d2379d79d1e9262">OnJoinedRoom</a> ()</td></tr>
 <tr class="memdesc:a17202ffb28b9e93f1d2379d79d1e9262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by PUN when this client entered a room (no matter if joined or created). <a href="#a17202ffb28b9e93f1d2379d79d1e9262">More...</a><br /></td></tr>
 <tr class="separator:a17202ffb28b9e93f1d2379d79d1e9262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a226f64a8398f70b91ad6af4ea3b44bd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a226f64a8398f70b91ad6af4ea3b44bd8">OnPhotonCustomRoomPropertiesChanged</a> (<a class="el" href="_extensions_8cs.html#afa613ef589c02dbd94acc273b62cdcfd">Hashtable</a> propertiesThatChanged)</td></tr>
+<tr class="memitem:a226f64a8398f70b91ad6af4ea3b44bd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a226f64a8398f70b91ad6af4ea3b44bd8">OnPhotonCustomRoomPropertiesChanged</a> (Hashtable propertiesThatChanged)</td></tr>
 <tr class="memdesc:a226f64a8398f70b91ad6af4ea3b44bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by PUN when new properties for the room were set (by any client in the room). <a href="#a226f64a8398f70b91ad6af4ea3b44bd8">More...</a><br /></td></tr>
 <tr class="separator:a226f64a8398f70b91ad6af4ea3b44bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae136a34f3bf637b1b5610fd202ffa1e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#ae136a34f3bf637b1b5610fd202ffa1e3">OnMasterClientSwitched</a> (<a class="el" href="class_photon_player.html">PhotonPlayer</a> newMasterClient)</td></tr>
 <tr class="separator:ae136a34f3bf637b1b5610fd202ffa1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c1cc2f294b32ed4dd293db35a9f4a7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a1c1cc2f294b32ed4dd293db35a9f4a7f">OnGUI</a> ()</td></tr>
+<tr class="memitem:a1c1cc2f294b32ed4dd293db35a9f4a7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c1cc2f294b32ed4dd293db35a9f4a7f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnGUI</b> ()</td></tr>
 <tr class="separator:a1c1cc2f294b32ed4dd293db35a9f4a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3fbc46448a70dff996a45f508d3e3cc8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a3fbc46448a70dff996a45f508d3e3cc8">SecondsPerTurn</a> = 5</td></tr>
+<tr class="memitem:a3fbc46448a70dff996a45f508d3e3cc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fbc46448a70dff996a45f508d3e3cc8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SecondsPerTurn</b> = 500</td></tr>
 <tr class="separator:a3fbc46448a70dff996a45f508d3e3cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ba8013f8081643dfffeb95e049a97c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a22ba8013f8081643dfffeb95e049a97c">StartTime</a></td></tr>
+<tr class="memitem:a22ba8013f8081643dfffeb95e049a97c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22ba8013f8081643dfffeb95e049a97c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>StartTime</b></td></tr>
 <tr class="separator:a22ba8013f8081643dfffeb95e049a97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1844d64936fc01a304de92179ac0cd4e"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_in_room_round_timer.html#a1844d64936fc01a304de92179ac0cd4e">TextPos</a> = new Rect(0,80,150,300)</td></tr>
+<tr class="memitem:a1844d64936fc01a304de92179ac0cd4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1844d64936fc01a304de92179ac0cd4e"></a>
+Rect&#160;</td><td class="memItemRight" valign="bottom"><b>TextPos</b> = new Rect(0,80,150,300)</td></tr>
 <tr class="separator:a1844d64936fc01a304de92179ac0cd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2399b0658c888b108f2c75f9d2fbb41c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2399b0658c888b108f2c75f9d2fbb41c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>starting_severtime</b></td></tr>
+<tr class="separator:a2399b0658c888b108f2c75f9d2fbb41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c3ea404ae1bc85c1cc36626ae2bed8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0c3ea404ae1bc85c1cc36626ae2bed8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>timetostart</b> = 0.0f</td></tr>
+<tr class="separator:aa0c3ea404ae1bc85c1cc36626ae2bed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913c06f7ecff0d23be4041c9eb5fb69a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a913c06f7ecff0d23be4041c9eb5fb69a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>secondsbeforeend</b> = 0</td></tr>
+<tr class="separator:a913c06f7ecff0d23be4041c9eb5fb69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple script that uses a property to sync a start time for a multiplayer game. </p>
@@ -89,21 +108,6 @@ Public Attributes</h2></td></tr>
 <p>Everyone else will join the room and check the property to calculate how much time passed since start. You can start a new round whenever you like.</p>
 <p>Based on this, you should be able to implement a synchronized timer for turns between players. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1c1cc2f294b32ed4dd293db35a9f4a7f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InRoomRoundTimer.OnGUI </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a17202ffb28b9e93f1d2379d79d1e9262"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +149,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void InRoomRoundTimer.OnPhotonCustomRoomPropertiesChanged </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_extensions_8cs.html#afa613ef589c02dbd94acc273b62cdcfd">Hashtable</a>&#160;</td>
+          <td class="paramtype">Hashtable&#160;</td>
           <td class="paramname"><em>propertiesThatChanged</em></td><td>)</td>
           <td></td>
         </tr>
@@ -156,50 +160,13 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a3fbc46448a70dff996a45f508d3e3cc8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int InRoomRoundTimer.SecondsPerTurn = 5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a22ba8013f8081643dfffeb95e049a97c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double InRoomRoundTimer.StartTime</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1844d64936fc01a304de92179ac0cd4e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Rect InRoomRoundTimer.TextPos = new Rect(0,80,150,300)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/UtilityScripts/<a class="el" href="_in_room_round_timer_8cs.html">InRoomRoundTimer.cs</a></li>
+<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/UtilityScripts/InRoomRoundTimer.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 2 2016 10:20:12 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 4 2016 11:26:45 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

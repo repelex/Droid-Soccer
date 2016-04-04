@@ -5,28 +5,32 @@
 Implements teams in a room/game with help of player properties.  
 
 
-
-
-Inherits Mono\+Behaviour.
-
+Inheritance diagram for Pun\+Teams\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pun_teams}
+\end{center}
+\end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_pun_teams_a933d84000474f43931805990b241a2a7}{Team} \+: byte \{ \hyperlink{class_pun_teams_a933d84000474f43931805990b241a2a7a334c4a4c42fdb79d7ebc3e73b517e6f8}{Team.\+none}, 
-\hyperlink{class_pun_teams_a933d84000474f43931805990b241a2a7abda9643ac6601722a28f238714274da4}{Team.\+red}, 
-\hyperlink{class_pun_teams_a933d84000474f43931805990b241a2a7a48d6215903dff56238e52e8891380c8f}{Team.\+blue}
+enum \hyperlink{class_pun_teams_a933d84000474f43931805990b241a2a7}{Team} \+: byte \{ {\bfseries none}, 
+{\bfseries red}, 
+{\bfseries blue}
  \}\begin{DoxyCompactList}\small\item\em Enum defining the teams available. First team should be neutral (it\textquotesingle{}s the default value any field of this enum gets).\end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_pun_teams_a34a0c084356816754542a6299e5cad94}{Start} ()
+void {\bfseries Start} ()\hypertarget{class_pun_teams_a34a0c084356816754542a6299e5cad94}{}\label{class_pun_teams_a34a0c084356816754542a6299e5cad94}
+
 \item 
 void \hyperlink{class_pun_teams_a9b844f234f8c18f9336458f14c1e10d5}{On\+Joined\+Room} ()
 \begin{DoxyCompactList}\small\item\em Needed to update the team lists when joining a room. \end{DoxyCompactList}\item 
 void \hyperlink{class_pun_teams_a8478309a7c3a43014901f5ae2ed3ddc7}{On\+Photon\+Player\+Properties\+Changed} (object\mbox{[}$\,$\mbox{]} player\+And\+Updated\+Props)
 \begin{DoxyCompactList}\small\item\em Refreshes the team lists. \end{DoxyCompactList}\item 
-void \hyperlink{class_pun_teams_a03fd4ce6acb2bd7a4b02ac15858740a0}{Update\+Teams} ()
+void {\bfseries Update\+Teams} ()\hypertarget{class_pun_teams_a03fd4ce6acb2bd7a4b02ac15858740a0}{}\label{class_pun_teams_a03fd4ce6acb2bd7a4b02ac15858740a0}
+
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -55,17 +59,6 @@ Teams are defined by enum Team. Change this to get more / different teams. There
 
 Enum defining the teams available. First team should be neutral (it\textquotesingle{}s the default value any field of this enum gets).
 
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{none@{none}!Pun\+Teams@{Pun\+Teams}}\index{Pun\+Teams@{Pun\+Teams}!none@{none}}\item[{\em 
-none\hypertarget{class_pun_teams_a933d84000474f43931805990b241a2a7a334c4a4c42fdb79d7ebc3e73b517e6f8}{}\label{class_pun_teams_a933d84000474f43931805990b241a2a7a334c4a4c42fdb79d7ebc3e73b517e6f8}
-}]\index{red@{red}!Pun\+Teams@{Pun\+Teams}}\index{Pun\+Teams@{Pun\+Teams}!red@{red}}\item[{\em 
-red\hypertarget{class_pun_teams_a933d84000474f43931805990b241a2a7abda9643ac6601722a28f238714274da4}{}\label{class_pun_teams_a933d84000474f43931805990b241a2a7abda9643ac6601722a28f238714274da4}
-}]\index{blue@{blue}!Pun\+Teams@{Pun\+Teams}}\index{Pun\+Teams@{Pun\+Teams}!blue@{blue}}\item[{\em 
-blue\hypertarget{class_pun_teams_a933d84000474f43931805990b241a2a7a48d6215903dff56238e52e8891380c8f}{}\label{class_pun_teams_a933d84000474f43931805990b241a2a7a48d6215903dff56238e52e8891380c8f}
-}]\end{description}
-\end{Desc}
 
 
 \subsection{Member Function Documentation}
@@ -93,21 +86,7 @@ Refreshes the team lists.
 
 It could be a non-\/team related property change, too.
 
-Called by P\+UN. See enum Photon\+Networking\+Message for an explanation.\index{Pun\+Teams@{Pun\+Teams}!Start@{Start}}
-\index{Start@{Start}!Pun\+Teams@{Pun\+Teams}}
-\subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Pun\+Teams.\+Start (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_pun_teams_a34a0c084356816754542a6299e5cad94}{}\label{class_pun_teams_a34a0c084356816754542a6299e5cad94}
-\index{Pun\+Teams@{Pun\+Teams}!Update\+Teams@{Update\+Teams}}
-\index{Update\+Teams@{Update\+Teams}!Pun\+Teams@{Pun\+Teams}}
-\subsubsection[{\texorpdfstring{Update\+Teams()}{UpdateTeams()}}]{\setlength{\rightskip}{0pt plus 5cm}void Pun\+Teams.\+Update\+Teams (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_pun_teams_a03fd4ce6acb2bd7a4b02ac15858740a0}{}\label{class_pun_teams_a03fd4ce6acb2bd7a4b02ac15858740a0}
-
+Called by P\+UN. See enum Photon\+Networking\+Message for an explanation.
 
 \subsection{Member Data Documentation}
 \index{Pun\+Teams@{Pun\+Teams}!Players\+Per\+Team@{Players\+Per\+Team}}
@@ -130,4 +109,4 @@ Defines the player custom property name to use for team affinity of \char`\"{}th
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_pun_teams_8cs}{Pun\+Teams.\+cs}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/Pun\+Teams.\+cs\end{DoxyCompactItemize}

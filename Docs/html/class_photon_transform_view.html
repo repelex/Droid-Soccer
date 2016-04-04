@@ -57,8 +57,15 @@
 
 <p>This class helps you to synchronize position, rotation and scale of a GameObject.  
  <a href="class_photon_transform_view.html#details">More...</a></p>
-
-<p>Inherits MonoBehaviour, and <a class="el" href="interface_i_pun_observable.html">IPunObservable</a>.</p>
+<div class="dynheader">
+Inheritance diagram for PhotonTransformView:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_photon_transform_view.png" usemap="#PhotonTransformView_map" alt=""/>
+  <map id="PhotonTransformView_map" name="PhotonTransformView_map">
+<area href="interface_i_pun_observable.html" title="Defines the OnPhotonSerializeView method to make it easy to implement correctly for observable script..." alt="IPunObservable" shape="rect" coords="146,0,282,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,7 +110,7 @@ Public Member Functions</h2></td></tr>
  <a class="el" href="class_photon_network.html#a154fc601fac7f0fddd704231189457fb" title="Defines how many times per second PhotonNetwork should send a package. ">PhotonNetwork.sendRate</a> affects how often packages are sent by this client.<br />
 </p>
 <p>Implementing this method, you can customize which data a <a class="el" href="class_photon_view.html" title="PUN&#39;s NetworkView replacement class for networking. ">PhotonView</a> regularly synchronizes. Your code defines what is being sent (content) and how your data is used by receiving clients.</p>
-<p>Unlike other callbacks, <em>OnPhotonSerializeView only gets called when it is assigned to a <a class="el" href="class_photon_view.html" title="PUN&#39;s NetworkView replacement class for networking. ">PhotonView</a></em> as <a class="el" href="class_photon_view.html#a7429864925f0716b072e8a7c4b23c59b">PhotonView.observed</a> script.</p>
+<p>Unlike other callbacks, <em>OnPhotonSerializeView only gets called when it is assigned to a <a class="el" href="class_photon_view.html" title="PUN&#39;s NetworkView replacement class for networking. ">PhotonView</a></em> as PhotonView.observed script.</p>
 <p>To make use of this method, the <a class="el" href="class_photon_stream.html" title="This container is used in OnPhotonSerializeView() to either provide incoming data of a PhotonView or ...">PhotonStream</a> is essential. It will be in "writing" mode" on the
 client that controls a PhotonView (PhotonStream.isWriting == true) and in "reading mode" on the remote clients that just receive that the controlling client sends.</p>
 <p>If you skip writing any value into the stream, PUN will skip the update. Used carefully, this can conserve bandwidth and messages (which have a limit per room/second).</p>
@@ -150,12 +157,12 @@ client that controls a PhotonView (PhotonStream.isWriting == true) and in "readi
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/<a class="el" href="_photon_transform_view_8cs.html">PhotonTransformView.cs</a></li>
+<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformView.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 2 2016 10:20:14 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 4 2016 11:26:57 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

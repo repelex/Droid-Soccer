@@ -5,24 +5,29 @@
 Makes a scene object pickup-\/able.  
 
 
-
-
-Inherits \hyperlink{class_photon_1_1_mono_behaviour}{Photon.\+Mono\+Behaviour}, and \hyperlink{interface_i_pun_observable}{I\+Pun\+Observable}.
-
+Inheritance diagram for Pickup\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pickup_item}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}{On\+Trigger\+Enter} (Collider other)
+void {\bfseries On\+Trigger\+Enter} (Collider other)\hypertarget{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}{}\label{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}
+
 \item 
 void \hyperlink{class_pickup_item_a7b6809bac46d2eaddc309e2ad97167fa}{On\+Photon\+Serialize\+View} (\hyperlink{class_photon_stream}{Photon\+Stream} stream, \hyperlink{class_photon_message_info}{Photon\+Message\+Info} info)
 \begin{DoxyCompactList}\small\item\em Called by P\+UN several times per second, so that your script can write and read synchronization data for the \hyperlink{class_photon_view}{Photon\+View}. \end{DoxyCompactList}\item 
-void \hyperlink{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}{Pickup} ()
+void {\bfseries Pickup} ()\hypertarget{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}{}\label{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}
+
 \item 
 void \hyperlink{class_pickup_item_aa23d18ee93cd9591072f01da535370bc}{Drop} ()
 \begin{DoxyCompactList}\small\item\em Makes use of R\+PC Pun\+Respawn to drop an item (sent through server for all).\end{DoxyCompactList}\item 
 void \hyperlink{class_pickup_item_a7fab906a78c790fe991bf63a812ae8cf}{Drop} (Vector3 new\+Position)
 \begin{DoxyCompactList}\small\item\em Makes use of R\+PC Pun\+Respawn to drop an item (sent through server for all).\end{DoxyCompactList}\item 
-void \hyperlink{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}{Pun\+Pickup} (\hyperlink{class_photon_message_info}{Photon\+Message\+Info} msg\+Info)
+void {\bfseries Pun\+Pickup} (\hyperlink{class_photon_message_info}{Photon\+Message\+Info} msg\+Info)\hypertarget{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}{}\label{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}
+
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -42,7 +47,8 @@ double \hyperlink{class_pickup_item_a73055debb47c9bcf0813e74a0fd6e3ee}{Time\+Of\
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static Hash\+Set$<$ \hyperlink{class_pickup_item}{Pickup\+Item} $>$ \hyperlink{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}{Disabled\+Pickup\+Items} = new Hash\+Set$<$\hyperlink{class_pickup_item}{Pickup\+Item}$>$()
+static Hash\+Set$<$ \hyperlink{class_pickup_item}{Pickup\+Item} $>$ {\bfseries Disabled\+Pickup\+Items} = new Hash\+Set$<$\hyperlink{class_pickup_item}{Pickup\+Item}$>$()\hypertarget{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}{}\label{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}
+
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -100,7 +106,7 @@ This method will be called in scripts that are assigned as Observed component of
 
 Implementing this method, you can customize which data a \hyperlink{class_photon_view}{Photon\+View} regularly synchronizes. Your code defines what is being sent (content) and how your data is used by receiving clients.
 
-Unlike other callbacks, {\itshape On\+Photon\+Serialize\+View only gets called when it is assigned to a \hyperlink{class_photon_view}{Photon\+View}} as \hyperlink{class_photon_view_a7429864925f0716b072e8a7c4b23c59b}{Photon\+View.\+observed} script.
+Unlike other callbacks, {\itshape On\+Photon\+Serialize\+View only gets called when it is assigned to a \hyperlink{class_photon_view}{Photon\+View}} as Photon\+View.\+observed script.
 
 To make use of this method, the \hyperlink{class_photon_stream}{Photon\+Stream} is essential. It will be in \char`\"{}writing\char`\"{} mode\char`\"{} on the
 client that controls a Photon\+View (\+Photon\+Stream.\+is\+Writing == true) and in \char`\"{}reading mode" on the remote clients that just receive that the controlling client sends.
@@ -111,33 +117,9 @@ Note that On\+Photon\+Serialize\+View is not called on remote clients when the s
 
 Implements \hyperlink{group__public_api_ga78c69bbb6f79d1e4fb23d3f761eaf4aa}{I\+Pun\+Observable}.
 
-\index{Pickup\+Item@{Pickup\+Item}!On\+Trigger\+Enter@{On\+Trigger\+Enter}}
-\index{On\+Trigger\+Enter@{On\+Trigger\+Enter}!Pickup\+Item@{Pickup\+Item}}
-\subsubsection[{\texorpdfstring{On\+Trigger\+Enter(\+Collider other)}{OnTriggerEnter(Collider other)}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+On\+Trigger\+Enter (
-\begin{DoxyParamCaption}
-\item[{Collider}]{other}
-\end{DoxyParamCaption}
-)}\hypertarget{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}{}\label{class_pickup_item_a785a8b65e46fc44ab4fdeb5411e01351}
-\index{Pickup\+Item@{Pickup\+Item}!Pickup@{Pickup}}
-\index{Pickup@{Pickup}!Pickup\+Item@{Pickup\+Item}}
-\subsubsection[{\texorpdfstring{Pickup()}{Pickup()}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+Pickup (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}{}\label{class_pickup_item_aed8f232a2849e9640b1ba4f32077bb16}
-\index{Pickup\+Item@{Pickup\+Item}!Pun\+Pickup@{Pun\+Pickup}}
-\index{Pun\+Pickup@{Pun\+Pickup}!Pickup\+Item@{Pickup\+Item}}
-\subsubsection[{\texorpdfstring{Pun\+Pickup(\+Photon\+Message\+Info msg\+Info)}{PunPickup(PhotonMessageInfo msgInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Pickup\+Item.\+Pun\+Pickup (
-\begin{DoxyParamCaption}
-\item[{{\bf Photon\+Message\+Info}}]{msg\+Info}
-\end{DoxyParamCaption}
-)}\hypertarget{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}{}\label{class_pickup_item_a2a170d7c2a6c7bd0e0491ab233380186}
 
 
 \subsection{Member Data Documentation}
-\index{Pickup\+Item@{Pickup\+Item}!Disabled\+Pickup\+Items@{Disabled\+Pickup\+Items}}
-\index{Disabled\+Pickup\+Items@{Disabled\+Pickup\+Items}!Pickup\+Item@{Pickup\+Item}}
-\subsubsection[{\texorpdfstring{Disabled\+Pickup\+Items}{DisabledPickupItems}}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Set$<${\bf Pickup\+Item}$>$ Pickup\+Item.\+Disabled\+Pickup\+Items = new Hash\+Set$<${\bf Pickup\+Item}$>$()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}{}\label{class_pickup_item_a9381a5e9ac9c159e295f5fbe1e7ce8f5}
 \index{Pickup\+Item@{Pickup\+Item}!On\+Picked\+Up\+Call@{On\+Picked\+Up\+Call}}
 \index{On\+Picked\+Up\+Call@{On\+Picked\+Up\+Call}!Pickup\+Item@{Pickup\+Item}}
 \subsubsection[{\texorpdfstring{On\+Picked\+Up\+Call}{OnPickedUpCall}}]{\setlength{\rightskip}{0pt plus 5cm}Mono\+Behaviour Pickup\+Item.\+On\+Picked\+Up\+Call}\hypertarget{class_pickup_item_a48a1fe620e9fecb4e8825c48723140c4}{}\label{class_pickup_item_a48a1fe620e9fecb4e8825c48723140c4}
@@ -202,4 +184,4 @@ Timestamp when to respawn the item (compared to \hyperlink{class_photon_network_
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_pickup_item_8cs}{Pickup\+Item.\+cs}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/Pickup\+Item.\+cs\end{DoxyCompactItemize}

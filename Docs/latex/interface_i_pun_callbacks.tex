@@ -5,10 +5,12 @@
 This interface is used as definition of all callback methods of P\+UN, except On\+Photon\+Serialize\+View.  
 
 
-
-
-Inherited by \hyperlink{class_photon_1_1_pun_behaviour}{Photon.\+Pun\+Behaviour}.
-
+Inheritance diagram for I\+Pun\+Callbacks\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_i_pun_callbacks}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,7 +52,7 @@ void \hyperlink{interface_i_pun_callbacks_aee4c7c26520ae45019b605b054fa1ac0}{On\
 \begin{DoxyCompactList}\small\item\em Called after the connection to the master is established and authenticated but only when \hyperlink{class_photon_network_ad534d4da7222bd8a6d8423cbd238d7f4}{Photon\+Network.\+auto\+Join\+Lobby} is false. \end{DoxyCompactList}\item 
 void \hyperlink{interface_i_pun_callbacks_a445d24c62e4e3d8bbc2cc0d25853d43c}{On\+Photon\+Max\+Cccu\+Reached} ()
 \begin{DoxyCompactList}\small\item\em Because the concurrent user limit was (temporarily) reached, this client is rejected by the server and disconnecting. \end{DoxyCompactList}\item 
-void \hyperlink{interface_i_pun_callbacks_a3a210383eb25f1c6f509aaa23c792f6f}{On\+Photon\+Custom\+Room\+Properties\+Changed} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} properties\+That\+Changed)
+void \hyperlink{interface_i_pun_callbacks_a3a210383eb25f1c6f509aaa23c792f6f}{On\+Photon\+Custom\+Room\+Properties\+Changed} (Hashtable properties\+That\+Changed)
 \begin{DoxyCompactList}\small\item\em Called when a room\textquotesingle{}s custom properties changed. \end{DoxyCompactList}\item 
 void \hyperlink{interface_i_pun_callbacks_aa6d84e9c68f93825fb3bf453d6f5ca1b}{On\+Photon\+Player\+Properties\+Changed} (object\mbox{[}$\,$\mbox{]} player\+And\+Updated\+Props)
 \begin{DoxyCompactList}\small\item\em Called when custom player-\/properties are changed. \end{DoxyCompactList}\item 
@@ -364,7 +366,7 @@ Implemented in \hyperlink{class_photon_1_1_pun_behaviour_a9fb00e512c59fa60c0a95e
 \index{On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}!I\+Pun\+Callbacks@{I\+Pun\+Callbacks}}
 \subsubsection[{\texorpdfstring{On\+Photon\+Custom\+Room\+Properties\+Changed(\+Hashtable properties\+That\+Changed)}{OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+Pun\+Callbacks.\+On\+Photon\+Custom\+Room\+Properties\+Changed (
 \begin{DoxyParamCaption}
-\item[{{\bf Hashtable}}]{properties\+That\+Changed}
+\item[{Hashtable}]{properties\+That\+Changed}
 \end{DoxyParamCaption}
 )}\hypertarget{interface_i_pun_callbacks_a3a210383eb25f1c6f509aaa23c792f6f}{}\label{interface_i_pun_callbacks_a3a210383eb25f1c6f509aaa23c792f6f}
 

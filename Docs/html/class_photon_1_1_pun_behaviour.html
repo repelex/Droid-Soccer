@@ -61,8 +61,16 @@
 
 <p>This class provides a .photonView and all callbacks/events that PUN can call.  
  <a href="class_photon_1_1_pun_behaviour.html#details">More...</a></p>
-
-<p>Inherits <a class="el" href="class_photon_1_1_mono_behaviour.html">Photon.MonoBehaviour</a>, and <a class="el" href="interface_i_pun_callbacks.html">IPunCallbacks</a>.</p>
+<div class="dynheader">
+Inheritance diagram for Photon.PunBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_photon_1_1_pun_behaviour.png" usemap="#Photon.PunBehaviour_map" alt=""/>
+  <map id="Photon.PunBehaviour_map" name="Photon.PunBehaviour_map">
+<area href="class_photon_1_1_mono_behaviour.html" title="This class adds the property photonView, while logging a warning when your game still uses the networ..." alt="Photon.MonoBehaviour" shape="rect" coords="0,56,145,80"/>
+<area href="interface_i_pun_callbacks.html" title="This interface is used as definition of all callback methods of PUN, except OnPhotonSerializeView. " alt="IPunCallbacks" shape="rect" coords="155,56,300,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -123,7 +131,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adcef9694244295ad493bc4ec0b4463d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_1_1_pun_behaviour.html#adcef9694244295ad493bc4ec0b4463d4">OnPhotonMaxCccuReached</a> ()</td></tr>
 <tr class="memdesc:adcef9694244295ad493bc4ec0b4463d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Because the concurrent user limit was (temporarily) reached, this client is rejected by the server and disconnecting.  <a href="#adcef9694244295ad493bc4ec0b4463d4">More...</a><br /></td></tr>
 <tr class="separator:adcef9694244295ad493bc4ec0b4463d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf25d63a39ef13cb9a0519e6e7672a2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_1_1_pun_behaviour.html#abf25d63a39ef13cb9a0519e6e7672a2f">OnPhotonCustomRoomPropertiesChanged</a> (<a class="el" href="namespace_photon.html#ac2f4b49a218ef814d00e31cd5f32bf4e">Hashtable</a> propertiesThatChanged)</td></tr>
+<tr class="memitem:abf25d63a39ef13cb9a0519e6e7672a2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_1_1_pun_behaviour.html#abf25d63a39ef13cb9a0519e6e7672a2f">OnPhotonCustomRoomPropertiesChanged</a> (Hashtable propertiesThatChanged)</td></tr>
 <tr class="memdesc:abf25d63a39ef13cb9a0519e6e7672a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a room's custom properties changed.  <a href="#abf25d63a39ef13cb9a0519e6e7672a2f">More...</a><br /></td></tr>
 <tr class="separator:abf25d63a39ef13cb9a0519e6e7672a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaec2f5973228b99c6ad781d5cedadb6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_1_1_pun_behaviour.html#aaec2f5973228b99c6ad781d5cedadb6f">OnPhotonPlayerPropertiesChanged</a> (object[] playerAndUpdatedProps)</td></tr>
@@ -148,7 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header properties_class_photon_1_1_mono_behaviour"><td colspan="2" onclick="javascript:toggleInherit('properties_class_photon_1_1_mono_behaviour')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_photon_1_1_mono_behaviour.html">Photon.MonoBehaviour</a></td></tr>
-<tr class="memitem:a27027ef7d8204896cb9381a200953892 inherit properties_class_photon_1_1_mono_behaviour"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_photon_view.html">PhotonView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_1_1_mono_behaviour.html#a27027ef7d8204896cb9381a200953892">photonView</a><code> [get]</code></td></tr>
+<tr class="memitem:a27027ef7d8204896cb9381a200953892 inherit properties_class_photon_1_1_mono_behaviour"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27027ef7d8204896cb9381a200953892"></a>
+<a class="el" href="class_photon_view.html">PhotonView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>photonView</b><code> [get]</code></td></tr>
 <tr class="separator:a27027ef7d8204896cb9381a200953892 inherit properties_class_photon_1_1_mono_behaviour"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c97185c3a8594bf5c1c518a701706e inherit properties_class_photon_1_1_mono_behaviour"><td class="memItemLeft" align="right" valign="top">new <a class="el" href="class_photon_view.html">PhotonView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_1_1_mono_behaviour.html#a00c97185c3a8594bf5c1c518a701706e">networkView</a><code> [get]</code></td></tr>
 <tr class="memdesc:a00c97185c3a8594bf5c1c518a701706e inherit properties_class_photon_1_1_mono_behaviour"><td class="mdescLeft">&#160;</td><td class="mdescRight">This property is only here to notify developers when they use the outdated value.  <a href="#a00c97185c3a8594bf5c1c518a701706e">More...</a><br /></td></tr>
@@ -632,7 +641,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">virtual void Photon.PunBehaviour.OnPhotonCustomRoomPropertiesChanged </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_photon.html#ac2f4b49a218ef814d00e31cd5f32bf4e">Hashtable</a>&#160;</td>
+          <td class="paramtype">Hashtable&#160;</td>
           <td class="paramname"><em>propertiesThatChanged</em></td><td>)</td>
           <td></td>
         </tr>
@@ -994,7 +1003,7 @@ void <a class="el" href="class_photon_1_1_pun_behaviour.html#aaec2f5973228b99c6a
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 2 2016 10:20:22 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 4 2016 11:27:15 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

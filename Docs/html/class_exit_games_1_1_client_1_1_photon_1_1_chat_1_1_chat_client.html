@@ -63,12 +63,19 @@
 
 <p>Central class of the <a class="el" href="namespace_exit_games_1_1_client_1_1_photon.html">Photon</a> <a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html">Chat</a> API to connect, handle channels and messages.  
  <a href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#details">More...</a></p>
-
-<p>Inherits IPhotonPeerListener.</p>
+<div class="dynheader">
+Inheritance diagram for ExitGames.Client.Photon.Chat.ChatClient:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.png" usemap="#ExitGames.Client.Photon.Chat.ChatClient_map" alt=""/>
+  <map id="ExitGames.Client.Photon.Chat.ChatClient_map" name="ExitGames.Client.Photon.Chat.ChatClient_map">
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5088b919addd1ae88cf8ed72d68c52c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a5088b919addd1ae88cf8ed72d68c52c2">ChatClient</a> (<a class="el" href="interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener.html">IChatClientListener</a> listener, ConnectionProtocol protocol=ConnectionProtocol.Udp)</td></tr>
+<tr class="memitem:a5088b919addd1ae88cf8ed72d68c52c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5088b919addd1ae88cf8ed72d68c52c2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ChatClient</b> (<a class="el" href="interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener.html">IChatClientListener</a> listener, ConnectionProtocol protocol=ConnectionProtocol.Udp)</td></tr>
 <tr class="separator:a5088b919addd1ae88cf8ed72d68c52c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fb7f78c7820b02fb0ec3c173ff0d2d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a4fb7f78c7820b02fb0ec3c173ff0d2d5">Connect</a> (string appId, string appVersion, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_authentication_values.html">AuthenticationValues</a> authValues)</td></tr>
 <tr class="memdesc:a4fb7f78c7820b02fb0ec3c173ff0d2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects this client to the <a class="el" href="namespace_exit_games_1_1_client_1_1_photon.html">Photon</a> <a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html">Chat</a> Cloud service, which will also authenticate the user (and set a UserId).  <a href="#a4fb7f78c7820b02fb0ec3c173ff0d2d5">More...</a><br /></td></tr>
@@ -76,9 +83,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e5b2c3dc8f4e43b053bd3436dd39c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a4e5b2c3dc8f4e43b053bd3436dd39c5f">Service</a> ()</td></tr>
 <tr class="memdesc:a4e5b2c3dc8f4e43b053bd3436dd39c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Must be called regularly to keep connection between client and server alive and to process incoming messages.  <a href="#a4e5b2c3dc8f4e43b053bd3436dd39c5f">More...</a><br /></td></tr>
 <tr class="separator:a4e5b2c3dc8f4e43b053bd3436dd39c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21acfc202dc0114eabdba678e03f21f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a21acfc202dc0114eabdba678e03f21f1">Disconnect</a> ()</td></tr>
+<tr class="memitem:a21acfc202dc0114eabdba678e03f21f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21acfc202dc0114eabdba678e03f21f1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Disconnect</b> ()</td></tr>
 <tr class="separator:a21acfc202dc0114eabdba678e03f21f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9ac75f889489a06dbc8f6d7881367c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#af9ac75f889489a06dbc8f6d7881367c4">StopThread</a> ()</td></tr>
+<tr class="memitem:af9ac75f889489a06dbc8f6d7881367c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ac75f889489a06dbc8f6d7881367c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>StopThread</b> ()</td></tr>
 <tr class="separator:af9ac75f889489a06dbc8f6d7881367c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecfdac4a2de6577291597477bcaec9c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#aecfdac4a2de6577291597477bcaec9c7">Subscribe</a> (string[] channels)</td></tr>
 <tr class="memdesc:aecfdac4a2de6577291597477bcaec9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends operation to subscribe to a list of channels by name.  <a href="#aecfdac4a2de6577291597477bcaec9c7">More...</a><br /></td></tr>
@@ -119,7 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad48f9b88b0635c9f2363322123044fb8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#ad48f9b88b0635c9f2363322123044fb8">TryGetChannel</a> (string channelName, out <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a> channel)</td></tr>
 <tr class="memdesc:ad48f9b88b0635c9f2363322123044fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplified access to all channels by name.  <a href="#ad48f9b88b0635c9f2363322123044fb8">More...</a><br /></td></tr>
 <tr class="separator:ad48f9b88b0635c9f2363322123044fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b1cdbd8b56655e88e678441452f65a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a6b1cdbd8b56655e88e678441452f65a1">SendAcksOnly</a> ()</td></tr>
+<tr class="memitem:a6b1cdbd8b56655e88e678441452f65a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b1cdbd8b56655e88e678441452f65a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendAcksOnly</b> ()</td></tr>
 <tr class="separator:a6b1cdbd8b56655e88e678441452f65a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -127,9 +137,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a66e028cd73b441bbdd8d37ee0e2b1dee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a66e028cd73b441bbdd8d37ee0e2b1dee">MessageLimit</a></td></tr>
 <tr class="memdesc:a66e028cd73b441bbdd8d37ee0e2b1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">If greater than 0, new channels will limit the number of messages they cache locally.  <a href="#a66e028cd73b441bbdd8d37ee0e2b1dee">More...</a><br /></td></tr>
 <tr class="separator:a66e028cd73b441bbdd8d37ee0e2b1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3d4261b652969dd5f94971ca48f5a7e"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; string, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#aa3d4261b652969dd5f94971ca48f5a7e">PublicChannels</a></td></tr>
+<tr class="memitem:aa3d4261b652969dd5f94971ca48f5a7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3d4261b652969dd5f94971ca48f5a7e"></a>
+readonly Dictionary&lt; string, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PublicChannels</b></td></tr>
 <tr class="separator:aa3d4261b652969dd5f94971ca48f5a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f9db0c022bb0feda81d31f43053a81"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; string, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a25f9db0c022bb0feda81d31f43053a81">PrivateChannels</a></td></tr>
+<tr class="memitem:a25f9db0c022bb0feda81d31f43053a81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25f9db0c022bb0feda81d31f43053a81"></a>
+readonly Dictionary&lt; string, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PrivateChannels</b></td></tr>
 <tr class="separator:a25f9db0c022bb0feda81d31f43053a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -146,9 +158,11 @@ Properties</h2></td></tr>
 <tr class="memitem:a5d523809d52088df6fbd8927523d6238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html#ad7d7f22d8741237f41e4b60779cdfa19">ChatState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a5d523809d52088df6fbd8927523d6238">State</a><code> [get]</code></td></tr>
 <tr class="memdesc:a5d523809d52088df6fbd8927523d6238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of the <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html" title="Central class of the Photon Chat API to connect, handle channels and messages. ">ChatClient</a>. Also use CanChat. <a href="#a5d523809d52088df6fbd8927523d6238">More...</a><br /></td></tr>
 <tr class="separator:a5d523809d52088df6fbd8927523d6238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05085dc638466b2660f1c694f90fbf8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html#ae3a2988c8cb1fea31bb2d9eeafc0ed8b">ChatDisconnectCause</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a05085dc638466b2660f1c694f90fbf8e">DisconnectedCause</a><code> [get]</code></td></tr>
+<tr class="memitem:a05085dc638466b2660f1c694f90fbf8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05085dc638466b2660f1c694f90fbf8e"></a>
+<a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html#ae3a2988c8cb1fea31bb2d9eeafc0ed8b">ChatDisconnectCause</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DisconnectedCause</b><code> [get]</code></td></tr>
 <tr class="separator:a05085dc638466b2660f1c694f90fbf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71c10e565150962413bb1abaa89af66a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a71c10e565150962413bb1abaa89af66a">CanChat</a><code> [get]</code></td></tr>
+<tr class="memitem:a71c10e565150962413bb1abaa89af66a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71c10e565150962413bb1abaa89af66a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanChat</b><code> [get]</code></td></tr>
 <tr class="separator:a71c10e565150962413bb1abaa89af66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96bec51384215e8622397b8fe2fc90e1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html#a96bec51384215e8622397b8fe2fc90e1">AppVersion</a><code> [get]</code></td></tr>
 <tr class="memdesc:a96bec51384215e8622397b8fe2fc90e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The version of your client. A new version also creates a new "virtual app" to separate players from older client versions. <a href="#a96bec51384215e8622397b8fe2fc90e1">More...</a><br /></td></tr>
@@ -171,34 +185,7 @@ Properties</h2></td></tr>
 <p>This class must be instantiated with a <a class="el" href="interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener.html" title="Callback interface for Chat client side. ">IChatClientListener</a> instance to get the callbacks. Integrate it into your game loop by calling Service regularly. Call Connect with an AppId that is setup as <a class="el" href="namespace_exit_games_1_1_client_1_1_photon.html">Photon</a> <a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html">Chat</a> application. Note: Connect covers multiple messages between this client and the servers. A short workflow will connect you to a chat server.</p>
 <p>Each <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_client.html" title="Central class of the Photon Chat API to connect, handle channels and messages. ">ChatClient</a> resembles a user in chat (set in Connect). Each user automatically subscribes a channel for incoming private messages and can message any other user privately. Before you publish messages in any non-private channel, that channel must be subscribed.</p>
 <p>PublicChannels is a list of subscribed channels, containing messages and senders. PrivateChannels contains all incoming and sent private messages. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a5088b919addd1ae88cf8ed72d68c52c2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ExitGames.Client.Photon.Chat.ChatClient.ChatClient </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener.html">IChatClientListener</a>&#160;</td>
-          <td class="paramname"><em>listener</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ConnectionProtocol&#160;</td>
-          <td class="paramname"><em>protocol</em> = <code>ConnectionProtocol.Udp</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a66aa30bff5ca81b1a1811d8e36b09546"></a>
 <div class="memitem">
 <div class="memproto">
@@ -269,21 +256,6 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a21acfc202dc0114eabdba678e03f21f1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExitGames.Client.Photon.Chat.ChatClient.Disconnect </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -381,21 +353,6 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the operation could be sent.</dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a6b1cdbd8b56655e88e678441452f65a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExitGames.Client.Photon.Chat.ChatClient.SendAcksOnly </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -562,21 +519,6 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the operation gets called on the server.</dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="af9ac75f889489a06dbc8f6d7881367c4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExitGames.Client.Photon.Chat.ChatClient.StopThread </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -767,30 +709,6 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a25f9db0c022bb0feda81d31f43053a81"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">readonly Dictionary&lt;string, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a>&gt; ExitGames.Client.Photon.Chat.ChatClient.PrivateChannels</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa3d4261b652969dd5f94971ca48f5a7e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">readonly Dictionary&lt;string, <a class="el" href="class_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_chat_channel.html">ChatChannel</a>&gt; ExitGames.Client.Photon.Chat.ChatClient.PublicChannels</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a class="anchor" id="a876c9a53400fe18fc365775ca728928f"></a>
 <div class="memitem">
@@ -858,26 +776,6 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71c10e565150962413bb1abaa89af66a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ExitGames.Client.Photon.Chat.ChatClient.CanChat</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a5b8e2b595533f33e5c298fe5ced2726b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -920,26 +818,6 @@ Properties</h2></td></tr>
 
 <p>Sets the level (and amount) of debug output provided by the library. </p>
 <p>This affects the callbacks to <a class="el" href="interface_exit_games_1_1_client_1_1_photon_1_1_chat_1_1_i_chat_client_listener.html#ae4c3e779b7761f6a254231b9775fabcf" title="All debug output of the library will be reported through this method. ">IChatClientListener.DebugReturn</a>. Default Level: Error. </p>
-
-</div>
-</div>
-<a class="anchor" id="a05085dc638466b2660f1c694f90fbf8e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_exit_games_1_1_client_1_1_photon_1_1_chat.html#ae3a2988c8cb1fea31bb2d9eeafc0ed8b">ChatDisconnectCause</a> ExitGames.Client.Photon.Chat.ChatClient.DisconnectedCause</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1034,12 +912,12 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Plugins/ChatApi/<a class="el" href="_chat_client_8cs.html">ChatClient.cs</a></li>
+<li>C:/Users/Chris/Documents/GitHub/Team-Game-Project/Assets/Plugins/ChatApi/ChatClient.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 2 2016 10:20:21 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 4 2016 11:27:13 for Droid Soccer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

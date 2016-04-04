@@ -12,17 +12,22 @@ Summarizes a \char`\"{}player\char`\"{} within a room, identified (in that room)
 \begin{DoxyCompactList}\small\item\em Creates a \hyperlink{class_photon_player}{Photon\+Player} instance. \end{DoxyCompactList}\item 
 override bool \hyperlink{class_photon_player_a2c234cfef38c2013337182a008844398}{Equals} (object p)
 \begin{DoxyCompactList}\small\item\em Makes \hyperlink{class_photon_player}{Photon\+Player} comparable \end{DoxyCompactList}\item 
-override int \hyperlink{class_photon_player_af88693cf6b3b3fb1c8afdb5892fd525c}{Get\+Hash\+Code} ()
+override int {\bfseries Get\+Hash\+Code} ()\hypertarget{class_photon_player_af88693cf6b3b3fb1c8afdb5892fd525c}{}\label{class_photon_player_af88693cf6b3b3fb1c8afdb5892fd525c}
+
 \item 
-void \hyperlink{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{Set\+Custom\+Properties} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} properties\+To\+Set, \hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} expected\+Values=null, bool web\+Forward=false)
+void \hyperlink{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{Set\+Custom\+Properties} (Hashtable properties\+To\+Set, Hashtable expected\+Values=null, bool web\+Forward=false)
 \begin{DoxyCompactList}\small\item\em Updates the this player\textquotesingle{}s Custom Properties with new/updated key-\/values. \end{DoxyCompactList}\item 
-\hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_player_a2aaf48a90dc7e618da31f47c4f1a1c03}{Get} (int id)
+\hyperlink{class_photon_player}{Photon\+Player} {\bfseries Get} (int id)\hypertarget{class_photon_player_a2aaf48a90dc7e618da31f47c4f1a1c03}{}\label{class_photon_player_a2aaf48a90dc7e618da31f47c4f1a1c03}
+
 \item 
-\hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_player_a4c7bf5d0bf28c15b67929a8a5297b96e}{Get\+Next} ()
+\hyperlink{class_photon_player}{Photon\+Player} {\bfseries Get\+Next} ()\hypertarget{class_photon_player_a4c7bf5d0bf28c15b67929a8a5297b96e}{}\label{class_photon_player_a4c7bf5d0bf28c15b67929a8a5297b96e}
+
 \item 
-\hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_player_a2cc6f30dc2691bc700b0a11bdaffcffd}{Get\+Next\+For} (\hyperlink{class_photon_player}{Photon\+Player} current\+Player)
+\hyperlink{class_photon_player}{Photon\+Player} {\bfseries Get\+Next\+For} (\hyperlink{class_photon_player}{Photon\+Player} current\+Player)\hypertarget{class_photon_player_a2cc6f30dc2691bc700b0a11bdaffcffd}{}\label{class_photon_player_a2cc6f30dc2691bc700b0a11bdaffcffd}
+
 \item 
-\hyperlink{class_photon_player}{Photon\+Player} \hyperlink{class_photon_player_adb4677870c9c5903527ce75dc0edba2b}{Get\+Next\+For} (int current\+Player\+Id)
+\hyperlink{class_photon_player}{Photon\+Player} {\bfseries Get\+Next\+For} (int current\+Player\+Id)\hypertarget{class_photon_player_adb4677870c9c5903527ce75dc0edba2b}{}\label{class_photon_player_adb4677870c9c5903527ce75dc0edba2b}
+
 \item 
 override string \hyperlink{class_photon_player_a0f41b47ae95448d2e6f7a4394c54f359}{To\+String} ()
 \begin{DoxyCompactList}\small\item\em Brief summary string of the \hyperlink{class_photon_player}{Photon\+Player}. \end{DoxyCompactList}\item 
@@ -43,7 +48,7 @@ object \hyperlink{class_photon_player_aaf54b32878a605d3e4d47f16ad106aa3}{Tag\+Ob
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_photon_player_a741e73c27e9c9f1f4afc9b95481e667d}{Photon\+Player} (bool \hyperlink{class_photon_player_a7d51daf7a538dadae8339e95bf39e692}{is\+Local}, int actor\+ID, \hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} properties)
+\hyperlink{class_photon_player_a741e73c27e9c9f1f4afc9b95481e667d}{Photon\+Player} (bool \hyperlink{class_photon_player_a7d51daf7a538dadae8339e95bf39e692}{is\+Local}, int actor\+ID, Hashtable properties)
 \begin{DoxyCompactList}\small\item\em Internally used to create players from event Join \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -54,9 +59,9 @@ string \hyperlink{class_photon_player_a74e5bb916dbfdb6960b8f2f11fa6aba9}{name}\h
 \begin{DoxyCompactList}\small\item\em Nickname of this player. \end{DoxyCompactList}\item 
 bool \hyperlink{class_photon_player_ade88a2875960de99e5ab98fc6db1650c}{is\+Master\+Client}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em True if this player is the Master Client of the current room. \end{DoxyCompactList}\item 
-\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} \hyperlink{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}{custom\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+Hashtable \hyperlink{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}{custom\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Read-\/only cache for custom properties of player. \end{DoxyCompactList}\item 
-\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} \hyperlink{class_photon_player_a82ba921802edc4960d075f1deacfb19d}{all\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+Hashtable \hyperlink{class_photon_player_a82ba921802edc4960d075f1deacfb19d}{all\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Creates a Hashtable with all properties (custom and \char`\"{}well known\char`\"{} ones). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -94,7 +99,7 @@ Creates a \hyperlink{class_photon_player}{Photon\+Player} instance.
 \begin{DoxyParamCaption}
 \item[{bool}]{is\+Local, }
 \item[{int}]{actor\+ID, }
-\item[{{\bf Hashtable}}]{properties}
+\item[{Hashtable}]{properties}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_photon_player_a741e73c27e9c9f1f4afc9b95481e667d}{}\label{class_photon_player_a741e73c27e9c9f1f4afc9b95481e667d}
 
@@ -134,47 +139,12 @@ Try to get a specific player by id.
 \begin{DoxyReturn}{Returns}
 The player with matching actor\+ID or null, if the actor\+ID is not in use.
 \end{DoxyReturn}
-\index{Photon\+Player@{Photon\+Player}!Get@{Get}}
-\index{Get@{Get}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{Get(int id)}{Get(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+Player.\+Get (
-\begin{DoxyParamCaption}
-\item[{int}]{id}
-\end{DoxyParamCaption}
-)}\hypertarget{class_photon_player_a2aaf48a90dc7e618da31f47c4f1a1c03}{}\label{class_photon_player_a2aaf48a90dc7e618da31f47c4f1a1c03}
-\index{Photon\+Player@{Photon\+Player}!Get\+Hash\+Code@{Get\+Hash\+Code}}
-\index{Get\+Hash\+Code@{Get\+Hash\+Code}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{Get\+Hash\+Code()}{GetHashCode()}}]{\setlength{\rightskip}{0pt plus 5cm}override int Photon\+Player.\+Get\+Hash\+Code (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_photon_player_af88693cf6b3b3fb1c8afdb5892fd525c}{}\label{class_photon_player_af88693cf6b3b3fb1c8afdb5892fd525c}
-\index{Photon\+Player@{Photon\+Player}!Get\+Next@{Get\+Next}}
-\index{Get\+Next@{Get\+Next}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{Get\+Next()}{GetNext()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+Player.\+Get\+Next (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_photon_player_a4c7bf5d0bf28c15b67929a8a5297b96e}{}\label{class_photon_player_a4c7bf5d0bf28c15b67929a8a5297b96e}
-\index{Photon\+Player@{Photon\+Player}!Get\+Next\+For@{Get\+Next\+For}}
-\index{Get\+Next\+For@{Get\+Next\+For}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{Get\+Next\+For(\+Photon\+Player current\+Player)}{GetNextFor(PhotonPlayer currentPlayer)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+Player.\+Get\+Next\+For (
-\begin{DoxyParamCaption}
-\item[{{\bf Photon\+Player}}]{current\+Player}
-\end{DoxyParamCaption}
-)}\hypertarget{class_photon_player_a2cc6f30dc2691bc700b0a11bdaffcffd}{}\label{class_photon_player_a2cc6f30dc2691bc700b0a11bdaffcffd}
-\index{Photon\+Player@{Photon\+Player}!Get\+Next\+For@{Get\+Next\+For}}
-\index{Get\+Next\+For@{Get\+Next\+For}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{Get\+Next\+For(int current\+Player\+Id)}{GetNextFor(int currentPlayerId)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photon\+Player} Photon\+Player.\+Get\+Next\+For (
-\begin{DoxyParamCaption}
-\item[{int}]{current\+Player\+Id}
-\end{DoxyParamCaption}
-)}\hypertarget{class_photon_player_adb4677870c9c5903527ce75dc0edba2b}{}\label{class_photon_player_adb4677870c9c5903527ce75dc0edba2b}
 \index{Photon\+Player@{Photon\+Player}!Set\+Custom\+Properties@{Set\+Custom\+Properties}}
 \index{Set\+Custom\+Properties@{Set\+Custom\+Properties}!Photon\+Player@{Photon\+Player}}
 \subsubsection[{\texorpdfstring{Set\+Custom\+Properties(\+Hashtable properties\+To\+Set, Hashtable expected\+Values=null, bool web\+Forward=false)}{SetCustomProperties(Hashtable propertiesToSet, Hashtable expectedValues=null, bool webForward=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void Photon\+Player.\+Set\+Custom\+Properties (
 \begin{DoxyParamCaption}
-\item[{{\bf Hashtable}}]{properties\+To\+Set, }
-\item[{{\bf Hashtable}}]{expected\+Values = {\ttfamily null}, }
+\item[{Hashtable}]{properties\+To\+Set, }
+\item[{Hashtable}]{expected\+Values = {\ttfamily null}, }
 \item[{bool}]{web\+Forward = {\ttfamily false}}
 \end{DoxyParamCaption}
 )}\hypertarget{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}{}\label{class_photon_player_af8815abb8edaafbe6bddbf328f9612fb}
@@ -259,14 +229,14 @@ Example\+: Set a player\textquotesingle{}s character as Tag by assigning the Gam
 \subsection{Property Documentation}
 \index{Photon\+Player@{Photon\+Player}!all\+Properties@{all\+Properties}}
 \index{all\+Properties@{all\+Properties}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{all\+Properties}{allProperties}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hashtable} Photon\+Player.\+all\+Properties\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_player_a82ba921802edc4960d075f1deacfb19d}{}\label{class_photon_player_a82ba921802edc4960d075f1deacfb19d}
+\subsubsection[{\texorpdfstring{all\+Properties}{allProperties}}]{\setlength{\rightskip}{0pt plus 5cm}Hashtable Photon\+Player.\+all\+Properties\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_photon_player_a82ba921802edc4960d075f1deacfb19d}{}\label{class_photon_player_a82ba921802edc4960d075f1deacfb19d}
 
 
 Creates a Hashtable with all properties (custom and \char`\"{}well known\char`\"{} ones). 
 
 If used more often, this should be cached.\index{Photon\+Player@{Photon\+Player}!custom\+Properties@{custom\+Properties}}
 \index{custom\+Properties@{custom\+Properties}!Photon\+Player@{Photon\+Player}}
-\subsubsection[{\texorpdfstring{custom\+Properties}{customProperties}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hashtable} Photon\+Player.\+custom\+Properties\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}{}\label{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}
+\subsubsection[{\texorpdfstring{custom\+Properties}{customProperties}}]{\setlength{\rightskip}{0pt plus 5cm}Hashtable Photon\+Player.\+custom\+Properties\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}{}\label{class_photon_player_ab7e0bc6125b15524e74b5ac9d7c337d7}
 
 
 Read-\/only cache for custom properties of player. 
@@ -300,4 +270,4 @@ Set the \hyperlink{class_photon_network_abb168e543c15731ec4de869d3a1ad8f4}{Photo
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_player_8cs}{Photon\+Player.\+cs}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/Photon\+Player.\+cs\end{DoxyCompactItemize}

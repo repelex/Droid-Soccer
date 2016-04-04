@@ -3,54 +3,40 @@
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292}{Origin} \+: byte \{ \hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292ae7a3a8e2f3e15102959481b9c2334647}{Origin.\+Server\+Web} = 1, 
-\hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292af704e8ac42b36e2873466f04fb12be26}{Origin.\+Cloud\+Web} = 2, 
-\hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292a6644a7352d32c9c4443017798130b61f}{Origin.\+Pun} = 3, 
-\hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292af9c18932d87693c2cdfd5c6042b27687}{Origin.\+Playmaker} = 4
- \}
+enum {\bfseries Origin} \+: byte \{ {\bfseries Server\+Web} = 1, 
+{\bfseries Cloud\+Web} = 2, 
+{\bfseries Pun} = 3, 
+{\bfseries Playmaker} = 4
+ \}\hypertarget{class_account_service_ad255ee623b704af8d6995bd2a6eca292}{}\label{class_account_service_ad255ee623b704af8d6995bd2a6eca292}
+
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_account_service_af440e845bf59207f2abab64155ac78fd}{Account\+Service} ()
 \begin{DoxyCompactList}\small\item\em Creates a instance of the Account Service to register \hyperlink{namespace_photon}{Photon} Cloud accounts. \end{DoxyCompactList}\item 
-void \hyperlink{class_account_service_a879044e72d8362127dd106cef0dee0a6}{Register\+By\+Email} (string email, \hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292}{Origin} origin)
+void \hyperlink{class_account_service_a879044e72d8362127dd106cef0dee0a6}{Register\+By\+Email} (string email, Origin origin)
 \begin{DoxyCompactList}\small\item\em Attempts to create a \hyperlink{namespace_photon}{Photon} Cloud Account. \end{DoxyCompactList}\item 
-void \hyperlink{class_account_service_a21f4161e664bf917292634c78d96d343}{Register\+By\+Email\+Async} (string email, \hyperlink{class_account_service_ad255ee623b704af8d6995bd2a6eca292}{Origin} origin, Action$<$ \hyperlink{class_account_service}{Account\+Service} $>$ callback=null)
+void \hyperlink{class_account_service_a21f4161e664bf917292634c78d96d343}{Register\+By\+Email\+Async} (string email, Origin origin, Action$<$ \hyperlink{class_account_service}{Account\+Service} $>$ callback=null)
 \begin{DoxyCompactList}\small\item\em Attempts to create a \hyperlink{namespace_photon}{Photon} Cloud Account asynchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \hyperlink{class_account_service_adb8216071aff4ae5088e65879f824376}{Validator} (object sender, X509\+Certificate certificate, X509\+Chain chain, Ssl\+Policy\+Errors policy\+Errors)
+static bool {\bfseries Validator} (object sender, X509\+Certificate certificate, X509\+Chain chain, Ssl\+Policy\+Errors policy\+Errors)\hypertarget{class_account_service_adb8216071aff4ae5088e65879f824376}{}\label{class_account_service_adb8216071aff4ae5088e65879f824376}
+
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{class_account_service_af80209c3fba8bbd0d70a19fac0efda34}{Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+string {\bfseries Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{class_account_service_af80209c3fba8bbd0d70a19fac0efda34}{}\label{class_account_service_af80209c3fba8bbd0d70a19fac0efda34}
+
 \item 
-string \hyperlink{class_account_service_aac56e602baed20f1f03bd6647da7ce0e}{App\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+string {\bfseries App\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{class_account_service_aac56e602baed20f1f03bd6647da7ce0e}{}\label{class_account_service_aac56e602baed20f1f03bd6647da7ce0e}
+
 \item 
-int \hyperlink{class_account_service_a203023d7caa8f3f41cc71bf538903ceb}{Return\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+int {\bfseries Return\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{class_account_service_a203023d7caa8f3f41cc71bf538903ceb}{}\label{class_account_service_a203023d7caa8f3f41cc71bf538903ceb}
+
 \end{DoxyCompactItemize}
-
-
-\subsection{Member Enumeration Documentation}
-\index{Account\+Service@{Account\+Service}!Origin@{Origin}}
-\index{Origin@{Origin}!Account\+Service@{Account\+Service}}
-\subsubsection[{\texorpdfstring{Origin}{Origin}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Account\+Service.\+Origin} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{class_account_service_ad255ee623b704af8d6995bd2a6eca292}{}\label{class_account_service_ad255ee623b704af8d6995bd2a6eca292}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{Server\+Web@{Server\+Web}!Account\+Service@{Account\+Service}}\index{Account\+Service@{Account\+Service}!Server\+Web@{Server\+Web}}\item[{\em 
-Server\+Web\hypertarget{class_account_service_ad255ee623b704af8d6995bd2a6eca292ae7a3a8e2f3e15102959481b9c2334647}{}\label{class_account_service_ad255ee623b704af8d6995bd2a6eca292ae7a3a8e2f3e15102959481b9c2334647}
-}]\index{Cloud\+Web@{Cloud\+Web}!Account\+Service@{Account\+Service}}\index{Account\+Service@{Account\+Service}!Cloud\+Web@{Cloud\+Web}}\item[{\em 
-Cloud\+Web\hypertarget{class_account_service_ad255ee623b704af8d6995bd2a6eca292af704e8ac42b36e2873466f04fb12be26}{}\label{class_account_service_ad255ee623b704af8d6995bd2a6eca292af704e8ac42b36e2873466f04fb12be26}
-}]\index{Pun@{Pun}!Account\+Service@{Account\+Service}}\index{Account\+Service@{Account\+Service}!Pun@{Pun}}\item[{\em 
-Pun\hypertarget{class_account_service_ad255ee623b704af8d6995bd2a6eca292a6644a7352d32c9c4443017798130b61f}{}\label{class_account_service_ad255ee623b704af8d6995bd2a6eca292a6644a7352d32c9c4443017798130b61f}
-}]\index{Playmaker@{Playmaker}!Account\+Service@{Account\+Service}}\index{Account\+Service@{Account\+Service}!Playmaker@{Playmaker}}\item[{\em 
-Playmaker\hypertarget{class_account_service_ad255ee623b704af8d6995bd2a6eca292af9c18932d87693c2cdfd5c6042b27687}{}\label{class_account_service_ad255ee623b704af8d6995bd2a6eca292af9c18932d87693c2cdfd5c6042b27687}
-}]\end{description}
-\end{Desc}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -73,7 +59,7 @@ Creates a instance of the Account Service to register \hyperlink{namespace_photo
 \subsubsection[{\texorpdfstring{Register\+By\+Email(string email, Origin origin)}{RegisterByEmail(string email, Origin origin)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+Service.\+Register\+By\+Email (
 \begin{DoxyParamCaption}
 \item[{string}]{email, }
-\item[{{\bf Origin}}]{origin}
+\item[{Origin}]{origin}
 \end{DoxyParamCaption}
 )}\hypertarget{class_account_service_a879044e72d8362127dd106cef0dee0a6}{}\label{class_account_service_a879044e72d8362127dd106cef0dee0a6}
 
@@ -94,7 +80,7 @@ Check Return\+Code, Message and App\+Id to get the result of this attempt.
 \subsubsection[{\texorpdfstring{Register\+By\+Email\+Async(string email, Origin origin, Action$<$ Account\+Service $>$ callback=null)}{RegisterByEmailAsync(string email, Origin origin, Action< AccountService > callback=null)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+Service.\+Register\+By\+Email\+Async (
 \begin{DoxyParamCaption}
 \item[{string}]{email, }
-\item[{{\bf Origin}}]{origin, }
+\item[{Origin}]{origin, }
 \item[{Action$<$ {\bf Account\+Service} $>$}]{callback = {\ttfamily null}}
 \end{DoxyParamCaption}
 )}\hypertarget{class_account_service_a21f4161e664bf917292634c78d96d343}{}\label{class_account_service_a21f4161e664bf917292634c78d96d343}
@@ -113,30 +99,8 @@ Once your callback is called, check Return\+Code, Message and App\+Id to get the
 {\em callback} & Called when the result is available.\\
 \hline
 \end{DoxyParams}
-\index{Account\+Service@{Account\+Service}!Validator@{Validator}}
-\index{Validator@{Validator}!Account\+Service@{Account\+Service}}
-\subsubsection[{\texorpdfstring{Validator(object sender, X509\+Certificate certificate, X509\+Chain chain, Ssl\+Policy\+Errors policy\+Errors)}{Validator(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Account\+Service.\+Validator (
-\begin{DoxyParamCaption}
-\item[{object}]{sender, }
-\item[{X509\+Certificate}]{certificate, }
-\item[{X509\+Chain}]{chain, }
-\item[{Ssl\+Policy\+Errors}]{policy\+Errors}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_account_service_adb8216071aff4ae5088e65879f824376}{}\label{class_account_service_adb8216071aff4ae5088e65879f824376}
-
-
-\subsection{Property Documentation}
-\index{Account\+Service@{Account\+Service}!App\+Id@{App\+Id}}
-\index{App\+Id@{App\+Id}!Account\+Service@{Account\+Service}}
-\subsubsection[{\texorpdfstring{App\+Id}{AppId}}]{\setlength{\rightskip}{0pt plus 5cm}string Account\+Service.\+App\+Id\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_account_service_aac56e602baed20f1f03bd6647da7ce0e}{}\label{class_account_service_aac56e602baed20f1f03bd6647da7ce0e}
-\index{Account\+Service@{Account\+Service}!Message@{Message}}
-\index{Message@{Message}!Account\+Service@{Account\+Service}}
-\subsubsection[{\texorpdfstring{Message}{Message}}]{\setlength{\rightskip}{0pt plus 5cm}string Account\+Service.\+Message\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_account_service_af80209c3fba8bbd0d70a19fac0efda34}{}\label{class_account_service_af80209c3fba8bbd0d70a19fac0efda34}
-\index{Account\+Service@{Account\+Service}!Return\+Code@{Return\+Code}}
-\index{Return\+Code@{Return\+Code}!Account\+Service@{Account\+Service}}
-\subsubsection[{\texorpdfstring{Return\+Code}{ReturnCode}}]{\setlength{\rightskip}{0pt plus 5cm}int Account\+Service.\+Return\+Code\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{class_account_service_a203023d7caa8f3f41cc71bf538903ceb}{}\label{class_account_service_a203023d7caa8f3f41cc71bf538903ceb}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Editor/\+Photon\+Network/\hyperlink{_account_service_8cs}{Account\+Service.\+cs}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Editor/\+Photon\+Network/Account\+Service.\+cs\end{DoxyCompactItemize}
