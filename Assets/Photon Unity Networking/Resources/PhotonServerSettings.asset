@@ -41,4 +41,6 @@ MonoBehaviour:
   - JoinBlue
   - JoinRed
   - changeLevel
+  - validateVars
+  - needed
   DisableAutoOpenWizard: 1

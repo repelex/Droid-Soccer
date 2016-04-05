@@ -36,7 +36,7 @@ public class Timer : Photon.MonoBehaviour
 
     void Start()
     {
-          timer = (float)PlayerPrefs.GetInt("Time");
+          timer = (float)((int)PhotonNetwork.masterClient.customProperties["Time"]);
           txt = GetComponent<Text>();
         txt.text = "00.00";
     }

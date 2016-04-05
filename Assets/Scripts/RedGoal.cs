@@ -34,14 +34,16 @@ public class RedGoal : MonoBehaviour
     bool canScore = true;
     void incrementScore()
     {
-        float vol = UnityEngine.Random.Range(volLowRange, volHighRange);
+          canScore = false;
+          float vol = UnityEngine.Random.Range(volLowRange, volHighRange);
         source.PlayOneShot(scoreSound, vol);
 
         GameObject BScoreOb = GameObject.Find("Blue Team Score");
 
         BScore++;
-        BScoreOb.GetComponent<Text>().text = BScore.ToString();
-        canScore = false;
+          PhotonNetwork.masterClient.customProperties["BlueScore"] = BScore;
+          BScoreOb.GetComponent<Text>().text = BScore.ToString();
+        
         saveScores();
     }
 
@@ -55,7 +57,7 @@ public class RedGoal : MonoBehaviour
         }
         if (!isSynced)
         {
-            GameObject.Find("Blue Team Score").GetComponent<Text>().text = BScore.ToString();
+            GameObject.Find("Blue Team Score").GetComponent<Text>().text = ((int)PhotonNetwork.masterClient.customProperties["BlueScore"]).ToString();
             GameObject.Find("Timer").GetComponent<Timer>().timer = (float)PlayerPrefs.GetInt("Time");
             isSynced = true;
 
@@ -91,24 +93,18 @@ public class RedGoal : MonoBehaviour
     //Load scores
     void getScores()
     {
-        //Check if we already have the value in playerprefs
-        if (!PlayerPrefs.HasKey("BlueScore"))
-        {
-            BScore = 0;
-            PlayerPrefs.SetInt("BlueScore", 0);
-        }
-        else
-        {
-            BScore = PlayerPrefs.GetInt("BlueScore");
-        }
+          BScore = (int)PhotonNetwork.masterClient.customProperties["BlueScore"];
+          PlayerPrefs.SetInt("RedScore", (int)PhotonNetwork.masterClient.customProperties["RedScore"]);
+          PlayerPrefs.SetInt("BlueScore", (int)PhotonNetwork.masterClient.customProperties["BlueScore"]);
 
 
-    }
-    //Used for continuing the scores between goals
-    void saveScores()
+
+     }
+     //Used for continuing the scores between goals
+     void saveScores()
     {
-        PlayerPrefs.SetInt("BlueScore", BScore);
-    }
+          PlayerPrefs.SetInt("BlueScore", (int)PhotonNetwork.masterClient.customProperties["BlueScore"]);
+     }
 
     //Saves the current time on the clock
     void saveTime()
@@ -116,8 +112,9 @@ public class RedGoal : MonoBehaviour
         string currTime = GameObject.Find("Timer").GetComponent<Text>().text.ToString();
         string[] times = currTime.Split(':');
         int timeRemaining = (Int32.Parse(times[0]) * 60) + Int32.Parse(times[1]);
-        PlayerPrefs.SetInt("Time", timeRemaining);
-    }
+          PhotonNetwork.masterClient.customProperties["Time"] = timeRemaining;
+          PlayerPrefs.SetInt("Time", (int)PhotonNetwork.masterClient.customProperties["Time"]);
+     }
 }
 
 
