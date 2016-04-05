@@ -114,7 +114,7 @@ public class BlueGoal : MonoBehaviour
         string currTime = GameObject.Find("Timer").GetComponent<Text>().text.ToString();
         string[] times = currTime.Split(':');
         int timeRemaining = (Int32.Parse(times[0]) * 60) + Int32.Parse(times[1]);
-          PhotonNetwork.masterClient.customProperties["Time"] = timeRemaining;
+        PhotonNetwork.masterClient.customProperties["Time"] = timeRemaining;
         PlayerPrefs.SetInt("Time", (int)PhotonNetwork.masterClient.customProperties["Time"]);
     }
 
