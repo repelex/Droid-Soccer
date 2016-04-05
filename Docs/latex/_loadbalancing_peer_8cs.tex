@@ -1,0 +1,141 @@
+\hypertarget{_loadbalancing_peer_8cs}{}\section{C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Loadbalancing\+Peer.cs File Reference}
+\label{_loadbalancing_peer_8cs}\index{C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Loadbalancing\+Peer.\+cs@{C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\+Loadbalancing\+Peer.\+cs}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Exit\+Games.\+Client.\+Photon.\+Loadbalancing\+Peer}
+\begin{DoxyCompactList}\small\item\em Internally used by P\+UN, a Loadbalancing\+Peer provides the operations and enum definitions needed to use the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Loadbalancing server (or the \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} Cloud). \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_loadbalancing_peer_1_1_enter_room_params}{Exit\+Games.\+Client.\+Photon.\+Loadbalancing\+Peer.\+Enter\+Room\+Params}
+\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_loadbalancing_peer_1_1_op_join_random_room_params}{Exit\+Games.\+Client.\+Photon.\+Loadbalancing\+Peer.\+Op\+Join\+Random\+Room\+Params}
+\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Exit\+Games.\+Client.\+Photon.\+Error\+Code}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_error_code}{Error\+Code} defines the default codes associated with \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Photon} client/server communication. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_actor_properties}{Exit\+Games.\+Client.\+Photon.\+Actor\+Properties}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_game_property_key}{Exit\+Games.\+Client.\+Photon.\+Game\+Property\+Key}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_event_code}{Exit\+Games.\+Client.\+Photon.\+Event\+Code}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_parameter_code}{Exit\+Games.\+Client.\+Photon.\+Parameter\+Code}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_exit_games_1_1_client_1_1_photon_1_1_operation_code}{Exit\+Games.\+Client.\+Photon.\+Operation\+Code}
+\begin{DoxyCompactList}\small\item\em Class for constants. \end{DoxyCompactList}\item 
+class \hyperlink{class_raise_event_options}{Raise\+Event\+Options}
+\begin{DoxyCompactList}\small\item\em Aggregates several less-\/often used options for operation Raise\+Event. See field descriptions for usage details.\end{DoxyCompactList}\item 
+class \hyperlink{class_typed_lobby}{Typed\+Lobby}
+\begin{DoxyCompactList}\small\item\em Refers to a specific lobby (and type) on the server. \end{DoxyCompactList}\item 
+class \hyperlink{class_typed_lobby_info}{Typed\+Lobby\+Info}
+\item 
+class \hyperlink{class_authentication_values}{Authentication\+Values}
+\begin{DoxyCompactList}\small\item\em Container for user authentication in \hyperlink{namespace_photon}{Photon}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_exit_games_1_1_client_1_1_photon}{Exit\+Games.\+Client.\+Photon}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{_loadbalancing_peer_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} = Exit\+Games.\+Client.\+Photon.\+Hashtable
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657}{Exit\+Games.\+Client.\+Photon.\+Join\+Mode} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a7a1920d61156abc05a60135aefe8bc67}{Exit\+Games.\+Client.\+Photon.\+Join\+Mode.\+Default} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657a1e41e14c1f9344f2db61fe8653b5b001}{Exit\+Games.\+Client.\+Photon.\+Join\+Mode.\+Create\+If\+Not\+Exists} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657aa63ce0e3e810c781a410d3addc56db7f}{Exit\+Games.\+Client.\+Photon.\+Join\+Mode.\+Join\+Or\+Rejoin} = 2, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_ad2643c9be9b35f92b9ed739fb77bc657adc2168ee308fc14616dfd264d45cfd15}{Exit\+Games.\+Client.\+Photon.\+Join\+Mode.\+Rejoin\+Only} = 3
+ \}\begin{DoxyCompactList}\small\item\em Defines possible values for Op\+Join\+Room and Op\+Join\+Or\+Create. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}{Exit\+Games.\+Client.\+Photon.\+Matchmaking\+Mode} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7daa5912f7a88c36ab01e9c1c38fd7bad9e}{Exit\+Games.\+Client.\+Photon.\+Matchmaking\+Mode.\+Fill\+Room} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da85e600e069b55d677fcc38fe96002751}{Exit\+Games.\+Client.\+Photon.\+Matchmaking\+Mode.\+Serial\+Matching} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7da43f0360f3d6dd072a905e7bf6343b565}{Exit\+Games.\+Client.\+Photon.\+Matchmaking\+Mode.\+Random\+Matching} = 2
+ \}\begin{DoxyCompactList}\small\item\em Options for matchmaking rules for Op\+Join\+Random. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bd}{Exit\+Games.\+Client.\+Photon.\+Receiver\+Group} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bda52ef9633d88a7480b3a938ff9eaa2a25}{Exit\+Games.\+Client.\+Photon.\+Receiver\+Group.\+Others} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdab1c94ca2fbc3e78fc30069c8d0f01680}{Exit\+Games.\+Client.\+Photon.\+Receiver\+Group.\+All} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a73fefe1509e4ac1eb48e279422ec82bdad0209f4a40060d6e7c37d29979d8f444}{Exit\+Games.\+Client.\+Photon.\+Receiver\+Group.\+Master\+Client} = 2
+ \}\begin{DoxyCompactList}\small\item\em Lite -\/ Op\+Raise\+Event lets you chose which actors in the room should receive events. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching} \+: byte \{ \\*
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53aed89696ce2a8a4cfb22e37d482c72cbb}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Do\+Not\+Cache} = 0, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ac9a823ae99d397814cb62b335ba9e0a9}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Merge\+Cache} = 1, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a28f79c65a5ac3ff0e04978cf99f7e540}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Replace\+Cache} = 2, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ad45857356b7a23b7daac5ef397b3825e}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Remove\+Cache} = 3, 
+\\*
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a53f67bc41da305a88205d1ded2f35954}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Add\+To\+Room\+Cache} = 4, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a187c171b946f4fb73de86aaee4d7aad2}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Add\+To\+Room\+Cache\+Global} = 5, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a92cb14adcb4e187b188c94fb74c53dab}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Remove\+From\+Room\+Cache} = 6, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a06e5db15df6ca1969b38628518d71d76}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Remove\+From\+Room\+Cache\+For\+Actors\+Left} = 7, 
+\\*
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53a0dc854abbac4ba563d1151c331e58c91}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Slice\+Increase\+Index} = 10, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53af8a05e1851a5563b3aff68bf8bf8486b}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Slice\+Set\+Index} = 11, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53acdf56f0af5cd6eecb93e8d808c131841}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Slice\+Purge\+Index} = 12, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a854484e793ad0027fa7e3245f9858e53ae426b4afc51b756484914daadb36ad4d}{Exit\+Games.\+Client.\+Photon.\+Event\+Caching.\+Slice\+Purge\+Up\+To\+Index} = 13
+ \}\begin{DoxyCompactList}\small\item\em Lite -\/ Op\+Raise\+Event allows you to cache events and automatically send them to joining players in a room. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1}{Exit\+Games.\+Client.\+Photon.\+Property\+Type\+Flag} \+: byte \{ \hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a6adf97f83acf6453d4a6a4b1070f3754}{Exit\+Games.\+Client.\+Photon.\+Property\+Type\+Flag.\+None} = 0x00, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a63d72051e901c069f8aa1b32aa0c43bb}{Exit\+Games.\+Client.\+Photon.\+Property\+Type\+Flag.\+Game} = 0x01, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a1cc84619677de81ee6e44149845270a3}{Exit\+Games.\+Client.\+Photon.\+Property\+Type\+Flag.\+Actor} = 0x02, 
+\hyperlink{namespace_exit_games_1_1_client_1_1_photon_a1eec77036780fdfff47d84b076f448a1a68ebb8ef1cbd0371b060a93d7788d460}{Exit\+Games.\+Client.\+Photon.\+Property\+Type\+Flag.\+Game\+And\+Actor} = Game $\vert$ Actor
+ \}\begin{DoxyCompactList}\small\item\em Flags for \char`\"{}types of properties\char`\"{}, being used as filter in Op\+Get\+Properties. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ad}{Lobby\+Type} \+: byte \{ \hyperlink{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ada7a1920d61156abc05a60135aefe8bc67}{Lobby\+Type.\+Default} = 0, 
+\hyperlink{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ada5c1bd8d2513ea60a7adcc388b0702dd9}{Lobby\+Type.\+Sql\+Lobby} = 2, 
+\hyperlink{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74adac833c502bc8e709e70d75b82c027bb6b}{Lobby\+Type.\+Async\+Random\+Lobby} = 3
+ \}\begin{DoxyCompactList}\small\item\em Options of lobby types available. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257}{Custom\+Authentication\+Type} \+: byte \{ \hyperlink{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a90589c47f06eb971d548591f23c285af}{Custom\+Authentication\+Type.\+Custom} = 0, 
+\hyperlink{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a4db4563826bad0eb2f60ee6e42d0ea4b}{Custom\+Authentication\+Type.\+Steam} = 1, 
+\hyperlink{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257ad85544fce402c7a2a96a48078edaf203}{Custom\+Authentication\+Type.\+Facebook} = 2, 
+\hyperlink{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a6adf97f83acf6453d4a6a4b1070f3754}{Custom\+Authentication\+Type.\+None} = byte.\+Max\+Value
+ \}\begin{DoxyCompactList}\small\item\em Options for optional \char`\"{}\+Custom Authentication\char`\"{} services used with \hyperlink{namespace_photon}{Photon}. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Hashtable@{Hashtable}}
+\index{Hashtable@{Hashtable}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}
+\subsubsection[{\texorpdfstring{Hashtable}{Hashtable}}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf Hashtable} =  Exit\+Games.\+Client.\+Photon.\+Hashtable}\hypertarget{_loadbalancing_peer_8cs_afa613ef589c02dbd94acc273b62cdcfd}{}\label{_loadbalancing_peer_8cs_afa613ef589c02dbd94acc273b62cdcfd}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Custom\+Authentication\+Type@{Custom\+Authentication\+Type}}
+\index{Custom\+Authentication\+Type@{Custom\+Authentication\+Type}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}
+\subsubsection[{\texorpdfstring{Custom\+Authentication\+Type}{CustomAuthenticationType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Custom\+Authentication\+Type} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257}{}\label{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257}
+
+
+Options for optional \char`\"{}\+Custom Authentication\char`\"{} services used with \hyperlink{namespace_photon}{Photon}. 
+
+Used by Op\+Authenticate after connecting to \hyperlink{namespace_photon}{Photon}. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Custom@{Custom}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Custom@{Custom}}\item[{\em 
+Custom\hypertarget{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a90589c47f06eb971d548591f23c285af}{}\label{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a90589c47f06eb971d548591f23c285af}
+}]Use a custom authentification service. Currently the only implemented option.\index{Steam@{Steam}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Steam@{Steam}}\item[{\em 
+Steam\hypertarget{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a4db4563826bad0eb2f60ee6e42d0ea4b}{}\label{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a4db4563826bad0eb2f60ee6e42d0ea4b}
+}]Authenticates users by their Steam Account. Set auth values accordingly!\index{Facebook@{Facebook}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Facebook@{Facebook}}\item[{\em 
+Facebook\hypertarget{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257ad85544fce402c7a2a96a48078edaf203}{}\label{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257ad85544fce402c7a2a96a48078edaf203}
+}]Authenticates users by their Facebook Account. Set auth values accordingly!\index{None@{None}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!None@{None}}\item[{\em 
+None\hypertarget{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a6adf97f83acf6453d4a6a4b1070f3754}{}\label{_loadbalancing_peer_8cs_aeb4d921fa77465ceb160913c4950e257a6adf97f83acf6453d4a6a4b1070f3754}
+}]Disables custom authentification. Same as not providing any \hyperlink{class_authentication_values}{Authentication\+Values} for connect (more precisely for\+: Op\+Authenticate).\end{description}
+\end{Desc}
+\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Lobby\+Type@{Lobby\+Type}}
+\index{Lobby\+Type@{Lobby\+Type}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}
+\subsubsection[{\texorpdfstring{Lobby\+Type}{LobbyType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Lobby\+Type} \+: byte\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ad}{}\label{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ad}
+
+
+Options of lobby types available. 
+
+Lobby types might be implemented in certain \hyperlink{namespace_photon}{Photon} versions and won\textquotesingle{}t be available on older servers. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Default@{Default}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Default@{Default}}\item[{\em 
+Default\hypertarget{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ada7a1920d61156abc05a60135aefe8bc67}{}\label{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ada7a1920d61156abc05a60135aefe8bc67}
+}]This lobby is used unless another is defined by game or Join\+Random. Room-\/lists will be sent and Join\+Random\+Room can filter by matching properties.\index{Sql\+Lobby@{Sql\+Lobby}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Sql\+Lobby@{Sql\+Lobby}}\item[{\em 
+Sql\+Lobby\hypertarget{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ada5c1bd8d2513ea60a7adcc388b0702dd9}{}\label{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74ada5c1bd8d2513ea60a7adcc388b0702dd9}
+}]This lobby type lists rooms like Default but Join\+Random has a parameter for S\+Q\+L-\/like \char`\"{}where\char`\"{} clauses for filtering. This allows bigger, less, or and and combinations.\index{Async\+Random\+Lobby@{Async\+Random\+Lobby}!Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}}\index{Loadbalancing\+Peer.\+cs@{Loadbalancing\+Peer.\+cs}!Async\+Random\+Lobby@{Async\+Random\+Lobby}}\item[{\em 
+Async\+Random\+Lobby\hypertarget{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74adac833c502bc8e709e70d75b82c027bb6b}{}\label{_loadbalancing_peer_8cs_ab34738ecd04700648af88bf53d1d74adac833c502bc8e709e70d75b82c027bb6b}
+}]This lobby does not send lists of games. It is only used for Op\+Join\+Random\+Room. It keeps rooms available for a while when there are only inactive users left.\end{description}
+\end{Desc}

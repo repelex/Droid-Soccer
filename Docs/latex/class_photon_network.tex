@@ -47,9 +47,9 @@ static bool \hyperlink{class_photon_network_a902344ffd109a23f1a0606599af5eb96}{J
 \begin{DoxyCompactList}\small\item\em Lets you either join a named room or create it on the fly -\/ you don\textquotesingle{}t have to know if someone created the room already. \end{DoxyCompactList}\item 
 static bool \hyperlink{class_photon_network_aa9a112ccaaf71a296b823e9637584445}{Join\+Random\+Room} ()
 \begin{DoxyCompactList}\small\item\em Joins any available room of the currently used lobby and fails if none is available. \end{DoxyCompactList}\item 
-static bool \hyperlink{class_photon_network_a08119a6962c1d179a34d0388927ead3c}{Join\+Random\+Room} (Hashtable expected\+Custom\+Room\+Properties, byte expected\+Max\+Players)
+static bool \hyperlink{class_photon_network_a08119a6962c1d179a34d0388927ead3c}{Join\+Random\+Room} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} expected\+Custom\+Room\+Properties, byte expected\+Max\+Players)
 \begin{DoxyCompactList}\small\item\em Attempts to join an open room with fitting, custom properties but fails if none is currently available. \end{DoxyCompactList}\item 
-static bool \hyperlink{class_photon_network_af80e5f52ce253ab5a5f81fef1435e948}{Join\+Random\+Room} (Hashtable expected\+Custom\+Room\+Properties, byte expected\+Max\+Players, \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}{Matchmaking\+Mode} matching\+Type, \hyperlink{class_typed_lobby}{Typed\+Lobby} typed\+Lobby, string sql\+Lobby\+Filter)
+static bool \hyperlink{class_photon_network_af80e5f52ce253ab5a5f81fef1435e948}{Join\+Random\+Room} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} expected\+Custom\+Room\+Properties, byte expected\+Max\+Players, \hyperlink{namespace_exit_games_1_1_client_1_1_photon_aa8150470595f719d6f62ff9467d97c7d}{Matchmaking\+Mode} matching\+Type, \hyperlink{class_typed_lobby}{Typed\+Lobby} typed\+Lobby, string sql\+Lobby\+Filter)
 \begin{DoxyCompactList}\small\item\em Attempts to join an open room with fitting, custom properties but fails if none is currently available. \end{DoxyCompactList}\item 
 static bool \hyperlink{class_photon_network_a62c512b8fe143fac07ff55e849aa48d5}{Join\+Lobby} ()
 \begin{DoxyCompactList}\small\item\em On Master\+Server this joins the default lobby which list rooms currently in use. \end{DoxyCompactList}\item 
@@ -61,7 +61,7 @@ static bool \hyperlink{class_photon_network_abb27939f0325b53c94f5ad52199b63b7}{L
 \begin{DoxyCompactList}\small\item\em Leave the current room and return to the Master Server where you can join or create rooms (see remarks). \end{DoxyCompactList}\item 
 static \hyperlink{class_room_info}{Room\+Info}\mbox{[}$\,$\mbox{]} \hyperlink{class_photon_network_aeef2085375accb7d4bc88e60cbe15eb9}{Get\+Room\+List} ()
 \begin{DoxyCompactList}\small\item\em Gets currently known rooms as \hyperlink{class_room_info}{Room\+Info} array. \end{DoxyCompactList}\item 
-static void \hyperlink{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}{Set\+Player\+Custom\+Properties} (Hashtable custom\+Properties)
+static void \hyperlink{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}{Set\+Player\+Custom\+Properties} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} custom\+Properties)
 \begin{DoxyCompactList}\small\item\em Sets this (local) player\textquotesingle{}s properties and synchronizes them to the other players (don\textquotesingle{}t modify them directly). \end{DoxyCompactList}\item 
 static void \hyperlink{class_photon_network_a4c59e3c4feeaf44293eef1d8d19b98a2}{Remove\+Player\+Custom\+Properties} (string\mbox{[}$\,$\mbox{]} custom\+Properties\+To\+Delete)
 \begin{DoxyCompactList}\small\item\em Locally removes Custom Properties of \char`\"{}this\char`\"{} player. \end{DoxyCompactList}\item 
@@ -996,7 +996,7 @@ If this fails, you can still create a room (and make this available for the next
 \index{Join\+Random\+Room@{Join\+Random\+Room}!Photon\+Network@{Photon\+Network}}
 \subsubsection[{\texorpdfstring{Join\+Random\+Room(\+Hashtable expected\+Custom\+Room\+Properties, byte expected\+Max\+Players)}{JoinRandomRoom(Hashtable expectedCustomRoomProperties, byte expectedMaxPlayers)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Random\+Room (
 \begin{DoxyParamCaption}
-\item[{Hashtable}]{expected\+Custom\+Room\+Properties, }
+\item[{{\bf Hashtable}}]{expected\+Custom\+Room\+Properties, }
 \item[{byte}]{expected\+Max\+Players}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a08119a6962c1d179a34d0388927ead3c}{}\label{class_photon_network_a08119a6962c1d179a34d0388927ead3c}
@@ -1021,7 +1021,7 @@ If this fails, you can still create a room (and make this available for the next
 \index{Join\+Random\+Room@{Join\+Random\+Room}!Photon\+Network@{Photon\+Network}}
 \subsubsection[{\texorpdfstring{Join\+Random\+Room(\+Hashtable expected\+Custom\+Room\+Properties, byte expected\+Max\+Players, Matchmaking\+Mode matching\+Type, Typed\+Lobby typed\+Lobby, string sql\+Lobby\+Filter)}{JoinRandomRoom(Hashtable expectedCustomRoomProperties, byte expectedMaxPlayers, MatchmakingMode matchingType, TypedLobby typedLobby, string sqlLobbyFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Photon\+Network.\+Join\+Random\+Room (
 \begin{DoxyParamCaption}
-\item[{Hashtable}]{expected\+Custom\+Room\+Properties, }
+\item[{{\bf Hashtable}}]{expected\+Custom\+Room\+Properties, }
 \item[{byte}]{expected\+Max\+Players, }
 \item[{{\bf Matchmaking\+Mode}}]{matching\+Type, }
 \item[{{\bf Typed\+Lobby}}]{typed\+Lobby, }
@@ -1422,7 +1422,7 @@ False when this operation couldn\textquotesingle{}t be done. Must be in a room (
 \index{Set\+Player\+Custom\+Properties@{Set\+Player\+Custom\+Properties}!Photon\+Network@{Photon\+Network}}
 \subsubsection[{\texorpdfstring{Set\+Player\+Custom\+Properties(\+Hashtable custom\+Properties)}{SetPlayerCustomProperties(Hashtable customProperties)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Photon\+Network.\+Set\+Player\+Custom\+Properties (
 \begin{DoxyParamCaption}
-\item[{Hashtable}]{custom\+Properties}
+\item[{{\bf Hashtable}}]{custom\+Properties}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}{}\label{class_photon_network_a3badca00ee2bacec4eaccac76002f0ac}
 
@@ -2131,4 +2131,4 @@ Used once per dispatch to limit unreliable commands per channel (so after a paus
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/Photon\+Network.\+cs\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Plugins/\+Photon\+Network/\hyperlink{_photon_network_8cs}{Photon\+Network.\+cs}\end{DoxyCompactItemize}

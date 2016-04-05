@@ -14,33 +14,26 @@ Inherits Mono\+Behaviour.
 \item 
 void \hyperlink{class_in_room_round_timer_a17202ffb28b9e93f1d2379d79d1e9262}{On\+Joined\+Room} ()
 \begin{DoxyCompactList}\small\item\em Called by P\+UN when this client entered a room (no matter if joined or created).\end{DoxyCompactList}\item 
-void \hyperlink{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}{On\+Photon\+Custom\+Room\+Properties\+Changed} (Hashtable properties\+That\+Changed)
+void \hyperlink{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}{On\+Photon\+Custom\+Room\+Properties\+Changed} (\hyperlink{_extensions_8cs_afa613ef589c02dbd94acc273b62cdcfd}{Hashtable} properties\+That\+Changed)
 \begin{DoxyCompactList}\small\item\em Called by P\+UN when new properties for the room were set (by any client in the room).\end{DoxyCompactList}\item 
 void \hyperlink{class_in_room_round_timer_ae136a34f3bf637b1b5610fd202ffa1e3}{On\+Master\+Client\+Switched} (\hyperlink{class_photon_player}{Photon\+Player} new\+Master\+Client)
 \item 
-void {\bfseries On\+G\+UI} ()\hypertarget{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}{}\label{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}
-
+void \hyperlink{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}{On\+G\+UI} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bfseries Seconds\+Per\+Turn} = 500\hypertarget{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}{}\label{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}
-
+int \hyperlink{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}{Seconds\+Per\+Turn} = 500
 \item 
-double {\bfseries Start\+Time}\hypertarget{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}{}\label{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}
-
+double \hyperlink{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}{Start\+Time}
 \item 
-Rect {\bfseries Text\+Pos} = new Rect(0,80,150,300)\hypertarget{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}{}\label{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}
-
+Rect \hyperlink{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}{Text\+Pos} = new Rect(0,80,150,300)
 \item 
-double {\bfseries starting\+\_\+severtime}\hypertarget{class_in_room_round_timer_a2399b0658c888b108f2c75f9d2fbb41c}{}\label{class_in_room_round_timer_a2399b0658c888b108f2c75f9d2fbb41c}
-
+double \hyperlink{class_in_room_round_timer_a2399b0658c888b108f2c75f9d2fbb41c}{starting\+\_\+severtime}
 \item 
-double {\bfseries timetostart} = 0.\+0f\hypertarget{class_in_room_round_timer_aa0c3ea404ae1bc85c1cc36626ae2bed8}{}\label{class_in_room_round_timer_aa0c3ea404ae1bc85c1cc36626ae2bed8}
-
+double \hyperlink{class_in_room_round_timer_aa0c3ea404ae1bc85c1cc36626ae2bed8}{timetostart} = 0.\+0f
 \item 
-double {\bfseries secondsbeforeend} = 0\hypertarget{class_in_room_round_timer_a913c06f7ecff0d23be4041c9eb5fb69a}{}\label{class_in_room_round_timer_a913c06f7ecff0d23be4041c9eb5fb69a}
-
+double \hyperlink{class_in_room_round_timer_a913c06f7ecff0d23be4041c9eb5fb69a}{secondsbeforeend} = 0
 \end{DoxyCompactItemize}
 
 
@@ -54,6 +47,13 @@ Everyone else will join the room and check the property to calculate how much ti
 Based on this, you should be able to implement a synchronized timer for turns between players. 
 
 \subsection{Member Function Documentation}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!On\+G\+UI@{On\+G\+UI}}
+\index{On\+G\+UI@{On\+G\+UI}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{On\+G\+U\+I()}{OnGUI()}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+G\+UI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}{}\label{class_in_room_round_timer_a1c1cc2f294b32ed4dd293db35a9f4a7f}
 \index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!On\+Joined\+Room@{On\+Joined\+Room}}
 \index{On\+Joined\+Room@{On\+Joined\+Room}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
 \subsubsection[{\texorpdfstring{On\+Joined\+Room()}{OnJoinedRoom()}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+Joined\+Room (
@@ -76,7 +76,7 @@ In theory, the client which created the room might crash/close before it sets th
 \index{On\+Photon\+Custom\+Room\+Properties\+Changed@{On\+Photon\+Custom\+Room\+Properties\+Changed}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
 \subsubsection[{\texorpdfstring{On\+Photon\+Custom\+Room\+Properties\+Changed(\+Hashtable properties\+That\+Changed)}{OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged)}}]{\setlength{\rightskip}{0pt plus 5cm}void In\+Room\+Round\+Timer.\+On\+Photon\+Custom\+Room\+Properties\+Changed (
 \begin{DoxyParamCaption}
-\item[{Hashtable}]{properties\+That\+Changed}
+\item[{{\bf Hashtable}}]{properties\+That\+Changed}
 \end{DoxyParamCaption}
 )}\hypertarget{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}{}\label{class_in_room_round_timer_a226f64a8398f70b91ad6af4ea3b44bd8}
 
@@ -85,6 +85,27 @@ Called by P\+UN when new properties for the room were set (by any client in the 
 
 
 
+\subsection{Member Data Documentation}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!secondsbeforeend@{secondsbeforeend}}
+\index{secondsbeforeend@{secondsbeforeend}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{secondsbeforeend}{secondsbeforeend}}]{\setlength{\rightskip}{0pt plus 5cm}double In\+Room\+Round\+Timer.\+secondsbeforeend = 0}\hypertarget{class_in_room_round_timer_a913c06f7ecff0d23be4041c9eb5fb69a}{}\label{class_in_room_round_timer_a913c06f7ecff0d23be4041c9eb5fb69a}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!Seconds\+Per\+Turn@{Seconds\+Per\+Turn}}
+\index{Seconds\+Per\+Turn@{Seconds\+Per\+Turn}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{Seconds\+Per\+Turn}{SecondsPerTurn}}]{\setlength{\rightskip}{0pt plus 5cm}int In\+Room\+Round\+Timer.\+Seconds\+Per\+Turn = 500}\hypertarget{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}{}\label{class_in_room_round_timer_a3fbc46448a70dff996a45f508d3e3cc8}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!starting\+\_\+severtime@{starting\+\_\+severtime}}
+\index{starting\+\_\+severtime@{starting\+\_\+severtime}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{starting\+\_\+severtime}{starting_severtime}}]{\setlength{\rightskip}{0pt plus 5cm}double In\+Room\+Round\+Timer.\+starting\+\_\+severtime}\hypertarget{class_in_room_round_timer_a2399b0658c888b108f2c75f9d2fbb41c}{}\label{class_in_room_round_timer_a2399b0658c888b108f2c75f9d2fbb41c}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!Start\+Time@{Start\+Time}}
+\index{Start\+Time@{Start\+Time}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{Start\+Time}{StartTime}}]{\setlength{\rightskip}{0pt plus 5cm}double In\+Room\+Round\+Timer.\+Start\+Time}\hypertarget{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}{}\label{class_in_room_round_timer_a22ba8013f8081643dfffeb95e049a97c}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!Text\+Pos@{Text\+Pos}}
+\index{Text\+Pos@{Text\+Pos}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{Text\+Pos}{TextPos}}]{\setlength{\rightskip}{0pt plus 5cm}Rect In\+Room\+Round\+Timer.\+Text\+Pos = new Rect(0,80,150,300)}\hypertarget{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}{}\label{class_in_room_round_timer_a1844d64936fc01a304de92179ac0cd4e}
+\index{In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}!timetostart@{timetostart}}
+\index{timetostart@{timetostart}!In\+Room\+Round\+Timer@{In\+Room\+Round\+Timer}}
+\subsubsection[{\texorpdfstring{timetostart}{timetostart}}]{\setlength{\rightskip}{0pt plus 5cm}double In\+Room\+Round\+Timer.\+timetostart = 0.\+0f}\hypertarget{class_in_room_round_timer_aa0c3ea404ae1bc85c1cc36626ae2bed8}{}\label{class_in_room_round_timer_aa0c3ea404ae1bc85c1cc36626ae2bed8}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/In\+Room\+Round\+Timer.\+cs\end{DoxyCompactItemize}
+C\+:/\+Users/\+Chris/\+Documents/\+Git\+Hub/\+Team-\/\+Game-\/\+Project/\+Assets/\+Photon Unity Networking/\+Utility\+Scripts/\hyperlink{_in_room_round_timer_8cs}{In\+Room\+Round\+Timer.\+cs}\end{DoxyCompactItemize}
