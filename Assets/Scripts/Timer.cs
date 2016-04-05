@@ -9,7 +9,7 @@ public class Timer : Photon.MonoBehaviour
      //300 seconds = 5 minutes
      //when adjusting play time you must also adjust the Timer(Script)
 
-     public float timer = 25;
+     public float timer = 300;
     Text txt;
     int minutes;
     int seconds;
