@@ -26,7 +26,7 @@ public class Timer : Photon.MonoBehaviour
             timer = 0;
                //PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.player.ID);
                PhotonNetwork.Disconnect();
-               PhotonNetwork.LoadLevel("Lobby");
+               PhotonNetwork.LoadLevel("MainMenu");
 
           }
     }
