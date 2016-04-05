@@ -9,7 +9,7 @@ public class Timer : Photon.MonoBehaviour
      //300 seconds = 5 minutes
      //when adjusting play time you must also adjust the Timer(Script)
 
-     public float timer = 300;
+     public float timer = 20;
     Text txt;
     int minutes;
     int seconds;
@@ -24,10 +24,11 @@ public class Timer : Photon.MonoBehaviour
         if (timer <= 0)
         {
             timer = 0;
-            PhotonNetwork.JoinLobby();
-            PhotonNetwork.LoadLevel("Lobby");
-            
-        }
+               //PhotonNetwork.DestroyPlayerObjects(PhotonNetwork.player.ID);
+               PhotonNetwork.Disconnect();
+               PhotonNetwork.LoadLevel("Lobby");
+
+          }
     }
 	public float GetTime()
 	{
@@ -36,7 +37,7 @@ public class Timer : Photon.MonoBehaviour
 
     void Start()
     {
-          timer = (float)PlayerPrefs.GetInt("Time");
+          timer = (float)((int)PhotonNetwork.masterClient.customProperties["Time"]);
           txt = GetComponent<Text>();
         txt.text = "00.00";
     }

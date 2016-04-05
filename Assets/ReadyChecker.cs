@@ -8,13 +8,14 @@ public class ReadyChecker : MonoBehaviour {
     private static bool allReady = false;
     public char[] names = new char[] {  };
     public Rect TextPos = new Rect(1, 80, 150, 300);
-     ExitGames.Client.Photon.Hashtable h = new ExitGames.Client.Photon.Hashtable();
+     
      //int numberofplayers = 0;
      //int counterforarray = 0;
      // Update is called once per frame
 
+
      public void Start() {
-          validateVars();
+          //PhotonNetwork.JoinLobby();
      }
     public void Update () {
 
@@ -45,7 +46,7 @@ public class ReadyChecker : MonoBehaviour {
                 }
                 if (allReady)
                 {
-                    
+                         //validateVars();
                     PhotonView photonView = GameObject.Find("Control").GetComponent<PhotonView>();
                     photonView.RPC("changeLevel", PhotonTargets.AllBuffered);
                 }
@@ -64,20 +65,16 @@ public class ReadyChecker : MonoBehaviour {
      {
           PlayerPrefs.SetInt("BlueScore", 0);
           PlayerPrefs.SetInt("RedScore", 0);
-          PlayerPrefs.SetInt("Time", 300);
-     }
+          PlayerPrefs.SetInt("Time", 20);
 
-     //Validates variables
-     void validateVars() 
-     {
-          //Get player object who is master client
           if (PhotonNetwork.isMasterClient)
           {
-               h.Add("t", "t");
+               ExitGames.Client.Photon.Hashtable h = new ExitGames.Client.Photon.Hashtable();
+               h.Add("BlueScore", 0);
+               h.Add("RedScore", 0);
+               h.Add("Time", 20);
+               PhotonNetwork.player.SetCustomProperties(h);
           }
-          if (h.ContainsKey("t"))
-               Debug.Log("Worked");
-          //Check their current values for timer and scores
-          //Take those values
      }
+    
 }
