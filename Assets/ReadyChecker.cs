@@ -65,14 +65,14 @@ public class ReadyChecker : MonoBehaviour {
      {
           PlayerPrefs.SetInt("BlueScore", 0);
           PlayerPrefs.SetInt("RedScore", 0);
-          PlayerPrefs.SetInt("Time", 20);
+          PlayerPrefs.SetInt("Time", 25);
 
           if (PhotonNetwork.isMasterClient)
           {
                ExitGames.Client.Photon.Hashtable h = new ExitGames.Client.Photon.Hashtable();
                h.Add("BlueScore", 0);
                h.Add("RedScore", 0);
-               h.Add("Time", 20);
+               h.Add("Time", 25);
                PhotonNetwork.player.SetCustomProperties(h);
           }
      }

@@ -8,6 +8,8 @@ public class BlueGoal : MonoBehaviour
 {
 
     GameObject RTS;
+    
+  
     int RScore;
     bool isSynced = false;
 
@@ -26,6 +28,9 @@ public class BlueGoal : MonoBehaviour
         //Create ref to the object before deactivating
         RTS = GameObject.Find("RedTeamScored");
         RTS.SetActive(false);
+       
+        
+        
         getScores();
     }
 
